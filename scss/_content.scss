@@ -1,0 +1,117 @@
+/* content */
+.spanning {
+    clear: both;
+}
+.content {}
+.subscribe {
+    padding: 50px 0;
+    background: $dgr;
+    color: $w;
+}
+.subscribe-title {
+    padding: 0 10px 2px 0;
+    font-size: 17px;
+    line-height: 1.36;
+    font-weight: 500;
+}
+.subscribe-email {
+    input {
+        float: left;
+        width: 100%;
+        padding: 15px 20px 15px 27px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $w;
+        border: 1px solid $tr;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        transition: color $d $f, background-color $d $f, border-color $d $f;
+        &::placeholder {
+            color: $w;
+        }
+        &.error {
+            &::placeholder {
+                color: $error;
+            }
+        }
+    }
+}
+.subscribe-checkbox {
+    text-align: center;
+    padding-left: 10px;
+    label {
+        &:before {
+            border-color: $w;
+        }
+    }
+}
+.seo {
+    padding: 65px 0 51px;
+    h5 {
+        font-size: 20px;
+        line-height: 1.3;
+        color: $b;
+        margin-bottom: 34px;
+    }
+    ul {
+        display: block;
+        margin-bottom: 18px;
+        li {
+            padding-left: 25px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 3px;
+                height: 3px;
+                background: $text;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.global-title {
+    text-align: center;
+    margin-bottom: 27px;
+    h2,
+    h3,
+    h4 {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 30px;
+        line-height: 1.2;
+        color: $b;
+    }
+}
+.box {
+    display: none;
+    &.visible {
+        display: block;
+    }
+}
+.global-tab {
+    margin-bottom: 93px;
+}
+.global-tabs {
+    display: block;
+    text-align: center;
+    margin: -4px -18px 25px;
+    li {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 18px 4px;
+        padding-bottom: 3px;
+        border-bottom: 2px solid $tr;
+        transition: color $d $f, border-color $d $f;
+        &.active {
+            cursor: default;
+            margin-top: -1px;
+            font-weight: 500;
+            color: $b;
+            border-bottom-color: $p;
+        }
+    }
+}

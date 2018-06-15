@@ -1,0 +1,30 @@
+.comment-info {
+    margin-bottom: 21px;
+}
+.comment-date {
+    font-size: 11px;
+    line-height: 1.37;
+    margin-bottom: 3px;
+}
+.comment-person {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $dgr;
+    letter-spacing: -0.3px;
+    margin-bottom: 13px;
+}
+.comment-rating {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    li {
+        display: inline-block;
+        vertical-align: top;
+        width: 12px;
+        margin-right: 3px;
+        img {
+            width: 100%;
+        }
+    }
+}

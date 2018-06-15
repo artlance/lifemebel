@@ -1,0 +1,195 @@
+/* forms */
+.error {
+    color: $error !important;
+    border-color: rgba(243, 0, 0, 0.5) !important;
+}
+.success {
+    color: $success !important;
+    border-color: $success !important;
+}
+.disabled {
+    color: $t !important;
+    border-color: $s !important;
+    cursor: default !important;
+}
+.input-wrapper {
+    margin-bottom: 20px;
+    & > label {
+        display: block;
+        padding: 1px 0 4px;
+    }
+}
+input.input-text {
+    float: left;
+    width: 100%;
+    padding: 10px 14px;
+    line-height: $lineHeight;
+    color: $b;
+    background: $w;
+    border: 1px solid $t;
+    border-radius: 2px;
+    transition: color $d $f, background-color $d $f, border-color $d $f, box-shadow $d $f;
+    &::placeholder {
+        color: $t;
+    }
+    &:hover,
+    &:focus {
+        border-color: $p;
+    }
+    &.error {
+        &::placeholder {
+            color: $error;
+        }
+    }
+    &:disabled {
+        cursor: default;
+        color: $t !important;
+        border-color: $s !important;
+        background-color: $s;
+        &::placeholder {
+            color: $t;
+        }
+    }
+}
+textarea.textarea {
+    @extend input.input-text;
+    font-family: $fontFamily;
+    overflow: auto;
+    height: auto;
+}
+select.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+select.select::-ms-expand {
+    display: none;
+}
+.checkbox,
+.radio {
+    display: block;
+    input {
+        display: none;
+        &:checked + label {
+            &:before {
+                border-color: $p;
+                background-color: $p;
+            }
+            &:after {
+                opacity: 1;
+            }
+        }
+        &:disabled + label {
+            cursor: default;
+        }
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        padding: 2px 0 3px 43px;
+        font-size: 11px;
+        line-height: 1.37;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: $w;
+            border: 1px solid $t;
+            border-radius: 2px;
+            transition: background-color $d $f, border-color $d $f;
+        }
+        &:after {
+            opacity: 0;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: $tr url('../upload/check.svg') 0 0 no-repeat;
+            background-size: 100% 100%;
+            transition: opacity $d $f;
+        }
+    }
+}
+a.button,
+input.button,
+button.button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 45px 12px;
+    line-height: $lineHeight;
+    font-weight: 500;
+    color: $b;
+    text-align: center;
+    background: $w;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+    transition: color $d $f, background-color $d $f, border-color $d $f, box-shadow $d $f;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    &.secondary {
+        background: $s;
+        box-shadow: none;
+        &:hover {
+            background-color: lighten($s, 2%);
+        }
+    }
+    &.primary {
+        color: $w;
+        background: $p;
+        box-shadow: none;
+        &:hover {
+            background-color: lighten($p, 5%);
+        }
+    }
+}
+.jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+.jspPane {
+  position: absolute;
+}
+.jspCap {
+  display: none;
+}
+.jspTrack {
+  background: $tr;
+  position: relative;
+}
+.jspDrag {
+  background: #E1E1E1;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.jspCorner {
+  background: $tr;
+  float: left;
+  height: 100%;
+}
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+}
