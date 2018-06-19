@@ -246,7 +246,7 @@ img {
   font-size: 0;
 }
 
-.clearfix::after, .wysiwyg::after {
+.clearfix::after, .wysiwyg::after, .no-js .tv::after, .no-js .recently-viewed::after {
   clear: both;
   content: "";
   display: table;
@@ -664,6 +664,39 @@ a.underline {
   margin-left: 6.25%;
 }
 
+.no-js .outside-slider-prev,
+.no-js .outside-slider-next {
+  display: none;
+}
+
+.no-js .tv .slide-js {
+  display: none;
+}
+
+.no-js .tv .slide-js:nth-child(1), .no-js .tv .slide-js:nth-child(2), .no-js .tv .slide-js:nth-child(3), .no-js .tv .slide-js:nth-child(4) {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.no-js .advices .slide-js {
+  display: none;
+}
+
+.no-js .advices .slide-js:nth-child(1) {
+  display: block;
+}
+
+.no-js .recently-viewed .slide-js {
+  display: none;
+}
+
+.no-js .recently-viewed .slide-js:nth-child(1), .no-js .recently-viewed .slide-js:nth-child(2), .no-js .recently-viewed .slide-js:nth-child(3), .no-js .recently-viewed .slide-js:nth-child(4), .no-js .recently-viewed .slide-js:nth-child(5), .no-js .recently-viewed .slide-js:nth-child(6) {
+  display: block;
+  float: left;
+  width: 16.6666%;
+}
+
 /* forms */
 .error {
   color: #F30000 !important;
@@ -1069,6 +1102,19 @@ button.button.primary:hover {
   height: 38px;
   background: transparent url("../upload/right.svg") 0 0 no-repeat;
   background-size: 100% 100%;
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  cursor: default;
+}
+
+.slick-prev.slick-disabled:after,
+.slick-next.slick-disabled:after {
+  opacity: 0.25;
 }
 
 .slick-prev {
@@ -1082,12 +1128,6 @@ button.button.primary:hover {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
-}
-
-.slick-prev.slick-disabled,
-.slick-next.slick-disabled {
-  opacity: 0.25;
-  cursor: default;
 }
 
 .slick-dots {
@@ -1135,6 +1175,9 @@ button.button.primary:hover {
   height: 40px;
   font-size: 0;
   line-height: 0;
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .outside-slider-prev:after,
@@ -1179,6 +1222,7 @@ button.button.primary:hover {
   top: 14px;
   height: 40px;
   width: 40px;
+  background: transparent;
 }
 
 .slider-js-arrows-nav .slick-prev:after,
@@ -1198,7 +1242,6 @@ button.button.primary:hover {
 
 /* header */
 .header-navbar {
-  padding-top: 12px;
   border-bottom: 1px solid #eaeaea;
 }
 
@@ -1206,13 +1249,14 @@ button.button.primary:hover {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-bottom: 11px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .header-city-choose {
   display: block;
-  max-width: 120px;
+  margin-left: -10px;
+  padding: 12px 10px 11px;
+  max-width: 140px;
   color: #686868;
   white-space: nowrap;
   overflow: hidden;
@@ -1228,14 +1272,13 @@ button.button.primary:hover {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-bottom: 11px;
-  margin-right: 10px;
 }
 
 .header-phone-toggle {
   display: block;
   position: relative;
-  padding-right: 18px;
+  margin-left: -10px;
+  padding: 12px 28px 11px 10px;
   font-size: 15px;
   line-height: 1.2;
   font-weight: 500;
@@ -1248,7 +1291,7 @@ button.button.primary:hover {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 10px;
   margin-top: -3px;
   width: 8px;
   height: 5px;
@@ -1263,24 +1306,23 @@ button.button.primary:hover {
 .header-worktime {
   display: inline-block;
   vertical-align: top;
-  padding-bottom: 11px;
+  padding: 12px 0 11px;
 }
 
 .header-navbar-menu {
   display: block;
   text-align: center;
-  padding-bottom: 11px;
 }
 
 .header-navbar-menu li {
   display: inline-block;
   vertical-align: top;
-  margin: 0 10px;
 }
 
 .header-navbar-menu li a {
   display: block;
   color: #686868;
+  padding: 12px 10px 11px;
 }
 
 .header-navbar-menu li a:hover {
@@ -1290,13 +1332,13 @@ button.button.primary:hover {
 .header-profile {
   float: right;
   position: relative;
-  padding-bottom: 11px;
 }
 
 .header-profile-toggle {
   display: block;
   position: relative;
-  padding-right: 21px;
+  margin-right: -10px;
+  padding: 12px 31px 11px 10px;
   font-weight: 500;
   color: #000000;
 }
@@ -1305,7 +1347,7 @@ button.button.primary:hover {
   content: "";
   position: absolute;
   top: 50%;
-  right: 3px;
+  right: 13px;
   margin-top: -1px;
   width: 8px;
   height: 5px;
@@ -1317,48 +1359,48 @@ button.button.primary:hover {
   color: #686868;
 }
 
-.header-content {
-  padding-top: 23px;
-}
-
 .header-menu {
   display: block;
-  padding: 1px 0 27px;
   margin-left: -16px;
 }
 
 .header-menu li {
   display: inline-block;
   vertical-align: top;
-  margin: 0 10px 0 16px;
+  margin-left: 6px;
 }
 
 .header-menu li a {
+  display: block;
+  padding: 24px 10px 27px;
+}
+
+.header-menu li a span {
   display: block;
   font-size: 16px;
   line-height: 1.625;
   color: #686868;
   border-bottom: 2px solid transparent;
+  -webkit-transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-menu li a:hover {
+.header-menu li a:hover span {
   color: #a1a1a1;
 }
 
-.header-menu li.active a {
+.header-menu li.active a span {
   font-weight: 500;
   color: #000000;
   border-bottom-color: #83C150;
 }
 
-.logo {
-  padding-bottom: 25px;
-}
-
 .logo a {
   display: block;
-  max-width: 221px;
+  max-width: 241px;
   margin: 0 auto;
+  padding: 23px 10px 25px;
 }
 
 .logo a img {
@@ -1368,7 +1410,6 @@ button.button.primary:hover {
 .header-products {
   float: right;
   position: relative;
-  padding: 5px 0 27px;
 }
 
 .header-favorite {
@@ -1379,15 +1420,16 @@ button.button.primary:hover {
 .header-favorite-toggle {
   display: block;
   position: relative;
-  padding: 2px 0 4px 44px;
+  padding: 30px 10px 31px 54px;
   color: #686868;
 }
 
 .header-favorite-toggle:before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  margin-top: -12px;
+  left: 10px;
   width: 24px;
   height: 22px;
   background: transparent url("../upload/favorite.svg") 0 0 no-repeat;
@@ -1400,8 +1442,9 @@ button.button.primary:hover {
 
 .header-favorite-number, .header-cart-number {
   position: absolute;
-  left: 14px;
-  top: -12px;
+  left: 24px;
+  top: 50%;
+  margin-top: -24px;
   padding: 0 2px;
   min-width: 25px;
   height: 25px;
@@ -1418,13 +1461,13 @@ button.button.primary:hover {
 .header-cart {
   display: inline-block;
   vertical-align: top;
-  margin-left: 37px;
+  margin: 0 -10px 0 17px;
 }
 
 .header-cart-toggle {
   display: block;
   position: relative;
-  padding: 3px 0 3px 44px;
+  padding: 31px 10px 30px 54px;
   font-size: 15px;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -1435,8 +1478,9 @@ button.button.primary:hover {
 .header-cart-toggle:before {
   content: "";
   position: absolute;
-  top: -1px;
-  left: 0;
+  top: 50%;
+  margin-top: -13px;
+  left: 10px;
   width: 25px;
   height: 24px;
   background: transparent url("../upload/cart.svg") 0 0 no-repeat;
@@ -1452,7 +1496,7 @@ button.button.primary:hover {
 }
 
 .header-cart-number {
-  left: 15px;
+  left: 25px;
   letter-spacing: 0;
 }
 
@@ -1658,14 +1702,14 @@ button.button.primary:hover {
 
 .nav-search-button {
   position: absolute;
-  top: 9px;
-  right: 13px;
-  width: 20px;
-  height: 20px;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 39px;
   border: 0;
   text-indent: -9999px;
-  background: transparent url("../upload/search.svg") 0 0 no-repeat;
-  background-size: 100% 100%;
+  background: transparent url("../upload/search.svg") 7px 9px no-repeat;
+  background-size: 20px 20px;
 }
 
 .drop.active .drop-block {
@@ -2403,6 +2447,10 @@ button.button.primary:hover {
 
 .subscribe-title {
   padding: 0 10px 2px 0;
+}
+
+.subscribe-title,
+.subscribe-title h4 {
   font-size: 17px;
   line-height: 1.36;
   font-weight: 500;
@@ -2526,14 +2574,18 @@ button.button.primary:hover {
 .global-tabs {
   display: block;
   text-align: center;
-  margin: -4px -18px 25px;
+  margin: -14px -18px 19px;
 }
 
 .global-tabs li {
   cursor: pointer;
   display: inline-block;
   vertical-align: top;
-  margin: 0 18px 4px;
+  padding: 10px 18px;
+}
+
+.global-tabs li span {
+  display: block;
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
   -webkit-transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2541,9 +2593,16 @@ button.button.primary:hover {
   transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.global-tabs li:hover span {
+  color: #a1a1a1;
+}
+
 .global-tabs li.active {
   cursor: default;
   margin-top: -1px;
+}
+
+.global-tabs li.active span {
   font-weight: 500;
   color: #000000;
   border-bottom-color: #83C150;
@@ -3028,7 +3087,7 @@ button.button.primary:hover {
 }
 
 .promotion {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .promotion-link {
@@ -3094,12 +3153,15 @@ button.button.primary:hover {
 }
 
 .promotions-show {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-weight: 500;
   text-align: center;
 }
 
 .promotions-show a {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px;
   color: #000000;
 }
 

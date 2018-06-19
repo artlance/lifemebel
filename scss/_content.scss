@@ -10,6 +10,9 @@
 }
 .subscribe-title {
     padding: 0 10px 2px 0;
+}
+.subscribe-title,
+.subscribe-title h4 {
     font-size: 17px;
     line-height: 1.36;
     font-weight: 500;
@@ -97,21 +100,31 @@
 .global-tabs {
     display: block;
     text-align: center;
-    margin: -4px -18px 25px;
+    margin: -14px -18px 19px;
     li {
         cursor: pointer;
         display: inline-block;
         vertical-align: top;
-        margin: 0 18px 4px;
-        padding-bottom: 3px;
-        border-bottom: 2px solid $tr;
-        transition: color $d $f, border-color $d $f;
+        padding: 10px 18px;
+        span {
+            display: block;
+            padding-bottom: 3px;
+            border-bottom: 2px solid $tr;
+            transition: color $d $f, border-color $d $f;
+        }
+        &:hover {
+            span {
+                color: $t;
+            }
+        }
         &.active {
             cursor: default;
             margin-top: -1px;
-            font-weight: 500;
-            color: $b;
-            border-bottom-color: $p;
+            span {
+                font-weight: 500;
+                color: $b;
+                border-bottom-color: $p;
+            }
         }
     }
 }

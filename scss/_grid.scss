@@ -34,3 +34,47 @@ $col-widths: ();
 .offset-1 {
     margin-left: 100% / $total-columns;
 }
+.no-js {
+    .outside-slider-prev,
+    .outside-slider-next {
+        display: none;
+    }
+    .tv {
+        @extend .clearfix;
+        .slide-js {
+            display: none;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: block;
+                float: left;
+                width: 25%;
+            }
+        }
+    }
+    .advices {
+        .slide-js {
+            display: none;
+            &:nth-child(1) {
+                display: block;
+            }
+        }
+    }
+    .recently-viewed {
+        @extend .clearfix;
+        .slide-js {
+            display: none;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                display: block;
+                float: left;
+                width: 16.6666%;
+            }
+        }
+    }
+}

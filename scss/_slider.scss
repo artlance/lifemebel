@@ -93,6 +93,13 @@
         height: 38px;
         background: $tr url('../upload/right.svg') 0 0 no-repeat;
         background-size: 100% 100%;
+        transition: opacity $d $f;
+    }
+    &.slick-disabled {
+        cursor: default;
+        &:after {
+            opacity: 0.25;
+        }
     }
 }
 .slick-prev {
@@ -103,11 +110,6 @@
     &:after {
         transform: rotate(-180deg);
     }
-}
-.slick-prev.slick-disabled,
-.slick-next.slick-disabled {
-    opacity: 0.25;
-    cursor: default;
 }
 .slick-dots {
     position: absolute;
@@ -148,6 +150,7 @@
     height: 40px;
     font-size: 0;
     line-height: 0;
+    transition: opacity $d $f;
     &:after {
         content: "";
         position: absolute;
@@ -182,6 +185,7 @@
         top: 14px;
         height: 40px;
         width: 40px;
+        background: $tr;
         &:after {
             margin-top: -10px;
             margin-left: -6px;

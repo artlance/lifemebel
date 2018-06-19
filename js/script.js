@@ -19,11 +19,6 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
-    //phone mask
-    $('.phone-mask').mask('+7 (999) 999-99-99');
-
-    //------------------------------------------------------------------------//
-
     //jScrollPane
     var scrollPane = function() {
         var pane = $('.scroll-pane');
@@ -34,7 +29,6 @@ $(document).ready(function(){
             }
         );
     }
-    scrollPane();
     var scrollPaneResize = function() {
         $('.scroll-pane').each(function(index, el) {
             $(this).jScrollPane({showArrows: false, autoReinitialise: true}).data('jsp').destroy();
@@ -70,15 +64,48 @@ $(document).ready(function(){
         activePop = null;
         closeInactivePop();
     });
+    var sliderJsArrowsNavInit = false;
     $('.drop-toggle').on('click', function(event) {
         event.preventDefault();
-        $(this).parent(dropClass).toggleClass('active');
-        if ( $('.scroll-pane').length ) {
+        var thisParent = $(this).parent(dropClass);
+        thisParent.toggleClass('active');
+        //
+        if ( $(thisParent).find('.scroll-pane').length ) {
             scrollPane();
             scrollPaneResize();
         }
-        if ( $('.slider-js-arrows-nav').length ) {
-            $('.slider-js-arrows-nav').slick('setPosition');
+        //
+        if ( $(thisParent).find('.slider-js-arrows-nav').length ) {
+            //slider arrows navigation
+            $('.slider-js-arrows-nav').on('init', function () {
+                sliderJsArrowsNavInit = true;
+            });
+            if (sliderJsArrowsNavInit) {
+                $('.slider-js-arrows-nav').slick('setPosition');
+            } else {
+                $('.slider-js-arrows-nav').slick({
+                    dots: false,
+                    arrows: true,
+                    draggable: true,
+                    infinite: false,
+                    centerMode: false,
+                    centerPadding: '0px',
+                    autoplay: false,
+                    autoplaySpeed: 5000,
+                    speed: 500,
+                    pauseOnHover: false,
+                    pauseOnDotsHover: false,
+                    slide: '.slide-js',
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    swipeToSlide: true
+                });
+            }
+        }
+        //
+        if ( $(thisParent).find('.phone-mask').length ) {
+            //phone mask
+            $('.phone-mask').mask('+7 (999) 999-99-99');
         }
     });
 
@@ -108,30 +135,18 @@ $(document).ready(function(){
         }
     });
 
+    $(document).keydown(function(e) {
+        if (e.keyCode == 27) {
+            activePop = null;
+            closeInactivePop();
+            dropExtraClass.hide();
+        }
+    });
+
     //------------------------------------------------------------------------//
 
     //tab
     $('.tabs').delegate('li:not(.active)','click',function(){$(this).addClass('active').siblings().removeClass('active').parents('.tab').find('.box').hide().eq($(this).index()).fadeIn(250);});
-
-    //------------------------------------------------------------------------//
-
-    //slider arrows navigation
-    $('.slider-js-arrows-nav').slick({
-        dots: false,
-        arrows: true,
-        draggable: true,
-        infinite: true,
-        centerMode: false,
-        centerPadding: '0px',
-        autoplay: false,
-        autoplaySpeed: 5000,
-        speed: 500,
-        pauseOnHover: false,
-        pauseOnDotsHover: false,
-        slide: '.slide-js',
-        slidesToShow: 4,
-        slidesToScroll: 1
-    });
 
     //------------------------------------------------------------------------//
 
@@ -140,7 +155,7 @@ $(document).ready(function(){
         dots: false,
         arrows: false,
         draggable: true,
-        infinite: true,
+        infinite: false,
         centerMode: false,
         centerPadding: '0px',
         autoplay: false,
@@ -150,7 +165,8 @@ $(document).ready(function(){
         pauseOnDotsHover: false,
         slide: '.slide-js',
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        swipeToSlide: true
     });
 
     //------------------------------------------------------------------------//
@@ -160,7 +176,7 @@ $(document).ready(function(){
         dots: true,
         arrows: true,
         draggable: true,
-        infinite: true,
+        infinite: false,
         centerMode: false,
         centerPadding: '0px',
         autoplay: false,
@@ -180,7 +196,7 @@ $(document).ready(function(){
         dots: false,
         arrows: true,
         draggable: true,
-        infinite: true,
+        infinite: false,
         centerMode: false,
         centerPadding: '0px',
         autoplay: false,
@@ -191,8 +207,26 @@ $(document).ready(function(){
         slide: '.slide-js',
         slidesToShow: 6,
         slidesToScroll: 1,
+        swipeToSlide: true,
         prevArrow: $('.outside-slider-prev'),
         nextArrow: $('.outside-slider-next')
+    });
+
+    //------------------------------------------------------------------------//
+
+    $('.header-cart-product-delete').on('click', function(event) {
+        event.preventDefault();
+        $(this).parents('.header-cart-product').fadeOut(1, function() {
+            scrollPaneResize();
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    $('.header-favorite-product-delete').on('click', function(event) {
+        event.preventDefault();
+        var deleteIndex = $(this).parents('.slick-slide').index();
+        $('.slider-js-arrows-nav').slick('slickRemove', deleteIndex);
     });
 
     //------------------------------------------------------------------------//
