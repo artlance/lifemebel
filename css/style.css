@@ -1505,6 +1505,14 @@ button.button.primary:hover {
   position: relative;
 }
 
+.menu-wrapper {
+  display: none;
+}
+
+.menu-wrapper.visible {
+  display: block;
+}
+
 .menu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1541,7 +1549,7 @@ button.button.primary:hover {
   background-color: #4B4B4B;
 }
 
-.menu > li:hover > ul {
+.menu > li.hover > ul {
   display: block;
 }
 
@@ -1708,6 +1716,14 @@ button.button.primary:hover {
   height: 39px;
   border: 0;
   text-indent: -9999px;
+  background: transparent url("../upload/search.svg") 7px 9px no-repeat;
+  background-size: 20px 20px;
+}
+
+.nav-search-toggle {
+  display: none;
+  width: 40px;
+  height: 39px;
   background: transparent url("../upload/search.svg") 7px 9px no-repeat;
   background-size: 20px 20px;
 }
@@ -2908,10 +2924,10 @@ button.button.primary:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   padding: 20px 30px 30px;
   color: #ffffff;
 }
@@ -3222,3 +3238,139 @@ button.button.primary:hover {
 }
 
 /* responsive */
+@media (max-width: 1325px) {
+  .no-js .recently-viewed .slide-js:nth-child(6) {
+    display: none;
+  }
+  .no-js .recently-viewed .slide-js:nth-child(1), .no-js .recently-viewed .slide-js:nth-child(2), .no-js .recently-viewed .slide-js:nth-child(3), .no-js .recently-viewed .slide-js:nth-child(4), .no-js .recently-viewed .slide-js:nth-child(5) {
+    width: 20%;
+  }
+  .header-navbar .col-5,
+  .header-navbar .col-6,
+  .header-navbar .col-12,
+  .header-content .col-5,
+  .header-content .col-6,
+  .header-content .col-12,
+  .nav-global .col-5,
+  .nav-global .col-6,
+  .nav-global .col-12 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    max-width: 100%;
+  }
+  .nav-global .col-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40px;
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+    max-width: 40px;
+  }
+  .header-menu li a {
+    padding-top: 26px;
+  }
+  .header-menu li a span {
+    font-size: 15px;
+  }
+  .menu > li > a {
+    padding-top: 18px;
+    font-size: 15px;
+  }
+  .menu-sale {
+    padding-left: 0;
+  }
+  .menu-sale:before {
+    display: none;
+  }
+  .nav-search {
+    float: none;
+    max-width: none;
+    padding-left: 0;
+  }
+  .nav-search.open {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #393939;
+    padding-left: 39px;
+    padding-right: 79px;
+  }
+  .nav-search.open .nav-search-input {
+    display: block;
+  }
+  .nav-search.open .nav-search-toggle {
+    position: absolute;
+    top: 10px;
+    right: 39px;
+    background-image: url("../upload/close.svg");
+    background-position: 50% 50%;
+    background-size: 40px 40px;
+  }
+  .nav-search-input {
+    display: none;
+  }
+  .nav-search-toggle {
+    display: block;
+  }
+  .subscribe-title,
+  .subscribe-title h4 {
+    font-size: 15px;
+  }
+  .thumb-caption-v1,
+  .thumb-caption-v2 {
+    padding-top: 28px;
+    padding-left: 20px;
+  }
+  .thumb-caption-v1 .thumb-subtitle,
+  .thumb-caption-v2 .thumb-subtitle {
+    font-size: 28px;
+  }
+  .thumb-caption-v3 {
+    padding-top: 27px;
+  }
+  .thumb-caption-v3 .thumb-subtitle {
+    font-size: 38px;
+    letter-spacing: -1.2px;
+  }
+  .thumb-caption-v4 {
+    padding-top: 28px;
+    padding-left: 20px;
+  }
+  .thumb-caption-v4 .thumb-subtitle {
+    font-size: 38px;
+    letter-spacing: -1.1px;
+  }
+  .thumb-caption-v5 {
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .thumb-caption-v5 .thumb-title {
+    font-size: 38px;
+    letter-spacing: -1.1px;
+  }
+  .thumb-caption-v6 {
+    padding-top: 27px;
+  }
+  .thumb-caption-v6 .thumb-title {
+    font-size: 28px;
+  }
+  .thumb-caption-v7 {
+    padding-bottom: 15px;
+  }
+  .thumb-caption-v8 {
+    padding-top: 20px;
+  }
+  .thumb-caption-v8 .thumb-subtitle {
+    font-size: 28px;
+  }
+  .promotion-caption,
+  .tv-item-content {
+    padding: 20px;
+  }
+  .advices-item-title {
+    padding: 30px 20px 20px 30px;
+  }
+}

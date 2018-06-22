@@ -233,7 +233,12 @@
     background: $dgr;
     position: relative;
 }
-.menu-wrapper {}
+.menu-wrapper {
+    display: none;
+    &.visible {
+        display: block;
+    }
+}
 .menu {
     display: flex;
     justify-content: space-between;
@@ -258,7 +263,7 @@
                 background-color: #4B4B4B;
             }
         }
-        &:hover {
+        &.hover {
             & > ul {
                 display: block;
             }
@@ -378,6 +383,13 @@
     height: 39px;
     border: 0;
     text-indent: -9999px;
+    background: $tr url('../upload/search.svg') 7px 9px no-repeat;
+    background-size: 20px 20px;
+}
+.nav-search-toggle {
+    display: none;
+    width: 40px;
+    height: 39px;
     background: $tr url('../upload/search.svg') 7px 9px no-repeat;
     background-size: 20px 20px;
 }
