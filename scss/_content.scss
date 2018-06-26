@@ -4,6 +4,7 @@
 }
 .content {}
 .subscribe {
+    margin-bottom: 65px;
     padding: 50px 0;
     background: $dgr;
     color: $w;
@@ -49,7 +50,7 @@
     }
 }
 .seo {
-    padding: 65px 0 51px;
+    padding-bottom: 51px;
     h5 {
         font-size: 20px;
         line-height: 1.3;
@@ -74,6 +75,13 @@
             }
         }
     }
+}
+.seo-separator {
+    border-top: 1px solid #b8babc;
+    height: 46px;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
 }
 .global-title {
     text-align: center;
@@ -127,4 +135,45 @@
             }
         }
     }
+}
+.breadcrumbs-wrapper {
+    padding: 14px 0 29px;
+}
+.breadcrumbs {
+    display: block;
+    margin-left: -15px;
+    li {
+        float: left;
+        line-height: 1.2;
+        strong {
+            display: block;
+            padding: 7px 0 8px 15px;
+            font-weight: 500;
+            color: $dgr;
+        }
+        a {
+            display: block;
+            padding: 7px 21px 8px 15px;
+            position: relative;
+            color: $t;
+            &:hover {
+                color: $dgr;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -3px;
+                right: 0;
+                width: 8px;
+                height: 5px;
+                background: $tr url('../upload/down.svg') 0 0 no-repeat;
+                background-size: 100% 100%;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+.collections {
+    margin-bottom: 93px;
 }

@@ -30,7 +30,10 @@
 .thumb-caption-v5,
 .thumb-caption-v6,
 .thumb-caption-v7,
-.thumb-caption-v8 {
+.thumb-caption-v8,
+.thumb-caption-v9,
+.thumb-caption-v10,
+.thumb-caption-v11 {
     position: absolute;
     top: 0;
     left: 0;
@@ -158,6 +161,63 @@
         font-weight: 900;
         color: $w;
         letter-spacing: -0.3px;
+        text-transform: uppercase;
+    }
+}
+.thumb-caption-v9 {
+    top: auto;
+    bottom: 0;
+    color: $w;
+    padding: 0 20px 41px 50px;
+    .thumb-title {
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+    .thumb-subtitle {
+        font-size: 39px;
+        line-height: 1;
+        letter-spacing: -1px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+}
+.thumb-caption-v10 {
+    color: $text;
+    padding: 62px 20px 0;
+    text-align: center;
+    .thumb-title {
+        font-size: 17px;
+        line-height: 1.12;
+        font-weight: 500;
+        margin-bottom: 1px;
+    }
+    .thumb-subtitle {
+        font-size: 47px;
+        line-height: 1;
+        font-weight: 900;
+        color: #A3B29A;
+        letter-spacing: -2.4px;
+        text-transform: uppercase;
+    }
+}
+.thumb-caption-v11 {
+    top: auto;
+    bottom: 0;
+    color: $w;
+    padding: 0 20px 51px;
+    text-align: center;
+    .thumb-title {
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+    .thumb-subtitle {
+        font-size: 44px;
+        line-height: 1;
+        letter-spacing: -2.2px;
+        font-weight: 900;
         text-transform: uppercase;
     }
 }

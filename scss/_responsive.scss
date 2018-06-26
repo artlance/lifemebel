@@ -126,7 +126,8 @@
     .thumb-caption-v6 {
         padding-top: 27px;
         .thumb-title {
-            font-size: 28px;
+            font-size: 24px;
+            letter-spacing: 0;
         }
     }
     .thumb-caption-v7 {
@@ -138,11 +139,36 @@
             font-size: 28px;
         }
     }
+    .thumb-caption-v9 {
+        padding-bottom: 21px;
+        padding-left: 20px;
+        .thumb-subtitle {
+            font-size: 29px;
+            letter-spacing: -0.5px;
+        }
+    }
+    .thumb-caption-v10 {
+        padding-top: 42px;
+        .thumb-subtitle {
+            font-size: 37px;
+            letter-spacing: -1.2px;
+        }
+    }
+    .thumb-caption-v11 {
+        padding-bottom: 31px;
+        .thumb-subtitle {
+            font-size: 34px;
+            letter-spacing: -1.1px;
+        }
+    }
     .promotion-caption,
     .tv-item-content {
         padding: 20px;
     }
     .advices-item-title {
         padding: 30px 20px 20px 30px;
+    }
+    .category-caption {
+        padding: 0 10px 20px;
     }
 }
