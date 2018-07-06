@@ -98,7 +98,7 @@
     &.slick-disabled {
         cursor: default;
         &:after {
-            opacity: 0.25;
+            opacity: 0.3;
         }
     }
 }
@@ -164,7 +164,7 @@
         background-size: 100% 100%;
     }
     &.slick-disabled {
-        opacity: 0.25;
+        opacity: 0.3;
         cursor: default;
     }
     &.slick-hidden {

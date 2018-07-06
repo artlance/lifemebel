@@ -53,7 +53,8 @@ $col-widths: ();
             }
         }
     }
-    .advices {
+    .advices,
+    .catalog-product-img-slider {
         .slide-js {
             display: none;
             &:nth-child(1) {
@@ -74,6 +75,17 @@ $col-widths: ();
                 display: block;
                 float: left;
                 width: 16.6666%;
+            }
+        }
+    }
+    .catalog-product-img-nav {
+        .slide-js {
+            display: none;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: block;
             }
         }
     }

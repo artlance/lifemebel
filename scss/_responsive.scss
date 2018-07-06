@@ -171,4 +171,23 @@
     .category-caption {
         padding: 0 10px 20px;
     }
+    .banner-title {
+        font-size: 28px;
+        line-height: 1.15;
+    }
+    .banner-subtitle {
+        font-size: 15px;
+    }
+    .pagination-list {
+        li {
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    }
+    .catalog-products {
+        .col-4 {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+        }
+    }
 }

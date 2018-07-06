@@ -12,6 +12,7 @@
 .category {
     position: relative;
     overflow: hidden;
+    background-color: $s;
     &:hover {
         .category-img {
             transform: scale(1.1);
