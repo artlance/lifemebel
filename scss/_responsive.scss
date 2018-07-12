@@ -57,28 +57,15 @@
         }
     }
     .nav-search {
-        float: none;
         max-width: none;
         padding-left: 0;
-        &.open {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background: $dgr;
+        &-focus {
             padding-left: 39px;
-            padding-right: 79px;
             .nav-search-input {
                 display: block;
             }
             .nav-search-toggle {
-                position: absolute;
-                top: 10px;
-                right: 39px;
-                background-image: url('../upload/close.svg');
-                background-position: 50% 50%;
-                background-size: 40px 40px;
+                display: none;
             }
         }
     }
@@ -87,6 +74,12 @@
     }
     .nav-search-toggle {
         display: block;
+    }
+    .nav-search-panel-products-list {
+        .col {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
     }
     .subscribe-title,
     .subscribe-title h4 {

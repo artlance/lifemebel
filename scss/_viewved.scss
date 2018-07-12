@@ -38,4 +38,22 @@
     line-height: 1.2;
     font-weight: 500;
     color: $b;
+    &-sale {
+        white-space: normal;
+    }
+}
+.product-thumb-price-new {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    color: $red;
+    margin-right: 7px;
+}
+.product-thumb-price-old {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    text-decoration: line-through;
+    font-weight: normal;
+    color: $t;
 }

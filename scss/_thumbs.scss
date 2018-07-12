@@ -1,7 +1,22 @@
 .thumbs {
     padding: 40px 0 93px;
 }
-.thumb {}
+.thumb {
+    &-gray {
+        .thumb-link {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.04);
+            }
+        }
+    }
+}
 .thumb-link {
     display: block;
     position: relative;
@@ -35,6 +50,7 @@
 .thumb-caption-v10,
 .thumb-caption-v11 {
     position: absolute;
+    z-index: 3;
     top: 0;
     left: 0;
     right: 0;

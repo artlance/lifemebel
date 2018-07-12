@@ -5,12 +5,21 @@
 .content {}
 .subscribe {
     margin-bottom: 65px;
-    padding: 50px 0;
+    padding: 52px 0 51px;
     background: $dgr;
     color: $w;
+    &-success {
+        .subscribe-success-info {
+            display: block;
+        }
+        .subscribe-email,
+        .subscribe-button {
+            display: none;
+        }
+    }
 }
 .subscribe-title {
-    padding: 0 10px 2px 0;
+    padding-right: 10px;
 }
 .subscribe-title,
 .subscribe-title h4 {
@@ -19,12 +28,13 @@
     font-weight: 500;
 }
 .subscribe-email {
+    padding-right: 20px;
     input {
         float: left;
         width: 100%;
-        padding: 15px 20px 15px 27px;
-        font-size: 14px;
-        line-height: 1.5;
+        padding: 13px 20px 14px 25px;
+        font-size: 13px;
+        line-height: 1.62;
         color: $w;
         border: 1px solid $tr;
         background: rgba(255, 255, 255, 0.1);
@@ -40,14 +50,23 @@
         }
     }
 }
-.subscribe-checkbox {
-    text-align: center;
-    padding-left: 10px;
-    label {
-        &:before {
-            border-color: $w;
-        }
+.subscribe-button {
+    .button {
+        width: 100%;
+        padding: 15px 5px 17px;
     }
+}
+.subscribe-success-info {
+    display: none;
+    margin-right: 20px;
+    font-size: 13px;
+    line-height: 1.62;
+    font-weight: 500;
+    color: $p;
+    padding: 14px 10px 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
 }
 .seo {
     padding-bottom: 51px;

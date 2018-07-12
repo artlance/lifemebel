@@ -36,6 +36,11 @@ $(document).ready(function(){
         $('.filter-range-slider').nstSlider('refresh');
     });
 
+    $(".filter-range-input-min, .filter-range-input-max").on('keypress', function(event) {
+        event = event || window.event;
+        if (event.charCode && event.charCode!=0 && event.charCode!=32 && event.charCode!=46 && (event.charCode < 48 || event.charCode > 57) ) return false;
+    });
+
     //------------------------------------------------------------------------//
 
     //filter item
@@ -51,54 +56,10 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
-    var numSlick = 0;
-    $('.catalog-product').each(function(index, el) {
-        numSlick++;
-        var thisElement = $(this);
-        var thisSlider = thisElement.find('.catalog-product-img-slider');
-        var thisNav = thisElement.find('.catalog-product-img-nav');
-        var thisAsNavFor = null;
-        if ( thisNav.length ) {
-            thisSlider.addClass('slider-' + numSlick).slick({
-                dots: false,
-                arrows: true,
-                draggable: true,
-                infinite: false,
-                centerMode: false,
-                centerPadding: '0px',
-                autoplay: false,
-                autoplaySpeed: 5000,
-                speed: 500,
-                pauseOnHover: false,
-                pauseOnDotsHover: false,
-                slide: '.slide-js',
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                asNavFor: '.slider-nav-' + numSlick
-            });
-            thisNav.addClass('slider-nav-' + numSlick).slick({
-                dots: false,
-                arrows: false,
-                draggable: true,
-                infinite: false,
-                centerMode: false,
-                centerPadding: '0px',
-                autoplay: false,
-                autoplaySpeed: 5000,
-                speed: 500,
-                pauseOnHover: false,
-                pauseOnDotsHover: false,
-                slide: '.slide-js',
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                swipeToSlide: true,
-                focusOnSelect: true,
-                vertical: true,
-                verticalSwiping: true,
-                asNavFor: '.slider-' + numSlick
-            });
-        } else {
-            thisSlider.slick({
+    var catalogProductHover = false;
+    $('.catalog-product').on('mouseenter', function(event) {
+        if ( !catalogProductHover ) {
+            $('.catalog-product-img-slider').slick({
                 dots: false,
                 arrows: true,
                 draggable: true,
@@ -115,14 +76,7 @@ $(document).ready(function(){
                 slidesToScroll: 1
             });
         }
-    });
-
-    $('.catalog-product').on('mouseenter', function(event) {
-        event.preventDefault();
-        var thisNavRefresh = $(this).find('.catalog-product-img-nav');
-        if (thisNavRefresh) {
-            thisNavRefresh.slick('setPosition');
-        }
+        catalogProductHover = true;
     });
 
     //------------------------------------------------------------------------//
