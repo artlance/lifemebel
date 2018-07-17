@@ -3,6 +3,22 @@
     .row {
         flex-wrap: wrap;
     }
+    .col {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 0 8px;
+    }
+    &-square {
+        .row {
+            margin: 0 -8px;
+        }
+        .catalog-product-img-link {
+            max-width: 358px;
+        }
+        .catalog-product-img {
+            margin-bottom: 21px;
+        }
+    }
 }
 .catalog-product {
     padding-top: 20px;
@@ -114,6 +130,8 @@
 }
 .catalog-product-labels {
     margin: -34px 0 8px;
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -146,7 +164,7 @@
     color: $p;
     padding: 5px 9px 5px 36px;
     border-radius: 3px;
-    background: $tr url('../upload/delivery.svg') 9px 4px no-repeat;
+    background: $w url('../upload/delivery.svg') 9px 4px no-repeat;
     background-size: 19px 14px;
     border: 1px solid rgba(131, 193, 80, 0.5);
 }

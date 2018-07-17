@@ -182,5 +182,17 @@
             flex: 0 0 33.3333%;
             max-width: 33.3333%;
         }
+        .col {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        &-square {
+            .catalog-product-img-link {
+                max-width: 480px;
+            }
+        }
+    }
+    .catalog-product-img-link {
+        max-width: 325px;
     }
 }
