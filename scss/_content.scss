@@ -208,3 +208,21 @@
 .collections {
     margin-bottom: 93px;
 }
+.zoom-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $p;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        height: 14px;
+        transform: translate3d(-50%, -50%, 0);
+        background: $tr url('../upload/search.svg') 50% 50% no-repeat;
+        background-size: 100% 100%;
+    }
+}

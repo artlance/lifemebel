@@ -39,7 +39,8 @@ $col-widths: ();
     .outside-slider-next {
         display: none;
     }
-    .tv {
+    .tv,
+    .product-photos-slider {
         @extend .clearfix;
         .slide-js {
             display: none;
@@ -54,7 +55,8 @@ $col-widths: ();
         }
     }
     .advices,
-    .catalog-product-img-slider {
+    .catalog-product-img-slider,
+    .product-gallery-slider {
         .slide-js {
             display: none;
             &:nth-child(1) {
@@ -75,6 +77,19 @@ $col-widths: ();
                 display: block;
                 float: left;
                 width: 16.6666%;
+            }
+        }
+    }
+    .product-gallery-thumbs-slider {
+        .slide-js {
+            display: none;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                display: block;
             }
         }
     }

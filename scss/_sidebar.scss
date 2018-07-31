@@ -196,7 +196,8 @@
         }
     }
 }
-.filter-item-hint-question {
+.filter-item-hint-question,
+.filter-item-hint-warning {
     display: block;
     cursor: pointer;
     width: 14px;
@@ -205,6 +206,11 @@
     border: 2px solid $text;
     border-radius: 50%;
     background-size: 14px 14px;
+}
+.filter-item-hint-warning {
+    background-color: #F3B800;
+    background-image: url('../upload/warning.svg');
+    border: 0;
 }
 .filter-item-hint-text {
     display: none;

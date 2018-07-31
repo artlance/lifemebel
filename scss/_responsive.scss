@@ -195,4 +195,79 @@
     .catalog-product-img-link {
         max-width: 325px;
     }
+    .product {
+        .col-11 {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        .col-5 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+    }
+    .product-gallery-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .product-features {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .product-thumbs {
+        .col {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+    .product-presentation {
+        .col-4 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .col-12 {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+    }
+    .product-presentation-content {
+        padding-right: 20px;
+        padding-left: 40px;
+    }
+    .product-presentation-manuals {
+        margin-left: -20px;
+    }
+    .product-presentation-manual-wrapper {
+        padding-left: 20px;
+    }
+    .product-brand-info-logo {
+        flex: 0 0 180px;
+        max-width: 180px;
+        padding-right: 30px;
+    }
+    .product-brand-info-logo-img {
+        height: 150px;
+        padding: 10px;
+    }
+    .product-brand-features {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .product-comments-list {
+        .row {
+            flex-wrap: wrap-reverse;
+        }
+        .offset-1 {
+            margin-left: 0;
+        }
+        .col-11,
+        .col-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .product-discounted-item-reason {
+        width: 65%;
+    }
 }

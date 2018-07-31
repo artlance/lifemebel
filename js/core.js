@@ -109,7 +109,7 @@ $(document).ready(function(){
         event.preventDefault();
         activePop = null;
         closeInactivePop();
-        dropExtraClass.show();
+        $(this).parents('.drop').find('.drop-extra-block').show();
         activeExtraPop = 1;
     });
     $('.drop-extra-close').on('click', function(event) {

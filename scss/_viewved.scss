@@ -1,6 +1,26 @@
 .recently-viewed {
     padding: 17px 0 93px;
 }
+.product-thumbs {
+    padding-bottom: 10px;
+    .product-thumb {
+        margin-bottom: 30px;
+    }
+    .row {
+        flex-wrap: wrap;
+    }
+    .col {
+        flex: 0 0 16.6666%;
+        max-width: 16.6666%;
+    }
+}
+.product-thumbs-more {
+    text-align: center;
+    .button {
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+}
 .product-thumb {}
 .product-thumb-link {
     display: block;
