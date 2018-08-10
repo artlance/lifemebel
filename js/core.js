@@ -244,13 +244,22 @@ $(document).ready(function(){
     $('.nav-search-input-text').on('focusout', function(event) {
         if ( !$('.nav-search-open').length ) {
             $('.nav-search').removeClass('nav-search-focus');
+            $('.nav-search-panel').slideUp('100');
         }
     });
     $('.nav-search-input-text').on('keyup', function(event) {
-        if ( $(this).val() != '' ) {
-            $('.nav-search').addClass('nav-search-open');
+        if ( $(this).val() != '' && event.keyCode != 27 ) {
+            $('.nav-search').addClass('nav-search-open').addClass('nav-search-focus');
+            $('.nav-search-panel').slideDown('200');
         } else {
             $('.nav-search').removeClass('nav-search-open');
+            $('.nav-search-panel').slideUp('100');
+        }
+
+        if ( event.keyCode == 27 ) {
+            $('.nav-search').removeClass('nav-search-open');
+            $('.nav-search-panel').slideUp('100');
+            $('.nav-search').removeClass('nav-search-focus');
         }
     });
     $('.nav-search-panel').on('click', function(event) {

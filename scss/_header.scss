@@ -384,11 +384,6 @@
             margin: 0 auto;
         }
     }
-    &-open {
-        .nav-search-panel {
-            display: block;
-        }
-    }
 }
 .nav-search-input {
     position: relative;
@@ -433,6 +428,7 @@
 .nav-search-panel {
     display: none;
     position: absolute;
+    z-index: 4500;
     left: 0;
     right: 0;
     top: 100%;

@@ -93,11 +93,60 @@
         background-image: url('../upload/favorite-red.svg');
     }
 }
-.product-gallery-slider {}
+.product-gallery-slider {
+    .slick-prev,
+    .slick-next {
+        opacity: 0;
+        height: 100%;
+        width: 50%;
+        background: $tr;
+        transition: opacity $d $f;
+        &:after {
+            left: auto;
+            right: 10px;
+            margin-left: 0;
+        }
+    }
+    .slick-prev {
+        top: 0;
+        bottom: auto;
+        &:after {
+            right: auto;
+            left: 10px;
+        }
+    }
+    &:hover {
+        .slick-prev,
+        .slick-next {
+            opacity: 1;
+        }
+    }
+    &.product-gallery-no-arrows {
+        .slick-prev,
+        .slick-next {
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+}
 .product-gallery-img {
     display: block;
     img {
         width: 100%;
+    }
+}
+.product-gallery-iframe {
+    display: block;
+    height: 0;
+    padding-top: 56.25%;
+    margin: 30.1515% 0;
+    position: relative;
+    iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 .product-features {
@@ -334,16 +383,20 @@
             display: block;
         }
         .product-color-list {
-            white-space: normal;
-            margin: 0 -7px;
+            margin: 0 -11px 0 -10px;
+        }
+        .product-color-item {
+            display: block;
+            flex: 0 0 12.5%;
+            max-width: 12.5%;
         }
         .product-color-block {
             position: absolute;
             right: 0;
             top: 0;
-            width: 840px;
-            padding-right: 25px;
-            padding-left: 25px;
+            width: 200%;
+            padding-right: 20px;
+            padding-left: 20px;
             background: $w;
             border-radius: 2px;
             box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
@@ -353,7 +406,8 @@
 .product-color-toggle {
     position: absolute;
     right: -20px;
-    bottom: 50px;
+    top: 50%;
+    margin-top: -6px;
     width: 40px;
     height: 40px;
     background: $tr url('../upload/right-small.svg') 50% 50% no-repeat;
@@ -365,26 +419,46 @@
     top: 0;
 }
 .product-color-block {
-    padding: 16px 20px 2px 0;
+    padding: 16px 9px 2px 0;
 }
 .product-color-list {
-    white-space: nowrap;
-    font-size: 0;
-    line-height: 0;
-    overflow: hidden;
-    padding-left: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 .product-color-item {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 0 16px -4px;
-    height: 104px;
+    display: none;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 16px;
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+        display: block;
+    }
+    &.active {
+        .product-color-item-img {
+            border-color: #E1E1E1;
+        }
+    }
+}
+.product-color-item-inside {
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+}
+.product-color-item-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     padding: 5px;
     border: 2px solid $tr;
     border-radius: 5px;
-    &.active {
-        border-color: #E1E1E1;
-    }
+    transition: border-color $d $f;
     img {
         width: 100%;
     }
@@ -524,4 +598,51 @@
 }
 .product-parameters-more-hide {
     display: none;
+}
+#threesixty {
+    position: relative;
+    overflow: hidden;
+    z-index: 3500;
+    width: 100%;
+    height: 0;
+    padding-top: 116.553%;
+}
+#threesixty_images {
+    display: none;
+}
+#threesixty img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    height: auto;
+    transform: translate3d(0, -50%, 0);
+}
+.current-image {
+    visibility: visible;
+    width: 100%;
+}
+.previous-image {
+    visibility: hidden;
+    width: 0;
+}
+#spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90px;
+    height: 90px;
+    margin-left: -45px;
+    margin-top: -50px;
+    display: none;
+}
+#spinner span {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: $dgr;
+    font: 0.8em Arial, Verdana, sans;
+    text-align: center;
+    line-height: 0.6em;
+    margin-top: -0.3em;
 }

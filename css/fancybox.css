@@ -94,7 +94,9 @@ body.compensate-for-scrollbar {
 
 .fancybox-toolbar {
   right: 0;
-  top: 0; }
+  top: 0;
+  z-index: 99998;
+}
 
 .fancybox-stage {
   direction: ltr;
@@ -343,28 +345,52 @@ body.compensate-for-scrollbar {
 
 /* Navigation arrows */
 .fancybox-navigation .fancybox-button {
-  height: 38px;
+  background: transparent;
   opacity: 0;
-  padding: 6px;
+  padding: 0;
   position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%; }
+
+.fancybox-navigation .fancybox-button--arrow_left {
+  left: 0; }
+
+.fancybox-navigation .fancybox-button--arrow_right {
+  right: 0; }
+
+.fancybox-navigation .fancybox-button svg {
+  position: absolute;
+  left: 12px;
   top: 50%;
-  width: 38px; }
+  margin-top: -13px;
+  width: 26px;
+  height: 26px;
+}
+
+.fancybox-navigation .fancybox-button--arrow_right svg {
+  left: auto;
+  right: 12px;
+}
+
+.fancybox-navigation .fancybox-button::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  margin-top: -19px;
+  width: 38px;
+  height: 38px;
+  background: rgba(30, 30, 30, 0.6);
+}
+
+.fancybox-navigation .fancybox-button--arrow_right::before {
+  left: auto;
+  right: 6px;
+}
 
 .fancybox-show-nav .fancybox-navigation .fancybox-button {
   transition: opacity .25s, visibility 0s, color .25s; }
-
-.fancybox-navigation .fancybox-button::after {
-  content: '';
-  left: -25px;
-  padding: 50px;
-  position: absolute;
-  top: -25px; }
-
-.fancybox-navigation .fancybox-button--arrow_left {
-  left: 6px; }
-
-.fancybox-navigation .fancybox-button--arrow_right {
-  right: 6px; }
 
 /* Close button on the top right corner of html content */
 .fancybox-close-small {
