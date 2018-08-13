@@ -27,6 +27,45 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    var galleryThumbsNum = $('.product-gallery-thumbs-slider .slide-js').length;
+    var galleryDraggHeight = 100/galleryThumbsNum;
+    //console.log(galleryThumbsNum);
+    $('<div class="product-gallery-scroll-panel"><div class="product-gallery-scroll-dragg" style="height: '+galleryDraggHeight+'%;"></div></div>').appendTo('.modal-gallery-thumbs');
+
+    var pressed, pressX, pressY,
+        dragged, draggedDir,
+        offset = 3;
+
+    $(document)
+    .on('mousedown', '.product-gallery-scroll-dragg', function(e) {
+        pressX = e.pageX;
+        pressY = e.pageY;
+        pressed = true;
+    })
+    .on('mousemove', '.product-gallery-scroll-dragg', function(e) {
+        if (!pressed) return;
+        dragged = Math.abs(e.pageY - pressY) > offset;
+        if (dragged) {
+            draggedDir = e.pageY - pressY;
+            $('.product-gallery-scroll-dragg').css({
+                'transform': 'translateY(' + draggedDir + 'px)'
+            });
+        }
+    })
+    .on('mouseup', function() {
+        if (dragged) {
+            if (draggedDir < 0) {
+                $('.modal-gallery-thumbs-slider').slick('slickPrev');
+            } else {
+                $('.modal-gallery-thumbs-slider').slick('slickNext');
+            }
+        }
+        pressed = dragged = false;
+        $('.product-gallery-scroll-dragg').css({
+            'transform': 'translateY(0px)'
+        });
+    });
+
     //product gallery
     $('.product-gallery-thumbs-slider').slick({
         dots: false,
@@ -86,11 +125,15 @@ $(document).ready(function(){
 
     var active3D = 0;
     $('.product-gallery-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        var has3D = $('.product-gallery-slider').find('.slide-js').eq(currentSlide).find('.threesixty-3d');
+        var has3D = $('.product-gallery-slider').find('.slide-js').eq(currentSlide).find('.threesixty');
         var hasVideo = $('.product-gallery-slider').find('.slide-js').eq(currentSlide).find('.youtube-video');
         if (has3D.length && !active3D) {
-            addSpinner();
-            loadImage();
+            //threesixty
+            $('.product-gallery-slider .threesixty').threeSixty({
+                dragDirection: 'horizontal',
+                useKeys: true,
+                draggable: true
+            });
             active3D = 1;
         }
         if ( has3D.length || hasVideo.length ) {
@@ -111,6 +154,106 @@ $(document).ready(function(){
             } else {
                 $('.product-gallery-slider').slick('slickNext');
             }
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
+    //modal gallery
+    $('.modal-gallery-thumbs-slider').slick({
+        dots: false,
+        arrows: false,
+        draggable: true,
+        infinite: false,
+        centerMode: false,
+        centerPadding: '0px',
+        autoplay: false,
+        autoplaySpeed: 5000,
+        speed: 500,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        slide: '.slide-js',
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
+        asNavFor: '.modal-gallery-slider'
+    });
+
+    $('.modal-gallery-thumbs-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        $('.product-gallery-scroll-dragg').css({'top': galleryDraggHeight*nextSlide+'%'});
+    });
+
+    var lastSlideChange = 0;
+    $(document).on('mousewheel DOMMouseScroll', '#modal-gallery', function(event) {
+        event.preventDefault();
+        var timeNow = new Date().getTime();
+        if (!(timeNow - lastSlideChange < 500)) {
+            lastSlideChange = timeNow;
+            if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+                $('.modal-gallery-thumbs-slider').slick('slickPrev');
+            } else {
+                $('.modal-gallery-thumbs-slider').slick('slickNext');
+            }
+        }
+    });
+
+    $('.modal-gallery-slider').slick({
+        dots: false,
+        arrows: true,
+        draggable: false,
+        infinite: false,
+        centerMode: false,
+        centerPadding: '0px',
+        autoplay: false,
+        autoplaySpeed: 5000,
+        speed: 500,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        slide: '.slide-js',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.modal-gallery-thumbs-slider',
+        fade: true
+    });
+
+    $('#modal-gallery').on('shown', function () {
+        $('.modal-gallery-thumbs-slider, .modal-gallery-slider').slick('setPosition');
+        centerModal();
+        var currentSlide = $('.product-gallery-slider').slick('slickCurrentSlide');
+        $('.modal-gallery-thumbs-slider').slick( 'slickGoTo', parseInt(currentSlide) );
+    });
+    $('#modal-gallery').on('hidden', function () {
+        var currentSlide = $('.modal-gallery-thumbs-slider').slick('slickCurrentSlide');
+        $('.product-gallery-slider').slick( 'slickGoTo', parseInt(currentSlide) );
+    });
+
+    $('.modal-gallery-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var hasVideo = $('.modal-gallery-slider').find('.slide-js').eq(currentSlide).find('.youtube-video');
+        if (hasVideo.length) {
+            hasVideo[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+        }
+    });
+
+    var active3Dmodal = 0;
+    $('.modal-gallery-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        var has3D = $('.modal-gallery-slider').find('.slide-js').eq(currentSlide).find('.threesixty');
+        var hasVideo = $('.modal-gallery-slider').find('.slide-js').eq(currentSlide).find('.youtube-video');
+        if (has3D.length && !active3Dmodal) {
+            //threesixty
+            $('.modal-gallery-slider .threesixty').threeSixty({
+                dragDirection: 'horizontal',
+                useKeys: true,
+                draggable: true
+            });
+            active3Dmodal = 1;
+        }
+        if ( has3D.length || hasVideo.length ) {
+            $('.modal-gallery-slider').addClass('modal-gallery-no-arrows');
+        } else {
+            $('.modal-gallery-slider').removeClass('modal-gallery-no-arrows');
         }
     });
 
@@ -252,185 +395,6 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
-    //threesixty
-    var ready = false,
-    dragging = false,
-    pointerStartPosX = 0,
-    pointerEndPosX = 0,
-    pointerDistance = 0,
-    monitorStartTime = 0,
-    monitorInt = 10,
-    ticker = 0,
-    speedMultiplier = 10,
-    spinner,
-    totalFrames = 52,
-    currentFrame = 0,
-    frames = [],
-    endFrame = 0,
-    loadedImages = 0,
-
-    $document = $(document),
-    $container = $('#threesixty'),
-    $images = $('#threesixty_images'),
-
-    demoMode = false,
-    fakePointer = {
-        x: 0,
-        speed: 4
-    },
-    fakePointerTimer = 0;
-
-    function addSpinner () {
-        spinner = new CanvasLoader("spinner");
-        spinner.setShape("spiral");
-        spinner.setDiameter(90);
-        spinner.setDensity(90);
-        spinner.setRange(1);
-        spinner.setSpeed(4);
-        spinner.setColor("#333333");
-        spinner.show();
-        $("#spinner").fadeIn("slow");
-    };
-
-    function loadImage() {
-        var li = document.createElement("li");
-        var imageName = "upload/img_3d/" + (loadedImages + 1) + ".png";
-        var image = $('<img>').attr('src', imageName).addClass("previous-image").appendTo(li);
-        frames.push(image);
-        $images.append(li);
-        $(image).load(function() {
-            imageLoaded();
-        });
-    };
-
-    function imageLoaded() {
-        loadedImages++;
-        $("#spinner span").text(Math.floor(loadedImages / totalFrames * 100) + "%");
-        if (loadedImages == totalFrames) {
-            frames[0].removeClass("previous-image").addClass("current-image");
-            $("#spinner").fadeOut("slow", function(){
-                spinner.hide();
-                showThreesixty();
-            });
-        } else {
-            loadImage();
-        }
-    };
-
-    function showThreesixty () {
-        $images.fadeIn("slow");
-        ready = true;
-        endFrame = -360;
-        if(!demoMode) {
-            refresh();
-        } else {
-            fakePointerTimer = window.setInterval(moveFakePointer, 100);
-        }
-    };
-
-    function moveFakePointer () {
-        fakePointer.x += fakePointer.speed;
-        trackPointer();
-    };
-
-    function quitDemoMode() {
-        window.clearInterval(fakePointerTimer);
-        demoMode = false;
-    };
-
-    function render () {
-        if(currentFrame !== endFrame)
-        {
-            var frameEasing = endFrame < currentFrame ? Math.floor((endFrame - currentFrame) * 0.1) : Math.ceil((endFrame - currentFrame) * 0.1);
-            hidePreviousFrame();
-            currentFrame += frameEasing;
-            showCurrentFrame();
-        } else {
-            window.clearInterval(ticker);
-            ticker = 0;
-        }
-    };
-
-    function refresh () {
-        if (ticker === 0) {
-            ticker = self.setInterval(render, Math.round(1000 / 60));
-        }
-    };
-
-    function hidePreviousFrame() {
-        frames[getNormalizedCurrentFrame()].removeClass("current-image").addClass("previous-image");
-    };
-
-    function showCurrentFrame() {
-        frames[getNormalizedCurrentFrame()].removeClass("previous-image").addClass("current-image");
-    };
-
-    function getNormalizedCurrentFrame() {
-        var c = -Math.ceil(currentFrame % totalFrames);
-        if (c < 0) c += (totalFrames - 1);
-        return c;
-    };
-
-    function getPointerEvent(event) {
-        return event.originalEvent.targetTouches ? event.originalEvent.targetTouches[0] : event;
-    };
-
-    $container.on("mousedown", function (event) {
-        quitDemoMode();
-        //event.preventDefault();
-        pointerStartPosX = getPointerEvent(event).pageX;
-        dragging = true;
-    });
-
-    $document.on("mouseup", function (event){
-        //event.preventDefault();
-        dragging = false;
-    });
-
-    $document.on("mousemove", function (event){
-        if(demoMode) {
-            return;
-        }
-        //event.preventDefault();
-        trackPointer(event);
-    });
-
-    $container.on("touchstart", function (event) {
-        quitDemoMode();
-        //event.preventDefault();
-        pointerStartPosX = getPointerEvent(event).pageX;
-        dragging = true;
-    });
-
-    $container.on("touchmove", function (event) {
-        //event.preventDefault();
-        trackPointer(event);
-    });
-
-    $container.on("touchend", function (event) {
-        //event.preventDefault();
-        dragging = false;
-    });
-
-    function trackPointer(event) {
-        var userDragging = ready && dragging ? true : false;
-        var demoDragging = demoMode;
-        if(userDragging || demoDragging) {
-            pointerEndPosX = userDragging ? getPointerEvent(event).pageX : fakePointer.x;
-            if(monitorStartTime < new Date().getTime() - monitorInt) {
-                pointerDistance = pointerEndPosX - pointerStartPosX;
-                endFrame = currentFrame + Math.ceil((totalFrames - 1) * speedMultiplier * (pointerDistance / $container.width()));
-                refresh();
-                monitorStartTime = new Date().getTime();
-                pointerStartPosX = userDragging ? getPointerEvent(event).pageX : fakePointer.x;
-            }
-        } else {
-            return;
-        }
-    };
-
-    //------------------------------------------------------------------------//
-
     $('.product-comments-more-button').on('click', function(event) {
         event.preventDefault();
         var buttonNum = parseInt($('.product-comments-more-num').text());
@@ -454,5 +418,48 @@ $(document).ready(function(){
         scrollPaneResize();
         productCheckboxIndex++;
     });
+
+    //------------------------------------------------------------------------//
+
+    //centerModal
+    function centerModal() {
+        var modalName = $('.modal-center');
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        modalName.each(function() {
+            var modalOuterWidth = $(this).outerWidth();
+            var modalOuterHeight = $(this).outerHeight();
+            $(this).css({
+                margin: 0
+            });
+            if (windowHeight > modalOuterHeight) {
+                $(this).css({
+                    top: (windowHeight - modalOuterHeight) /2
+                });
+            } else {
+               $(this).css({
+                    top: 0
+                });
+            }
+            if (windowWidth > modalOuterWidth) {
+                $(this).css({
+                    left: (windowWidth - modalOuterWidth) /2
+                });
+            } else {
+               $(this).css({
+                    left: 0
+                });
+            }
+        });
+    }
+    $('[data-toggle="modal"]').on('click', function() {
+        centerModal();
+    });
+    $(window).resize(function(){
+        centerModal();
+    });
+    centerModal();
+
+    //------------------------------------------------------------------------//
 
 });//document ready
