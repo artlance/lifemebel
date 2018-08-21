@@ -267,6 +267,12 @@ $(document).ready(function(){
         $('.nav-search-input-text').focus();
         $('.nav-search').addClass('nav-search-focus');
     });
+    $('.nav-search-delete').on('click', function(event) {
+        event.preventDefault();
+        $('.nav-search').removeClass('nav-search-open');
+        $('.nav-search-panel').slideUp('100');
+        $('.nav-search-input-text').val('').focus();
+    });
 
     //------------------------------------------------------------------------//
 
