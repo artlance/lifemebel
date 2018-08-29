@@ -319,6 +319,18 @@
     .order-product-option {
         padding-left: 20px;
     }
+    .order-delivery-type-item {
+        padding-left: 17px;
+    }
+    .order-comment {
+        margin: 0 -10px;
+    }
+    .order-comment-col,
+    .order-comment-col-x2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px;
+    }
 }
 @media (max-width: 1179px) {
     .product-color {

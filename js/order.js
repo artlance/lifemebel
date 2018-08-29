@@ -66,4 +66,61 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //order phone mask
+    $('.order-phone-mask').mask('+7 (999) 999-99-99');
+
+    //------------------------------------------------------------------------//
+
+    //order map
+    $('.order-delivery-map-toggle').on('click', function(event) {
+        event.preventDefault();
+        $(this).parents('.order-delivery-map').addClass('open');
+    });
+
+    $('.order-delivery-map-hide').on('click', function(event) {
+        event.preventDefault();
+        $(this).parents('.order-delivery-map').removeClass('open');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //datepicker
+    $.datepicker.regional['ru'] = {
+        closeText: 'Закрыть',
+        prevText: 'Предыдущий',
+        nextText: 'Следующий',
+        currentText: 'Сегодня',
+        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+        'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+        'Июл','Авг','Сен','Окт','Ноя','Дек'],
+        dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+        dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        weekHeader: 'Не',
+        dateFormat: 'dd.mm.yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
+    $('.datepicker').datepicker({
+        showOtherMonths: true,
+        selectOtherMonths: true,
+        minDate: 0,
+        maxDate: +60
+    });
+
+    //------------------------------------------------------------------------//
+
+    //order comment
+    $('.order-comment-options li a').on('click', function(event) {
+        event.preventDefault();
+        var thisComment = $(this).text();
+        $('.order-comment-textarea').focus().val(thisComment);
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

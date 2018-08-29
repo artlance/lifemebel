@@ -673,15 +673,14 @@ a.order-product-change-more-button {
     }
 }
 .order-buy-button {
+    margin-bottom: 7px;
     .button {
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
     }
 }
-.order-buy-begin {
-    margin-bottom: 7px;
-}
+.order-buy-begin {}
 .order-buy-confirm {
     padding-top: 13px;
     font-size: 11px;
@@ -702,5 +701,355 @@ a.order-product-change-more-button {
         font-weight: 500;
         color: $b;
         letter-spacing: -0.17px;
+    }
+}
+.order-data {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    padding-top: 12px;
+    .input-wrapper {
+        & > label {
+            padding-bottom: 9px;
+        }
+    }
+}
+.order-data-col {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 0 10px;
+}
+.order-delivery {
+    padding-bottom: 15px;
+}
+.order-delivery-city {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.order-delivery-city-title {
+    padding: 5px 0 6px;
+    font-weight: 500;
+    color: $b;
+    letter-spacing: -0.17px;
+}
+.order-delivery-city-select {
+    select {
+        cursor: pointer;
+        float: left;
+        width: 100%;
+        padding: 5px 24px 6px 4px;
+        font-size: 13px;
+        line-height: 1.385;
+        font-family: $ff;
+        font-weight: 500;
+        color: $p;
+        letter-spacing: -0.17px;
+        white-space: nowrap;
+        background: $tr url('../upload/select-green.svg') 100% 50% no-repeat;
+        background-size: 18px 8px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        border-radius: 0;
+        border: 0;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+}
+.order-delivery-type {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 10px;
+}
+.order-delivery-type-radio {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 10px 20px;
+    input {
+        display: none;
+        &:checked + label {
+            background-color: $w;
+            border-color: $p;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+        }
+        &:disabled + label {
+            cursor: default;
+        }
+    }
+    label {
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+.order-delivery-type-item {
+    display: block;
+    padding: 22px 17px 26px 27px;
+    background: $s;
+    border: 3px solid $s;
+    border-radius: 5px;
+    transition: background-color $d $f, border-color $d $f, box-shadow $d $f;
+    .filter-item-hint {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 3px;
+        margin-left: 2px;
+    }
+}
+.order-delivery-type-title {
+    display: block;
+    font-weight: 500;
+    color: $b;
+    margin-bottom: 12px;
+}
+.order-delivery-type-price {
+    display: block;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $b;
+    margin-bottom: 20px;
+}
+.order-delivery-type-date {
+    display: block;
+    color: $dgr;
+}
+.order-delivery-address {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 -10px;
+}
+.order-delivery-address-text {
+    flex-grow: 1;
+    max-width: calc(100% - 227px);
+    padding: 0 10px;
+    .input-wrapper {
+        & > label {
+            padding-bottom: 9px;
+        }
+    }
+}
+.order-delivery-address-button {
+    flex: 0 0 227px;
+    max-width: 227px;
+    padding: 0 10px 20px;
+    .button {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.order-delivery-map {
+    &.open {
+        .order-delivery-map-toggle {
+            display: none;
+        }
+        .order-delivery-map-block {
+            display: block;
+        }
+    }
+}
+.order-delivery-map-toggle,
+.order-delivery-map-hide {
+    display: inline-block;
+    vertical-align: top;
+    margin: -15px -10px 18px;
+    font-weight: 500;
+    padding: 10px;
+}
+.order-delivery-map-block {
+    display: none;
+    margin-bottom: 30px;
+}
+.order-delivery-map-title {
+    display: inline-block;
+    vertical-align: top;
+    color: $dgr;
+    margin: -4px 16px 29px 0;
+}
+#map {
+    height: 278px;
+}
+.order-delivery-date {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    .input-wrapper {
+        & > label {
+            padding-bottom: 9px;
+        }
+    }
+}
+.order-delivery-date-col {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 0 10px;
+}
+input.datepicker {
+    cursor: pointer;
+    padding-right: 34px;
+    background: $w url('../upload/datepicker.svg') 100% 50% no-repeat;
+    background-size: 28px 17px;
+}
+.ui-datepicker {
+    display: none;
+    z-index: 1000 !important;
+    width: 327px;
+    padding: 20px;
+    background: $w;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.ui-datepicker-header {
+    position: relative;
+    margin-bottom: 12px;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    line-height: 0;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -10px;
+        margin-left: -6px;
+        width: 12px;
+        height: 20px;
+        background: $tr url('../upload/right-small.svg') 0 0 no-repeat;
+        background-size: 100% 100%;
+        transition: opacity $d $f;
+    }
+    &.ui-state-disabled {
+        cursor: default;
+        &:after {
+            opacity: 0.3;
+        }
+    }
+}
+.ui-datepicker-prev {
+    right: auto;
+    left: 0;
+    &:after {
+        transform: rotate(-180deg);
+    }
+}
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+    display: none;
+}
+.ui-datepicker-title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 38px;
+    font-weight: 500;
+    color: $b;
+    padding-bottom: 2px;
+}
+.ui-datepicker-calendar {
+    width: 100%;
+    table-layout: fixed;
+}
+.ui-datepicker-calendar th {
+    text-align: center;
+    font-weight: bold;
+    color: $dgr;
+    padding: 5px 3px 7px;
+    span {
+        cursor: default;
+    }
+}
+.ui-datepicker-calendar td {
+    text-align: center;
+    padding: 3px;
+    font-size: 15px;
+    line-height: 35px;
+    span {
+        color: #D4D4D4;
+        cursor: default;
+    }
+    &.ui-datepicker-other-month {
+        a {
+            color: $text;
+        }
+    }
+    a {
+        display: block;
+        font-weight: 500;
+        color: $b;
+        text-decoration: none;
+        height: 35px;
+        width: 35px;
+        margin: 0 auto;
+        &:hover {
+            color: $p;
+        }
+        &.ui-state-active {
+            color: $w;
+            background: $p;
+            border-radius: 3px;
+            cursor: default;
+        }
+    }
+}
+.order-payment {
+    padding: 21px 0 20px;
+}
+.order-payment-note {
+    display: block;
+    font-size: 11px;
+    line-height: 1.37;
+    color: $text;
+}
+.order-comment {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding-bottom: 5px;
+    .input-wrapper {
+        margin-bottom: 0;
+    }
+}
+.order-comment-col {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 0 15px;
+}
+.order-comment-col-x2 {
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+    padding: 0 15px;
+}
+textarea.order-comment-textarea {
+    height: 146px;
+}
+.order-comment-options {
+    display: block;
+    margin-top: -5px;
+    li {
+        color: $b;
+        &:first-child {
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+        a {
+            display: block;
+            padding: 3px 0 4px;
+        }
     }
 }
