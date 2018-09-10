@@ -89,4 +89,12 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //search results categories
+    $('.search-results-categories-more-button').on('click', function(event) {
+        event.preventDefault();
+        $(this).parents('.search-results-categories').toggleClass('open');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

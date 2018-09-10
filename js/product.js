@@ -462,4 +462,12 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //product material
+    $('.product-material-more-button').on('click', function(event) {
+        event.preventDefault();
+        $(this).parents('.product-material-content').addClass('open');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
