@@ -263,6 +263,9 @@
         margin-bottom: 27px;
     }
 }
+.product-discounted-wrapper {
+    margin-bottom: 73px;
+}
 .product-discounted-item {
     display: table;
     width: 100%;
@@ -319,5 +322,13 @@
     strong {
         font-weight: 500;
         line-height: normal;
+    }
+}
+.product-discounted-more {
+    text-align: center;
+    padding-top: 10px;
+    .button {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }

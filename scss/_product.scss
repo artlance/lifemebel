@@ -4,6 +4,19 @@
 .product-gallery {
     display: flex;
     align-items: flex-start;
+    &-single {
+        .product-gallery-content {
+            max-width: 100%;
+        }
+    }
+}
+.product-gallery-single-img {
+    a {
+        display: block;
+    }
+    img {
+        margin: 0 auto;
+    }
 }
 .product-gallery-thumbs {
     flex: 0 0 104px;
@@ -375,6 +388,13 @@
             color: $text;
         }
     }
+}
+.product-choose-analog {
+    display: block;
+    padding: 8px 0;
+    font-weight: 500;
+    letter-spacing: -0.24px;
+    text-decoration: underline;
 }
 .product-subtitle {
     font-size: 15px;

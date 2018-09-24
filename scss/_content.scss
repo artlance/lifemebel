@@ -125,6 +125,14 @@
         font-size: 30px;
         line-height: 1.2;
         color: $b;
+        strong {
+            font-weight: 500;
+        }
+    }
+    .filter-item-hint {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 12px;
     }
 }
 .box {

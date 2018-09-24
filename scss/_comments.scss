@@ -32,6 +32,13 @@
     background: $s;
     margin-bottom: 93px;
     padding: 64px 0 70px;
+    &-white {
+        padding: 0;
+        background: $w;
+        .product-comment-answer {
+            background: $s;
+        }
+    }
 }
 .product-comments-list {}
 .product-comment {

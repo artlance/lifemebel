@@ -209,6 +209,14 @@
             display: block;
         }
     }
+    &.large {
+        .filter-item-hint-question,
+        .filter-item-hint-warning {
+            width: 18px;
+            height: 18px;
+            background-size: 18px 18px;
+        }
+    }
 }
 .filter-item-hint-question,
 .filter-item-hint-warning {

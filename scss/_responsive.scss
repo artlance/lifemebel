@@ -358,6 +358,25 @@
     .search-results-categories-hidden {
         padding-right: 20px;
     }
+    .product-additional-content {
+        padding: 0 10px;
+    }
+    .product-additional-info {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .product-additional-availability {
+        span {
+            font-size: 10px;
+            line-height: 18px;
+        }
+    }
+    .product-additional-button {
+        .button {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
 }
 @media (max-width: 1179px) {
     .product-color {
