@@ -377,10 +377,39 @@
             line-height: 18px;
         }
     }
+    .contact-map-company {
+        top: 10px;
+        right: 20px;
+        width: 400px;
+    }
+    .contact-map-company-content {
+        max-height: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .wholesale-customers {
+        .category-caption {
+            padding-bottom: 20px;
+        }
+        .category-title {
+            font-size: 18px;
+            line-height: 1.2223;
+        }
+    }
+    .category-info {
+        min-height: 54px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
 }
 @media (max-width: 1179px) {
     .product-color {
         min-height: 170px;
+    }
+    .wholesale-customers {
+        .category-caption {
+            padding: 0 0 10px;
+        }
     }
 }
 @media (max-height: 1079px), (max-width: 1359px) {

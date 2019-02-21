@@ -32,6 +32,10 @@
 }
 .category-img {
     transition: transform $d*2 $f;
+    a {
+        display: block;
+        position: relative;
+    }
     img {
         width: 100%;
     }
@@ -75,6 +79,46 @@
             color: $text;
             &:hover {
                 color: $t;
+            }
+        }
+    }
+}
+.category-info {
+    padding: 0 10px;
+    min-height: 60px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: $dgr;
+}
+.wholesale-customers {
+    .breadcrumbs-push {
+        height: 73px;
+    }
+    .global-title {
+        padding-top: 8px;
+        margin-bottom: 40px;
+    }
+    .category-caption {
+        padding-bottom: 30px;
+    }
+    .category {
+        &-gray {
+            &:before {
+                display: none;
+            }
+            .category-img {
+                a {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.04);
+                    }
+                }
             }
         }
     }

@@ -38,6 +38,13 @@ $(document).ready(function(){
     //drop
     activePop = null;
     dropClass = $('.drop');
+
+    $('.contact-info-callback').on('click', function(event) {
+        event.preventDefault();
+        $('.header-phone').addClass('active');
+        activePop = 1;
+    });
+
     function closeInactivePop() {
         dropClass.each(function (i) {
             if ($(this).hasClass('active') && i!=activePop) {
@@ -59,6 +66,7 @@ $(document).ready(function(){
         activePop = null;
         closeInactivePop();
     });
+
     var sliderJsArrowsNavInit = false;
     $('.drop-toggle').on('click', function(event) {
         event.preventDefault();

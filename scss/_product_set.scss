@@ -133,6 +133,12 @@
         height: 2px;
         background: $t;
         transform: translate3d(-50%, -50%, 0);
+        transition: background-color $d $f;
+    }
+    &:hover {
+        &:before {
+            background-color: $b;
+        }
     }
 }
 .product-number-plus {
@@ -147,6 +153,12 @@
         height: 2px;
         background: $t;
         transform: translate3d(-50%, -50%, 0) rotate(90deg);
+        transition: background-color $d $f;
+    }
+    &:hover {
+        &:after {
+            background-color: $b;
+        }
     }
 }
 .product-set-item-product-price {

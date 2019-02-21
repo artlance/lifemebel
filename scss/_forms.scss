@@ -11,6 +11,7 @@
     color: $t !important;
     border-color: $s !important;
     cursor: default !important;
+    pointer-events: none;
 }
 .input-wrapper {
     margin-bottom: 20px;
@@ -56,6 +57,7 @@
         select.select {
             color: $error;
             border-color: rgba(243, 0, 0, 0.5);
+            background-image: url('../upload/select-error.svg');
         }
     }
 }
@@ -132,6 +134,9 @@ select.select {
     &.success {
         color: $b !important;
     }
+    &.error {
+        background-image: url('../upload/select-error.svg');
+    }
 }
 select.select::-ms-expand {
     display: none;
@@ -149,9 +154,24 @@ select.select::-ms-expand {
             &:after {
                 opacity: 1;
             }
+            &:hover {
+                &:before {
+                    border-color: #569F29;
+                    background-color: #569F29;
+                }
+            }
         }
         &:disabled + label {
             cursor: default;
+            &:before {
+                border-color: rgba(161, 161, 161, 0.3);
+            }
+        }
+        &:checked:disabled + label {
+            &:before {
+                border-color: $tr;
+                background-color: rgba(131, 193, 80, 0.3);
+            }
         }
     }
     label {
@@ -192,6 +212,19 @@ select.select::-ms-expand {
             background-size: 100% 100%;
             transition: opacity $d $f;
         }
+        &:hover {
+            &:before {
+                border-color: $dgr;
+            }
+        }
+    }
+    &.error {
+        label {
+            color: $error !important;
+            &:before {
+                border-color: $error;
+            }
+        }
     }
 }
 .radio {
@@ -230,8 +263,39 @@ button.button {
     border-radius: 3px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
     transition: color $d $f, background-color $d $f, border-color $d $f, box-shadow $d $f;
+    position: relative;
+    &:after {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin: -12px 0 0 -12px;
+        background: $tr url('../upload/loader-green.svg') 50% 50% no-repeat;
+        background-size: 100% 100%;
+    }
     &:hover {
         background-color: rgba(255, 255, 255, 0.9);
+    }
+    &:active {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    &:disabled,
+    &.disabled {
+        cursor: default;
+        color: $t !important;
+        box-shadow: inset 0 0 0 2px #E1E1E1;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    &.loading {
+        color: $tr !important;
+        background-color: $w;
+        &:after {
+            display: block;
+            animation: rotation 0.8s infinite linear;
+        }
     }
     &.big {
         padding-top: 12px;
@@ -241,10 +305,29 @@ button.button {
         letter-spacing: -0.12px;
     }
     &.secondary {
-        background: $s;
+        color: $b;
+        background: #F5F5F5;
         box-shadow: none;
         &:hover {
-            background-color: lighten($s, 2%);
+            color: $text;
+            background-color: #F5F5F5;
+        }
+        &:active {
+            color: $b;
+            background-color: #E9EBED;
+        }
+        &:disabled,
+        &.disabled {
+            cursor: default;
+            color: #E1E1E1 !important;
+            background-color: #F5F5F5;
+        }
+        &.loading {
+            color: $tr !important;
+            background-color: #F5F5F5;
+            &:after {
+                background-image: url('../upload/loader.svg');
+            }
         }
     }
     &.primary {
@@ -252,7 +335,23 @@ button.button {
         background: $p;
         box-shadow: none;
         &:hover {
-            background-color: lighten($p, 5%);
+            background-color: #9cd365;
+        }
+        &:active {
+            background-color: #569F29;
+        }
+        &:disabled,
+        &.disabled {
+            cursor: default;
+            color: $w !important;
+            background-color: #D9ECCA;
+        }
+        &.loading {
+            color: $tr !important;
+            background-color: #569F29;
+            &:after {
+                background-image: url('../upload/loader-white.svg');
+            }
         }
     }
     &.orange {
@@ -260,11 +359,32 @@ button.button {
         background: #F3B800;
         box-shadow: none;
         &:hover {
-            background-color: lighten(#F3B800, 5%);
+            background-color: #F7CC00;
+        }
+        &:active {
+            background-color: #E78400;
+        }
+        &:disabled,
+        &.disabled {
+            cursor: default;
+            color: $w !important;
+            background-color: #f9db7f;
+        }
+        &.loading {
+            color: $tr !important;
+            background-color: #E78400;
+            &:after {
+                background-image: url('../upload/loader-white.svg');
+            }
         }
     }
-    &.disabled {
-        box-shadow: inset 0 0 0 2px #E1E1E1;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
 .jspContainer {

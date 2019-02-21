@@ -39,6 +39,11 @@
     border: 4px solid $p;
     background: $w;
     border-radius: 50%;
+    transition: box-shadow $d $f;
+    &:hover,
+    &:active {
+        box-shadow: 0 0 0 8px rgba(131, 193, 80, 0.3);
+    }
 }
 .filter-range-handle-max {
     margin-left: 1px;

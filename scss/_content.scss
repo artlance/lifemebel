@@ -2,7 +2,44 @@
 .spanning {
     clear: both;
 }
-.content {}
+.content-wrapper {
+    margin-bottom: 30px;
+}
+.content {
+    flex-grow: 1;
+    max-width: calc(100% - 255px);
+}
+.sidebar {
+    flex: 0 0 255px;
+    max-width: 255px;
+    padding-right: 35px;
+}
+.sidebar-menu {
+    display: block;
+    padding: 23px 0 17px;
+    border-top: 1px solid #F0F0F0;
+    &:first-child {
+        padding-top: 6px;
+        border-top: 0;
+    }
+    li {
+        margin-bottom: 5px;
+        a {
+            display: block;
+            padding: 5px 10px 7px;
+            color: $b;
+            &:hover {
+                color: $text;
+            }
+        }
+        &.active {
+            a {
+                background: $s;
+                color: $b;
+            }
+        }
+    }
+}
 .subscribe {
     margin-bottom: 65px;
     padding: 52px 0 51px;
@@ -117,6 +154,7 @@
 .global-title {
     text-align: center;
     margin-bottom: 27px;
+    h1,
     h2,
     h3,
     h4 {
@@ -156,12 +194,19 @@
         span {
             display: block;
             padding-bottom: 3px;
+            color: $dgr;
             border-bottom: 2px solid $tr;
             transition: color $d $f, border-color $d $f;
         }
         &:hover {
             span {
-                color: $t;
+                color: $b;
+            }
+        }
+        &:active {
+            span {
+                color: $b;
+                border-bottom-color: #EBEBEB;
             }
         }
         &.active {
