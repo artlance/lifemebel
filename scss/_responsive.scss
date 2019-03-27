@@ -401,6 +401,19 @@
         font-size: 12px;
         line-height: 1.5;
     }
+    .search-results-main-content {
+        padding: 0 40px;
+    }
+    .search-results-main-category {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    .promo-content {
+        padding: 30px 20px 0;
+    }
+    .promo-title {
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 1179px) {
     .product-color {

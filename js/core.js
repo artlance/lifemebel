@@ -138,11 +138,15 @@ $(document).ready(function(){
 
     $(document).keydown(function(e) {
         if (e.keyCode == 27) {
-            activePop = null;
-            closeInactivePop();
             dropExtraClass.hide();
+            $('.drop').each(function(index, el) {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                }
+            });
         }
     });
+
 
     //------------------------------------------------------------------------//
 
