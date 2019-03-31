@@ -197,11 +197,13 @@
 }
 .product-title {
     margin: -6px 0 1px;
+    font-size: 30px;
+    line-height: 1.2;
+    color: $b;
+    letter-spacing: -0.5px;
     h1 {
         font-size: 30px;
         line-height: 1.2;
-        color: $b;
-        letter-spacing: -0.5px;
     }
 }
 .product-articul {
@@ -219,6 +221,10 @@
     margin-bottom: 20px;
     background: $s;
     position: relative;
+    .set-composition {
+        padding-top: 29px;
+        margin-bottom: 11px;
+    }
 }
 .product-price-info {
     display: flex;
@@ -639,4 +645,32 @@
 }
 .product-parameters-more-hide {
     display: none;
+}
+.product-company {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 17px -60px;
+}
+.product-company-logo {
+    a {
+        display: block;
+    }
+}
+.product-company-logo,
+.product-company-country {
+    padding: 20px 0 20px 60px;
+}
+.product-company-country-in {
+    display: flex;
+    align-items: center;
+}
+.product-company-country-flag {
+    padding-right: 16px;
+}
+.product-company-country-title {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $b;
 }

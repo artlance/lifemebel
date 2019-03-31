@@ -414,6 +414,77 @@
     .promo-title {
         margin-bottom: 20px;
     }
+    .set-gallery-product {
+        width: 150px;
+        padding: 5px 5px 10px;
+    }
+    .set-gallery-product-img {
+        margin-bottom: 5px;
+        a {
+            max-width: 90px;
+            margin: 0 auto;
+        }
+    }
+    .set-gallery-product-title {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+    .set-gallery-product-dimensions {
+        margin: 0 -2px 8px;
+        font-size: 10px;
+    }
+    .set-gallery-product-width,
+    .set-gallery-product-length,
+    .set-gallery-product-height {
+        padding: 2px;
+        span {
+            padding-left: 12px;
+            &:before {
+                margin-top: -3px;
+                width: 10px;
+                height: 6px;
+            }
+        }
+    }
+    .set-gallery-product-price {
+        font-size: 13px;
+    }
+    .set-custom-products-wrapper {
+        .product-set-item-product {
+            flex: 0 0 25%;
+            max-width: 25%;
+            &:nth-child(5n + 1) {
+                .product-set-item-product-img {
+                    border-left-width: 0;
+                }
+            }
+            &:nth-child(4n + 1) {
+                .product-set-item-product-img {
+                    border-left-width: 1px;
+                }
+            }
+        }
+    }
+    .set-alternative {
+        .col-11 {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        .col-5 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+    }
+    .set-alternative-products {
+        margin-left: 0;
+        padding-right: 20px;
+    }
+    .set-alternative-product {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 @media (max-width: 1179px) {
     .product-color {
@@ -444,5 +515,39 @@
     }
     .modal-gallery-wrapper {
         max-width: calc(100% - 104px);
+    }
+    .modal-product {
+        padding: 20px;
+        .modal-gallery-thumbs {
+            flex: 0 0 84px;
+            max-width: 84px;
+        }
+        .modal-gallery-thumb {
+            height: 84px;
+            .three-d-icon {
+                height: 70px;
+                padding-top: 40px;
+            }
+        }
+        .product-gallery-scroll-panel {
+            right: -25px;
+        }
+        .modal-gallery-wrapper {
+            max-width: calc(100% - 84px);
+            padding: 0 20px 0 45px;
+        }
+    }
+    .modal-product-gallery {
+        max-width: calc(100% - 370px);
+    }
+    .modal-product-gallery-single {
+        padding-right: 20px;
+    }
+    .modal-product-info {
+        flex: 0 0 370px;
+        max-width: 370px;
+        .product-color {
+            min-height: 154px;
+        }
     }
 }
