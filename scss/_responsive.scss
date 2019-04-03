@@ -288,6 +288,9 @@
             padding-right: 20px;
         }
     }
+    .order-completion-map {
+        margin-left: -20px;
+    }
     .order-product,
     .order-recommended-product {
         padding-left: 10px;
@@ -309,6 +312,22 @@
         flex: 0 0 200px;
         max-width: 200px;
         padding-left: 20px;
+    }
+    .order-recommended-product-extended {
+        padding-left: 0;
+        .order-recommended-product-img {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .order-recommended-product-button {
+            flex: 0 0 180px;
+            max-width: 180px;
+            padding-left: 20px;
+        }
+        .order-recommended-product-price {
+            flex: 0 0 85px;
+            max-width: 85px;
+        }
     }
     .order-product-set-list {
         padding-left: 90px;
@@ -500,6 +519,10 @@
     .modal {
         width: 1000px;
     }
+    .modal-close {
+        top: 0;
+        right: 0;
+    }
     .modal-gallery-thumbs {
         flex: 0 0 104px;
         max-width: 104px;
@@ -547,7 +570,7 @@
         flex: 0 0 370px;
         max-width: 370px;
         .product-color {
-            min-height: 154px;
+            min-height: 155px;
         }
     }
 }
