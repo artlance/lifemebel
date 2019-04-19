@@ -275,9 +275,6 @@
     .product-discounted-item-reason {
         width: 65%;
     }
-    .product-color {
-        min-height: 185px;
-    }
     .order-price-block {
         padding-left: 20px;
         padding-right: 20px;
@@ -506,9 +503,6 @@
     }
 }
 @media (max-width: 1179px) {
-    .product-color {
-        min-height: 170px;
-    }
     .wholesale-customers {
         .category-caption {
             padding: 0 0 10px;
@@ -569,8 +563,5 @@
     .modal-product-info {
         flex: 0 0 370px;
         max-width: 370px;
-        .product-color {
-            min-height: 155px;
-        }
     }
 }

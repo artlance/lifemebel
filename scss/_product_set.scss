@@ -310,6 +310,7 @@
     background: #FFF1BD;
 }
 .product-discounted-item-price-new {
+    display: block;
     font-size: 15px;
     line-height: 1.2;
     font-weight: 500;
@@ -317,6 +318,7 @@
     margin-bottom: 5px;
 }
 .product-discounted-item-saving {
+    display: block;
     color: $dgr;
     strong {
         white-space: nowrap;

@@ -28,7 +28,7 @@
     &:hover {
         .product-thumb-img {
             img {
-                transform: translate3d(0, 0, 0) scale(1.1);
+                transform: translate3d(0, -50%, 0) scale(1.1);
             }
         }
     }
@@ -37,9 +37,16 @@
     display: block;
     margin-bottom: 21px;
     overflow: hidden;
+    position: relative;
+    height: 0;
+    padding-top: 100%;
     img {
+        position: absolute;
+        left: 0;
         width: 100%;
+        top: 50%;
         transition: transform $d*2 $f;
+        transform: translate3d(0, -50%, 0);
     }
 }
 .product-thumb-caption {

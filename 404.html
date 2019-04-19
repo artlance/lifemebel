@@ -1060,469 +1060,591 @@
             <!-- /.container -->
         </nav>
         <section class="spanning">
-            <div class="container">
-                <div class="breadcrumbs-wrapper">
-                    <div class="row">
-                        <div class="col-16">
-                            <ul class="breadcrumbs clearfix">
-                                <li><a href="#">Главная</a></li>
-                                <li><strong>Контакты</strong></li>
-                            </ul>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.breadcrumbs-wrapper -->
-                <div class="content-wrapper">
-                    <div class="row">
-                        <aside class="sidebar">
-                            <ul class="sidebar-menu">
-                                <li class="active"><a href="#">Контакты</a></li>
-                                <li><a href="#">Доставка</a></li>
-                                <li><a href="#">Гарантия и возврат</a></li>
-                                <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">Новости</a></li>
-                                <li><a href="#">Акции</a></li>
-                                <li><a href="#">Часто задаваемые вопросы</a></li>
-                            </ul>
-                            <ul class="sidebar-menu">
-                                <li><a href="#">Поставщикам</a></li>
-                                <li><a href="#">Оптовикам</a></li>
-                                <li><a href="#">Работа у нас</a></li>
-                            </ul>
-                        </aside>
-                        <!-- /.sidebar -->
-                        <div class="content">
-                            <div class="contact-caption">
-                                <h1>Контакты&nbsp;в</h1>
-                                <div class="contact-caption-select clearfix">
-                                    <select>
-                                        <option>Петропавловске-Камчатском</option>
-                                        <option>Санкт-Петербурге</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- /.contact-caption -->
-                            <div class="contact-info">
-                                <div class="contact-info-block">
-                                    <p>Отдел продаж</p>
-                                    <div class="contact-info-phone">
-                                        <p><a href="tel:84955405517" class="nowrap">8 (495) 540-55-17</a></p>
-                                        <p><a href="tel:88005557328" class="nowrap">8 (800) 555-73-28</a></p>
-                                    </div>
-                                    <p>9:00 - 21:00 без выходных</p>
-                                    <p><a href="#" class="contact-info-callback">Перезвоните мне</a></p>
-                                </div>
-                                <!-- /.contact-info-block -->
-                                <div class="contact-info-block">
-                                    <p>По вопросам заказа</p>
-                                    <div class="contact-info-mail">
-                                        <p><a href="mailto:zakaz@lifemebel.ru">zakaz@lifemebel.ru</a></p>
-                                    </div>
-                                </div>
-                                <!-- /.contact-info-block -->
-                                <div class="contact-info-block">
-                                    <ul class="contact-info-options">
-                                        <li><a href="#" class="contact-info-comment">Оставить отзыв о магазине</a></li>
-                                        <li><a href="#" class="contact-info-report">Пожаловаться директору</a></li>
-                                    </ul>
-                                </div>
-                                <!-- /.contact-info-block -->
-                            </div>
-                            <!-- /.contact-info -->
-                            <div class="contact-map-block">
-                                <div id="contact-map"></div>
-                                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-                                <script>
-                                    var ballContentCustom = '<div class="contact-map-company-logo"><a href="#"><img src="upload/images/delivery-company.png" width="159" height="25" alt=""></a></div><p>У нас пока нет собственной службы доставки в вашем городе. Но мы доставим ваш заказ через нашего партнёра "Hermes". Заказ вы можете получить на пункте выдачи.</p><div class="contact-map-company-worktime"><div class="contact-map-company-worktime-title">Время работы</div><table class="contact-map-company-worktime-table"><thead><tr><th><span>Пн</span></th><th><span>Вт</span></th><th><span>Ср</span></th><th><span>Чт</span></th><th><span>Пт</span></th><th><span>Сб</span></th><th><span>Вс</span></th></tr></thead><tbody><tr><td>9:00</td><td>9:00</td><td>9:00</td><td>9:00</td><td>9:00</td><td>10:00</td><td rowspan="2">&ndash;</td></tr><tr><td>19:00</td><td>19:00</td><td>19:00</td><td>19:00</td><td>19:00</td><td>16:00</td></tr></tbody></table></div><div class="contact-map-delivery-info"><div class="contact-map-delivery-info-block"><div class="contact-map-delivery-info-number">239</div><div class="contact-map-delivery-info-text">заказав было доставлено нами в Петропавловск-Камчатский</div></div><div class="contact-map-delivery-info-block"><div class="contact-map-delivery-info-number">200</div><div class="contact-map-delivery-info-text">человек из Петропавловска-Камчатского посещали наш сайт за последний месяц</div></div></div><a href="#" class="contact-map-delivery-terms">Подробные условия доставки</a>';
-
-                                    ymaps.modules.define('Panel', [
-                                        'util.augment',
-                                        'collection.Item'
-                                    ], function (provide, augment, item) {
-
-                                        var Panel = function (options) {
-                                            Panel.superclass.constructor.call(this, options);
-                                        };
-
-                                        augment(Panel, item, {
-                                            onAddToMap: function (map) {
-                                                Panel.superclass.onAddToMap.call(this, map);
-                                                this.getParent().getChildElement(this).then(this._onGetChildElement, this);
-                                                map.margin.addArea({
-                                                    top: 0,
-                                                    right: 0,
-                                                    width: '460px',
-                                                    height: '100%'
-                                                })
-                                            },
-
-                                            onRemoveFromMap: function (oldMap) {
-                                                if (this._$control) {
-                                                    this._$control.remove();
-                                                }
-                                                Panel.superclass.onRemoveFromMap.call(this, oldMap);
-                                            },
-
-                                            _onGetChildElement: function (parentDomContainer) {
-                                                this._$control = $('<div class="contact-map-company"><div class="contact-map-company-content">'+ballContentCustom+'</div></div>').appendTo(parentDomContainer);
-                                                this._$content = $('.contact-map-company-content');
-
-                                                $('.closeButton').on('click', this._onClose);
-                                            },
-                                            _onClose: function () {
-                                                $('.contact-map-company').css('display', 'none');
-                                            },
-                                            setContent: function (text) {
-                                                this._$control.css('display', 'flex');
-                                                this._$content.html(text);
-                                            }
-                                        });
-
-                                        provide(Panel);
-
-                                    });
-
-                                    ymaps.ready(['Panel']).then(function () {
-                                        var map = new ymaps.Map('contact-map', {
-                                            center: [55.751131, 37.637388],
-                                            zoom: 17,
-                                            controls: []
-                                        });
-
-                                        var panel = new ymaps.Panel();
-                                        map.controls.add(panel, {
-                                            float: 'right'
-                                        });
-                                        var collection = new ymaps.GeoObjectCollection(null, {
-                                            hasBalloon: false,
-                                            iconLayout: 'default#image',
-                                            iconImageHref: 'upload/pin-logo.png',
-                                            iconImageSize: [70, 66],
-                                            iconImageOffset: [-24, -66]
-                                        });
-
-                                        collection
-                                            .add(new ymaps.Placemark([55.751131, 37.637388], {
-                                                balloonContent: ballContentCustom
-                                            }));
-                                        map.geoObjects.add(collection);
-                                        collection.events.add('click', function (e) {
-                                            var target = e.get('target');
-                                            panel.setContent(target.properties.get('balloonContent'));
-                                            map.panTo(target.geometry.getCoordinates(), {useMapMargin: true});
-                                        });
-                                        map.panTo([55.751131, 37.637388], {useMapMargin: true});
-
-                                    });
-                                </script>
-                            </div>
-                            <!-- /.contact-map-block -->
-                        </div>
-                        <!-- /.content -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.content-wrapper -->
-            </div>
-            <!-- /.container -->
-            <div class="contact-detail">
+            <div class="not-found">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-16">
-                            <div class="contact-detail-wrapper">
-                                <div class="contact-detail-content">
-                                    <div class="contact-detail-block">
-                                        <div class="contact-detail-title">Оптовые закупки</div>
-                                        <p><a href="mailto:opt@lifemebel.ru">opt@lifemebel.ru</a></p>
-                                        <div class="contact-detail-title">Отдел рекламаций</div>
-                                        <p>
-                                            <a href="tel:88001436733" class="nowrap">8 (800) 143-67-33</a> <br>
-                                            <a href="mailto:brak@lifemebel.ru">brak@lifemebel.ru</a>
-                                        </p>
-                                        <a href="#" class="contact-detail-complaint">Открыть рекламацию</a>
-                                    </div>
-                                    <!-- /.contact-detail-block -->
-                                    <div class="contact-detail-block">
-                                        <div class="contact-detail-title">Для поставщиков</div>
-                                        <p><a href="mailto:zakupka@lifemebel.ru">zakupka@lifemebel.ru</a></p>
-                                        <div class="contact-detail-title">Отдел маркетинга</div>
-                                        <p><a href="mailto:pr@lifemebel.ru">pr@lifemebel.ru</a></p>
-                                        <div class="contact-detail-title">По всем вопросам</div>
-                                        <p><a href="mailto:lifemebel@yandex.ru">lifemebel@yandex.ru</a></p>
-                                    </div>
-                                    <!-- /.contact-detail-block -->
-                                    <div class="contact-detail-block">
-                                        <div class="contact-detail-title">Реквизиты</div>
-                                        <p>
-                                            ООО «Арбиэль» <br>
-                                            Юр. адрес: 111394, г.Москва, ул. Плеханова д.17 <br>
-                                            ИНН / КПП: 7720687284/772001001 <br>
-                                            ОГРН: 1107746447214 <br>
-                                            Расчетный счет: 40702810038120003749 <br>
-                                            Банк: Сбербанк России ОАО г.Москва <br>
-                                            Кор.счет: 30101810400000000225 <br>
-                                            БИК: 044525225
-                                        </p>
-                                    </div>
-                                    <!-- /.contact-detail-block -->
-                                </div>
-                                <!-- /.contact-detail-content -->
+                    <div class="breadcrumbs-wrapper">
+                        <div class="row">
+                            <div class="col-16">
+                                <ul class="breadcrumbs clearfix">
+                                    <li><a href="/" class="breadcrumbs-back">Вернуться на главную</a></li>
+                                </ul>
                             </div>
-                            <!-- /.contact-detail-wrapper -->
+                            <!-- /.col -->
                         </div>
-                        <!-- /.col -->
+                        <!-- /.row -->
                     </div>
-                    <!-- /.row -->
+                    <!-- /.breadcrumbs-wrapper -->
+                    <div class="content-wrapper">
+                        <div class="row">
+                            <div class="col-16">
+                                <div class="not-found-content">
+                                    <div class="global-title">
+                                        <h1>Cтраница не найдена</h1>
+                                    </div>
+                                    <div class="not-found-search">
+                                        <div class="not-found-search-title">Воспользуйтесь поиском на сайте</div>
+                                        <form action="search.php">
+                                            <div class="input-wrapper clearfix">
+                                                <input type="text" class="input-text" placeholder="Поиск">
+                                                <input type="submit" class="not-found-search-button" value="Поиск">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- /.not-found-search -->
+                                    <div class="not-found-img">
+                                        <img src="upload/images/not-found.jpg" srcset="upload/images/not-found@2x.jpg 2x" width="874" height="427" alt="">
+                                    </div>
+                                </div>
+                                <!-- /.not-found-content -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.content-wrapper -->
+                    <div class="global-title">
+                        <div class="row">
+                            <div class="col-16">
+                                <h2>Мы специально подобрали для вас товары</h2>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.global-title -->
+                    <div class="global-tab tab">
+                        <div class="row">
+                            <div class="col-16">
+                                <ul class="global-tabs tabs">
+                                    <li class="active"><span>Все</span></li>
+                                    <li><span>Столы</span></li>
+                                    <li><span>Кухня</span></li>
+                                    <li><span>Гостинная</span></li>
+                                    <li><span>Спальня</span></li>
+                                </ul>
+                                <!-- /.global-tabs -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="box visible">
+                            <div class="product-thumbs">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb1.jpg" srcset="upload/images/product_thumb1@2x.jpg 2x" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb2.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price">21 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb3.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол компьютерный <br>Бавария</span>
+                                                    <span class="product-thumb-price">8 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb4.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb5.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb6.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price product-thumb-price-sale">
+                                                        <span class="product-thumb-price-new">8 540 ₽</span>
+                                                        <span class="product-thumb-price-old">10 540 ₽</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.product-thumbs -->
+                        </div>
+                        <!-- /.box -->
+                        <div class="box">
+                            <div class="product-thumbs">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb1.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb2.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price">21 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb3.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол компьютерный <br>Бавария</span>
+                                                    <span class="product-thumb-price">8 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb4.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb5.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb6.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price product-thumb-price-sale">
+                                                        <span class="product-thumb-price-new">8 540 ₽</span>
+                                                        <span class="product-thumb-price-old">10 540 ₽</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.product-thumbs -->
+                        </div>
+                        <!-- /.box -->
+                        <div class="box">
+                            <div class="product-thumbs">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb1.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb2.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price">21 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb3.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол компьютерный <br>Бавария</span>
+                                                    <span class="product-thumb-price">8 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb4.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb5.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb6.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price product-thumb-price-sale">
+                                                        <span class="product-thumb-price-new">8 540 ₽</span>
+                                                        <span class="product-thumb-price-old">10 540 ₽</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.product-thumbs -->
+                        </div>
+                        <!-- /.box -->
+                        <div class="box">
+                            <div class="product-thumbs">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb1.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb2.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price">21 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb3.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол компьютерный <br>Бавария</span>
+                                                    <span class="product-thumb-price">8 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb4.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb5.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb6.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price product-thumb-price-sale">
+                                                        <span class="product-thumb-price-new">8 540 ₽</span>
+                                                        <span class="product-thumb-price-old">10 540 ₽</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.product-thumbs -->
+                        </div>
+                        <!-- /.box -->
+                        <div class="box">
+                            <div class="product-thumbs">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb1.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb2.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price">21 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb3.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол компьютерный <br>Бавария</span>
+                                                    <span class="product-thumb-price">8 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb4.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb5.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
+                                                    <span class="product-thumb-price">12 540 ₽</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col">
+                                        <div class="product-thumb">
+                                            <a href="#" class="product-thumb-link">
+                                                <span class="product-thumb-img">
+                                                    <img src="upload/images/product_thumb6.jpg" width="227" height="227" alt="">
+                                                </span>
+                                                <span class="product-thumb-caption">
+                                                    <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
+                                                    <span class="product-thumb-price product-thumb-price-sale">
+                                                        <span class="product-thumb-price-new">8 540 ₽</span>
+                                                        <span class="product-thumb-price-old">10 540 ₽</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.product-thumb -->
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.product-thumbs -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.global-tab -->
                 </div>
                 <!-- /.container -->
             </div>
-            <!-- /.contact-detail -->
-            <div class="container">
-                <div class="global-title">
-                    <div class="row">
-                        <div class="col-16">
-                            <h3>Наши преимущества</h3>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.global-title -->
-                <div class="services">
-                    <div class="row">
-                        <div class="col">
-                            <div class="services-item">
-                                <div class="services-item-img"><img src="upload/service1.svg" alt=""></div>
-                                <div class="services-item-title">Ассортимент</div>
-                                <div class="services-item-info">Более 40 000 товаров <br>и 500 брендов</div>
-                            </div>
-                            <!-- /.services-item -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col">
-                            <div class="services-item">
-                                <div class="services-item-img"><img src="upload/service2.svg" alt=""></div>
-                                <div class="services-item-title">Доставка по России</div>
-                                <div class="services-item-info">Более 40 городов</div>
-                            </div>
-                            <!-- /.services-item -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col">
-                            <div class="services-item">
-                                <div class="services-item-img"><img src="upload/service3.svg" alt=""></div>
-                                <div class="services-item-title">Опыт и надёжность</div>
-                                <div class="services-item-info">Более 8 лет успешной работы</div>
-                            </div>
-                            <!-- /.services-item -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col">
-                            <div class="services-item">
-                                <div class="services-item-img"><img src="upload/service5.svg" alt=""></div>
-                                <div class="services-item-title">Выбор покупателей</div>
-                                <div class="services-item-info">Более 145 тысяч довольных клиентов</div>
-                            </div>
-                            <!-- /.services-item -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col">
-                            <div class="services-item">
-                                <div class="services-item-img"><img src="upload/service6.svg" alt=""></div>
-                                <div class="services-item-title">Гарантия 12 месяцев</div>
-                                <div class="services-item-info">Возврат и обмен без проблем</div>
-                            </div>
-                            <!-- /.services-item -->
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.services -->
-                <div class="global-title">
-                    <div class="row">
-                        <div class="col-16">
-                            <a href="#" class="outside-slider-prev"></a>
-                            <h3>Вы недавно смотрели</h3>
-                            <a href="#" class="outside-slider-next"></a>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.global-title -->
-                <div class="recently-viewed">
-                    <div class="slider-js-outside-nav">
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb1.jpg" srcset="upload/images/product_thumb1@2x.jpg 2x" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
-                                        <span class="product-thumb-price">12 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb2.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
-                                        <span class="product-thumb-price">21 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb3.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол компьютерный <br>Бавария</span>
-                                        <span class="product-thumb-price">8 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb4.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
-                                        <span class="product-thumb-price">12 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb5.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
-                                        <span class="product-thumb-price">12 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb6.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
-                                        <span class="product-thumb-price">21 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb4.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
-                                        <span class="product-thumb-price">12 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb2.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол раскладной Cubo 120 черный</span>
-                                        <span class="product-thumb-price">21 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb3.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол компьютерный <br>Бавария</span>
-                                        <span class="product-thumb-price">8 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                        <div class="slide-js">
-                            <div class="product-thumb">
-                                <a href="#" class="product-thumb-link">
-                                    <span class="product-thumb-img"><img src="upload/images/product_thumb5.jpg" alt=""></span>
-                                    <span class="product-thumb-caption">
-                                        <span class="product-thumb-title">Стол-книжка СП-09 <br>дуб венге</span>
-                                        <span class="product-thumb-price">12 540 ₽</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /.product-thumb -->
-                        </div>
-                        <!-- /.slide-js -->
-                    </div>
-                    <!-- /.slider-js-outside-nav -->
-                </div>
-                <!-- /.recently-viewed -->
-            </div>
-            <!-- /.container -->
+            <!-- /.not-found -->
         </section>
         <!-- /.spanning -->
-        <section class="seo">
-            <div class="container">
-                <div class="seo-separator"></div>
-                <div class="row">
-                    <div class="col-7">
-                        <p>Двуспальная кровать – это главный предмет мебели в спальной комнате как для взрослых, так и детей. Здоровый сон и хорошее настроение утром напрямую зависят от качества выбранной модели. Широкий ассортимент мебели, выполненной из высококачественных материалов, вы можете найти в нашем интернет-магазине, где есть подробный каталог и цены. Обратите внимание! Мы сотрудничаем только с лучшими производителями мебели и представляем оригинальные коллекции по выгодным ценам.</p>
-                        <h5>Качество каркаса двуспальной кровати</h5>
-                        <p>Кровать двуспальная состоит из каркаса, матраса и рамы под него. Каркас должен быть достаточно прочным, чтобы выдерживать большие нагрузки.</p>
-                        <p>Популярны каркасы из:</p>
-                        <ul>
-                            <li>массива березы, сосны, дуба, бука, гевеи;</li>
-                            <li>материалов «под дерево»: ДСП, ЛДСП, МДФ с ПВХ;</li>
-                            <li>металлические кованые каркасы;</li>
-                        </ul>
-                        <p>Особенность первого материала заключается в его экологичности, высокой прочности и красоте. Традиционно и изысканно смотрятся в интерьере двуспальные кровати с металлическим основанием. К более бюджетным вариантам относят категорию различных материалов «под дерево», которые сочетают в себе практичность и современный дизайн.</p>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-7 offset-1">
-                        <h5>Двуспальные кровати: ортопедическое основание и обивка</h5>
-                        <p>Материал обивки кровати зависит от модели. На сайте вы найдете варианты с обивкой из кожи, экокожи, велюра, бархата или другой ткани. В зависимости от выбранного интерьерного решения стоит выбирать и дизайн будущего ложе. <br>При выборе кровати рекомендуем особое внимание уделить матрасу. Он должен быть комфортным по уровню жесткости, идеально подходить к габаритам каркаса и главное – давать позвоночнику правильное положение. Если ортопедическое основание не идет в комплекте с кроватью, мы поможем вам с выбором!</p>
-                        <h5>Двуспальные кровати в ассортименте от ЛайфМебель!</h5>
-                        <p>В нашем магазине вы можете купить двухместные модели от лучших мебельных фабрик. Выполненная в стиле модерн и классическом дизайне, с декоративной отделкой или стильной обивкой, она может быть также с подъемным механизмом и без него. Мы поможем вам выбрать кровать и доставим заказ по Москве и МО или регионам России.</p>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </section>
-        <!-- /.seo -->
         <footer class="footer-global">
             <div class="container">
                 <div class="footer-info">

@@ -191,6 +191,7 @@
         display: inline-block;
         vertical-align: top;
         padding: 10px 18px;
+        a,
         span {
             display: block;
             padding-bottom: 3px;
@@ -199,11 +200,13 @@
             transition: color $d $f, border-color $d $f;
         }
         &:hover {
+            a,
             span {
                 color: $b;
             }
         }
         &:active {
+            a,
             span {
                 color: $b;
                 border-bottom-color: #EBEBEB;
@@ -212,6 +215,7 @@
         &.active {
             cursor: default;
             margin-top: -1px;
+            a,
             span {
                 font-weight: 500;
                 color: $b;
@@ -261,6 +265,19 @@
                 background-size: 100% 100%;
                 transform: rotate(-90deg);
             }
+            &.breadcrumbs-back {
+                padding-right: 15px;
+                font-weight: 500;
+                text-decoration: underline;
+                letter-spacing: -0.24px;
+                color: $l;
+                &:hover {
+                    color: $lh;
+                }
+                &:after {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -283,5 +300,139 @@
         transform: translate3d(-50%, -50%, 0);
         background: $tr url('../upload/search.svg') 50% 50% no-repeat;
         background-size: 100% 100%;
+    }
+}
+.content-narrow {
+    max-width: 850px;
+    padding-top: 8px;
+}
+.warranty {
+    padding-bottom: 52px;
+    & > p {
+        margin-bottom: 18px;
+        strong {
+            font-weight: 500;
+            color: $b;
+        }
+    }
+    & > ul {
+        display: block;
+        margin-bottom: 18px;
+        li {
+            color: $dgr;
+            padding-left: 18px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 7px;
+                left: 5px;
+                width: 3px;
+                height: 3px;
+                background: $dgr;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.warranty-caption {
+    display: flex;
+    align-items: center;
+    padding: 13px 0 17px;
+}
+.warranty-caption-icon {
+    flex: 0 0 140px;
+    max-width: 140px;
+    padding-right: 20px;
+    img {
+        margin: 0 auto;
+    }
+}
+.warranty-caption-content {
+    flex-grow: 1;
+    font-size: 15px;
+    line-height: 1.2667;
+}
+.warranty-caption-title {
+    color: $b;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.warranty-caption-info {
+    color: $dgr;
+    margin-bottom: 6px;
+}
+.warranty-subtitle {
+    font-size: 15px;
+    line-height: 1.2;
+    color: $b;
+    padding-top: 20px;
+    margin-bottom: 26px;
+}
+a.warranty-email {
+    color: $text;
+    &:hover {
+        color: $b;
+    }
+}
+.warranty-separator {
+    height: 25px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid #E1E1E1;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+}
+.not-found {
+    .global-tab {
+        margin-bottom: 53px;
+    }
+}
+.not-found-content {
+    .global-title {
+        margin-bottom: 16px;
+    }
+}
+.not-found-search {
+    padding-bottom: 10px;
+    max-width: 330px;
+    margin: 0 auto;
+    .input-wrapper {
+        position: relative;
+        &.success {
+            &:before {
+                display: none;
+            }
+            input.input-text {
+                padding-right: 46px;
+            }
+        }
+    }
+    input.input-text {
+        padding-right: 46px;
+    }
+}
+.not-found-search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 47px;
+    height: 40px;
+    border: 0;
+    text-indent: -9999px;
+    background: $tr url('../upload/search-green.svg') 14px 9px no-repeat;
+    background-size: 20px 20px;
+}
+.not-found-search-title {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.2;
+    color: $b;
+    margin-bottom: 17px;
+}
+.not-found-img {
+    margin-bottom: 30px;
+    img {
+        margin: 0 auto;
     }
 }

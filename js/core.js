@@ -154,6 +154,34 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //tab-filter
+    $(document).on('click', '.tabs-filter a', function(){
+
+        $(this).parents('li').addClass('active').siblings('li').removeClass('active');
+
+        var thisFilter = $(this).prop('href');
+        thisFilter = thisFilter.substring(thisFilter.indexOf('#')+1);
+
+        var thisParent = $(this).parents('.global-tab-filter');
+
+        thisParent.find('[data-filter]').each(function(index, el) {
+            var thisElement = $(this);
+            var thisData = thisElement.data('filter');
+
+            var thisDataArray = new Array();
+            thisDataArray = thisData.split(", ");
+
+            if ( jQuery.inArray(thisFilter, thisDataArray) != '-1' || thisFilter == 'filterAll' ) {
+                $(this).removeClass('hidden');
+            } else {
+                $(this).addClass('hidden');
+            }
+        });
+
+    });
+
+    //------------------------------------------------------------------------//
+
     //slider no navigation
     $('.slider-js-no-nav').slick({
         dots: false,
