@@ -11,7 +11,8 @@
 }
 .drop-toggle {}
 .drop-close {}
-.header-profile-block {
+.header-profile-block,
+.header-login-block {
     position: absolute;
     top: 100%;
     margin-top: 1px;
@@ -26,7 +27,12 @@
         padding-right: 10px;
     }
 }
+.header-login-block {
+    width: 348px;
+    padding-top: 26px;
+}
 .header-profile-close,
+.header-login-close,
 .header-phone-close,
 .header-city-select-close,
 .header-cart-close,
@@ -113,6 +119,56 @@
     color: $w;
     background: $p;
     border-radius: 50%;
+}
+.header-login-content {}
+.header-login-title {
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: $b;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+.header-login-info {
+    font-size: 13px;
+    line-height: 1.54;
+    color: $dgr;
+    margin-bottom: 20px;
+}
+.header-login-phone {
+    font-size: 13px;
+    line-height: 1.54;
+    color: $dgr;
+    padding-bottom: 15px;
+}
+.header-login-phone-number {
+    strong {
+        white-space: nowrap;
+        font-weight: 500;
+        line-height: normal;
+        color: $b;
+    }
+}
+.header-login-phone-change {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    margin: -7px -10px -10px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+.header-login-number {
+    margin-bottom: -20px;
+}
+.header-login-resend {
+    display: inline-block;
+    vertical-align: top;
+    padding: 7px 10px;
+    margin: -7px -10px;
+    font-size: 13px;
+    line-height: 1.31;
+    font-weight: 500;
+    letter-spacing: -0.2px;
 }
 .header-phone-block {
     position: absolute;

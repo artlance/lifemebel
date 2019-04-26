@@ -436,3 +436,61 @@ a.warranty-email {
         margin: 0 auto;
     }
 }
+.service-unavailable {
+    .header-global {
+        padding: 12px 0 10px;
+        border-bottom: 1px solid #EAEAEA;
+    }
+    .footer-info {
+        padding-top: 55px;
+        padding-bottom: 31px;
+    }
+    .footer-contact {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .footer-title {
+        margin-bottom: 20px;
+    }
+    .footer-phone {
+        padding-top: 4px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+    .footer-phone-note {
+        padding-top: 9px;
+    }
+    .footer-address {
+        margin-bottom: 16px;
+        color: $dgr;
+        a {
+            color: $dgr;
+            &:hover {
+                color: $text;
+            }
+        }
+    }
+}
+.service-unavailable-content {
+    padding: 57px 0 30px;
+}
+.service-unavailable-img {
+    margin-bottom: 61px;
+    img {
+        margin: 0 auto;
+    }
+}
+.service-unavailable-info {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $b;
+    .global-title {
+        margin-bottom: 23px;
+    }
+    p {
+        margin-bottom: 21px;
+    }
+}

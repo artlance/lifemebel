@@ -1,0 +1,202 @@
+.cabinet {
+    margin-bottom: 63px;
+    .content {
+        max-width: calc(100% - 230px);
+    }
+    .sidebar {
+        flex: 0 0 230px;
+        max-width: 230px;
+        padding-right: 30px;
+    }
+    .sidebar-menu {
+        padding-top: 12px;
+        padding-bottom: 30px;
+        li {
+            margin-bottom: 1px;
+            &.cabinet-user {
+                padding: 12px 10px 13px;
+                margin-bottom: 0;
+                border-bottom: 1px solid #E1E1E1;
+                background: $s;
+            }
+            a {
+                padding-top: 6px;
+                color: $dgr;
+                &:hover {
+                    color: $b;
+                }
+            }
+            &.active {
+                a {
+                    color: $dgr;
+                }
+            }
+        }
+    }
+}
+.cabinet-user-name {
+    display: block;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $b;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cabinet-user-status {
+    display: block;
+    color: $dgr;
+    .filter-item-hint {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 3px;
+    }
+}
+.cabinet-caption {
+    padding: 1px 0 19px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid #E1E1E1;
+    h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        color: $b;
+        strong {
+            font-weight: 500;
+        }
+    }
+}
+.cabinet-data {
+    max-width: 288px;
+    margin-bottom: 30px;
+    .input-wrapper {
+        margin-bottom: 30px;
+    }
+    .button {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.cabinet-data-phone {
+    margin-bottom: 8px;
+}
+.cabinet-data-phone-title {
+    color: $dgr;
+}
+.cabinet-data-phone-note {
+    font-size: 11px;
+    line-height: 1.55;
+    color: rgba(57, 57, 57, 0.5);
+    margin-bottom: 2px;
+}
+.cabinet-data-phone-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.cabinet-data-phone-number {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $b;
+    white-space: nowrap;
+    padding: 0 18px 4px 0;
+}
+.cabinet-data-phone-change {
+    display: block;
+    padding: 10px;
+    font-weight: 500;
+    letter-spacing: -0.24px;
+    text-decoration: underline;
+}
+.cabinet-review {
+    max-width: 640px;
+    margin-bottom: 30px;
+    .button {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+.cabinet-review-info {
+    color: $dgr;
+    margin-bottom: 34px;
+    p {
+        margin-bottom: 18px;
+    }
+}
+.cabinet-review-phone {
+    color: $dgr;
+    white-space: nowrap;
+    &:hover {
+        color: $b;
+    }
+}
+.cabinet-review-bonus {}
+.cabinet-review-bonus-product {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+.cabinet-review-bonus-product-img {
+    flex: 0 0 120px;
+    max-width: 120px;
+    padding-right: 30px;
+    a {
+        display: block;
+    }
+    img {
+        width: 100%;
+    }
+}
+.cabinet-review-bonus-product-info {
+    flex-grow: 1;
+    padding-right: 20px;
+}
+.cabinet-review-bonus-product-title {
+    margin-bottom: 11px;
+    font-weight: 500;
+    color: $dgr;
+    a {
+        color: $dgr;
+        &:hover {
+            color: $b;
+        }
+    }
+}
+.cabinet-review-bonus-product-articul {
+    font-size: 11px;
+    line-height: 1.55;
+    margin-bottom: 2px;
+}
+.cabinet-review-bonus-product-button {
+    flex: 0 0 240px;
+    max-width: 240px;
+    padding-bottom: 8px;
+    .button {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.cabinet-review-bonus-more {
+    text-align: center;
+    padding-top: 5px;
+}
+.cabinet-offers {
+    .product-thumbs {
+        .col {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+}
+.cabinet-offers-more {
+    text-align: center;
+    margin-bottom: 30px;
+    .button {
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+}

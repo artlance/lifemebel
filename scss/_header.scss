@@ -89,6 +89,13 @@
         }
     }
 }
+.header-login {
+    &.active {
+        .header-login-button {
+            text-decoration: underline;
+        }
+    }
+}
 .header-profile-toggle {
     display: block;
     position: relative;
@@ -119,7 +126,8 @@
     font-weight: 500;
     color: $b;
     &:hover {
-        color: $text;
+        color: $b;
+        text-decoration: underline;
     }
 }
 .header-content {}

@@ -108,6 +108,10 @@ $(document).ready(function(){
         if ( $(thisParent).find('.phone-mask').length ) {
             $('.phone-mask').mask('+7 (999) 999-99-99');
         }
+        //
+        if ( $(thisParent).find('.code-mask').length ) {
+            $('.code-mask').mask('9  9  9  9');
+        }
     });
 
     //extra
