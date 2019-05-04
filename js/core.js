@@ -45,6 +45,12 @@ $(document).ready(function(){
         activePop = 1;
     });
 
+    $('.cabinet-order-manager-callback-link').on('click', function(event) {
+        event.preventDefault();
+        $('.header-phone').addClass('active');
+        activePop = 1;
+    });
+
     function closeInactivePop() {
         dropClass.each(function (i) {
             if ($(this).hasClass('active') && i!=activePop) {

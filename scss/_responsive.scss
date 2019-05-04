@@ -501,6 +501,31 @@
         padding-left: 0;
         padding-right: 0;
     }
+    .cabinet-order-product-img {
+        flex: 0 0 60px;
+        max-width: 60px;
+    }
+    .cabinet-order-product-set-list {
+        padding-left: 20px;
+    }
+    .cabinet-order-product-price,
+    .cabinet-order-total-price,
+    .cabinet-order-total-price-final {
+        flex: 0 0 150px;
+        max-width: 150px;
+    }
+    .cabinet-order-product-number {
+        flex: 0 0 70px;
+        max-width: 70px;
+        padding-right: 20px;
+    }
+    .cabinet-order-total-title {
+        padding-right: 20px;
+    }
+    .cabinet-order-manager-img {
+        flex: 0 0 90px;
+        max-width: 90px;
+    }
 }
 @media (max-width: 1179px) {
     .wholesale-customers {
