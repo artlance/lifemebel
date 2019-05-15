@@ -10,7 +10,6 @@
     <meta name="format-detection" content="address=no">
     <meta name="copyright" content="www.iconix.ru">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fancybox.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-512x512.png" sizes="512x512">
@@ -1067,7 +1066,7 @@
                         <div class="col-16">
                             <ul class="breadcrumbs clearfix">
                                 <li><a href="#">Главная</a></li>
-                                <li><strong>Личный кабинет</strong></li>
+                                <li><strong>Пожаловаться директору</strong></li>
                             </ul>
                         </div>
                         <!-- /.col -->
@@ -1075,95 +1074,148 @@
                     <!-- /.row -->
                 </div>
                 <!-- /.breadcrumbs-wrapper -->
-                <div class="cabinet">
+            </div>
+            <!-- /.container -->
+            <div class="complaint">
+                <div class="container">
                     <div class="row">
-                        <aside class="sidebar">
-                            <ul class="sidebar-menu">
-                                <li class="cabinet-user">
-                                    <span class="cabinet-user-name">Артем Константинопольский</span>
-                                    <span class="cabinet-user-status">
-                                        Silver Status
-                                        <span class="filter-item-hint">
-                                            <span class="filter-item-hint-question"></span>
-                                            <span class="filter-item-hint-text">
-                                                <span class="filter-item-hint-block">Другие скидки и акции не действуют</span>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </li>
-                                <li><a href="#">Личные данные</a></li>
-                                <li class="active"><a href="#">Мои заказы</a></li>
-                                <li><a href="#">Мои отзывы</a></li>
-                                <li><a href="#">Просмотренные товары</a></li>
-                                <li><a href="#">Мои акции (29)</a></li>
-                                <li><a href="#">Избранные товары (20)</a></li>
-                                <li><a href="#">Мои привелегии</a></li>
-                            </ul>
-                        </aside>
-                        <!-- /.sidebar -->
-                        <div class="content">
-                            <div class="cabinet-caption">
-                                <h1>Мои заказы</h1>
-                            </div>
-                            <div class="cabinet-review">
-                                <div class="cabinet-review-info">
-                                    <p>Константин, оставьте отзыв о товарах, котрые вы покупали у нас. <br>Так вы поможете нашим покупателям, а мы положим Вам на телефон деньги.</p>
+                        <div class="col-16">
+                            <div class="complaint-block">
+                                <div class="global-title">
+                                    <h1>Пожаловаться директору</h1>
                                 </div>
-                                <div class="cabinet-review-bonus">
-                                    <div class="cabinet-review-bonus-product">
-                                        <div class="cabinet-review-bonus-product-img">
-                                            <img src="upload/images/cart4.jpg" width="90" height="90" alt="">
+                                <div class="complaint-form">
+                                    <div class="complaint-form-col-rating">
+                                        <div class="complaint-rating">
+                                            <div class="complaint-rating-title">Магазин</div>
+                                            <div class="complaint-rating-block clearfix">
+                                                <input type="radio" id="complaint-rating-shop5" value="5" name="complaint-rating-shop">
+                                                <label for="complaint-rating-shop5" title="Отличная работа" data-rating="Отличная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-shop4" value="4" name="complaint-rating-shop">
+                                                <label for="complaint-rating-shop4" title="Хорошая работа" data-rating="Хорошая работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-shop3" value="3" name="complaint-rating-shop">
+                                                <label for="complaint-rating-shop3" title="Удовлетворительная работа" data-rating="Удовлетворительная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-shop2" value="2" name="complaint-rating-shop">
+                                                <label for="complaint-rating-shop2" title="Неудовлетворительная работа" data-rating="Неудовлетворительная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-shop1" value="1" name="complaint-rating-shop">
+                                                <label for="complaint-rating-shop1" title="Плохая работа" data-rating="Плохая работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                            </div>
+                                            <div class="complaint-rating-value"></div>
                                         </div>
-                                        <div class="cabinet-review-bonus-product-info">
-                                            <div class="cabinet-review-bonus-product-title">Шкаф для одежды</div>
-                                            <div class="cabinet-review-bonus-product-articul">Артикул: <span class="nowrap">5678</span></div>
+                                        <!-- /.complaint-rating -->
+                                        <div class="complaint-rating">
+                                            <div class="complaint-rating-title">Работа менеджеров</div>
+                                            <div class="complaint-rating-block clearfix">
+                                                <input type="radio" id="complaint-rating-manager5" value="5" name="complaint-rating-manager">
+                                                <label for="complaint-rating-manager5" title="Отличная работа" data-rating="Отличная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-manager4" value="4" name="complaint-rating-manager">
+                                                <label for="complaint-rating-manager4" title="Хорошая работа" data-rating="Хорошая работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-manager3" value="3" name="complaint-rating-manager">
+                                                <label for="complaint-rating-manager3" title="Удовлетворительная работа" data-rating="Удовлетворительная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-manager2" value="2" name="complaint-rating-manager">
+                                                <label for="complaint-rating-manager2" title="Неудовлетворительная работа" data-rating="Неудовлетворительная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-manager1" value="1" name="complaint-rating-manager">
+                                                <label for="complaint-rating-manager1" title="Плохая работа" data-rating="Плохая работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                            </div>
+                                            <div class="complaint-rating-value"></div>
                                         </div>
-                                        <div class="cabinet-review-bonus-product-button">
-                                            <a href="#" class="button primary">Оставить отзыв за 500 руб</a>
+                                        <!-- /.complaint-rating -->
+                                        <div class="complaint-rating">
+                                            <div class="complaint-rating-title">Работа курьера</div>
+                                            <div class="complaint-rating-block clearfix">
+                                                <input type="radio" id="complaint-rating-courier5" value="5" name="complaint-rating-courier">
+                                                <label for="complaint-rating-courier5" title="Отличная работа" data-rating="Отличная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-courier4" value="4" name="complaint-rating-courier">
+                                                <label for="complaint-rating-courier4" title="Хорошая работа" data-rating="Хорошая работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-courier3" value="3" name="complaint-rating-courier">
+                                                <label for="complaint-rating-courier3" title="Удовлетворительная работа" data-rating="Удовлетворительная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-courier2" value="2" name="complaint-rating-courier">
+                                                <label for="complaint-rating-courier2" title="Неудовлетворительная работа" data-rating="Неудовлетворительная работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                                <input type="radio" id="complaint-rating-courier1" value="1" name="complaint-rating-courier">
+                                                <label for="complaint-rating-courier1" title="Плохая работа" data-rating="Плохая работа">
+                                                    <svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 19.762l-8.034 4.071L6.5 15.21 0 9.104l8.983-1.258L13 0l4.017 7.846L26 9.101l-6.5 6.11 1.534 8.621z" fill="#D8D8D8" class="svg-fill" fill-rule="evenodd"/></svg>
+                                                </label>
+                                            </div>
+                                            <div class="complaint-rating-value"></div>
                                         </div>
+                                        <!-- /.complaint-rating -->
                                     </div>
-                                    <!-- /.cabinet-review-bonus-product -->
-                                    <div class="cabinet-review-bonus-product">
-                                        <div class="cabinet-review-bonus-product-img">
-                                            <img src="upload/images/cart11.jpg" width="90" height="90" alt="">
+                                    <!-- /.complaint-form-col -->
+                                    <div class="complaint-form-col">
+                                        <div class="input-wrapper clearfix">
+                                            <label for="complaint-order">Номер заказа</label>
+                                            <input type="tel" class="input-text" id="complaint-order" placeholder="000987009">
                                         </div>
-                                        <div class="cabinet-review-bonus-product-info">
-                                            <div class="cabinet-review-bonus-product-title">Стол раскладной</div>
-                                            <div class="cabinet-review-bonus-product-articul">Артикул: <span class="nowrap">6670</span></div>
+                                        <!-- /.input-wrapper -->
+                                        <div class="input-wrapper clearfix">
+                                            <label for="complaint-name">Ваше имя</label>
+                                            <input type="text" class="input-text" id="complaint-name" placeholder="Константинопольский Артем">
                                         </div>
-                                        <div class="cabinet-review-bonus-product-button">
-                                            <a href="#" class="button primary">Оставить отзыв за 200 руб</a>
+                                        <!-- /.input-wrapper -->
+                                        <div class="input-note">чтобы мы знали, как к вам обращаться</div>
+                                        <div class="input-wrapper clearfix">
+                                            <label for="complaint-phone">Ваш телефон</label>
+                                            <input type="tel" class="input-text complaint-phone-mask" id="complaint-phone" placeholder="8 (495) 540-55-17">
                                         </div>
+                                        <!-- /.input-wrapper -->
+                                        <div class="input-note">чтобы мы могли с вами связаться для уточнения</div>
+                                        <div class="input-wrapper clearfix">
+                                            <label for="complaint-email">Ваш email</label>
+                                            <input type="email" class="input-text" id="complaint-email" placeholder="konstantinopolskiy.artem@gmail.com">
+                                        </div>
+                                        <!-- /.input-wrapper -->
+                                        <div class="input-note">чтобы мы могли выслать вам наш ответ</div>
+                                        <div class="input-wrapper clearfix">
+                                            <label for="complaint-textarea">Жалоба</label>
+                                            <textarea id="complaint-textarea" class="textarea complaint-textarea" cols="30" rows="5" placeholder="Недоволен..."></textarea>
+                                        </div>
+                                        <!-- /.input-wrapper -->
+                                        <div class="complaint-button">
+                                            <button class="button primary">Отправить</button>
+                                        </div>
+                                        <div class="complaint-agree">Нажимая кнопку "Отправить", я даю согласие на обработку своих персональных данных в соответствии с <a href="#">Условиями</a>.</div>
                                     </div>
-                                    <!-- /.cabinet-review-bonus-product -->
-                                    <div class="cabinet-review-bonus-product">
-                                        <div class="cabinet-review-bonus-product-img">
-                                            <img src="upload/images/cart6.jpg" width="90" height="90" alt="">
-                                        </div>
-                                        <div class="cabinet-review-bonus-product-info">
-                                            <div class="cabinet-review-bonus-product-title">Лампа накаливания</div>
-                                            <div class="cabinet-review-bonus-product-articul">Артикул: <span class="nowrap">5678</span></div>
-                                        </div>
-                                        <div class="cabinet-review-bonus-product-button">
-                                            <a href="#" class="button primary">Оставить отзыв за 100 руб</a>
-                                        </div>
-                                    </div>
-                                    <!-- /.cabinet-review-bonus-product -->
-                                    <div class="cabinet-review-bonus-more">
-                                        <a href="#" class="button secondary">Показать еще товары</a>
-                                    </div>
+                                    <!-- /.complaint-form-col -->
                                 </div>
-                                <!-- /.cabinet-review-bonus -->
+                                <!-- /.complaint-form -->
                             </div>
-                            <!-- /.cabinet-review -->
+                            <!-- /.complaint-block -->
                         </div>
-                        <!-- /.content -->
+                        <!-- /.col -->
                     </div>
                     <!-- /.row -->
                 </div>
-                <!-- /.cabinet -->
+                <!-- /.container -->
             </div>
-            <!-- /.container -->
+            <!-- /.complaint -->
             <div class="container">
                 <div class="global-title">
                     <div class="row">
@@ -1317,6 +1369,36 @@
             <!-- /.container -->
         </section>
         <!-- /.spanning -->
+        <section class="seo">
+            <div class="container">
+                <div class="seo-separator"></div>
+                <div class="row">
+                    <div class="col-7">
+                        <p>Двуспальная кровать – это главный предмет мебели в спальной комнате как для взрослых, так и детей. Здоровый сон и хорошее настроение утром напрямую зависят от качества выбранной модели. Широкий ассортимент мебели, выполненной из высококачественных материалов, вы можете найти в нашем интернет-магазине, где есть подробный каталог и цены. Обратите внимание! Мы сотрудничаем только с лучшими производителями мебели и представляем оригинальные коллекции по выгодным ценам.</p>
+                        <h5>Качество каркаса двуспальной кровати</h5>
+                        <p>Кровать двуспальная состоит из каркаса, матраса и рамы под него. Каркас должен быть достаточно прочным, чтобы выдерживать большие нагрузки.</p>
+                        <p>Популярны каркасы из:</p>
+                        <ul>
+                            <li>массива березы, сосны, дуба, бука, гевеи;</li>
+                            <li>материалов «под дерево»: ДСП, ЛДСП, МДФ с ПВХ;</li>
+                            <li>металлические кованые каркасы;</li>
+                        </ul>
+                        <p>Особенность первого материала заключается в его экологичности, высокой прочности и красоте. Традиционно и изысканно смотрятся в интерьере двуспальные кровати с металлическим основанием. К более бюджетным вариантам относят категорию различных материалов «под дерево», которые сочетают в себе практичность и современный дизайн.</p>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-7 offset-1">
+                        <h5>Двуспальные кровати: ортопедическое основание и обивка</h5>
+                        <p>Материал обивки кровати зависит от модели. На сайте вы найдете варианты с обивкой из кожи, экокожи, велюра, бархата или другой ткани. В зависимости от выбранного интерьерного решения стоит выбирать и дизайн будущего ложе. <br>При выборе кровати рекомендуем особое внимание уделить матрасу. Он должен быть комфортным по уровню жесткости, идеально подходить к габаритам каркаса и главное – давать позвоночнику правильное положение. Если ортопедическое основание не идет в комплекте с кроватью, мы поможем вам с выбором!</p>
+                        <h5>Двуспальные кровати в ассортименте от ЛайфМебель!</h5>
+                        <p>В нашем магазине вы можете купить двухместные модели от лучших мебельных фабрик. Выполненная в стиле модерн и классическом дизайне, с декоративной отделкой или стильной обивкой, она может быть также с подъемным механизмом и без него. Мы поможем вам выбрать кровать и доставим заказ по Москве и МО или регионам России.</p>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.seo -->
         <footer class="footer-global">
             <div class="container">
                 <div class="footer-info">
@@ -1430,8 +1512,7 @@
     <script src="js/mask.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/scrollpane.js"></script>
-    <script src="js/fancybox.min.js"></script>
     <script src="js/core.js"></script>
-    <script src="js/cabinet.js"></script>
+    <script src="js/complaint.js"></script>
 </body>
 </html>

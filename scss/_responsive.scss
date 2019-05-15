@@ -526,6 +526,54 @@
         flex: 0 0 90px;
         max-width: 90px;
     }
+    .provider-advantages {
+        .row {
+            margin: 0 -10px;
+            .col-4 {
+                padding: 0 10px;
+            }
+        }
+    }
+    .provider-advantage-title {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .provider-requirement-list {
+        padding: 0;
+        margin: 0 -25px;
+    }
+    .promotions-item-img {
+        height: 260px;
+    }
+    .promotions-item-caption {
+        font-size: 16px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .articles-list {
+        .col-8 {
+            .articles-item-caption {
+                padding-left: 20px;
+            }
+        }
+        .col-4,
+        .col-12,
+        .col-16 {
+            .articles-item-img {
+                height: 260px;
+            }
+            .articles-item-caption {
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .articles-item-img {
+        height: 342px;
+    }
+    .articles-item-caption {
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
 }
 @media (max-width: 1179px) {
     .wholesale-customers {

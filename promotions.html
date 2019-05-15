@@ -10,7 +10,6 @@
     <meta name="format-detection" content="address=no">
     <meta name="copyright" content="www.iconix.ru">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fancybox.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-512x512.png" sizes="512x512">
@@ -1067,7 +1066,7 @@
                         <div class="col-16">
                             <ul class="breadcrumbs clearfix">
                                 <li><a href="#">Главная</a></li>
-                                <li><strong>Личный кабинет</strong></li>
+                                <li><strong>Акции</strong></li>
                             </ul>
                         </div>
                         <!-- /.col -->
@@ -1075,93 +1074,225 @@
                     <!-- /.row -->
                 </div>
                 <!-- /.breadcrumbs-wrapper -->
-                <div class="cabinet">
+                <div class="global-title">
                     <div class="row">
-                        <aside class="sidebar">
-                            <ul class="sidebar-menu">
-                                <li class="cabinet-user">
-                                    <span class="cabinet-user-name">Артем Константинопольский</span>
-                                    <span class="cabinet-user-status">
-                                        Silver Status
-                                        <span class="filter-item-hint">
-                                            <span class="filter-item-hint-question"></span>
-                                            <span class="filter-item-hint-text">
-                                                <span class="filter-item-hint-block">Другие скидки и акции не действуют</span>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </li>
-                                <li><a href="#">Личные данные</a></li>
-                                <li class="active"><a href="#">Мои заказы</a></li>
-                                <li><a href="#">Мои отзывы</a></li>
-                                <li><a href="#">Просмотренные товары</a></li>
-                                <li><a href="#">Мои акции (29)</a></li>
-                                <li><a href="#">Избранные товары (20)</a></li>
-                                <li><a href="#">Мои привелегии</a></li>
-                            </ul>
-                        </aside>
-                        <!-- /.sidebar -->
-                        <div class="content">
-                            <div class="cabinet-caption">
-                                <h1>Мои заказы</h1>
-                            </div>
-                            <div class="cabinet-review">
-                                <div class="cabinet-review-info">
-                                    <p>Константин, оставьте отзыв о товарах, котрые вы покупали у нас. <br>Так вы поможете нашим покупателям, а мы положим Вам на телефон деньги.</p>
-                                </div>
-                                <div class="cabinet-review-bonus">
-                                    <div class="cabinet-review-bonus-product">
-                                        <div class="cabinet-review-bonus-product-img">
-                                            <img src="upload/images/cart4.jpg" width="90" height="90" alt="">
-                                        </div>
-                                        <div class="cabinet-review-bonus-product-info">
-                                            <div class="cabinet-review-bonus-product-title">Шкаф для одежды</div>
-                                            <div class="cabinet-review-bonus-product-articul">Артикул: <span class="nowrap">5678</span></div>
-                                        </div>
-                                        <div class="cabinet-review-bonus-product-button">
-                                            <a href="#" class="button primary">Оставить отзыв за 500 руб</a>
-                                        </div>
-                                    </div>
-                                    <!-- /.cabinet-review-bonus-product -->
-                                    <div class="cabinet-review-bonus-product">
-                                        <div class="cabinet-review-bonus-product-img">
-                                            <img src="upload/images/cart11.jpg" width="90" height="90" alt="">
-                                        </div>
-                                        <div class="cabinet-review-bonus-product-info">
-                                            <div class="cabinet-review-bonus-product-title">Стол раскладной</div>
-                                            <div class="cabinet-review-bonus-product-articul">Артикул: <span class="nowrap">6670</span></div>
-                                        </div>
-                                        <div class="cabinet-review-bonus-product-button">
-                                            <a href="#" class="button primary">Оставить отзыв за 200 руб</a>
-                                        </div>
-                                    </div>
-                                    <!-- /.cabinet-review-bonus-product -->
-                                    <div class="cabinet-review-bonus-product">
-                                        <div class="cabinet-review-bonus-product-img">
-                                            <img src="upload/images/cart6.jpg" width="90" height="90" alt="">
-                                        </div>
-                                        <div class="cabinet-review-bonus-product-info">
-                                            <div class="cabinet-review-bonus-product-title">Лампа накаливания</div>
-                                            <div class="cabinet-review-bonus-product-articul">Артикул: <span class="nowrap">5678</span></div>
-                                        </div>
-                                        <div class="cabinet-review-bonus-product-button">
-                                            <a href="#" class="button primary">Оставить отзыв за 100 руб</a>
-                                        </div>
-                                    </div>
-                                    <!-- /.cabinet-review-bonus-product -->
-                                    <div class="cabinet-review-bonus-more">
-                                        <a href="#" class="button secondary">Показать еще товары</a>
-                                    </div>
-                                </div>
-                                <!-- /.cabinet-review-bonus -->
-                            </div>
-                            <!-- /.cabinet-review -->
+                        <div class="col-16">
+                            <h1>Текущие акции</h1>
                         </div>
-                        <!-- /.content -->
+                        <!-- /.col -->
                     </div>
                     <!-- /.row -->
                 </div>
-                <!-- /.cabinet -->
+                <!-- /.global-title -->
+                <div class="global-tab global-tab-filter">
+                    <div class="row">
+                        <div class="col-16">
+                            <ul class="global-tabs tabs-filter">
+                                <li class="active"><a href="#filterAll">Все</a></li>
+                                <li><a href="#filterFurniture">Мебель</a></li>
+                                <li><a href="#filterLighting">Свет</a></li>
+                                <li><a href="#filterOffice">Офис</a></li>
+                                <li><a href="#filterEquipment">Техника</a></li>
+                                <li><a href="#filterBathroom">Ванная</a></li>
+                                <li><a href="#filterPlayroom">Детская</a></li>
+                                <li><a href="#filterOffice">Офис</a></li>
+                                <li><a href="#filterGarden">Сад</a></li>
+                            </ul>
+                            <!-- /.global-tabs -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="box visible">
+                        <div class="promotions-list">
+                            <div class="row">
+                                <div class="col-12" data-filter='filterFurniture, filterPlayroom'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb1.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">31&nbsp;августа - 28&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Скоро в школу</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterFurniture, filterOffice'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb2.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">30&nbsp;августа - 28&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Акция Успей в сентябре</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterLighting'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb3.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">09&nbsp;июня - 01&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Хрустальное лето</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterFurniture, filterOffice'>
+                                    <div class="promotions-item promotions-item-gray">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb4.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">01&nbsp;августа - 28&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Провожая лето</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterFurniture, filterGarden'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb5.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">21&nbsp;августа - 28&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Долгожданная распродажа садовой&nbsp;мебели</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterLighting, filterBathroom'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb6.jpg);"></span>
+                                            <span class="promotions-item-caption promotions-item-caption-white">
+                                                <span class="promotions-item-date">22&nbsp;августа - 04&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Globaльная распродажа</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterFurniture, filterGarden'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb7.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">02&nbsp;июля - 01&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Жаркое лето</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterFurniture, filterOffice'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb8.jpg);"></span>
+                                            <span class="promotions-item-caption promotions-item-caption-white">
+                                                <span class="promotions-item-date">21&nbsp;июля - 10&nbsp;августа</span>
+                                                <span class="promotions-item-title">Успей в августе</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-8" data-filter='filterFurniture'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb9.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">05&nbsp;июня - 30&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Акция на кухонные уголки</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterFurniture, filterBathroom'>
+                                    <div class="promotions-item promotions-item-gray">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb10.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">22&nbsp;сентября - 28&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Акция на дизайнерские изделия</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterLighting, filterEquipment'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb11.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">22&nbsp;августа - 04&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Globaльная распродажа</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterFurniture'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb12.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">21&nbsp;августа - 28&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Расспродажа классической мебели</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-4" data-filter='filterGarden'>
+                                    <div class="promotions-item">
+                                        <a href="#" class="promotions-item-link">
+                                            <span class="promotions-item-img" style="background-image: url(upload/images/promo_thumb13.jpg);"></span>
+                                            <span class="promotions-item-caption">
+                                                <span class="promotions-item-date">01&nbsp;августа - 28&nbsp;сентября</span>
+                                                <span class="promotions-item-title">Провожая лето</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /.promotions-item -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.promotions-list -->
+                        <div class="promotions-more">
+                            <div class="row">
+                                <div class="col-16">
+                                    <a href="#" class="button secondary">Показать еще</a>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.promotions-more -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.global-tab -->
             </div>
             <!-- /.container -->
             <div class="container">
@@ -1317,6 +1448,36 @@
             <!-- /.container -->
         </section>
         <!-- /.spanning -->
+        <section class="seo">
+            <div class="container">
+                <div class="seo-separator"></div>
+                <div class="row">
+                    <div class="col-7">
+                        <p>Двуспальная кровать – это главный предмет мебели в спальной комнате как для взрослых, так и детей. Здоровый сон и хорошее настроение утром напрямую зависят от качества выбранной модели. Широкий ассортимент мебели, выполненной из высококачественных материалов, вы можете найти в нашем интернет-магазине, где есть подробный каталог и цены. Обратите внимание! Мы сотрудничаем только с лучшими производителями мебели и представляем оригинальные коллекции по выгодным ценам.</p>
+                        <h5>Качество каркаса двуспальной кровати</h5>
+                        <p>Кровать двуспальная состоит из каркаса, матраса и рамы под него. Каркас должен быть достаточно прочным, чтобы выдерживать большие нагрузки.</p>
+                        <p>Популярны каркасы из:</p>
+                        <ul>
+                            <li>массива березы, сосны, дуба, бука, гевеи;</li>
+                            <li>материалов «под дерево»: ДСП, ЛДСП, МДФ с ПВХ;</li>
+                            <li>металлические кованые каркасы;</li>
+                        </ul>
+                        <p>Особенность первого материала заключается в его экологичности, высокой прочности и красоте. Традиционно и изысканно смотрятся в интерьере двуспальные кровати с металлическим основанием. К более бюджетным вариантам относят категорию различных материалов «под дерево», которые сочетают в себе практичность и современный дизайн.</p>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-7 offset-1">
+                        <h5>Двуспальные кровати: ортопедическое основание и обивка</h5>
+                        <p>Материал обивки кровати зависит от модели. На сайте вы найдете варианты с обивкой из кожи, экокожи, велюра, бархата или другой ткани. В зависимости от выбранного интерьерного решения стоит выбирать и дизайн будущего ложе. <br>При выборе кровати рекомендуем особое внимание уделить матрасу. Он должен быть комфортным по уровню жесткости, идеально подходить к габаритам каркаса и главное – давать позвоночнику правильное положение. Если ортопедическое основание не идет в комплекте с кроватью, мы поможем вам с выбором!</p>
+                        <h5>Двуспальные кровати в ассортименте от ЛайфМебель!</h5>
+                        <p>В нашем магазине вы можете купить двухместные модели от лучших мебельных фабрик. Выполненная в стиле модерн и классическом дизайне, с декоративной отделкой или стильной обивкой, она может быть также с подъемным механизмом и без него. Мы поможем вам выбрать кровать и доставим заказ по Москве и МО или регионам России.</p>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.seo -->
         <footer class="footer-global">
             <div class="container">
                 <div class="footer-info">
@@ -1430,8 +1591,6 @@
     <script src="js/mask.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/scrollpane.js"></script>
-    <script src="js/fancybox.min.js"></script>
     <script src="js/core.js"></script>
-    <script src="js/cabinet.js"></script>
 </body>
 </html>

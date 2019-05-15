@@ -1,0 +1,120 @@
+.articles {
+    margin-bottom: 93px;
+    .global-title {
+        margin-bottom: 40px;
+    }
+}
+.articles-list {
+    padding-bottom: 30px;
+    .row {
+        margin: 0 -5px;
+        flex-wrap: wrap;
+    }
+    .col,
+    .col-4,
+    .col-8,
+    .col-12,
+    .col-16 {
+        padding: 0 5px;
+    }
+    .col-8 {
+        .articles-item-caption {
+            padding-left: 50px;
+            max-width: 450px;
+        }
+    }
+    .col-4,
+    .col-12,
+    .col-16 {
+        .articles-item-img {
+            height: 342px;
+        }
+        .articles-item-caption {
+            max-width: 450px;
+            padding-bottom: 30px;
+        }
+    }
+}
+.articles-item {
+    margin-bottom: 10px;
+    .tv-item-content {
+        z-index: 3;
+        top: 0;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 52.8%;
+            opacity: 0.7;
+            background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+            transform: translate3d(0, 0, 0);
+        }
+        .tv-item-icon,
+        .tv-item-caption {
+            position: relative;
+        }
+    }
+}
+.articles-item-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        .articles-item-img {
+            transform: translate3d(0, 0, 0) scale(1.1);
+        }
+    }
+}
+.articles-item-img {
+    display: block;
+    height: 456px;
+    background: $tr 50% 50% no-repeat;
+    background-size: cover;
+    transition: transform $d*2 $f;
+    transform: translate3d(0, 0, 0);
+}
+.articles-item-caption {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20px 40px 30px;
+    transform: translate3d(0, 0, 0);
+    &-white {
+        .articles-item-date,
+        .articles-item-title,
+        .articles-item-info {
+            color: $w;
+        }
+    }
+}
+.articles-item-date {
+    display: block;
+    font-size: 11px;
+    line-height: 1;
+    color: $dgr;
+}
+.articles-item-title {
+    display: block;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: $b;
+    margin-bottom: 16px;
+}
+.articles-item-info {
+    display: block;
+    font-size: 13px;
+    line-height: 1.54;
+    color: $text;
+}
+.articles-more {
+    text-align: center;
+    .button {
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+}

@@ -12,34 +12,45 @@ a {
     }
 }
 .wysiwyg {
+    color: $dgr;
     @extend .clearfix;
     h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        color: $b;
         margin-top: $spacer;
         margin-bottom: $spacer;
     }
     h2 {
+        font-size: 30px;
+        line-height: 1.5;
+        color: $b;
         margin-top: $spacer;
         margin-bottom: $spacer;
     }
-    h3 {
-        margin-top: $spacer;
-        margin-bottom: $spacer;
-    }
+    h3,
     h4 {
-        margin-top: $spacer;
-        margin-bottom: $spacer;
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 500;
+        color: $b;
+        margin-top: 21px;
+        margin-bottom: 21px;
     }
-    h5 {
-        margin-top: $spacer;
-        margin-bottom: $spacer;
-    }
+    h5,
     h6 {
-        margin-top: $spacer;
-        margin-bottom: $spacer;
+        font-size: 13px;
+        line-height: 1.85;
+        font-weight: 500;
+        color: $b;
+        margin-top: 24px;
+        margin-bottom: 24px;
     }
     p {
-        margin-top: $spacer;
-        margin-bottom: $spacer;
+        font-size: 13px;
+        line-height: 1.85;
+        margin-top: 24px;
+        margin-bottom: 24px;
     }
     a {
         font-weight: 500;
@@ -89,21 +100,25 @@ a {
         }
     }
     ul {
-        overflow: hidden;
-        margin-top: $spacer;
-        margin-bottom: $spacer;
-        list-style: inside disc;
+        display: block;
+        margin-top: 20px;
         li {
-            padding-left: $spacer;
+            font-size: 13px;
+            line-height: 1.54;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
         }
     }
     ol {
         overflow: hidden;
-        margin-top: $spacer;
-        margin-bottom: $spacer;
+        margin-top: 20px;
         list-style: inside decimal;
         li {
-            padding-left: $spacer;
+            font-size: 13px;
+            line-height: 1.54;
+            margin-bottom: 20px;
+            padding-left: 20px;
         }
     }
     table {

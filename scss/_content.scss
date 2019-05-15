@@ -494,3 +494,82 @@ a.warranty-email {
         margin-bottom: 21px;
     }
 }
+.promotions-list {
+    padding: 8px 0 30px;
+    .row {
+        margin: 0 -5px;
+        flex-wrap: wrap;
+    }
+    .col-4,
+    .col-8,
+    .col-12,
+    .col-16 {
+        padding: 0 5px;
+    }
+}
+.promotions-item {
+    margin-bottom: 10px;
+    &-gray {
+        .promotions-item-link {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.04);
+            }
+        }
+    }
+}
+.promotions-item-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #E1E1E1;
+    &:hover {
+        .promotions-item-img {
+            transform: translate3d(0, 0, 0) scale(1.1);
+        }
+    }
+}
+.promotions-item-img {
+    display: block;
+    height: 333px;
+    background: $tr 50% 50% no-repeat;
+    background-size: cover;
+    transition: transform $d*2 $f;
+    transform: translate3d(0, 0, 0);
+}
+.promotions-item-caption {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translate3d(0, 0, 0);
+    padding: 30px 15px 0 40px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $b;
+    &-white {
+        color: $w;
+    }
+}
+.promotions-item-date {
+    display: block;
+    margin-bottom: 5px;
+}
+.promotions-item-title {
+    display: block;
+    font-weight: 500;
+}
+.promotions-more {
+    text-align: center;
+    .button {
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+}
