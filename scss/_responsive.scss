@@ -574,6 +574,48 @@
         padding-bottom: 20px;
         padding-left: 20px;
     }
+    .wysiwyg {
+        table {
+            th,
+            td {
+                padding-left: 5%;
+            }
+        }
+    }
+    .article-component-info {
+        padding: 24px 20px 10px;
+    }
+    .article-description {
+        padding: 30px 30px 6px;
+    }
+    .article-description-text {
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding-right: 20px;
+    }
+    .article-description-table {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    .delivery-no-service-payment {
+        .row {
+            margin: 0 -15px;
+        }
+        .col {
+            padding: 0 15px;
+        }
+    }
+    .delivery-no-service-near-city {
+        margin-left: 0;
+    }
+    .delivery-payment-list {
+        .row {
+            margin: 0 -30px;
+        }
+        .col {
+            padding: 0 30px;
+        }
+    }
 }
 @media (max-width: 1179px) {
     .wholesale-customers {

@@ -1,0 +1,196 @@
+.delivery {
+    margin-bottom: 93px;
+    .contact-caption {
+        margin-bottom: 0;
+        border-bottom: 0;
+        h1 {
+            color: $b;
+        }
+    }
+}
+.delivery-info {
+    min-height: 141px;
+    padding: 38px 0 20px;
+    font-size: 15px;
+    line-height: 1.3334;
+    color: $b;
+    background: $s;
+    .row {
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    .col {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 0 15px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+}
+.delivery-info-partner {
+    margin-top: -16px;
+    margin-bottom: 14px;
+}
+.delivery-info-orders {
+    display: flex;
+    margin-bottom: 20px;
+}
+.delivery-info-orders-number {
+    padding-right: 20px;
+    font-size: 30px;
+    line-height: 1.0667;
+    font-weight: 500;
+    letter-spacing: -0.52px;
+}
+.delivery-info-orders-title {
+    flex-grow: 1;
+}
+.delivery-no-service {
+    padding: 40px 0;
+    .row {
+        margin: 0 -15px;
+    }
+}
+.delivery-no-service-payment-wrapper {
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+    padding: 0 15px;
+}
+.delivery-no-service-payment {
+    max-width: 790px;
+    margin-top: -3px;
+    .row {
+        flex-wrap: wrap;
+        margin: 0 -34px;
+    }
+    .col {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 0 34px;
+    }
+}
+.delivery-no-service-payment-item {
+    padding-bottom: 30px;
+    p {
+        font-size: 13px;
+        line-height: 1.31;
+        color: $dgr;
+        margin-bottom: 10px;
+    }
+}
+.delivery-no-service-payment-title {
+    font-size: 15px;
+    line-height: 1.3334;
+    color: $b;
+    font-weight: 500;
+    padding-bottom: 4px;
+    margin-bottom: 11px;
+    border-bottom: 1px solid #CBCFD3;
+}
+.delivery-no-service-payment-price {
+    font-size: 15px;
+    line-height: 1.3334;
+    color: $b;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-bottom: 8px;
+}
+.delivery-no-service-near-city-wrapper {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 0 15px;
+}
+.delivery-no-service-near-city {
+    margin-left: -10px;
+    padding: 26px 30px 20px;
+    background: #FFF1BD;
+    color: $dgr;
+    strong {
+        font-weight: 500;
+        line-height: normal;
+    }
+    p {
+        margin-bottom: 9px;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        li {
+            padding: 0 15px 10px;
+            a {
+                display: block;
+                padding: 10px;
+                margin: -10px;
+                font-weight: 500;
+                letter-spacing: -0.2px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.delivery-payment {
+    padding: 55px 0 30px;
+    background: $s;
+}
+.delivery-payment-caption {
+    text-align: center;
+    margin-bottom: 29px;
+    h3 {
+        font-size: 20px;
+        line-height: 1.3;
+        color: $b;
+    }
+}
+.delivery-payment-list {
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -60px;
+    }
+    .col {
+        flex: 0 1 auto;
+        padding: 0 60px;
+    }
+}
+.delivery-payment-item {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.delivery-payment-img {
+    display: flex;
+    align-items: center;
+    min-height: 75px;
+    margin-bottom: 9px;
+    img {
+        margin: 0 auto;
+    }
+}
+.delivery-payment-title {
+    font-size: 15px;
+    line-height: 1.3334;
+    color: $b;
+    margin-bottom: 10px;
+    .filter-item-hint {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 3px;
+        margin-top: 3px;
+    }
+    .filter-item-hint-text {
+        bottom: auto;
+        top: 100%;
+        padding-bottom: 0;
+        padding-top: 10px;
+    }
+    .filter-item-hint-block {
+        background: $dgr;
+        &:before {
+            top: auto;
+            bottom: 100%;
+            border-top-color: $tr;
+            border-bottom-color: $dgr;
+        }
+    }
+}
