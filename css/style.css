@@ -13345,7 +13345,6 @@ textarea.complaint-textarea {
 }
 
 .delivery-info {
-  min-height: 141px;
   padding: 38px 0 20px;
   font-size: 15px;
   line-height: 1.3334;
@@ -13590,6 +13589,582 @@ textarea.complaint-textarea {
   bottom: 100%;
   border-top-color: transparent;
   border-bottom-color: #393939;
+}
+
+.delivery-rate {
+  padding-bottom: 50px;
+}
+
+.delivery-rate-separator {
+  clear: both;
+  display: block;
+  line-height: 0;
+  font-size: 0;
+  height: 0;
+  border-bottom: 1px solid #CBCFD3;
+  margin-bottom: 14px;
+}
+
+.delivery-rate-caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-right: -30px;
+  margin-bottom: 28px;
+}
+
+.delivery-rate-caption h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  color: #000000;
+  padding-right: 30px;
+}
+
+.delivery-rate-address {
+  padding-right: 30px;
+}
+
+.delivery-rate-address-toggle {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  margin: -4px -10px -8px;
+  font-weight: 500;
+  text-decoration: underline;
+  letter-spacing: -0.2px;
+}
+
+.delivery-rate-list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.delivery-rate-list {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-right: 20px;
+  max-width: calc(100% - 227px);
+}
+
+.delivery-rate-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.delivery-rate-col {
+  padding: 21px 20px 0;
+}
+
+.delivery-rate-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-bottom: 27px;
+}
+
+.delivery-rate-item .filter-item-hint {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+.delivery-rate-item-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 85px;
+  flex: 0 0 85px;
+  max-width: 85px;
+  padding-right: 10px;
+}
+
+.delivery-rate-item-img img {
+  margin: 0 auto;
+}
+
+.delivery-rate-item-info {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-top: 2px;
+}
+
+.delivery-rate-item-title {
+  font-size: 15px;
+  line-height: 1.3334;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.delivery-rate-item-price {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #000000;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+
+.delivery-rate-item-note {
+  font-size: 13px;
+  line-height: 1.31;
+  color: #393939;
+  margin-bottom: 14px;
+}
+
+.delivery-rate-item-floor {
+  font-size: 15px;
+  line-height: 1.2;
+  color: #000000;
+  padding-top: 10px;
+  margin-bottom: 6px;
+}
+
+.delivery-rate-item-floor strong {
+  font-weight: 500;
+}
+
+.delivery-rate-item-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+.delivery-rate-item-inside-col {
+  padding: 0 12px;
+}
+
+.delivery-rate-outside {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 227px;
+  flex: 0 0 227px;
+  max-width: 227px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 25px 20px 26px;
+  text-align: center;
+  color: #000000;
+  background: #FFF1BD;
+}
+
+.delivery-rate-outside-title {
+  font-size: 15px;
+  line-height: 1.3334;
+  font-weight: 500;
+  margin-bottom: 11px;
+}
+
+.delivery-rate-outside-price {
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.52px;
+  margin-bottom: 9px;
+}
+
+.delivery-rate-outside-price strong {
+  font-weight: 500;
+}
+
+.delivery-rate-outside-on-map {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  margin: -10px;
+  font-weight: 500;
+  text-decoration: underline;
+  letter-spacing: -0.2px;
+}
+
+.delivery-lift-wrapper {
+  padding: 44px 0 12px;
+  border-top: 1px solid #CBCFD3;
+}
+
+.delivery-lift-inverse .col-9 {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.delivery-lift-inverse .delivery-lift-content {
+  padding-right: 0;
+  padding-left: 40px;
+}
+
+.delivery-lift-content {
+  padding-right: 40px;
+}
+
+.delivery-lift-caption {
+  margin-bottom: 39px;
+}
+
+.delivery-lift-caption h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.delivery-lift-manual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.delivery-lift-manual-col {
+  padding: 0 10px;
+}
+
+.delivery-lift-automatic {
+  padding-top: 2px;
+}
+
+.delivery-lift-automatic h4 {
+  font-size: 15px;
+  line-height: 1.3334;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.delivery-lift-automatic-block {
+  padding: 26px 30px 16px;
+  margin-bottom: 38px;
+  color: #393939;
+  background: #FFF1BD;
+}
+
+.delivery-lift-automatic-block p {
+  margin-bottom: 18px;
+}
+
+.delivery-lift-free {
+  padding: 24px 30px 16px;
+  margin-bottom: 38px;
+  color: #393939;
+  background: #F4F5F6;
+}
+
+.delivery-lift-free p {
+  margin-bottom: 18px;
+}
+
+.delivery-lift-free strong {
+  font-weight: 500;
+}
+
+.delivery-detail {
+  padding: 45px 0 5px;
+}
+
+.delivery-detail .row {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.delivery-detail-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-bottom: 31px;
+  padding-right: 80px;
+}
+
+.delivery-detail-item-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 115px;
+  flex: 0 0 115px;
+  max-width: 115px;
+  padding-right: 40px;
+  padding-top: 5px;
+}
+
+.delivery-detail-item-img img {
+  margin: 0 auto;
+}
+
+.delivery-detail-item-info {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  color: #393939;
+}
+
+.delivery-detail-item-info p {
+  margin-bottom: 18px;
+}
+
+.delivery-detail-item-info ul {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.delivery-detail-item-info ul li {
+  padding-left: 18px;
+  position: relative;
+}
+
+.delivery-detail-item-info ul li:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 3px;
+  height: 3px;
+  background: #393939;
+  border-radius: 50%;
+}
+
+.delivery-detail-item-title {
+  font-size: 20px;
+  line-height: 1.3;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+#delivery-map {
+  height: 540px;
+}
+
+.delivery-address {
+  display: none;
+  margin-bottom: -1px;
+  position: relative;
+}
+
+.delivery-address.delivery-address-map-hidden .delivery-address-map,
+.delivery-address.delivery-address-map-hidden .delivery-address-options-map-info {
+  display: none;
+}
+
+.delivery-address.delivery-address-map-hidden .delivery-address-options-map-show {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.delivery-address-block {
+  padding-top: 40px;
+  padding-bottom: 5px;
+  background: #F4F5F6;
+}
+
+.delivery-address-block .col-16 {
+  max-width: 1250px;
+}
+
+.delivery-address-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.delivery-address-input-title {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 200px;
+  flex: 0 0 200px;
+  max-width: 200px;
+  padding-right: 15px;
+  padding-bottom: 6px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.delivery-address-input-wrapper {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-right: 50px;
+}
+
+.delivery-address-input-wrapper .input-wrapper {
+  margin-bottom: 0;
+}
+
+.delivery-address-input-button {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 215px;
+  flex: 0 0 215px;
+  max-width: 215px;
+}
+
+.delivery-address-input-button .button {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.delivery-address-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 200px;
+  margin-bottom: 30px;
+}
+
+.delivery-address-options-map {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-right: 50px;
+}
+
+.delivery-address-options-map-show {
+  display: none;
+  padding: 10px;
+  margin: -10px -10px -8px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  text-decoration: underline;
+}
+
+.delivery-address-options-map-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.delivery-address-options-map-title {
+  font-size: 15px;
+  line-height: 1.3334;
+  color: #000000;
+  padding-right: 20px;
+}
+
+.delivery-address-options-map-hide {
+  white-space: nowrap;
+}
+
+.delivery-address-options-hide {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 215px;
+  flex: 0 0 215px;
+  max-width: 215px;
+  text-align: right;
+}
+
+.delivery-address-options-map-hide,
+.delivery-address-options-hide-button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  margin: -10px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  text-decoration: underline;
+}
+
+.delivery-pickup {
+  padding-top: 40px;
+}
+
+#delivery-pickup-map {
+  height: 276px;
+}
+
+.delivery-pickup-map {
+  margin-bottom: 30px;
+}
+
+.delivery-pickup-separator {
+  clear: both;
+  display: block;
+  line-height: 0;
+  font-size: 0;
+  height: 0;
+  border-bottom: 1px solid #CBCFD3;
+}
+
+.delivery-pickup-content {
+  padding: 14px 30px 20px 0;
+  color: #000000;
+}
+
+.delivery-pickup-content p {
+  font-size: 15px;
+  line-height: 1.3334;
+  margin-bottom: 12px;
+}
+
+.delivery-pickup-content p strong {
+  font-weight: 500;
+}
+
+.delivery-pickup-title {
+  margin-bottom: 15px;
+}
+
+.delivery-pickup-title h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.delivery-pickup-coordinates {
+  margin-bottom: 12px;
+}
+
+.delivery-pickup-coordinates a {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  margin: -10px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  text-decoration: underline;
+}
+
+.delivery-pickup-worktime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.delivery-pickup-worktime-item {
+  padding: 0 10px 13px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.delivery-pickup-worktime-item strong {
+  font-weight: normal;
+  font-size: 15px;
 }
 
 /* home */
@@ -14338,6 +14913,23 @@ textarea.complaint-textarea {
   }
   .delivery-payment-list .col {
     padding: 0 30px;
+  }
+  .delivery-rate-row {
+    margin: 0 -15px;
+  }
+  .delivery-rate-col {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .delivery-lift-inverse .delivery-lift-content {
+    padding-right: 0;
+    padding-left: 30px;
+  }
+  .delivery-lift-content {
+    padding-right: 30px;
+  }
+  .delivery-detail-item {
+    padding-right: 40px;
   }
 }
 

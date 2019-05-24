@@ -616,6 +616,25 @@
             padding: 0 30px;
         }
     }
+    .delivery-rate-row {
+        margin: 0 -15px;
+    }
+    .delivery-rate-col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .delivery-lift-inverse {
+        .delivery-lift-content {
+            padding-right: 0;
+            padding-left: 30px;
+        }
+    }
+    .delivery-lift-content {
+        padding-right: 30px;
+    }
+    .delivery-detail-item {
+        padding-right: 40px;
+    }
 }
 @media (max-width: 1179px) {
     .wholesale-customers {
