@@ -108,8 +108,10 @@ $(document).ready(function(){
     $('.datepicker').datepicker({
         showOtherMonths: true,
         selectOtherMonths: true,
-        minDate: 0,
-        maxDate: +60
+        // minDate: 1,
+        // maxDate: +10
+        minDate: new Date(2019, 5, 3),
+        maxDate: new Date(2019, 11, 30)
     });
 
     //------------------------------------------------------------------------//
@@ -119,6 +121,41 @@ $(document).ready(function(){
         event.preventDefault();
         var thisComment = $(this).text();
         $('.order-comment-textarea').focus().val(thisComment);
+    });
+
+    //------------------------------------------------------------------------//
+
+    //order check
+    function orderSet(thisElement) {
+        var thisParent = thisElement.parents('.order-product-set'),
+            thisParentProduct = thisParent.find('> .order-product'),
+            thisSet = thisParent.find('.order-product-set-list'),
+            thisSetCheckbox = thisSet.find('.order-product-assembly input[type="checkbox"]'),
+            thisParentCheckbox = thisParentProduct.find('.order-product-assembly input[type="checkbox"]');
+
+        if (thisElement.parents('.order-product-set-list').length) {
+            var setTrue = true;
+            thisSetCheckbox.each(function(index, el) {
+                if ( $(this).prop('checked') == false ) {
+                    setTrue = false;
+                }
+                if (setTrue) {
+                    thisParentCheckbox.prop('checked', true);
+                } else {
+                    thisParentCheckbox.prop('checked', false);
+                }
+            });
+        } else {
+            if (thisParentCheckbox.is(':checked')) {
+                thisSetCheckbox.prop('checked', true);
+            } else {
+                thisSetCheckbox.prop('checked', false);
+            }
+        }
+    }
+
+    $('.order-product-set input[type="checkbox"]').on('change', function(event) {
+        orderSet($(this));
     });
 
     //------------------------------------------------------------------------//

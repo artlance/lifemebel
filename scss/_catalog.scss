@@ -2,35 +2,37 @@
     margin-bottom: 30px;
 }
 .catalog-wrapper {
+    order: 2;
     flex-grow: 1;
     max-width: calc(100% - 255px);
 }
 .catalog-caption {
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 30px;
     padding-bottom: 17px;
     border-bottom: 1px solid #E1E1E1;
     h1 {
-        display: inline-block;
-        vertical-align: top;
         font-size: 30px;
         line-height: 1.2;
         color: $b;
     }
 }
 .catalog-caption-number {
-    display: inline-block;
-    vertical-align: top;
-    padding: 9px 0 0 10px;
+    white-space: nowrap;
+    padding: 9px 0 0 14px;
     font-size: 11px;
     line-height: 1.55;
     font-weight: 500;
     color: $dgr;
 }
 .filter-selected {
-    margin: 0 -5px 20px 0;
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 20px;
 }
 .filter-selected-list {
-    float: left;
+    display: block;
     li {
         float: left;
         margin: 0 5px 5px 0;
@@ -77,8 +79,9 @@
     }
 }
 .filter-selected-reset {
-    float: left;
-    margin: 0 5px 5px 0;
+    display: block;
+    white-space: nowrap;
+    margin: 0 -15px 5px 0;
     padding: 5px 15px 7px;
     font-weight: 500;
     letter-spacing: -0.24px;

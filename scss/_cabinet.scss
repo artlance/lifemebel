@@ -574,19 +574,20 @@
 }
 .cabinet-order-history-item {
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
     padding: 3px 0 2px;
 }
 .cabinet-order-history-date {
-    padding: 1px 12px 1px 0;
+    flex: 0 0 135px;
+    max-width: 135px;
+    padding: 1px 10px 1px 0;
 }
 .cabinet-order-history-status {
+    flex-grow: 1;
     color: $b;
-    padding: 1px 20px 1px 0;
+    padding: 1px 0;
     .filter-item-hint {
-        margin-left: 8px;
-        margin-top: 1px;
+        margin-right: 30px;
     }
 }
 .cabinet-order-sidebar-info {

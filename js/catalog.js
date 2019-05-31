@@ -97,4 +97,27 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //catalog-product-info
+    function catalogInit() {
+        $('.catalog-product-info').each(function(index, el) {
+            var thisElement = $(el),
+                thisParentBg = thisElement.parents('.catalog-product').find('.catalog-product-bg');
+            thisElement.css({
+                'opacity': '0',
+                'display': 'block'
+            });
+            var thisHeight = thisElement.innerHeight() + 20;
+            thisParentBg.css({
+                'bottom': -thisHeight
+            });
+            thisElement.attr({'style': ''});
+        });
+    }
+    catalogInit();
+    $(window).resize(function() {
+        catalogInit();
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

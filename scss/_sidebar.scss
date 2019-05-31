@@ -203,6 +203,8 @@
     }
 }
 .filter-item-hint {
+    display: inline-block;
+    vertical-align: top;
     position: relative;
     margin-top: 2px;
     &:hover {

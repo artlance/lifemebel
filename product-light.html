@@ -4935,136 +4935,139 @@
         </footer>
     </div>
     <!-- /.main -->
-    <div class="modal modal-center" id="modal-gallery" tabindex="-1" role="dialog">
-        <a href="#" class="modal-close" data-dismiss="modal" aria-hidden="true" title="Закрыть"></a>
-        <div class="modal-product">
-            <div class="modal-product-gallery modal-product-gallery-single">
-                <div class="modal-product-slider-wrapper">
-                    <div class="modal-product-single-img">
-                        <img src="upload/images/product3.jpg" width="538" height="538" alt="">
+    <div class="modal" id="modal-gallery" tabindex="-1" role="dialog">
+        <div class="modal-content modal-center">
+            <a href="#" class="modal-close" data-dismiss="modal" aria-hidden="true" title="Закрыть"></a>
+            <div class="modal-product">
+                <div class="modal-product-gallery modal-product-gallery-single">
+                    <div class="modal-product-slider-wrapper">
+                        <div class="modal-product-single-img">
+                            <img src="upload/images/product3.jpg" width="538" height="538" alt="">
+                        </div>
+                        <a href="#" class="product-favorite"></a>
                     </div>
-                    <a href="#" class="product-favorite"></a>
+                    <!-- /.modal-product-slider-wrapper -->
                 </div>
-                <!-- /.modal-product-slider-wrapper -->
-            </div>
-            <!-- /.modal-product-gallery -->
-            <div class="modal-product-info">
-                <div class="product-title">Kerin 2557/1C</div>
-                <div class="product-articul">Артикул: <strong>1463</strong></div>
-                <!-- product price DEFAULT -->
-                <div class="product-price-block">
-                    <div class="product-price-info">
-                        <div class="product-price-info-col">
-                            <div class="product-price-number">48 540 ₽</div>
-                        </div>
-                    </div>
-                    <!-- /.product-price-info -->
-                    <div class="product-price-delivery">
-                        <div class="product-price-available">В наличии</div>
-                        <p>Доставка завтра, 25 апреля – <strong>590 ₽</strong></p>
-                        <p>Сборка – <strong>1470 ₽</strong></p>
-                    </div>
-                    <!-- /.product-price-delivery -->
-                    <div class="product-price-button">
-                        <a href="#" class="button primary big">Добавить в корзину</a>
-                    </div>
-                    <div class="product-buy drop">
-                        <a href="#" class="product-buy-toggle drop-toggle">Купить в один клик</a>
-                        <div class="product-buy-block drop-block">
-                            <a href="#" class="product-buy-close drop-close"></a>
-                            <div class="product-buy-caption">Купить в один клик</div>
-                            <div class="input-wrapper clearfix">
-                                <label for="product-buy-number">Номер телефона</label>
-                                <input type="tel" class="input-text phone-mask" id="product-buy-number" placeholder="+7 (___) ___-__-__">
+                <!-- /.modal-product-gallery -->
+                <div class="modal-product-info">
+                    <div class="product-title">Kerin 2557/1C</div>
+                    <div class="product-articul">Артикул: <strong>1463</strong></div>
+                    <!-- product price DEFAULT -->
+                    <div class="product-price-block">
+                        <div class="product-price-info">
+                            <div class="product-price-info-col">
+                                <div class="product-price-number">48 540 ₽</div>
                             </div>
-                            <!-- /.input-wrapper -->
-                            <div class="input-wrapper clearfix">
-                                <label for="product-buy-name">Имя</label>
-                                <input type="text" class="input-text" id="product-buy-name" placeholder="Иван Петров">
-                            </div>
-                            <!-- /.input-wrapper -->
-                            <button class="button primary drop-extra-toggle">Жду звонка</button>
-                            <div class="product-buy-agree">Нажимая кнопку "Жду звонка", я даю согласие на обработку своих персональных данных в соответствии с <a href="#">Условиями</a>.</div>
                         </div>
-                        <!-- /.product-buy-block -->
-                        <div class="product-buy-success drop-extra-block">
-                            <div class="product-buy-success-content">
-                                <div class="product-buy-success-row">
-                                    <div class="product-buy-success-title">Ваша заявка принята</div>
-                                    <p>Наш менеджер вскоре свяжется с вами. <br>Пожалуйста, не отключайте телефон.</p>
-                                    <a href="#" class="button primary drop-extra-close">Закрыть</a>
+                        <!-- /.product-price-info -->
+                        <div class="product-price-delivery">
+                            <div class="product-price-available">В наличии</div>
+                            <p>Доставка завтра, 25 апреля – <strong>590 ₽</strong></p>
+                            <p>Сборка – <strong>1470 ₽</strong></p>
+                        </div>
+                        <!-- /.product-price-delivery -->
+                        <div class="product-price-button">
+                            <a href="#" class="button primary big">Добавить в корзину</a>
+                        </div>
+                        <div class="product-buy drop">
+                            <a href="#" class="product-buy-toggle drop-toggle">Купить в один клик</a>
+                            <div class="product-buy-block drop-block">
+                                <a href="#" class="product-buy-close drop-close"></a>
+                                <div class="product-buy-caption">Купить в один клик</div>
+                                <div class="input-wrapper clearfix">
+                                    <label for="product-buy-number">Номер телефона</label>
+                                    <input type="tel" class="input-text phone-mask" id="product-buy-number" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                <!-- /.input-wrapper -->
+                                <div class="input-wrapper clearfix">
+                                    <label for="product-buy-name">Имя</label>
+                                    <input type="text" class="input-text" id="product-buy-name" placeholder="Иван Петров">
+                                </div>
+                                <!-- /.input-wrapper -->
+                                <button class="button primary drop-extra-toggle">Жду звонка</button>
+                                <div class="product-buy-agree">Нажимая кнопку "Жду звонка", я даю согласие на обработку своих персональных данных в соответствии с <a href="#">Условиями</a>.</div>
+                            </div>
+                            <!-- /.product-buy-block -->
+                            <div class="product-buy-success drop-extra-block">
+                                <div class="product-buy-success-content">
+                                    <div class="product-buy-success-row">
+                                        <div class="product-buy-success-title">Ваша заявка принята</div>
+                                        <p>Наш менеджер вскоре свяжется с вами. <br>Пожалуйста, не отключайте телефон.</p>
+                                        <a href="#" class="button primary drop-extra-close">Закрыть</a>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- /.product-buy-success -->
                         </div>
-                        <!-- /.product-buy-success -->
+                        <!-- /.product-buy -->
                     </div>
-                    <!-- /.product-buy -->
-                </div>
-                <!-- /.product-price-block -->
-                <div class="product-company">
-                    <div class="product-company-logo">
-                        <a href="#"><img src="upload/images/company.jpg" width="107" height="40" alt=""></a>
-                    </div>
-                    <div class="product-company-country">
-                        <div class="product-company-country-in">
-                            <div class="product-company-country-flag"><img src="upload/images/country.png" width="30" height="20" alt=""></div>
-                            <div class="product-company-country-title">Италия</div>
+                    <!-- /.product-price-block -->
+                    <div class="product-company">
+                        <div class="product-company-logo">
+                            <a href="#"><img src="upload/images/company.jpg" width="107" height="40" alt=""></a>
                         </div>
-                    </div>
-                </div>
-                <!-- /.product-company -->
-                <div class="product-parameters">
-                    <div class="product-parameters-inside">
-                        <div class="product-subtitle">Размеры</div>
-                        <div class="product-parameters-list">
-                            <div class="product-parameters-row">
-                                <div class="product-parameters-title">Длина</div>
-                                <div class="product-parameters-value">120 см</div>
-                            </div>
-                            <div class="product-parameters-row">
-                                <div class="product-parameters-title">Длина в разложенном виде</div>
-                                <div class="product-parameters-value">150 см</div>
-                            </div>
-                            <div class="product-parameters-row">
-                                <div class="product-parameters-title">Ширина</div>
-                                <div class="product-parameters-value">80 см</div>
-                            </div>
-                            <div class="product-parameters-row">
-                                <div class="product-parameters-title">Высота</div>
-                                <div class="product-parameters-value">76 см</div>
+                        <div class="product-company-country">
+                            <div class="product-company-country-in">
+                                <div class="product-company-country-flag"><img src="upload/images/country.png" width="30" height="20" alt=""></div>
+                                <div class="product-company-country-title">Италия</div>
                             </div>
                         </div>
-                        <!-- /.product-parameters-list -->
                     </div>
-                    <!-- /.product-parameters-inside -->
-                    <div class="product-parameters-list-hidden">
-                        <div class="product-subtitle">Материалы</div>
-                        <div class="product-parameters-list">
-                            <div class="product-parameters-row">
-                                <div class="product-parameters-title">Каркас</div>
-                                <div class="product-parameters-value">Массив гевеи</div>
+                    <!-- /.product-company -->
+                    <div class="product-parameters">
+                        <div class="product-parameters-inside">
+                            <div class="product-subtitle">Размеры</div>
+                            <div class="product-parameters-list">
+                                <div class="product-parameters-row">
+                                    <div class="product-parameters-title">Длина</div>
+                                    <div class="product-parameters-value">120 см</div>
+                                </div>
+                                <div class="product-parameters-row">
+                                    <div class="product-parameters-title">Длина в разложенном виде</div>
+                                    <div class="product-parameters-value">150 см</div>
+                                </div>
+                                <div class="product-parameters-row">
+                                    <div class="product-parameters-title">Ширина</div>
+                                    <div class="product-parameters-value">80 см</div>
+                                </div>
+                                <div class="product-parameters-row">
+                                    <div class="product-parameters-title">Высота</div>
+                                    <div class="product-parameters-value">76 см</div>
+                                </div>
                             </div>
-                            <div class="product-parameters-row">
-                                <div class="product-parameters-title">Столешница</div>
-                                <div class="product-parameters-value">МДФ</div>
-                            </div>
+                            <!-- /.product-parameters-list -->
                         </div>
-                        <!-- /.product-parameters-list -->
+                        <!-- /.product-parameters-inside -->
+                        <div class="product-parameters-list-hidden">
+                            <div class="product-subtitle">Материалы</div>
+                            <div class="product-parameters-list">
+                                <div class="product-parameters-row">
+                                    <div class="product-parameters-title">Каркас</div>
+                                    <div class="product-parameters-value">Массив гевеи</div>
+                                </div>
+                                <div class="product-parameters-row">
+                                    <div class="product-parameters-title">Столешница</div>
+                                    <div class="product-parameters-value">МДФ</div>
+                                </div>
+                            </div>
+                            <!-- /.product-parameters-list -->
+                        </div>
+                        <!-- /.product-parameters-list-hidden -->
+                        <a href="#" class="product-parameters-more set-position-modal">
+                            <span class="product-parameters-more-show">Все характеристики</span>
+                            <span class="product-parameters-more-hide">Скрыть</span>
+                        </a>
                     </div>
-                    <!-- /.product-parameters-list-hidden -->
-                    <a href="#" class="product-parameters-more set-position-modal">
-                        <span class="product-parameters-more-show">Все характеристики</span>
-                        <span class="product-parameters-more-hide">Скрыть</span>
-                    </a>
+                    <!-- /.product-parameters -->
+                    <div class="modal-product-view">
+                        <a href="#" data-dismiss="modal" aria-hidden="true" class="button secondary">Перейти к карточке товара</a>
+                    </div>
                 </div>
-                <!-- /.product-parameters -->
-                <div class="modal-product-view">
-                    <a href="#" data-dismiss="modal" aria-hidden="true" class="button secondary">Перейти к карточке товара</a>
-                </div>
+                <!-- /.modal-product-info -->
             </div>
-            <!-- /.modal-product-info -->
+            <!-- /.modal-product -->
         </div>
-        <!-- /.modal-product -->
+        <!-- /.modal-content -->
     </div>
     <!-- /.modal -->
     <script src="js/jquery.js"></script>

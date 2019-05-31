@@ -762,7 +762,7 @@ a.order-product-change-more-button {
 }
 .order-delivery-city {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 12px;
 }
 .order-delivery-city-title {
@@ -796,6 +796,17 @@ a.order-product-change-more-button {
     select::-ms-expand {
         display: none;
     }
+}
+.order-delivery-city-select-link {
+    display: block;
+    padding: 5px 24px 6px 4px;
+    font-size: 13px;
+    line-height: 1.385;
+    font-weight: 500;
+    letter-spacing: -0.17px;
+    white-space: nowrap;
+    background: $tr url('../upload/select-green.svg') 100% 50% no-repeat;
+    background-size: 18px 8px;
 }
 .order-delivery-type {
     display: flex;

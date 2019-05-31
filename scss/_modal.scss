@@ -13,16 +13,19 @@
 }
 .modal {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    overflow: auto;
+}
+.modal-content {
+    position: absolute;
     background: $w;
     width: 1360px;
     max-width: 100%;
-    max-height: 100%;
-    overflow: auto;
-    position: absolute;
-    z-index: 9999;
-    &.modal-center {
-        position: fixed;
-    }
 }
 body.modal-open {
     overflow: hidden !important;
