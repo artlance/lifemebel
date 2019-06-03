@@ -21,6 +21,37 @@
     z-index: 9999;
     overflow: auto;
 }
+#modal-gallery {
+    .modal-content {
+        left: 0 !important;
+        right: 0 !important;
+        top: 0 !important;
+        min-height: 100%;
+        width: 100%;
+    }
+    .modal-gallery {
+        align-items: center;
+        min-height: 100vh;
+    }
+    .modal-gallery-slider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .modal-product {
+        padding: 0 40px;
+        align-items: center;
+        min-height: 100vh;
+        .modal-gallery {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            min-height: none;
+        }
+        .modal-product-info {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+}
 .modal-content {
     position: absolute;
     background: $w;
@@ -127,6 +158,10 @@ body.modal-open {
         height: 100%;
         width: calc(50% + 95px);
         background: $tr;
+        height: 78px;
+        width: 51px;
+        top: 50%;
+        margin-top: -39px;
         &:after {
             left: auto;
             right: 10px;
@@ -136,9 +171,6 @@ body.modal-open {
     .slick-prev {
         right: auto;
         left: -60px;
-        width: calc(50% + 60px);
-        top: 0;
-        bottom: auto;
         &:after {
             right: auto;
             left: 10px;
@@ -153,6 +185,14 @@ body.modal-open {
 }
 .modal-gallery-img {
     display: block;
+    &.disable-zoom {
+        img.zoomit-zoomed {
+            display: none !important;
+        }
+        .zoomit-ghost {
+            display: none !important;
+        }
+    }
 }
 .modal-gallery-iframe {
     display: block;
@@ -198,10 +238,15 @@ body.modal-open {
     .modal-gallery-slider {
         .slick-prev,
         .slick-next {
-            opacity: 0;
             right: 0;
-            width: 50%;
+            top: 50%;
+            margin-top: -39px;
+            opacity: 0;
+            height: 78px;
+            width: 51px;
+            background: $tr;
             transition: opacity $d $f;
+            z-index: 50;
         }
         .slick-prev {
             right: auto;
