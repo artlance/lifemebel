@@ -212,18 +212,18 @@ $(document).ready(function(){
         });
 
         var lastSlideChange = 0;
-        // $(document).on('mousewheel DOMMouseScroll', '.modal-gallery-thumbs-slider', function(event) {
-        //     event.preventDefault();
-        //     var timeNow = new Date().getTime();
-        //     if (!(timeNow - lastSlideChange < 500)) {
-        //         lastSlideChange = timeNow;
-        //         if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-        //             $('.modal-gallery-thumbs-slider').slick('slickPrev');
-        //         } else {
-        //             $('.modal-gallery-thumbs-slider').slick('slickNext');
-        //         }
-        //     }
-        // });
+        $(document).on('mousewheel DOMMouseScroll', '.modal-gallery-thumbs-slider', function(event) {
+            event.preventDefault();
+            var timeNow = new Date().getTime();
+            if (!(timeNow - lastSlideChange < 500)) {
+                lastSlideChange = timeNow;
+                if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+                    $('.modal-gallery-thumbs-slider').slick('slickPrev');
+                } else {
+                    $('.modal-gallery-thumbs-slider').slick('slickNext');
+                }
+            }
+        });
 
         $('.modal-gallery-slider').on('init', function(event, slick){
             var thisFirst = $(this).find('.slide-js').eq(0);
@@ -256,19 +256,20 @@ $(document).ready(function(){
         });
 
         function fixHeightSlider() {
-            var modalSliderHeight = $('.modal-gallery-slider').innerHeight(),
-                modalSliderDoc = $('body').innerHeight() - 80;
-            if (modalSliderHeight > modalSliderDoc) {
-                var newWidth = modalSliderDoc/modalSliderHeight,
-                    currentWidth = $('.modal-gallery-slider').innerWidth();
-                currentWidth = currentWidth * newWidth;
-                $('.modal-gallery-slider').css({'max-width': currentWidth+'px'});
-                $('.modal-gallery-slider').slick('setPosition');
-            }
+            // var modalSliderHeight = $('.modal-gallery-slider').innerHeight(),
+            //     modalSliderDoc = $('body').innerHeight() - 80;
+            // if (modalSliderHeight > modalSliderDoc) {
+            //     var newWidth = modalSliderDoc/modalSliderHeight,
+            //         currentWidth = $('.modal-gallery-slider').innerWidth();
+            //     currentWidth = currentWidth * newWidth;
+            //     $('.modal-gallery-slider').css({'max-width': currentWidth+'px'});
+            //     $('.modal-gallery-slider').slick('setPosition');
+            // }
         }
 
         $(window).resize(function() {
             fixHeightSlider();
+            $('.modal-gallery-thumbs-slider, .modal-gallery-slider').slick('setPosition');
         });
 
 
@@ -319,13 +320,30 @@ $(document).ready(function(){
         });
 
     }
+
     modalGallery_init();
+
+    $('.modal-gallery-full').on('hidden', function () {
+        $('.modal-gallery-img').each(function(index, el) {
+            if ( $(this).find('.zoomit-container').length ) {
+                var imgTemplate = $(this).find('.zoomit-target');
+                $(this).removeClass('can-disable-zoom');
+                $(this).html(imgTemplate);
+            }
+        });
+    });
 
     $(document).on('click', '.modal-gallery-img:not(".can-disable-zoom")', function(event) {
         event.preventDefault();
         $(this).removeClass('disable-zoom');
         $(this).addClass('can-disable-zoom');
-        $(this).find('.zoomit-target').zoomIt();
+        var thisZoomTarget = $(this).find('.zoomit-target'),
+            thisZoomLength = $(this).find('.zoomit-container');
+
+        if ( thisZoomTarget.length && !thisZoomLength.length ) {
+            thisZoomTarget.zoomIt();
+        }
+
     });
     $(document).on('click', '.can-disable-zoom', function(event) {
         event.preventDefault();
@@ -651,4 +669,239 @@ $(document).ready(function(){
 
 });//document ready
 
-!function(t){"function"==typeof define&&define.amd?define(["jquery"],t):t(jQuery)}(function(t){t.fn.zoomIt=function(o){var i={enabled:1,status:0,loaded:0,img:t(this),offset:[0,0],"class":{container:"zoomit-container",loaded:"loaded",img:"zoomit-zoomed",ghost:"zoomit-ghost"},src:function(){return this.img.data("zoomed")},getSrc:function(){return"function"==typeof this.src?this.src():this.src},imgTag:null};o=t.extend(i,o),o.execute=function(t){"string"==typeof t&&"function"==typeof o[t]&&o[t](o)},o.getContainer=function(){return t('<div class="'+o["class"].container+'"></div>')},o.getImgSrc=function(){return null===o.imgTag&&(o.imgTag=t("<img />").addClass(o["class"].img).attr("src",this.getSrc()),"undefined"!=typeof o.img.attr("alt")&&o.imgTag.attr("alt",o.img.attr("alt"))),o.imgTag},o.getZoomInstance=function(){return o.img.parent().find("."+o["class"].img)},o.restrict=function(t){return t>1?t=1:0>t&&(t=0),t},o.getDimensions=function(){o.position={img:{width:o.img.width(),height:o.img.height(),offset:o.img.offset()},zoom:{width:o.getZoomInstance().width(),height:o.getZoomInstance().height()}}},o.setPosition=function(t){"undefined"!=typeof t.originalEvent&&(t=t.originalEvent),0===o.loaded&&o.getDimensions(),o.img.parent().addClass(o["class"].loaded),o.loaded=1,o.position.x=o.restrict((t.pageX-o.position.img.offset.left)/o.position.img.width),o.position.y=o.restrict((t.pageY-o.position.img.offset.top)/o.position.img.height),o.position.zoom.offset={left:(o.position.zoom.width-o.position.img.width)*o.position.x,top:(o.position.zoom.height-o.position.img.height)*o.position.y},o.getZoomInstance().css({transform:"translate(-"+o.position.zoom.offset.left+"px, -"+o.position.zoom.offset.top+"px)"})},o.show=function(t){!o.enabled||1===o.status&&0===o.loaded||(o.status=1,0==o.img.parent().find("."+o["class"].img).length?(o.img.after(o.getImgSrc()),o.getZoomInstance().on("load",function(){o.setPosition(t)}).each(function(){this.complete&&o.setPosition(t)})):o.setPosition(t),o.execute("onZoomIn"))},o.hide=function(){o.status=0,o.loaded=0,o.imgTag=null,o.img.parent().removeClass(o["class"].loaded),o.getZoomInstance().remove(),o.execute("onZoomOut")},o.move=function(t){o.status&&o.show(t)},o.enable=function(){o.enabled=1},o.disable=function(){o.enabled=0},o.init=function(){o.img.wrap(o.getContainer()).after('<div class="'+o["class"].ghost+'"></div>'),o.ghost=o.img.parent().find("."+o["class"].ghost),o.ghost.on("mouseenter touchstart",function(t){o.show(t)}).on("mouseleave touchend",function(){o.hide()}).on("mousemove touchmove",function(t){t.stopPropagation(),t.preventDefault(),o.move(t)}).on("click",function(){o.execute("onClick")}),o.execute("onInit")},o.img.data("zoom",o),o.init()}});
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else {
+        factory(jQuery);
+    }
+}(function ($) {
+    $.fn.zoomIt = function (options) {
+        // Default parameters
+        var defaults = {
+            enabled: 1,
+            status: 0,
+            loaded: 0,
+            img: $(this),
+            offset: [0,0],
+            class: {
+                container: 'zoomit-container',
+                loaded: 'loaded',
+                img: 'zoomit-zoomed',
+                ghost: 'zoomit-ghost'
+            },
+            // Get image src
+            src: function () {
+                return this.img.data('zoomed')
+            },
+            // Get zoom image src
+            getSrc: function () {
+                return typeof this.src == 'function' ? this.src() : this.src;
+            },
+            // Image HTML
+            imgTag: null
+        };
+
+        // Merge options
+        options = $.extend(defaults, options);
+
+        // Execute Callback
+        options.execute = function (e) {
+            if (typeof e === 'string' && typeof options[e] === 'function') {
+                options[e]( options );
+            }
+        };
+
+        // Get container
+        options.getContainer = function () {
+            return $('<div class="' + options.class.container + '"></div>');
+        };
+
+        // Get zoom image src
+        options.getImgSrc = function () {
+            if ( options.imgTag === null ) {
+                options.imgTag = $('<img />').addClass( options.class.img ).attr('src', this.getSrc());
+
+                // Alt Tag
+                if ( typeof options.img.attr('alt') !== 'undefined' ) {
+                    options.imgTag.attr( 'alt', options.img.attr('alt') );
+                }
+            }
+
+            return options.imgTag;
+        };
+
+        // Get zoomed image instance
+        options.getZoomInstance = function () {
+            return options.img.parent().find('.' + options.class.img);
+        };
+
+        // Restrict a numerical value between 0 and 1
+        options.restrict = function (val) {
+            if (val > 1) {
+                val = 1;
+            } else if (val < 0) {
+                val = 0;
+            }
+
+            return val;
+        };
+
+        // Get image dimensions
+        options.getDimensions = function () {
+            // Set position
+            options.position = {
+                img: {
+                    width: options.img.width(),
+                    height: options.img.height(),
+                    offset: options.img.offset()
+                },
+                zoom: {
+                    width: options.getZoomInstance().innerWidth(),
+                    height: options.getZoomInstance().innerHeight()
+                }
+            };
+        };
+
+        // Position zoomed image element
+        options.setPosition = function (event) {
+            // iOS Original Event (Pointer Position)
+            if (typeof event.originalEvent !== 'undefined') {
+                event = event.originalEvent;
+            }
+
+            // Get image dimensions
+            if (options.loaded === 0) {
+                options.getDimensions();
+            }
+
+            // Add loaded class
+            options.img.parent().addClass( options.class.loaded );
+            options.loaded = 1;
+
+            // Percentages
+            options.position.x = options.restrict( (event.pageX - options.position.img.offset.left) / options.position.img.width );
+            options.position.y = options.restrict( (event.pageY - options.position.img.offset.top) / options.position.img.height );
+
+            //offset fix
+            var offsetFixSizeLeft = $('.slick-active').find('.modal-gallery-img').offset().left;
+            var offsetSidebar = $('.modal-gallery-thumbs').innerWidth() / 2;
+            var offsetFixSizeTop = $('.slick-active').find('.modal-gallery-img').offset().top;
+
+            // Offsets
+            options.position.zoom.offset = {
+                left: (options.position.zoom.width - options.position.img.width - offsetFixSizeLeft + offsetSidebar) * options.position.x,
+                top: (options.position.zoom.height - options.position.img.height - 0) * options.position.y
+            };
+
+            // console.log(options.position.zoom.offset.left);
+            // console.log(options.position.zoom.offset.top);
+
+            var leftTranslate = 0;
+            if ( options.position.zoom.offset.left > 0 ) {
+                leftTranslate = options.position.zoom.offset.left;
+            }
+
+            var topTranslate = 0;
+            if ( options.position.zoom.offset.top > 0 ) {
+                topTranslate = options.position.zoom.offset.top;
+            }
+
+            options.getZoomInstance().css({
+                'transform': 'translate(-' + leftTranslate + 'px, -' + topTranslate + 'px)'
+            });
+        };
+
+        // Show zoom
+        options.show = function (event) {
+            // Return early if image is loading
+            if ( !options.enabled || options.status === 1 && options.loaded === 0 ) {
+                return;
+            }
+
+            // Set zoom status
+            options.status = 1;
+
+            // Append image
+            if ( options.img.parent().find('.' + options.class.img).length == 0 ) {
+                options.img.after( options.getImgSrc() );
+
+                // Image loaded callback
+                options.getZoomInstance().on('load', function() {
+                    options.setPosition(event);
+                }).each(function() {
+                    if( this.complete ) options.setPosition(event);
+                });
+            } else {
+                options.setPosition(event);
+            }
+
+            // onZoomIn
+            options.execute('onZoomIn');
+        };
+
+        // Hide zoom
+        options.hide = function () {
+            options.status = 0;
+            options.loaded = 0;
+            options.imgTag = null;
+            options.img.parent().removeClass( options.class.loaded );
+            options.getZoomInstance().remove();
+
+            // onZoomOut
+            options.execute('onZoomOut');
+        };
+
+        // Move zoom
+        options.move = function (event) {
+            if (options.status) {
+                options.show(event);
+            }
+        };
+
+        // Enable
+        options.enable = function () {
+            options.enabled = 1;
+        }
+
+        // Disable
+        options.disable = function () {
+            options.enabled = 0;
+        }
+
+        // Initialize
+        options.init = function () {
+            options.img
+                .wrap( options.getContainer() )
+                .after('<div class="' + options.class.ghost + '"></div>');
+
+            // Ghost
+            options.ghost = options.img.parent().find('.' + options.class.ghost);
+
+            // Mouse events
+            options.ghost.on('mouseenter touchstart', function (event) {
+                options.show(event);
+            }).on('mouseleave touchend', function () {
+                //options.hide();
+            }).on('mousemove touchmove', function (event) {
+                event.stopPropagation();
+                event.preventDefault();
+                options.move(event);
+            }).on('click', function () {
+                options.execute('onClick');
+            });
+
+            // onInit
+            options.execute('onInit');
+        };
+
+        // Bind zoom data
+        options.img.data('zoom', options);
+        options.init();
+
+        $(window).resize(function() {
+            options.hide();
+        });
+
+    };
+}));

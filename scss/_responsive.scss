@@ -699,3 +699,25 @@
         max-width: 370px;
     }
 }
+@media (max-height: 700px) {
+    .modal-gallery-thumbs {
+        flex: 0 0 64px;
+        max-width: 64px;
+        padding-bottom: 3px;
+    }
+    .modal-gallery-thumb {
+        height: 64px;
+        margin-bottom: 8px;
+        .three-d-icon {
+            height: 50px;
+            font-size: 15px;
+            padding-top: 32px;
+        }
+    }
+    .modal-gallery-wrapper {
+        max-width: calc(100% - 64px);
+    }
+    .play-icon {
+        background-size: 50% 50%;
+    }
+}
