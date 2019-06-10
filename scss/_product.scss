@@ -138,6 +138,12 @@
             opacity: 0;
             z-index: -1;
         }
+        ~ .product-gallery-zoom {
+            top: auto;
+            left: auto;
+            width: 80px;
+            height: 80px;
+        }
     }
 }
 .product-gallery-wrapper {
