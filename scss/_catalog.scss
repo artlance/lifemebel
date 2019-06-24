@@ -108,6 +108,31 @@
         }
     }
 }
+.catalog-sorting-delivery {
+    padding: 0 11px;
+    .checkbox {
+        label {
+            font-size: 13px;
+            line-height: 1.54;
+            color: $dgr;
+            padding: 6px 44px 6px 12px;
+            white-space: nowrap;
+            background: $s;
+            border-radius: 3px;
+            &:before,
+            &:after {
+                top: 6px;
+                left: auto;
+                right: 6px;
+            }
+            img {
+                display: inline-block;
+                vertical-align: top;
+                margin: 3px 5px 0 0;
+            }
+        }
+    }
+}
 .banner {
     margin-bottom: 40px;
 }

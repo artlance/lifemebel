@@ -4134,8 +4134,7 @@ a.warranty-email:hover {
 }
 
 .filter-checkbox input:checked + label .filter-checkbox-text {
-  margin-right: -27px;
-  padding-right: 34px;
+  padding-right: 20px;
   color: #000000;
   background-color: #F5F5F5;
 }
@@ -4150,6 +4149,10 @@ a.warranty-email:hover {
 
 .filter-checkbox input:checked + label:hover .filter-checkbox-text:before, .filter-checkbox input:checked + label:hover .filter-checkbox-text:after {
   background-color: #686868;
+}
+
+.filter-checkbox input:checked + label:hover .filter-checkbox-text .filter-checkbox-show {
+  display: block;
 }
 
 .filter-checkbox input:disabled + label {
@@ -4179,7 +4182,10 @@ a.warranty-email:hover {
 
 .filter-checkbox-text {
   position: relative;
-  z-index: 2;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
   margin-left: -7px;
   padding: 3px 7px;
   color: #393939;
@@ -4227,6 +4233,31 @@ a.warranty-email:hover {
   border: 1px solid #878787;
   background-color: #878787;
   border-radius: 50%;
+}
+
+.filter-checkbox-color + .filter-checkbox-text {
+  max-width: calc(100% - 37px);
+}
+
+.filter-checkbox-show {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: 100%;
+  margin-left: -12px;
+  top: 50%;
+  margin-top: -32px;
+  width: 173px;
+  height: 70px;
+  padding: 12px 15px 18px 28px;
+  background: transparent url("../upload/filter-show.svg") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.filter-checkbox-show .button {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .filter-price {
@@ -4641,6 +4672,32 @@ a.warranty-email:hover {
 .catalog-sorting li.active a {
   font-weight: 500;
   color: #393939;
+}
+
+.catalog-sorting-delivery {
+  padding: 0 11px;
+}
+
+.catalog-sorting-delivery .checkbox label {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+  padding: 6px 44px 6px 12px;
+  white-space: nowrap;
+  background: #F4F5F6;
+  border-radius: 3px;
+}
+
+.catalog-sorting-delivery .checkbox label:before, .catalog-sorting-delivery .checkbox label:after {
+  top: 6px;
+  left: auto;
+  right: 6px;
+}
+
+.catalog-sorting-delivery .checkbox label img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 3px 5px 0 0;
 }
 
 .banner {
@@ -6387,7 +6444,21 @@ a.product-comment-discommend:before {
 }
 
 .product-feature {
+  cursor: pointer;
+  position: relative;
   padding: 0 10px 20px;
+}
+
+.product-feature:hover .product-feature-info {
+  display: block;
+}
+
+.product-feature:hover .product-feature-img .svg-stroke {
+  stroke: #83C150;
+}
+
+.product-feature:hover .product-feature-img .svg-fill {
+  fill: #83C150;
 }
 
 .product-feature-img {
@@ -6398,8 +6469,64 @@ a.product-comment-discommend:before {
   margin: 0 auto;
 }
 
+.product-feature-img svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.product-feature-img .svg-stroke,
+.product-feature-img .svg-fill {
+  -webkit-transition: stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .product-feature-title {
   color: #393939;
+}
+
+.product-feature-info {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  bottom: 100%;
+  margin-bottom: 16px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+  width: 292px;
+  padding: 20px;
+  font-size: 11px;
+  line-height: 1.37;
+  color: #393939;
+  text-align: left;
+  background: #ffffff;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+.product-feature-info:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #ffffff;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+}
+
+.product-feature-info:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
 }
 
 .product-title {
@@ -7373,6 +7500,13 @@ a.product-comment-discommend:before {
   font-weight: 500;
   color: #000000;
   margin-bottom: 19px;
+}
+
+.product-brand-info-note {
+  font-size: 11px;
+  line-height: 1.37;
+  color: #686868;
+  padding-top: 3px;
 }
 
 .product-brand-info-products {
