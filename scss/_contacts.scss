@@ -37,6 +37,16 @@
         display: none;
     }
 }
+.contact-caption-select-link {
+    display: block;
+    padding: 2px 44px 4px 0;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 500;
+    white-space: nowrap;
+    background: $tr url('../upload/select-big.svg') 100% 50% no-repeat;
+    background-size: 29px 14px;
+}
 .contact-info {
     display: flex;
     margin: 0 -10px 38px;

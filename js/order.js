@@ -105,13 +105,25 @@ $(document).ready(function(){
         yearSuffix: ''
     };
     $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+    var enableDays = ['03.07.2019', '04.07.2019'];
+
+    function enableAllTheseDays(date) {
+        var sdate = $.datepicker.formatDate( 'dd.mm.yy', date);
+        if ( $.inArray(sdate, enableDays ) != -1) {
+            return [true];
+        }
+        return [false];
+    }
+
     $('.datepicker').datepicker({
         showOtherMonths: true,
         selectOtherMonths: true,
         // minDate: 1,
         // maxDate: +10
-        minDate: new Date(2019, 5, 3),
-        maxDate: new Date(2019, 11, 30)
+        // minDate: new Date(2019, 5, 3),
+        // maxDate: new Date(2019, 11, 30)
+        beforeShowDay: enableAllTheseDays
     });
 
     //------------------------------------------------------------------------//

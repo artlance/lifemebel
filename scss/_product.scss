@@ -446,6 +446,50 @@
     border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
 }
+.product-credit {}
+.product-credit-button {
+    display: block;
+    padding: 10px 0 9px 28px;
+    color: $b;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -13px;
+        left: 0;
+        width: 16px;
+        height: 21px;
+        background: $tr url('../upload/wallet.svg') 50% 50% no-repeat;
+        background-size: 100% 100%;
+    }
+    &:hover {
+        color: $text;
+    }
+}
+.product-credit-yandex {
+    margin: -10px 0 20px;
+}
+.product-credit-yandex-button {
+    display: block;
+    padding: 16px 20px 15px 67px;
+    color: $b;
+    position: relative;
+    background: #FFDB4D;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        bottom: 3px;
+        left: 3px;
+        width: 44px;
+        background: $w url('../upload/wallet.svg') 50% 50% no-repeat;
+        background-size: 20px 26px;
+    }
+    &:hover {
+        color: $text;
+    }
+}
 .product-buy {}
 .product-buy-toggle {
     display: block;

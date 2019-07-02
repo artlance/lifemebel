@@ -29,21 +29,9 @@
         z-index: 100;
         .catalog-product-bg,
         .catalog-product-favorite,
-        .catalog-product-info,
-        .catalog-product-img-nav {
+        .catalog-product-info {
             display: block;
         }
-        .catalog-product-img-slider {
-            .slick-prev,
-            .slick-next {
-                opacity: 1;
-            }
-        }
-    }
-}
-.catalog-product-extra {
-    .catalog-product-bg {
-        left: -100px;
     }
 }
 .catalog-product-bg {
@@ -51,7 +39,7 @@
     position: absolute;
     z-index: 5;
     top: 0;
-    bottom: -175px;
+    bottom: -128px;
     left: -20px;
     right: -20px;
     background: $w;
@@ -66,28 +54,6 @@
 }
 .catalog-product-img-slider {
     @extend .clearfix;
-    .slick-prev,
-    .slick-next {
-        opacity: 0;
-        right: -20px;
-        top: 50%;
-        margin-top: -20px;
-        height: 40px;
-        width: 40px;
-        background: $tr;
-        &:after {
-            margin-top: -10px;
-            margin-left: -6px;
-            width: 12px;
-            height: 20px;
-            background-image: url('../upload/right-small.svg');
-        }
-    }
-    .slick-prev {
-        right: auto;
-        left: -20px;
-        bottom: auto;
-    }
     .slide-js {
         display: none;
         &:nth-child(1) {
@@ -97,6 +63,24 @@
     &.slick-initialized {
         .slide-js {
             display: block;
+        }
+    }
+    .slick-dots {
+        bottom: -20px;
+        display: flex;
+        top: 0;
+        li {
+            height: 100%;
+            flex-grow: 1;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            button {
+                background: $tr;
+                height: 100%;
+                width: 100%;
+                border-radius: 0;
+            }
         }
     }
 }
@@ -112,24 +96,6 @@
 }
 .catalog-product-img-nav {
     display: none;
-    position: absolute;
-    left: -80px;
-    width: 55px;
-    top: 5px;
-}
-.catalog-product-img-thumb {
-    display: block;
-    margin-bottom: 17px;
-    height: 55px;
-    padding: 3px;
-    border: 2px solid $tr;
-    background: $w;
-    &.active {
-        border-color: #E1E1E1;
-    }
-    img {
-        width: 100%;
-    }
 }
 .catalog-product-labels {
     margin: -34px 0 8px;
@@ -171,8 +137,49 @@
     background-size: 19px 14px;
     border: 1px solid rgba(131, 193, 80, 0.5);
 }
+.catalog-product-colors {
+    padding: 4px 0 8px;
+    height: 29px;
+}
+.catalog-product-colors-list {
+    display: flex;
+    justify-content: center;
+    margin-left: -7px;
+    li {
+        padding-left: 7px;
+    }
+}
+.catalog-product-color {
+    display: block;
+    border: 2px solid $tr;
+    border-radius: 50%;
+    &:hover {
+        border-color: $b;
+        span {
+            box-shadow: inset 0 0 0 2px $w;
+        }
+    }
+    span {
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: $tr;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: box-shadow $d $f;
+    }
+}
+.catalog-product-colors-more {
+    display: block;
+    width: 19px;
+    height: 17px;
+    background: $tr url('../upload/more.svg') 50% 50% no-repeat;
+    background-size: 15px 3px;
+}
 .catalog-product-title {
-    padding: 0 10px 13px;
+    padding: 0 10px 8px;
     font-size: 13px;
     line-height: 1.31;
     a {
@@ -224,10 +231,10 @@
     left: 0;
     right: 0;
     top: 100%;
-    padding: 6px 10px 10px;
+    padding: 6px 10px 0;
 }
 .catalog-product-parameters {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
     table {
         width: 100%;
         table-layout: fixed;
@@ -240,6 +247,16 @@
             &:first-child {
                 padding: 0 10px 0 0;
                 text-align: right;
+            }
+            &.wide {
+                padding: 0;
+                text-align: center;
+            }
+            strong {
+                color: $b;
+            }
+            span {
+                font-weight: bold;
             }
         }
     }
@@ -256,9 +273,11 @@
     }
 }
 .catalog-product-button {
+    margin: 0 -30px;
     .button {
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
+        border-radius: 0;
     }
 }

@@ -263,6 +263,14 @@
 .nav-global {
     background: $dgr;
     position: relative;
+    .col-12 {
+        flex: 1 0 auto;
+        max-width: calc(100% - 187px);
+    }
+    .col-4 {
+        flex: 0 0 187px;
+        max-width: 187px;
+    }
 }
 .menu-wrapper {
     display: none;
@@ -385,7 +393,7 @@
 .nav-search {
     float: right;
     width: 100%;
-    max-width: 297px;
+    max-width: 187px;
     padding: 10px 0 11px 10px;
     &-focus {
         float: none;

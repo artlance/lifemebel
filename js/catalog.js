@@ -60,20 +60,26 @@ $(document).ready(function(){
     $('.catalog-product').on('mouseenter', function(event) {
         if ( !catalogProductHover ) {
             $('.catalog-product-img-slider').slick({
-                dots: false,
-                arrows: true,
-                draggable: true,
+                dots: true,
+                arrows: false,
+                draggable: false,
                 infinite: false,
                 centerMode: false,
                 centerPadding: '0px',
                 autoplay: false,
                 autoplaySpeed: 5000,
-                speed: 500,
+                speed: 0,
                 pauseOnHover: false,
                 pauseOnDotsHover: false,
                 slide: '.slide-js',
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                fade: true
+            });
+            $(document).on('mouseenter', '.catalog-product-img-slider .slick-dots li, .catalog-product-colors-list li', function(event) {
+                event.preventDefault();
+                var thisParent = $(this).parents('.catalog-product');
+                thisParent.find('.catalog-product-img-slider').slick('slickGoTo', $(this).index());
             });
         }
         catalogProductHover = true;
@@ -106,7 +112,7 @@ $(document).ready(function(){
                 'opacity': '0',
                 'display': 'block'
             });
-            var thisHeight = thisElement.innerHeight() + 20;
+            var thisHeight = thisElement.innerHeight();
             thisParentBg.css({
                 'bottom': -thisHeight
             });
