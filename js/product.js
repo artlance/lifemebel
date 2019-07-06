@@ -712,6 +712,32 @@ $(document).ready(function(){
     }
     //reInitProduct();
 
+    $('#modal-quick-view').on('shown', function () {
+        $.ajax({
+            url: '../quick-view.html',
+            cache: false,
+            success: function() {
+                $('#modal-quick-view').load( '../quick-view.html', function( response, status, xhr ) {
+
+                    //init gallery
+                    modalGallery_init();
+                    scrollPaneResizeModal();
+                    centerModal();
+
+                    //set slider
+                    $(response).find('.modal-product-slider-wrapper img').eq(0).on('load',function(){
+                        $('.modal-gallery-slider').slick('setPosition');
+                        var modalCurrentSlide =  $('.product-gallery-slider').slick('slickCurrentSlide');
+                        if ( modalCurrentSlide ) {
+                            $('.modal-gallery-slider').slick('slickGoTo', modalCurrentSlide);
+                        }
+                    });
+
+                });
+            }
+        });
+    });
+
     //------------------------------------------------------------------------//
 
 });//document ready
