@@ -79,7 +79,13 @@ $(document).ready(function(){
             $(document).on('mouseenter', '.catalog-product-img-slider .slick-dots li, .catalog-product-colors-list li', function(event) {
                 event.preventDefault();
                 var thisParent = $(this).parents('.catalog-product');
+                var thisParentColors = $(this).parents('.catalog-product').find('.catalog-product-colors-list');
                 thisParent.find('.catalog-product-img-slider').slick('slickGoTo', $(this).index());
+
+                if (thisParentColors) {
+                    thisParentColors.find('li').eq($(this).index()).find('.catalog-product-color').addClass('hover');
+                    thisParentColors.find('li').eq($(this).index()).siblings('li').find('.catalog-product-color').removeClass('hover');
+                }
             });
         }
         catalogProductHover = true;

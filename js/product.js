@@ -637,8 +637,26 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+
+    $(document).on('mouseenter', '.product-color.active .product-color-list', function(event) {
+        var x=window.scrollX;
+        var y=window.scrollY;
+        window.onscroll=function(){window.scrollTo(x, y);};
+    });
+
+    $(document).on('mouseleave', '.product-color.active .product-color-list', function(event) {
+        window.onscroll=function(){};
+    });
+
+    $(document).on('click', '.product-color-close', function(event) {
+        event.preventDefault();
+        window.onscroll=function(){};
+    });
+
+
     //product color scroll
     $(document).on('mousewheel DOMMouseScroll', '.product-color.active .product-color-list', function(event) {
+
         var timeNow = new Date().getTime();
         var thisPosition = $(this).scrollLeft();
 
@@ -650,6 +668,7 @@ $(document).ready(function(){
                 $(this).scrollLeft(thisPosition += 20);
             }
         }
+
     });
 
     //------------------------------------------------------------------------//
