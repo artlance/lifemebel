@@ -847,3 +847,7 @@ $zoomit-ease-time: 0.1s;
         opacity: 0;
     }
 }
+.product-gallery-thumb,
+.product-gallery-thumbs-slider .slick-track {
+    transition: none !important;
+}

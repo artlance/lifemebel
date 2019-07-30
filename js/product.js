@@ -38,7 +38,7 @@ $(document).ready(function(){
             arrows: false,
             draggable: true,
             infinite: false,
-            centerMode: false,
+            centerMode: true,
             centerPadding: '0px',
             autoplay: false,
             autoplaySpeed: 5000,
@@ -62,6 +62,28 @@ $(document).ready(function(){
                     }
                 }
             ]
+        });
+
+        $('.product-gallery-thumbs-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+            var thisSlider = $('.product-gallery-thumbs-slider');
+                slidesCount = thisSlider.find('.slick-slide').length,
+                thisSliderTrack = thisSlider.find('.slick-track');
+                heightTotal = thisSliderTrack.innerHeight(),
+                visibleHeight = thisSlider.find('.slick-list').innerHeight(),
+                slideHeight = heightTotal / slidesCount,
+                invisibleSlides = ( heightTotal - visibleHeight ) / slideHeight;
+
+            if ( nextSlide != 0 && nextSlide < ( slidesCount - invisibleSlides - 1 ) ) {
+                thisSliderTrack.css({
+                    'top': slideHeight+'px'
+                });
+            } else {
+                thisSliderTrack.css({
+                    'top': '0'
+                });
+            }
+
         });
 
         $('.product-gallery-slider').on('init', function(event, slick){
