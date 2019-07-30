@@ -38,7 +38,7 @@ $(document).ready(function(){
             arrows: false,
             draggable: true,
             infinite: false,
-            centerMode: true,
+            centerMode: false,
             centerPadding: '0px',
             autoplay: false,
             autoplaySpeed: 5000,
