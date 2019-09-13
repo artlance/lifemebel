@@ -38,6 +38,14 @@
 .thumb-subtitle {
     display: block;
 }
+.thumb-arrow {
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 18px;
+    background: $tr url('../upload/arrow-white.svg') 50% calc(50% + 1px) no-repeat;
+    background-size: 5px 10px;
+}
 .thumb-caption-v1,
 .thumb-caption-v2,
 .thumb-caption-v3,
@@ -48,7 +56,16 @@
 .thumb-caption-v8,
 .thumb-caption-v9,
 .thumb-caption-v10,
-.thumb-caption-v11 {
+.thumb-caption-v11,
+.thumb-caption-v12,
+.thumb-caption-v13,
+.thumb-caption-v14,
+.thumb-caption-v15,
+.thumb-caption-v16,
+.thumb-caption-v17,
+.thumb-caption-v18,
+.thumb-caption-v19,
+.thumb-caption-v20 {
     position: absolute;
     z-index: 3;
     top: 0;
@@ -235,5 +252,82 @@
         letter-spacing: -2.2px;
         font-weight: 900;
         text-transform: uppercase;
+    }
+}
+.thumb-caption-v12,
+.thumb-caption-v13,
+.thumb-caption-v14,
+.thumb-caption-v15,
+.thumb-caption-v16,
+.thumb-caption-v17,
+.thumb-caption-v18 {
+    color: $w;
+    padding: 53px 20px 0 50px;
+    .thumb-subtitle {
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+    .thumb-title {
+        font-size: 42px;
+        line-height: 0.9524;
+        letter-spacing: -1.88px;
+        margin-bottom: 5px;
+    }
+}
+.thumb-caption-v13,
+.thumb-caption-v15,
+.thumb-caption-v16,
+.thumb-caption-v17,
+.thumb-caption-v18 {
+    .thumb-subtitle {
+        color: $text;
+    }
+    .thumb-arrow {
+        background-image: url('../upload/arrow-gray.svg');
+    }
+}
+.thumb-caption-v14 {
+    color: $dgr;
+    .thumb-arrow {
+        background-image: url('../upload/arrow-dark.svg');
+    }
+}
+.thumb-caption-v15,
+.thumb-caption-v17 {
+    color: $p;
+}
+.thumb-caption-v16,
+.thumb-caption-v17 {
+    top: auto;
+    bottom: 0;
+    padding-top: 0;
+    padding-bottom: 42px;
+}
+.thumb-caption-v18 {
+    color: $text;
+}
+.thumb-caption-v19,
+.thumb-caption-v20 {
+    top: auto;
+    bottom: 0;
+    padding: 0 20px 25px;
+    text-align: center;
+    color: $w;
+    .thumb-title {
+        margin-bottom: 7px;
+    }
+    .thumb-subtitle {
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+}
+.thumb-caption-v20 {
+    color: $b;
+    .thumb-title {
+        color: $dgr;
     }
 }

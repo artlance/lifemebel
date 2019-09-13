@@ -577,3 +577,42 @@ a.warranty-email {
         padding-right: 33px;
     }
 }
+.light-bulbs {
+    margin-bottom: 93px;
+}
+.light {
+    &-delivery {
+        margin-bottom: 93px;
+        &-block {
+            display: flex;
+            align-items: center;
+            min-height: 400px;
+            background: $s 50% 50% no-repeat;
+            background-size: cover;
+        }
+        &-title {
+            flex: 0 0 780px;
+            max-width: 100%;
+            padding: 30px 50px 48px 110px;
+            font-size: 48px;
+            line-height: 1.083334;
+            color: $b;
+            a {
+                display: block;
+                color: $b;
+                strong {
+                    display: block;
+                    padding-top: 9px;
+                    color: #82AC26;
+                    white-space: nowrap;
+                    transition: color $d $f;
+                }
+                &:hover {
+                    strong {
+                        color: lighten(#82AC26, 5%);
+                    }
+                }
+            }
+        }
+    }
+}
