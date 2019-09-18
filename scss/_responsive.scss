@@ -6,7 +6,8 @@
     .thumb-caption-v15,
     .thumb-caption-v16,
     .thumb-caption-v17,
-    .thumb-caption-v18 {
+    .thumb-caption-v18,
+    .thumb-caption-v22 {
         .thumb-title {
             font-size: 36px;
             line-height: 1;
@@ -177,7 +178,8 @@
     .thumb-caption-v15,
     .thumb-caption-v16,
     .thumb-caption-v17,
-    .thumb-caption-v18 {
+    .thumb-caption-v18,
+    .thumb-caption-v22 {
         padding-top: 30px;
         padding-left: 20px;
         .thumb-title {
@@ -186,13 +188,47 @@
         }
     }
     .thumb-caption-v16,
-    .thumb-caption-v17 {
+    .thumb-caption-v17,
+    .thumb-caption-v22 {
         padding-top: 0;
         padding-bottom: 20px;
     }
     .thumb-caption-v19,
     .thumb-caption-v20 {
         padding-bottom: 15px;
+    }
+    .thumb-caption-v21 {
+        padding-top: 15px;
+    }
+    .thumb-caption-v23 {
+        padding-left: 20px;
+        padding-bottom: 27px;
+        .thumb-title {
+            font-size: 48px;
+            letter-spacing: -2px;
+        }
+    }
+    .thumb-caption-v24 {
+        padding-top: 20px;
+        .thumb-subtitle {
+            font-size: 28px;
+        }
+    }
+    .thumb-caption-v25 {
+        padding-top: 23px;
+        padding-left: 20px;
+        .thumb-title {
+            font-size: 28px;
+            line-height: 1;
+        }
+    }
+    .thumb-caption-v26 {
+        padding-top: 24px;
+        padding-left: 20px;
+        .thumb-title {
+            font-size: 38px;
+            letter-spacing: -1.1px;
+        }
     }
     .promotion-caption,
     .tv-item-content {
@@ -681,6 +717,9 @@
         padding-left: 50px;
         padding-bottom: 30px;
         font-size: 38px;
+    }
+    .showroom-location-info {
+        padding-left: 35px;
     }
 }
 @media (max-width: 1179px) {

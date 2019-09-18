@@ -65,7 +65,13 @@
 .thumb-caption-v17,
 .thumb-caption-v18,
 .thumb-caption-v19,
-.thumb-caption-v20 {
+.thumb-caption-v20,
+.thumb-caption-v21,
+.thumb-caption-v22,
+.thumb-caption-v23,
+.thumb-caption-v24,
+.thumb-caption-v25,
+.thumb-caption-v26 {
     position: absolute;
     z-index: 3;
     top: 0;
@@ -260,7 +266,8 @@
 .thumb-caption-v15,
 .thumb-caption-v16,
 .thumb-caption-v17,
-.thumb-caption-v18 {
+.thumb-caption-v18,
+.thumb-caption-v22 {
     color: $w;
     padding: 53px 20px 0 50px;
     .thumb-subtitle {
@@ -280,7 +287,8 @@
 .thumb-caption-v15,
 .thumb-caption-v16,
 .thumb-caption-v17,
-.thumb-caption-v18 {
+.thumb-caption-v18,
+.thumb-caption-v22 {
     .thumb-subtitle {
         color: $text;
     }
@@ -299,17 +307,20 @@
     color: $p;
 }
 .thumb-caption-v16,
-.thumb-caption-v17 {
+.thumb-caption-v17,
+.thumb-caption-v22 {
     top: auto;
     bottom: 0;
     padding-top: 0;
     padding-bottom: 42px;
 }
-.thumb-caption-v18 {
+.thumb-caption-v18,
+.thumb-caption-v22 {
     color: $text;
 }
 .thumb-caption-v19,
-.thumb-caption-v20 {
+.thumb-caption-v20,
+.thumb-caption-v21 {
     top: auto;
     bottom: 0;
     padding: 0 20px 25px;
@@ -325,9 +336,69 @@
         white-space: nowrap;
     }
 }
-.thumb-caption-v20 {
+.thumb-caption-v20,
+.thumb-caption-v21 {
     color: $b;
     .thumb-title {
         color: $dgr;
+    }
+}
+.thumb-caption-v21 {
+    top: 0;
+    bottom: auto;
+    padding-bottom: 0;
+    padding-top: 25px;
+}
+.thumb-caption-v23 {
+    top: auto;
+    bottom: 0;
+    color: $w;
+    padding: 0 20px 47px 50px;
+    .thumb-title {
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: -2.7px;
+    }
+}
+.thumb-caption-v24 {
+    color: $text;
+    padding: 47px 20px 0;
+    text-align: center;
+    .thumb-title {
+        font-size: 17px;
+        line-height: 1.12;
+        font-weight: 500;
+        margin-bottom: 3px;
+    }
+    .thumb-subtitle {
+        font-size: 31px;
+        line-height: 1.13;
+        font-weight: 900;
+        color: $w;
+        letter-spacing: -0.3px;
+        text-transform: uppercase;
+    }
+}
+.thumb-caption-v25 {
+    color: $text;
+    padding: 43px 20px 0 50px;
+    .thumb-title {
+        font-size: 31px;
+        line-height: 0.91;
+    }
+}
+.thumb-caption-v26 {
+    color: $dgr;
+    padding: 50px 20px 0 50px;
+    .thumb-title {
+        font-size: 48px;
+        line-height: 0.75;
+        letter-spacing: -2.15px;
+        margin-bottom: 7px;
+    }
+    .thumb-subtitle {
+        font-size: 17px;
+        line-height: 1.12;
+        font-weight: 500;
     }
 }
