@@ -729,6 +729,17 @@
     .country-text-block {
         padding-right: 30px;
     }
+    .content {
+        .assembly-content,
+        .assembly-sidebar {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .assembly-sidebar {
+            padding-left: 0;
+            padding-top: 0;
+        }
+    }
 }
 @media (max-width: 1179px) {
     .wholesale-customers {
