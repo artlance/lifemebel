@@ -1,0 +1,200 @@
+.reviews {
+    &-caption {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid #E1E1E1;
+        h1 {
+            font-size: 30px;
+            line-height: 1.2;
+            color: $b;
+        }
+        &-number {
+            white-space: nowrap;
+            padding-left: 6px;
+            font-size: 11px;
+            line-height: 1;
+            font-weight: 500;
+            color: $b;
+        }
+    }
+    &-sorting {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin: -5px -21px 38px;
+        li {
+            padding: 0 11px;
+            a {
+                display: block;
+                padding: 5px 10px;
+                line-height: normal;
+                color: $b;
+                &:hover {
+                    color: $text;
+                }
+                span {
+                    display: block;
+                    border-bottom: 1px solid $tr;
+                    transition: border-color $d $f;
+                }
+            }
+            &.active {
+                a {
+                    color: $dgr;
+                    font-weight: bold;
+                    span {
+                        border-bottom-color: $p;
+                    }
+                }
+            }
+        }
+    }
+    &-content {
+        display: flex;
+    }
+    &-list {
+        flex: 0 0 64.589%;
+        max-width: 64.589%;
+    }
+    &-item {
+        display: flex;
+        padding-bottom: 13px;
+        margin-bottom: 51px;
+        border-bottom: 1px solid #E1E1E1;
+        &-info {
+            flex: 0 0 186px;
+            max-width: 186px;
+            padding-right: 15px;
+            margin-bottom: 15px;
+        }
+        &-date {
+            font-size: 11px;
+            line-height: 1.37;
+            margin-bottom: 3px;
+        }
+        &-person {
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 9px;
+        }
+        &-rating {
+            display: flex;
+            margin-left: -3px;
+            li {
+                flex: 0 0 15px;
+                max-width: 15px;
+                padding-left: 3px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &-content {
+            flex-grow: 1;
+            p {
+                font-size: 13px;
+                line-height: 1.154;
+                color: $dgr;
+                margin-bottom: 18px;
+            }
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 8px;
+        }
+        &-photo {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px 16px 0;
+            a {
+                margin: 0 10px 10px 0;
+                img {
+                    width: 83px;
+                }
+            }
+        }
+    }
+    &-audio {
+        margin-bottom: 15px;
+        audio {
+            max-width: 100%;
+        }
+    }
+    &-sidebar {
+        flex: 0 0 35.411%;
+        max-width: 35.411%;
+        padding-left: 50px;
+        .product-comments-info {
+            margin-bottom: 53px;
+            padding-top: 46px;
+            padding-bottom: 46px;
+            p {
+                font-weight: 500;
+                line-height: 1.154;
+                margin-bottom: 25px;
+            }
+            .button {
+                max-width: 140px;
+                padding-top: 6px;
+                padding-bottom: 9px;
+            }
+        }
+        .product-comments-info-ico {
+            width: 46px;
+            height: 46px;
+            margin-bottom: 15px;
+            img {
+                margin-top: 0;
+            }
+        }
+    }
+    &-all {
+        margin-bottom: 50px;
+        &-title {
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 13px;
+        }
+        &-type {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        &-type-stars {
+            flex: 0 0 94px;
+            max-width: 94px;
+            padding-right: 10px;
+        }
+        &-type-list {
+            display: flex;
+            margin-left: -3px;
+            li {
+                flex: 0 0 15px;
+                max-width: 15px;
+                padding-left: 3px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &-type-percent {
+            flex: 0 0 52px;
+            max-width: 52px;
+            padding-right: 10px;
+            color: $t;
+        }
+        &-type-number {
+            flex-grow: 1;
+            color: $dgr;
+        }
+    }
+}
