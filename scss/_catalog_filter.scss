@@ -185,8 +185,9 @@
         }
         &-sale {
             color: $red !important;
-            .svg-fill {
-                fill: $red !important;
+            &:before,
+            &:after {
+                background: $red !important;
             }
         }
         &-item-reset {
@@ -231,6 +232,81 @@
             box-shadow: 0 3px 13px 0 rgba(0,0,0,0.30);
             &.narrow {
                 width: 518px;
+            }
+            &.narrow-2 {
+                width: 238px;
+            }
+            &.narrow-3 {
+                width: 300px;
+                .catalog-filter-range {
+                    margin-bottom: 16px;
+                }
+                .catalog-filter-sorting-panel-content {
+                    max-height: 266px;
+                }
+                .catalog-filter-sorting-panel-list {
+                    padding-bottom: 2px;
+                }
+                .checkbox {
+                    margin-bottom: 16px;
+                }
+            }
+            &.narrow-4 {
+                width: 460px;
+                .catalog-filter-sorting-panel-content {
+                    max-height: 266px;
+                }
+                .catalog-filter-sorting-panel-list {
+                    padding-bottom: 2px;
+                }
+                .checkbox {
+                    margin-bottom: 16px;
+                }
+            }
+            &.narrow-5 {
+                width: 414px;
+                .catalog-filter-sorting-panel-content {
+                    max-height: 282px;
+                }
+                .catalog-filter-sorting-panel-list {
+                    padding-top: 4px;
+                    padding-bottom: 1px;
+                }
+            }
+            &.narrow-6 {
+                width: 300px;
+                .catalog-filter-sorting-panel-content {
+                    max-height: 220px;
+                }
+                .catalog-filter-sorting-panel-list {
+                    padding-top: 4px;
+                    padding-bottom: 1px;
+                }
+            }
+            &.medium {
+                width: 776px;
+            }
+            &.medium-2 {
+                width: 660px;
+                .catalog-filter-sorting-panel-content {
+                    max-height: 266px;
+                }
+                .catalog-filter-sorting-panel-list {
+                    padding-bottom: 2px;
+                }
+                .checkbox {
+                    margin-bottom: 16px;
+                }
+            }
+            &.medium-3 {
+                width: 618px;
+                .catalog-filter-sorting-panel-content {
+                    max-height: 282px;
+                }
+                .catalog-filter-sorting-panel-list {
+                    padding-top: 4px;
+                    padding-bottom: 1px;
+                }
             }
             &-close {
                 position: absolute;
@@ -287,7 +363,7 @@
                     line-height: 1.231;
                     font-weight: 500;
                     color: $b;
-                    padding: 8px 0 13px;
+                    padding: 8px 0 5px;
                 }
             }
             &-options {
@@ -322,9 +398,27 @@
             &-category {
                 font-weight: 500;
                 color: $b;
-                padding: 7px 0 15px;
+                padding: 7px 0;
+                .filter-item-hint {
+                    margin-top: 3px;
+                }
+                .filter-item-hint-text {
+                    bottom: auto;
+                    top: 100%;
+                    padding-bottom: 0;
+                    padding-top: 10px;
+                }
+                .filter-item-hint-block {
+                    &:before {
+                        top: auto;
+                        bottom: 100%;
+                        border-top-color: $tr;
+                        border-bottom-color: $b;
+                    }
+                }
             }
             &-list {
+                padding-top: 8px;
                 padding-bottom: 4px;
             }
             .checkbox {
@@ -343,8 +437,45 @@
                 }
             }
         }
+        &-type {
+            display: block;
+            padding: 14px 0 16px;
+            li {
+                a {
+                    display: block;
+                    padding: 6px 32px 5px 16px;
+                    color: $b;
+                    position: relative;
+                    &:after {
+                        opacity: 0;
+                        content: "";
+                        position: absolute;
+                        top: 10px;
+                        right: 18px;
+                        width: 11px;
+                        height: 9px;
+                        background: $tr url('../upload/check-green.svg') 50% 50% no-repeat;
+                        background-size: 100% 100%;
+                        transition: opacity $d $f;
+                        will-change: opacity;
+                    }
+                    &:hover {
+                        color: $text;
+                    }
+                }
+                &.active {
+                    a {
+                        color: $b;
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
     }
     &-range {
+        padding-top: 8px;
         margin-bottom: 28px;
         color: $dgr;
         &-wrapper {
@@ -432,6 +563,78 @@
             padding-bottom: 2px;
         }
     }
+    &-color {
+        display: block;
+        margin-bottom: 11px;
+        input {
+            display: none;
+            &:checked + label {
+                .catalog-filter-color-text {
+                    font-weight: 500;
+                    background-color: $s;
+                }
+                .catalog-filter-color-bg {
+                    border: 1px solid $w;
+                    &:before {
+                        border-width: 2px;
+                        border-color: $text;
+                    }
+                }
+            }
+            &:disabled + label {
+                cursor: default;
+                pointer-events: none;
+                opacity: 0.5;
+            }
+        }
+        label {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            padding: 0 6px 0 28px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        &-bg {
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid $tr;
+            transition: border-color $d $f;
+            will-change: border-color;
+            background: $tr 50% 50% no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            &:before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: -4px;
+                width: 24px;
+                height: 24px;
+                border: 1px solid #e1e1e1;
+                border-radius: 50%;
+                transition: border-color $d $f;
+                will-change: border-color;
+            }
+        }
+        &-text {
+            display: block;
+            padding: 4px 8px 5px;
+            line-height: 1.154;
+            color: $b;
+            transition: background-color $d $f;
+            will-change: background-color;
+            border-radius: 3px;
+        }
+    }
 }
 @media (max-width: 1325px) {
     .catalog-filter-category {
@@ -441,12 +644,26 @@
 }
 @media (max-width: 1079px) {
     .catalog-filter-category,
-    .catalog-filter-sorting-panel-col {
+    .catalog-filter-sorting-panel-col,
+    .catalog-filter-sorting-panel-block-col {
         flex: 0 0 50%;
         max-width: 50%;
     }
     .catalog-filter-sorting-panel {
         width: 518px;
+        &.medium,
+        &.medium-2,
+        &.medium-3 {
+            width: 518px;
+        }
+        &.narrow-3,
+        &.narrow-6 {
+            .catalog-filter-sorting-panel-col,
+            .catalog-filter-sorting-panel-block-col {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
     }
 }
 /*-------------------- End new filter --------------------*/
