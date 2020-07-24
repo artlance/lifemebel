@@ -1,0 +1,118 @@
+/*-------------------- Begin marketplace --------------------*/
+.marketplace {
+    &-hero {
+        background: $p 50% 50% no-repeat;
+        background-size: cover;
+        position: relative;
+        margin-bottom: 100px;
+        .container {
+            position: relative;
+        }
+        .row {
+            min-height: 580px;
+        }
+        &-content {
+            padding: 186px 0 100px 88px;
+            max-width: 710px;
+        }
+        &-caption {
+            font-size: 44px;
+            line-height: 1.14;
+            font-weight: 900;
+            color: $w;
+            margin-bottom: 20px;
+            h1 {
+                font-size: 100%;
+                font-weight: 900;
+            }
+        }
+        &-icon-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-icon1 {
+            position: absolute;
+            top: 27px;
+            left: 45.613%;
+            width: 160px;
+            height: 160px;
+            border-radius: 30px;
+            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+            background: #4f3f84;
+        }
+        &-icon2 {
+            position: absolute;
+            top: 131px;
+            left: 40.775%;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.2);
+            background: #f3b800;
+        }
+        &-icon3 {
+            position: absolute;
+            bottom: 73px;
+            left: 46.91%;
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+            background: $p;
+        }
+        &-icon4 {
+            position: absolute;
+            bottom: 102px;
+            right: 8.84%;
+            width: 160px;
+            height: 160px;
+            border-radius: 30px;
+            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+            background: $dgr;
+        }
+        &-icon5 {
+            position: absolute;
+            top: 100px;
+            left: 37.94%;
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            background: #6aa638;
+        }
+        &-icon6 {
+            position: absolute;
+            bottom: 271px;
+            right: 5.23%;
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: #61A334;
+        }
+        &-icon7 {
+            position: absolute;
+            bottom: 59px;
+            left: 33.1%;
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: $w;
+        }
+        &-icon8 {
+            position: absolute;
+            bottom: -30px;
+            left: 37.17%;
+            width: 90px;
+            height: 90px;
+            border-radius: 17px;
+            background: #6aa638;
+        }
+    }
+}
+@media (max-width: 1325px) {
+    .marketplace-hero-content {
+        padding-left: 0;
+        max-width: 622px;
+    }
+}
+/*-------------------- End marketplace --------------------*/
