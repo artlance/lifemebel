@@ -17452,6 +17452,7 @@ textarea.complaint-textarea {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .marketplace-hero-icon1 {
@@ -17542,10 +17543,288 @@ textarea.complaint-textarea {
   background: #6aa638;
 }
 
+.marketplace-title {
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.154;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+.marketplace-title h1, .marketplace-title h2, .marketplace-title h3, .marketplace-title h4, .marketplace-title h5, .marketplace-title h6 {
+  font-size: 100%;
+  font-weight: 900;
+}
+
+.marketplace-advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 15px 60px;
+}
+
+.marketplace-advantages-col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 645px;
+  padding: 0 75px;
+}
+
+.marketplace-advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 0 40px;
+}
+
+.marketplace-advantage-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 132px;
+  flex: 0 0 132px;
+  max-width: 132px;
+  padding-right: 28px;
+}
+
+.marketplace-advantage-icon span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 104px;
+  height: 104px;
+  background: #F4F5F6;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.marketplace-advantage-text {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-top: 2px;
+  line-height: 1.54;
+  color: #393939;
+}
+
+.marketplace-advantage-title {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 9px;
+}
+
+.marketplace-advantage-title h4 {
+  font-size: 100%;
+  font-weight: 500;
+}
+
+.marketplace-process {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px 0 65px;
+}
+
+.marketplace-process-step {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px;
+  max-width: 120px;
+  margin-bottom: 60px;
+}
+
+.marketplace-process-step.active .marketplace-process-step-icon {
+  border-color: #83C150;
+}
+
+.marketplace-process-step-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  width: 100px;
+  height: 100px;
+  border: 7px solid rgba(131, 193, 80, 0.4);
+  background: #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.marketplace-process-step-icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.marketplace-process-step-number {
+  position: relative;
+  font-size: 26px;
+  line-height: 1.154;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+.marketplace-process-step-title {
+  font-size: 15px;
+  line-height: 1.3334;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+}
+
+.marketplace-process-step-img {
+  position: relative;
+}
+
+.marketplace-process-dots {
+  padding: 46px 15px;
+  font-size: 0;
+  line-height: 0;
+  white-space: nowrap;
+}
+
+.marketplace-process-dots li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 6px;
+  width: 8px;
+  height: 8px;
+  background: #e1e1e1;
+  border-radius: 50%;
+}
+
+.marketplace-apply {
+  margin-bottom: 100px;
+  padding: 0 30px 50px;
+  background: #F4F5F6;
+  border-radius: 3px;
+}
+
+.marketplace-apply-icon {
+  position: relative;
+  top: -25px;
+  padding: 5px;
+  margin: 0 auto 22px;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.marketplace-apply-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 40px;
+  background: #83C150;
+  border-radius: 50%;
+}
+
+.marketplace-apply-content {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.marketplace-apply-form {
+  margin-bottom: 50px;
+}
+
+.marketplace-requirements {
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.marketplace-requirements p {
+  line-height: 1.54;
+  margin-bottom: 39px;
+  color: #393939;
+}
+
+.marketplace-requirements p strong {
+  color: #000000;
+}
+
+.marketplace-requirements-link {
+  margin-bottom: 33px;
+  line-height: 1.54;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+}
+
+.marketplace-requirements-link a {
+  display: inline-block;
+  vertical-align: top;
+  padding: 4px 10px;
+}
+
 @media (max-width: 1325px) {
   .marketplace-hero-content {
     padding-left: 0;
     max-width: 622px;
+  }
+  .marketplace-advantages {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .marketplace-advantages-col {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 525px;
+  }
+  .marketplace-process {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  .marketplace-process-dots {
+    padding: 48px 0 49px;
+    margin: 0 -10px;
+  }
+  .marketplace-process-dots li {
+    margin: 0 2px;
+    width: 3px;
+    height: 3px;
   }
 }
 
