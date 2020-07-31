@@ -17543,6 +17543,26 @@ textarea.complaint-textarea {
   background: #6aa638;
 }
 
+.marketplace-hero-icon9 {
+  position: absolute;
+  top: 42%;
+  right: 10.77%;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #6aa638;
+}
+
+.marketplace-hero-icon10 {
+  position: absolute;
+  bottom: 10.25%;
+  right: -1.8%;
+  width: 90px;
+  height: 90px;
+  border-radius: 17px;
+  background: #6aa638;
+}
+
 .marketplace-title {
   text-align: center;
   font-size: 26px;
@@ -18203,6 +18223,172 @@ textarea.complaint-textarea {
   width: 100%;
 }
 
+.marketplace-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+.marketplace-login-content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 45.8333%;
+  flex: 0 0 45.8333%;
+  max-width: 45.8333%;
+}
+
+.marketplace-login-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  min-height: 100%;
+  padding: 60px 30px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.marketplace-login-header {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 2px 0 68px;
+}
+
+.marketplace-login-header .marketplace-logo {
+  margin-left: -10px;
+}
+
+.marketplace-login-header .marketplace-logo a {
+  margin: 0;
+}
+
+.marketplace-login-form {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 65px;
+}
+
+.marketplace-login-form .input-wrapper > label {
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+
+.marketplace-login-title {
+  font-size: 13px;
+  line-height: 1.54;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.marketplace-login-checkbox {
+  padding: 12px 0 30px;
+}
+
+.marketplace-login-checkbox .checkbox label {
+  font-size: 13px;
+  line-height: 1.154;
+  padding: 1px 0 0 29px;
+  color: #393939;
+}
+
+.marketplace-login-checkbox .checkbox label:before, .marketplace-login-checkbox .checkbox label:after {
+  width: 16px;
+  height: 16px;
+}
+
+.marketplace-login-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.marketplace-login-button {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 61.75%;
+  flex: 0 0 61.75%;
+  max-width: 61.75%;
+}
+
+.marketplace-login-button .button {
+  width: 100%;
+}
+
+.marketplace-login-forgot {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 38.25%;
+  flex: 0 0 38.25%;
+  max-width: 38.25%;
+  text-align: right;
+}
+
+.marketplace-login-forgot a {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -10px;
+  padding: 10px 10px 12px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+}
+
+.marketplace-login-footer {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.marketplace-login-copyright {
+  padding: 30px 0;
+  font-size: 11px;
+  line-height: 1.364;
+  color: #393939;
+}
+
+.marketplace-login-hero {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 54.1667%;
+  flex: 0 0 54.1667%;
+  max-width: 54.1667%;
+  background: #83C150 50% 50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.marketplace-login-hero .marketplace-hero-icon1 {
+  top: 22%;
+  left: auto;
+  right: 15.25%;
+}
+
+.marketplace-login-hero .marketplace-hero-icon2 {
+  top: 37.5%;
+  left: auto;
+  right: 32.6%;
+}
+
+.marketplace-login-hero .marketplace-hero-icon3 {
+  bottom: 15.875%;
+  left: auto;
+  right: 35.13%;
+}
+
+.marketplace-login-hero .marketplace-hero-icon4 {
+  bottom: 17.5%;
+  right: 4.49%;
+}
+
 @media (max-width: 1325px) {
   .marketplace-hero-content {
     padding-left: 0;
@@ -18263,6 +18449,18 @@ textarea.complaint-textarea {
   .marketplace-date-table th,
   .marketplace-date-table td {
     font-size: 11px;
+  }
+  .marketplace-login-button {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58%;
+    flex: 0 0 58%;
+    max-width: 58%;
+  }
+  .marketplace-login-forgot {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 42%;
+    flex: 0 0 42%;
+    max-width: 42%;
   }
 }
 
