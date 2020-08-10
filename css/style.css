@@ -5852,6 +5852,8 @@ a.warranty-email:hover {
   padding-right: 27px;
   background-color: #ffffff;
   border-color: #a1a1a1;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .catalog-filter-sorting-link.active:before, .catalog-filter-sorting-link.active:after {
@@ -5866,6 +5868,28 @@ a.warranty-email:hover {
   position: absolute;
   left: 10px;
   top: 7px;
+}
+
+.catalog-filter-sorting-preorder {
+  padding-left: 33px;
+  color: #7396d1;
+}
+
+.catalog-filter-sorting-preorder:hover {
+  color: #7396d1;
+}
+
+.catalog-filter-sorting-preorder.active {
+  color: #7396d1;
+  border-color: #7396d1;
+  -webkit-box-shadow: 0 0 4px 0 rgba(115, 150, 209, 0.3);
+  box-shadow: 0 0 4px 0 rgba(115, 150, 209, 0.3);
+}
+
+.catalog-filter-sorting-preorder img {
+  position: absolute;
+  left: 11px;
+  top: 5px;
 }
 
 .catalog-filter-sorting-reset {
