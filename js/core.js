@@ -27,9 +27,18 @@ $(document).ready(function(){
     var scrollPaneResize = function() {
         $('.scroll-pane').each(function(index, el) {
             $(this).jScrollPane({showArrows: false, autoReinitialise: true}).data('jsp').destroy();
-        });
-        $('.scroll-pane').each(function(index, el) {
             $(this).jScrollPane({showArrows: false, autoReinitialise: true}).data('jsp').reinitialise();
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //single
+    var scrollPaneSingle = function(jqParent) {
+        var pane = jqParent.find('.scroll-pane');
+        pane.jScrollPane({
+            showArrows: false,
+            autoReinitialise: false
         });
     }
 
@@ -79,9 +88,10 @@ $(document).ready(function(){
         var thisParent = $(this).parent(dropClass);
         thisParent.toggleClass('active');
         //
-        if ( $(thisParent).find('.scroll-pane').length ) {
-            scrollPane();
-            scrollPaneResize();
+        var thisParentPane = thisParent.find('.scroll-pane');
+        if ( thisParentPane.length && !thisParent.hasClass('scroll-pane-initialized') ) {
+            scrollPaneSingle(thisParent);
+            thisParent.addClass('scroll-pane-initialized');
         }
         //
         if ( $(thisParent).find('.slider-js-arrows-nav').length ) {
