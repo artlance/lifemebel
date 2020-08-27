@@ -27,4 +27,26 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //new showroom categories
+    var newShowroomCategories,
+        newShowroomCategoriesLength = $('.new-showroom-products-categories').length;
+    if ( newShowroomCategoriesLength ) {
+        newShowroomCategories = new Swiper ('.new-showroom-products-categories', {
+            navigation: {
+                nextEl: '.new-showroom-products-categories-wrapper .swiper-button-next',
+                prevEl: '.new-showroom-products-categories-wrapper .swiper-button-prev',
+            },
+            speed: 500,
+            slidesPerView: 5,
+            watchOverflow: true,
+            breakpoints: {
+                1326: {
+                    slidesPerView: 8
+                }
+            }
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready
