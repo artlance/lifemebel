@@ -179,7 +179,7 @@
   --swiper-navigation-color: #000000;
 }
 .swiper-button-lock {
-  display: none;
+  display: none !important;
 }
 :root {
   /*
@@ -202,7 +202,7 @@
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 12px;
+  bottom: 20px;
   left: 0;
   width: 100%;
 }
@@ -337,7 +337,7 @@ button.swiper-pagination-bullet {
   --swiper-pagination-color: #000000;
 }
 .swiper-pagination-lock {
-  display: none;
+  display: none !important;
 }
 /* Scrollbar */
 .swiper-scrollbar {
@@ -375,7 +375,7 @@ button.swiper-pagination-bullet {
   cursor: move;
 }
 .swiper-scrollbar-lock {
-  display: none;
+  display: none !important;
 }
 .swiper-zoom-container {
   width: 100%;

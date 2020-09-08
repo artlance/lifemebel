@@ -175,6 +175,20 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //new product select
+    $(document).on('click', '.new-product-select-link', function(event) {
+        event.preventDefault();
+        var thisElement = $(this),
+            thisElementHtml = thisElement.html(),
+            thisParent = thisElement.parents('.new-product-select-block');
+        thisElement.addClass('active').siblings().removeClass('active');
+        thisParent.find('.new-product-select-toggle').html(thisElementHtml);
+        activePop = null;
+        closeInactivePop();
+    });
+
+    //------------------------------------------------------------------------//
+
     //tab
     $('.tabs').delegate('li:not(.active)','click',function(){$(this).addClass('active').siblings().removeClass('active').parents('.tab').find('.box').hide().eq($(this).index()).fadeIn(250);});
 
