@@ -44,6 +44,18 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //countdown
+    if ( $('.countdown').length ) {
+        $('.countdown').downCount({
+            date: '11/04/2020 24:00:00',
+            offset: +3
+        }, function () {
+            //callback
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
     //new other products
     var newOtherProducts,
         newOtherProductsLength = $('.new-other-products').length;
@@ -295,6 +307,98 @@ $(document).ready(function(){
             }
         });
     });
+
+    //------------------------------------------------------------------------//
+
+    //new product modal review
+    $('#new-product-modal-review').on('shown', function () {
+        $.ajax({
+            url: '../new-product-modal-review.html',
+            cache: false,
+            success: function() {
+                $('#new-product-modal-review').load( '../new-product-modal-review.html', function( response, status, xhr ) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new product set
+    $(document).on('keypress', '.new-product-set-number-text', function(event) {
+        event = event || window.event;
+        if (event.charCode && event.charCode!=0 && event.charCode!=46 && (event.charCode < 48 || event.charCode > 57) ) return false;
+    });
+
+    $(document).on('change', '.new-product-set-number-text', function(event) {
+        var thisParent = $(this).parents('.new-product-set-item');
+        var quantityValue = $(this).val();
+        if ( quantityValue == 0 ) {
+            thisParent.find('.new-product-set-checkbox input').prop('checked', false);
+        } else {
+            thisParent.find('.new-product-set-checkbox input').prop('checked', true);
+        }
+    });
+
+    $(document).on('click', '.new-product-set-number-minus', function(event) {
+        event.preventDefault();
+        var thisParent = $(this).parents('.new-product-set-item');
+        var quantityInput = $(this).parent('.new-product-set-number').find('.new-product-set-number-text');
+        var quantityValue = quantityInput.val();
+        quantityValue = --quantityValue;
+        if ( quantityValue < 0 ) { quantityValue = 0; }
+        quantityInput.val(quantityValue);
+        if ( quantityValue == 0 ) {
+            thisParent.find('.new-product-set-checkbox input').prop('checked', false);
+        }
+    });
+
+    $(document).on('click', '.new-product-set-number-plus', function(event) {
+        event.preventDefault();
+        var thisParent = $(this).parents('.new-product-set-item');
+        var quantityInput = $(this).parent('.new-product-set-number').find('.new-product-set-number-text');
+        var quantityValue = quantityInput.val();
+        quantityInput.val(++quantityValue);
+        thisParent.find('.new-product-set-checkbox input').prop('checked', true);
+    });
+
+    $(document).on('change', '.new-product-set-checkbox input', function(event) {
+        var thisParent = $(this).parents('.new-product-set-item');
+        if( $(this).is(':checked') ) {
+            thisParent.find('.new-product-set-number-text').val('1');
+        } else {
+            thisParent.find('.new-product-set-number-text').val('0');
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new product set delete
+    $(document).on('click', '.new-product-set-total-item-delete', function(event) {
+        event.preventDefault();
+        $(this).parents('.new-product-set-total-item').remove();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new product set buy
+    var newProductSetBuy,
+        newProductSetBuyLength = $('.new-product-set-buy-slider').length;
+    if ( newProductSetBuyLength ) {
+        newProductSetBuy = new Swiper ('.new-product-set-buy-slider', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            speed: 500,
+            spaceBetween: 16,
+            slidesPerView: 'auto',
+            watchOverflow: true,
+        });
+    }
 
     //------------------------------------------------------------------------//
 
