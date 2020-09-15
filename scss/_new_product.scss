@@ -2283,6 +2283,145 @@
             }
         }
     }
+    &-customer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: -15px 0 46px;
+        &-title {
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 14px;
+        }
+        &-photos {
+            flex: 0 0 73.21%;
+            max-width: 73.21%;
+            position: relative;
+            .swiper-button-prev,
+            .swiper-button-next {
+                &.swiper-button-disabled {
+                    display: none;
+                }
+                &.swiper-button-white {
+                    box-shadow: none;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: -18px;
+                    bottom: -18px;
+                    right: -22px;
+                    width: 123px;
+                    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+                }
+                &:after {
+                    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+                    border-radius: 50%;
+                }
+            }
+            .swiper-button-prev {
+                left: 0;
+                &:before {
+                    right: auto;
+                    left: -22px;
+                    background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+                }
+            }
+            .swiper-button-next {
+                right: 0;
+            }
+        }
+        &-photos-slider {
+            .swiper-slide {
+                width: 123px;
+            }
+        }
+        &-photo {
+            display: block;
+            height: 90px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        &-note {
+            flex: 0 0 26.79%;
+            max-width: 26.79%;
+            padding-left: 24px;
+            color: $b;
+            p {
+                max-width: 300px;
+            }
+            strong {
+                font-weight: 500;
+            }
+        }
+    }
+    &-quick-view {
+        position: absolute;
+        width: 1362px;
+        max-width: calc(100% - 56px);
+        background: $w;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+        &-content {
+            display: flex;
+        }
+        &-wrapper {
+            flex: 0 0 74.45%;
+            max-width: 74.45%;
+            padding: 30px;
+        }
+        &-gallery {
+            background: $s;
+            img {
+                width: 100%;
+            }
+            .new-product-favorite {
+                right: 24px;
+            }
+            .swiper-button-prev {
+                left: 24px;
+            }
+            .swiper-button-next {
+                right: 24px;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                &.swiper-button-white {
+                    box-shadow: none;
+                }
+                &.swiper-button-disabled {
+                    display: none;
+                }
+            }
+            .swiper-pagination-bullet {
+                background: $t;
+            }
+            .swiper-pagination-bullet-active {
+                background: $p;
+            }
+        }
+        &-info {
+            flex: 0 0 25.55%;
+            max-width: 25.55%;
+            background: $s;
+            .new-product-info-block {
+                background: $tr;
+                margin-bottom: 0;
+                padding-bottom: 30px;
+            }
+        }
+        &-button {
+            padding-top: 30px;
+            .button {
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 100%;
+            }
+        }
+    }
 }
 a.new-product-brand-feature {
     &:hover {
@@ -2549,6 +2688,34 @@ a.new-product-brand-feature {
                         padding-right: 10px;
                     }
                 }
+            }
+        }
+        &-quick-view {
+            &-wrapper {
+                flex: 0 0 60%;
+                max-width: 60%;
+                padding: 15px;
+            }
+            &-gallery {
+                .new-product-favorite {
+                    right: 15px;
+                }
+                .swiper-button-prev {
+                    left: 15px;
+                }
+                .swiper-button-next {
+                    right: 15px;
+                }
+            }
+            &-info {
+                flex: 0 0 40%;
+                max-width: 40%;
+                .new-product-info-block {
+                    padding-bottom: 15px;
+                }
+            }
+            &-button {
+                padding-top: 15px;
             }
         }
     }

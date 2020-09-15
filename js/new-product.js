@@ -402,4 +402,78 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //new product customer photos
+    var newProductCustomerPhotos,
+        newProductCustomerPhotosLength = $('.new-product-customer-photos-slider').length;
+    if ( newProductCustomerPhotosLength ) {
+        newProductCustomerPhotos = new Swiper ('.new-product-customer-photos-slider', {
+            navigation: {
+                nextEl: '.new-product-customer-photos .swiper-button-next',
+                prevEl: '.new-product-customer-photos .swiper-button-prev',
+            },
+            watchOverflow: true,
+            speed: 500,
+            spaceBetween: 5,
+            slidesPerView: 'auto',
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //new product quick view
+    function newProductQuickView_init() {
+
+        var newProductQuickView,
+            newProductQuickViewLength = $('.new-product-quick-view-gallery').length;
+        if ( newProductQuickViewLength ) {
+            newProductQuickView = new Swiper ('.new-product-quick-view-gallery', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                watchOverflow: true,
+                speed: 500,
+                on: {
+                    imagesReady: function () {
+                        centerModal();
+                    },
+                },
+            });
+        }
+
+    }
+
+    $('#new-product-quick-view').on('shown', function () {
+        $.ajax({
+            url: '../new-product-quick-view.html',
+            cache: false,
+            success: function() {
+                $('#new-product-quick-view').load( '../new-product-quick-view.html', function( response, status, xhr ) {
+                    newProductQuickView_init();
+                    centerModal();
+                    if ( $('.popover-target').length ) {
+                        $('.popover-target').popover({
+                            trigger: 'hover',
+                            html: true
+                        });
+                    }
+                    if ( $('.countdown').length ) {
+                        $('.countdown').downCount({
+                            date: '11/04/2020 24:00:00',
+                            offset: +3
+                        }, function () {
+                            //callback
+                        });
+                    }
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

@@ -61,17 +61,17 @@ $(document).ready(function(){
     });
 
     function closeInactivePop() {
-        dropClass.each(function (i) {
+        $('.drop').each(function (i) {
             if ($(this).hasClass('active') && i!=activePop) {
                 $(this).removeClass('active');
             }
         });
         return false;
     }
-    dropClass.on('mouseover', function(event) {
-        activePop = dropClass.index(this);
+    $(document).on('mouseover', '.drop', function(event) {
+        activePop = $('.drop').index(this);
     });
-    dropClass.on('mouseout', function(event) {
+    $(document).on('mouseout', '.drop', function(event) {
         activePop = null;
     });
     $(document).on('click', function(event) {
@@ -85,7 +85,7 @@ $(document).ready(function(){
     var sliderJsArrowsNavInit = false;
     $(document).on('click', '.drop-toggle', function(event) {
         event.preventDefault();
-        var thisParent = $(this).parent(dropClass);
+        var thisParent = $(this).parent('.drop');
         thisParent.toggleClass('active');
         //
         var thisParentPane = thisParent.find('.scroll-pane');

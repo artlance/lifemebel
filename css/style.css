@@ -6637,7 +6637,7 @@ a.warranty-email:hover {
   top: 0;
   left: 0;
   margin-bottom: 10px;
-  z-index: 5100;
+  z-index: 10000;
   display: block;
   max-width: 152px;
   text-align: center;
@@ -22206,6 +22206,202 @@ button.swiper-pagination-bullet {
   padding-right: 10px;
 }
 
+.new-product-customer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: -15px 0 46px;
+}
+
+.new-product-customer-title {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 14px;
+}
+
+.new-product-customer-photos {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 73.21%;
+  flex: 0 0 73.21%;
+  max-width: 73.21%;
+  position: relative;
+}
+
+.new-product-customer-photos .swiper-button-prev.swiper-button-disabled,
+.new-product-customer-photos .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+
+.new-product-customer-photos .swiper-button-prev.swiper-button-white,
+.new-product-customer-photos .swiper-button-next.swiper-button-white {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.new-product-customer-photos .swiper-button-prev:before,
+.new-product-customer-photos .swiper-button-next:before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  bottom: -18px;
+  right: -22px;
+  width: 123px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(14%, rgba(255, 255, 255, 0)), color-stop(57%, #ffffff), color-stop(57%, #ffffff));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+}
+
+.new-product-customer-photos .swiper-button-prev:after,
+.new-product-customer-photos .swiper-button-next:after {
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.new-product-customer-photos .swiper-button-prev {
+  left: 0;
+}
+
+.new-product-customer-photos .swiper-button-prev:before {
+  right: auto;
+  left: -22px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(14%, rgba(255, 255, 255, 0)), color-stop(57%, #ffffff), color-stop(57%, #ffffff));
+  background-image: -webkit-linear-gradient(right, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+  background-image: -o-linear-gradient(right, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+}
+
+.new-product-customer-photos .swiper-button-next {
+  right: 0;
+}
+
+.new-product-customer-photos-slider .swiper-slide {
+  width: 123px;
+}
+
+.new-product-customer-photo {
+  display: block;
+  height: 90px;
+  overflow: hidden;
+}
+
+.new-product-customer-photo img {
+  width: 100%;
+}
+
+.new-product-customer-note {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 26.79%;
+  flex: 0 0 26.79%;
+  max-width: 26.79%;
+  padding-left: 24px;
+  color: #000000;
+}
+
+.new-product-customer-note p {
+  max-width: 300px;
+}
+
+.new-product-customer-note strong {
+  font-weight: 500;
+}
+
+.new-product-quick-view {
+  position: absolute;
+  width: 1362px;
+  max-width: calc(100% - 56px);
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.new-product-quick-view-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.new-product-quick-view-wrapper {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 74.45%;
+  flex: 0 0 74.45%;
+  max-width: 74.45%;
+  padding: 30px;
+}
+
+.new-product-quick-view-gallery {
+  background: #F4F5F6;
+}
+
+.new-product-quick-view-gallery img {
+  width: 100%;
+}
+
+.new-product-quick-view-gallery .new-product-favorite {
+  right: 24px;
+}
+
+.new-product-quick-view-gallery .swiper-button-prev {
+  left: 24px;
+}
+
+.new-product-quick-view-gallery .swiper-button-next {
+  right: 24px;
+}
+
+.new-product-quick-view-gallery .swiper-button-prev.swiper-button-white,
+.new-product-quick-view-gallery .swiper-button-next.swiper-button-white {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.new-product-quick-view-gallery .swiper-button-prev.swiper-button-disabled,
+.new-product-quick-view-gallery .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+
+.new-product-quick-view-gallery .swiper-pagination-bullet {
+  background: #a1a1a1;
+}
+
+.new-product-quick-view-gallery .swiper-pagination-bullet-active {
+  background: #83C150;
+}
+
+.new-product-quick-view-info {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25.55%;
+  flex: 0 0 25.55%;
+  max-width: 25.55%;
+  background: #F4F5F6;
+}
+
+.new-product-quick-view-info .new-product-info-block {
+  background: transparent;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+.new-product-quick-view-button {
+  padding-top: 30px;
+}
+
+.new-product-quick-view-button .button {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
 a.new-product-brand-feature:hover .new-product-brand-feature-title {
   color: #686868;
 }
@@ -22509,6 +22705,34 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   .new-product-set-tab .new-product-tabs li {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .new-product-quick-view-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 15px;
+  }
+  .new-product-quick-view-gallery .new-product-favorite {
+    right: 15px;
+  }
+  .new-product-quick-view-gallery .swiper-button-prev {
+    left: 15px;
+  }
+  .new-product-quick-view-gallery .swiper-button-next {
+    right: 15px;
+  }
+  .new-product-quick-view-info {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .new-product-quick-view-info .new-product-info-block {
+    padding-bottom: 15px;
+  }
+  .new-product-quick-view-button {
+    padding-top: 15px;
   }
 }
 
