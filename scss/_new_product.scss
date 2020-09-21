@@ -39,9 +39,18 @@
         }
     }
     &-gallery-img {
+        position: relative;
         img {
             width: 100%;
         }
+    }
+    &-mask-gray {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($b, 0.04);
     }
     &-favorite {
         display: block;

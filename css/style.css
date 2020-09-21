@@ -5759,6 +5759,85 @@ a.warranty-email:hover {
   border-radius: 0;
 }
 
+.catalog-banner {
+  padding: 20px 0 40px;
+}
+
+.catalog-banner-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.catalog-banner-link:before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), #000000);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), #000000);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
+
+.catalog-banner-link img {
+  width: 100%;
+}
+
+.catalog-banner-caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 30px 30px;
+}
+
+.catalog-banner-play {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 56px;
+  flex: 0 0 56px;
+  max-width: 56px;
+  padding-right: 16px;
+}
+
+.catalog-banner-play-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #F4F5F6 url("../upload/new-play.svg") calc(50% + 1px) 50% no-repeat;
+  background-size: 12px 16px;
+  border-radius: 50%;
+}
+
+.catalog-banner-title {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 18px;
+  line-height: 1.12;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+@media (max-width: 1079px) {
+  .catalog-banner-caption {
+    padding: 0 16px 20px;
+  }
+  .catalog-banner-title {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
 /*-------------------- Begin new filter --------------------*/
 .catalog-caption-other {
   margin-top: -13px;
@@ -19289,8 +19368,21 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
+.new-product-gallery-img {
+  position: relative;
+}
+
 .new-product-gallery-img img {
   width: 100%;
+}
+
+.new-product-mask-gray {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.04);
 }
 
 .new-product-favorite {
