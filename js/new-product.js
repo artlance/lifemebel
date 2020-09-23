@@ -1,11 +1,11 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     //new product gallery
     var newProductGalleryCurrent = 0;
     var newProductGallery,
         newProductGalleryLength = $('.new-product-gallery').length;
-    if ( newProductGalleryLength ) {
-        newProductGallery = new Swiper ('.new-product-gallery', {
+    if (newProductGalleryLength) {
+        newProductGallery = new Swiper('.new-product-gallery', {
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -14,12 +14,37 @@ $(document).ready(function(){
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            // убираем свайп
+            // simulateTouch: false,
+            // allowTouchMove: false,
             watchOverflow: true,
             speed: 500,
             on: {
-                slideChange: function () {
-                    newProductGalleryCurrent = newProductGallery.activeIndex
+                init: function () {
+                    console.log("Инициализация слайдера, текущий слайд: 0");
                 },
+                slideChange: function (swiper) {
+
+                    var thisActiveIndex = newProductGallery.activeIndex,
+                        thisPreviousIndex = newProductGallery.previousIndex,
+                        thisSlides = $('.new-product-gallery').find(".swiper-slide");
+                    newProductGalleryCurrent = thisActiveIndex;
+
+                    //Предыдущий
+                    console.log("Предыдущий слайд: " + thisPreviousIndex);
+                    var previousSlide = thisSlides.eq(thisActiveIndex);
+
+                    //Текущий
+                    console.log("Меняем слайд на: " + thisActiveIndex);
+                    var currentSlide = thisSlides.eq(thisActiveIndex);
+
+                },
+                slideChangeTransitionStart: function () {
+                    console.log("Начало смены слайда: " + newProductGallery.activeIndex);
+                },
+                slideChangeTransitionEnd: function () {
+                    console.log("Конец смены слайда: " + newProductGallery.activeIndex);
+                }
             },
         });
     }
@@ -27,7 +52,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //new product favorite
-    $(document).on('click', '.new-product-favorite', function(event) {
+    $(document).on('click', '.new-product-favorite', function (event) {
         event.preventDefault();
         $(this).toggleClass('active');
     });
@@ -35,7 +60,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //popover
-    if ( $('.popover-target').length ) {
+    if ($('.popover-target').length) {
         $('.popover-target').popover({
             trigger: 'hover',
             html: true
@@ -45,9 +70,9 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //countdown
-    if ( $('.countdown').length ) {
+    if ($('.countdown').length) {
         $('.countdown').downCount({
-            date: '11/04/2020 24:00:00',
+            date: '11/04/2020 12:00:00',
             offset: +3
         }, function () {
             //callback
@@ -59,8 +84,8 @@ $(document).ready(function(){
     //new other products
     var newOtherProducts,
         newOtherProductsLength = $('.new-other-products').length;
-    if ( newOtherProductsLength ) {
-        newOtherProducts = new Swiper ('.new-other-products', {
+    if (newOtherProductsLength) {
+        newOtherProducts = new Swiper('.new-other-products', {
             navigation: {
                 nextEl: '.new-other-products-wrapper .swiper-button-next',
                 prevEl: '.new-other-products-wrapper .swiper-button-prev',
@@ -78,8 +103,8 @@ $(document).ready(function(){
     //new similar products
     var newSimilarProducts,
         newSimilarProductsLength = $('.new-similar-products').length;
-    if ( newSimilarProductsLength ) {
-        newSimilarProducts = new Swiper ('.new-similar-products', {
+    if (newSimilarProductsLength) {
+        newSimilarProducts = new Swiper('.new-similar-products', {
             navigation: {
                 nextEl: '.new-similar-products-wrapper .swiper-button-next',
                 prevEl: '.new-similar-products-wrapper .swiper-button-prev',
@@ -102,8 +127,8 @@ $(document).ready(function(){
     //new recently products
     var newRecentlyProducts,
         newRecentlyProductsLength = $('.new-recently-products').length;
-    if ( newRecentlyProductsLength ) {
-        newRecentlyProducts = new Swiper ('.new-recently-products', {
+    if (newRecentlyProductsLength) {
+        newRecentlyProducts = new Swiper('.new-recently-products', {
             navigation: {
                 nextEl: '.new-recently-products-wrapper .swiper-button-next',
                 prevEl: '.new-recently-products-wrapper .swiper-button-prev',
@@ -124,7 +149,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //new product specs
-    $(document).on('click', '.new-product-specs-more-button', function(event) {
+    $(document).on('click', '.new-product-specs-more-button', function (event) {
         event.preventDefault();
         $(this).parents('.new-product-specs-more').addClass('hidden');
         $(this).parents('.new-product-specs').find('.new-product-specs-item').removeClass('hidden');
@@ -133,7 +158,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //fancybox
-    if ( $('[data-fancybox]').length ) {
+    if ($('[data-fancybox]').length) {
         $('[data-fancybox]').fancybox({
             infobar: false,
             transitionEffect: "slide",
@@ -163,7 +188,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //new product reviews
-    $(document).on('click', '.new-product-reviews-more-button', function(event) {
+    $(document).on('click', '.new-product-reviews-more-button', function (event) {
         event.preventDefault();
         $(this).parents('.new-product-reviews-more').addClass('hidden');
         $(this).parents('.new-product-reviews').find('.new-product-review').removeClass('hidden');
@@ -176,7 +201,7 @@ $(document).ready(function(){
         var modalName = $('.modal-center');
         var windowWidth = $(window).width();
         var windowHeight = $(window).height();
-        modalName.each(function() {
+        modalName.each(function () {
             var modalOuterWidth = $(this).outerWidth();
             var modalOuterHeight = $(this).outerHeight();
             $(this).css({
@@ -184,28 +209,28 @@ $(document).ready(function(){
             });
             if (windowHeight > modalOuterHeight) {
                 $(this).css({
-                    top: (windowHeight - modalOuterHeight) /2
+                    top: (windowHeight - modalOuterHeight) / 2
                 });
             } else {
-               $(this).css({
+                $(this).css({
                     top: 0
                 });
             }
             if (windowWidth > modalOuterWidth) {
                 $(this).css({
-                    left: (windowWidth - modalOuterWidth) /2
+                    left: (windowWidth - modalOuterWidth) / 2
                 });
             } else {
-               $(this).css({
+                $(this).css({
                     left: 0
                 });
             }
         });
     }
-    $(document).on('click', '[data-toggle="modal"]', function(event) {
+    $(document).on('click', '[data-toggle="modal"]', function (event) {
         centerModal();
     });
-    $(window).resize(function(){
+    $(window).resize(function () {
         centerModal();
     });
 
@@ -216,8 +241,8 @@ $(document).ready(function(){
 
         var newProductModalCertificate,
             newProductModalCertificateLength = $('.new-product-modal-certificate').length;
-        if ( newProductModalCertificateLength ) {
-            newProductModalCertificate = new Swiper ('.new-product-modal-certificate', {
+        if (newProductModalCertificateLength) {
+            newProductModalCertificate = new Swiper('.new-product-modal-certificate', {
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -242,8 +267,8 @@ $(document).ready(function(){
         $.ajax({
             url: '../new-product-modal-certificate.html',
             cache: false,
-            success: function() {
-                $('#new-product-modal-certificate').load( '../new-product-modal-certificate.html', function( response, status, xhr ) {
+            success: function () {
+                $('#new-product-modal-certificate').load('../new-product-modal-certificate.html', function (response, status, xhr) {
                     newProductModalCertificate_init();
                     centerModal();
                 });
@@ -258,8 +283,8 @@ $(document).ready(function(){
         $.ajax({
             url: '../new-product-modal-credit.html',
             cache: false,
-            success: function() {
-                $('#new-product-modal-credit').load( '../new-product-modal-credit.html', function( response, status, xhr ) {
+            success: function () {
+                $('#new-product-modal-credit').load('../new-product-modal-credit.html', function (response, status, xhr) {
                     centerModal();
                 });
             }
@@ -273,8 +298,8 @@ $(document).ready(function(){
 
         var newProductModalGallery,
             newProductModalGalleryLength = $('.new-product-modal-gallery-slider').length;
-        if ( newProductModalGalleryLength ) {
-            newProductModalGallery = new Swiper ('.new-product-modal-gallery-slider', {
+        if (newProductModalGalleryLength) {
+            newProductModalGallery = new Swiper('.new-product-modal-gallery-slider', {
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -300,8 +325,8 @@ $(document).ready(function(){
         $.ajax({
             url: '../new-product-modal-gallery.html',
             cache: false,
-            success: function() {
-                $('#new-product-modal-gallery').load( '../new-product-modal-gallery.html', function( response, status, xhr ) {
+            success: function () {
+                $('#new-product-modal-gallery').load('../new-product-modal-gallery.html', function (response, status, xhr) {
                     newProductModalGallery_init();
                 });
             }
@@ -315,8 +340,8 @@ $(document).ready(function(){
         $.ajax({
             url: '../new-product-modal-review.html',
             cache: false,
-            success: function() {
-                $('#new-product-modal-review').load( '../new-product-modal-review.html', function( response, status, xhr ) {
+            success: function () {
+                $('#new-product-modal-review').load('../new-product-modal-review.html', function (response, status, xhr) {
                     centerModal();
                 });
             }
@@ -326,35 +351,35 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //new product set
-    $(document).on('keypress', '.new-product-set-number-text', function(event) {
+    $(document).on('keypress', '.new-product-set-number-text', function (event) {
         event = event || window.event;
-        if (event.charCode && event.charCode!=0 && event.charCode!=46 && (event.charCode < 48 || event.charCode > 57) ) return false;
+        if (event.charCode && event.charCode != 0 && event.charCode != 46 && (event.charCode < 48 || event.charCode > 57)) return false;
     });
 
-    $(document).on('change', '.new-product-set-number-text', function(event) {
+    $(document).on('change', '.new-product-set-number-text', function (event) {
         var thisParent = $(this).parents('.new-product-set-item');
         var quantityValue = $(this).val();
-        if ( quantityValue == 0 ) {
+        if (quantityValue == 0) {
             thisParent.find('.new-product-set-checkbox input').prop('checked', false);
         } else {
             thisParent.find('.new-product-set-checkbox input').prop('checked', true);
         }
     });
 
-    $(document).on('click', '.new-product-set-number-minus', function(event) {
+    $(document).on('click', '.new-product-set-number-minus', function (event) {
         event.preventDefault();
         var thisParent = $(this).parents('.new-product-set-item');
         var quantityInput = $(this).parent('.new-product-set-number').find('.new-product-set-number-text');
         var quantityValue = quantityInput.val();
         quantityValue = --quantityValue;
-        if ( quantityValue < 0 ) { quantityValue = 0; }
+        if (quantityValue < 0) { quantityValue = 0; }
         quantityInput.val(quantityValue);
-        if ( quantityValue == 0 ) {
+        if (quantityValue == 0) {
             thisParent.find('.new-product-set-checkbox input').prop('checked', false);
         }
     });
 
-    $(document).on('click', '.new-product-set-number-plus', function(event) {
+    $(document).on('click', '.new-product-set-number-plus', function (event) {
         event.preventDefault();
         var thisParent = $(this).parents('.new-product-set-item');
         var quantityInput = $(this).parent('.new-product-set-number').find('.new-product-set-number-text');
@@ -363,9 +388,9 @@ $(document).ready(function(){
         thisParent.find('.new-product-set-checkbox input').prop('checked', true);
     });
 
-    $(document).on('change', '.new-product-set-checkbox input', function(event) {
+    $(document).on('change', '.new-product-set-checkbox input', function (event) {
         var thisParent = $(this).parents('.new-product-set-item');
-        if( $(this).is(':checked') ) {
+        if ($(this).is(':checked')) {
             thisParent.find('.new-product-set-number-text').val('1');
         } else {
             thisParent.find('.new-product-set-number-text').val('0');
@@ -375,7 +400,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //new product set delete
-    $(document).on('click', '.new-product-set-total-item-delete', function(event) {
+    $(document).on('click', '.new-product-set-total-item-delete', function (event) {
         event.preventDefault();
         $(this).parents('.new-product-set-total-item').remove();
     });
@@ -385,8 +410,8 @@ $(document).ready(function(){
     //new product set buy
     var newProductSetBuy,
         newProductSetBuyLength = $('.new-product-set-buy-slider').length;
-    if ( newProductSetBuyLength ) {
-        newProductSetBuy = new Swiper ('.new-product-set-buy-slider', {
+    if (newProductSetBuyLength) {
+        newProductSetBuy = new Swiper('.new-product-set-buy-slider', {
             scrollbar: {
                 el: '.swiper-scrollbar',
                 hide: false,
@@ -405,8 +430,8 @@ $(document).ready(function(){
     //new product customer photos
     var newProductCustomerPhotos,
         newProductCustomerPhotosLength = $('.new-product-customer-photos-slider').length;
-    if ( newProductCustomerPhotosLength ) {
-        newProductCustomerPhotos = new Swiper ('.new-product-customer-photos-slider', {
+    if (newProductCustomerPhotosLength) {
+        newProductCustomerPhotos = new Swiper('.new-product-customer-photos-slider', {
             navigation: {
                 nextEl: '.new-product-customer-photos .swiper-button-next',
                 prevEl: '.new-product-customer-photos .swiper-button-prev',
@@ -425,8 +450,8 @@ $(document).ready(function(){
 
         var newProductQuickView,
             newProductQuickViewLength = $('.new-product-quick-view-gallery').length;
-        if ( newProductQuickViewLength ) {
-            newProductQuickView = new Swiper ('.new-product-quick-view-gallery', {
+        if (newProductQuickViewLength) {
+            newProductQuickView = new Swiper('.new-product-quick-view-gallery', {
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -451,17 +476,17 @@ $(document).ready(function(){
         $.ajax({
             url: '../new-product-quick-view.html',
             cache: false,
-            success: function() {
-                $('#new-product-quick-view').load( '../new-product-quick-view.html', function( response, status, xhr ) {
+            success: function () {
+                $('#new-product-quick-view').load('../new-product-quick-view.html', function (response, status, xhr) {
                     newProductQuickView_init();
                     centerModal();
-                    if ( $('.popover-target').length ) {
+                    if ($('.popover-target').length) {
                         $('.popover-target').popover({
                             trigger: 'hover',
                             html: true
                         });
                     }
-                    if ( $('.countdown').length ) {
+                    if ($('.countdown').length) {
                         $('.countdown').downCount({
                             date: '11/04/2020 24:00:00',
                             offset: +3
