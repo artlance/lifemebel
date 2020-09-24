@@ -21733,6 +21733,8 @@ button.swiper-pagination-bullet {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  margin-top: 47px;
+  margin-bottom: 30px;
 }
 
 .new-product-set-content {
@@ -21741,6 +21743,10 @@ button.swiper-pagination-bullet {
   flex-grow: 1;
   max-width: calc(100% - 258px);
   padding-right: 16px;
+}
+
+.new-product-set-content .new-product-set-caption:first-child {
+  margin-top: -47px;
 }
 
 .new-product-set-caption {
@@ -22028,11 +22034,20 @@ button.swiper-pagination-bullet {
   -ms-flex: 0 0 258px;
   flex: 0 0 258px;
   max-width: 258px;
-  margin: 47px 0 50px;
+  will-change: min-height;
+}
+
+.new-product-set-total-inner {
   padding: 0 24px;
   -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: position, transform;
 }
 
 .new-product-set-total-title {

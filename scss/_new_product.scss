@@ -1852,10 +1852,17 @@
     &-set {
         display: flex;
         align-items: flex-start;
+        margin-top: 47px;
+        margin-bottom: 30px;
         &-content {
             flex-grow: 1;
             max-width: calc(100% - 258px);
             padding-right: 16px;
+            .new-product-set-caption {
+                &:first-child {
+                    margin-top: -47px;
+                }
+            }
         }
         &-caption {
             font-size: 20px;
@@ -2073,10 +2080,15 @@
         &-total {
             flex: 0 0 258px;
             max-width: 258px;
-            margin: 47px 0 50px;
-            padding: 0 24px;
-            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
-            background-color: $w;
+            will-change: min-height;
+            &-inner {
+                padding: 0 24px;
+                box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+                background-color: $w;
+                transform: translate(0, 0);
+                transform: translate3d(0, 0, 0);
+                will-change: position, transform;
+            }
             &-title {
                 font-weight: 500;
                 color: $b;

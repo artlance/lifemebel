@@ -403,6 +403,7 @@ $(document).ready(function () {
     $(document).on('click', '.new-product-set-total-item-delete', function (event) {
         event.preventDefault();
         $(this).parents('.new-product-set-total-item').remove();
+        $('.new-product-set-total').stickySidebar('updateSticky');
     });
 
     //------------------------------------------------------------------------//
@@ -488,7 +489,7 @@ $(document).ready(function () {
                     }
                     if ($('.countdown').length) {
                         $('.countdown').downCount({
-                            date: '11/04/2020 24:00:00',
+                            date: '11/04/2020 12:00:00',
                             offset: +3
                         }, function () {
                             //callback
@@ -498,6 +499,19 @@ $(document).ready(function () {
             }
         });
     });
+
+    //------------------------------------------------------------------------//
+
+    //sticky sidebar
+    if ($('.new-product-set-total').length) {
+        $('.new-product-set-total').stickySidebar({
+            containerSelector: '.new-product-set',
+            innerWrapperSelector: '.new-product-set-total-inner',
+            topSpacing: 16,
+            bottomSpacing: 16,
+            resizeSensor: true,
+        });
+    }
 
     //------------------------------------------------------------------------//
 
