@@ -18492,6 +18492,509 @@ textarea.complaint-textarea {
   right: 4.49%;
 }
 
+.marketplace-content {
+  padding: 70px 0 50px;
+  position: relative;
+}
+
+.marketplace-content:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  background: #F4F5F6;
+}
+
+.marketplace-content-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.marketplace-caption {
+  min-height: 100px;
+}
+
+.marketplace-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: -14px -20px 0;
+}
+
+.marketplace-menu li {
+  padding: 0 20px;
+}
+
+.marketplace-menu li a {
+  display: block;
+  padding: 13px 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #686868;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+}
+
+.marketplace-menu li a:hover {
+  color: #000000;
+}
+
+.marketplace-menu li.active a {
+  color: #000000;
+  font-weight: bold;
+  border-bottom-color: #83C150;
+}
+
+.marketplace-stock {
+  padding: 30px 40px 10px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.marketplace-stock .pagination-other {
+  margin-bottom: 25px;
+}
+
+.marketplace-stock-products {
+  margin-bottom: 35px;
+}
+
+.marketplace-stock-products table {
+  width: 100%;
+}
+
+.marketplace-stock-products table th,
+.marketplace-stock-products table td {
+  padding: 0 20px 0 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.marketplace-stock-products table th:last-child,
+.marketplace-stock-products table td:last-child {
+  text-align: right;
+}
+
+.marketplace-stock-products table th:first-child,
+.marketplace-stock-products table td:first-child {
+  width: 22.2%;
+  padding-left: 20px;
+}
+
+.marketplace-stock-products table th {
+  padding-bottom: 12px;
+  font-size: 11px;
+  line-height: 1.55;
+  font-weight: bold;
+  color: #393939;
+}
+
+.marketplace-stock-products table td {
+  padding-top: 16px;
+  padding-bottom: 14px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+}
+
+.marketplace-stock-products table td strong {
+  line-height: normal;
+  font-weight: 500;
+  color: #000000;
+}
+
+.marketplace-calculation {
+  padding: 30px 40px 10px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.marketplace-calculation .pagination-other {
+  margin-bottom: 25px;
+}
+
+.marketplace-calculation-period {
+  margin: 0 -40px 45px;
+  padding: 7px 40px 40px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.marketplace-calculation-table {
+  margin-bottom: 35px;
+}
+
+.marketplace-calculation-table table {
+  width: 100%;
+}
+
+.marketplace-calculation-table table th,
+.marketplace-calculation-table table td {
+  padding: 0 20px 0 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.marketplace-calculation-table table th:nth-child(4), .marketplace-calculation-table table th:nth-child(5), .marketplace-calculation-table table th:last-child,
+.marketplace-calculation-table table td:nth-child(4),
+.marketplace-calculation-table table td:nth-child(5),
+.marketplace-calculation-table table td:last-child {
+  text-align: right;
+}
+
+.marketplace-calculation-table table th:first-child,
+.marketplace-calculation-table table td:first-child {
+  padding-left: 20px;
+}
+
+.marketplace-calculation-table table th {
+  padding-bottom: 12px;
+  font-size: 11px;
+  line-height: 1.55;
+  font-weight: bold;
+  color: #393939;
+}
+
+.marketplace-calculation-table table td {
+  padding-top: 16px;
+  padding-bottom: 14px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+}
+
+.marketplace-calculation-table table td strong {
+  line-height: normal;
+  font-weight: 500;
+  color: #000000;
+}
+
+.marketplace-period {
+  position: relative;
+  max-width: 500px;
+}
+
+.marketplace-period-title {
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 14px;
+}
+
+.marketplace-period-toggle {
+  display: block;
+  padding: 10px 39px 10px 15px;
+  color: #000000;
+  background: #ffffff url("../upload/datepicker.svg") 100% 50% no-repeat;
+  background-size: 28px 17px;
+  border: 1px solid #a1a1a1;
+  border-radius: 2px;
+}
+
+.marketplace-period-toggle:hover {
+  color: #000000;
+  border-color: #83C150;
+}
+
+.marketplace-period-panel {
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  left: -40px;
+  width: 1048px;
+  padding: 30px 30px 0;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.marketplace-period-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.marketplace-period-calendar {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-bottom: 10px;
+}
+
+.marketplace-period-menu {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 260px;
+  flex: 0 0 260px;
+  max-width: 260px;
+  padding-left: 60px;
+}
+
+.marketplace-period-menu ul {
+  display: block;
+}
+
+.marketplace-period-menu ul li {
+  margin-bottom: 10px;
+}
+
+.marketplace-period-menu ul li a {
+  display: block;
+  padding: 9px 10px 11px;
+  font-weight: 500;
+  color: #393939;
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+}
+
+.marketplace-period-menu ul li a:hover {
+  border-color: #83C150;
+}
+
+.marketplace-period-menu ul li.active a {
+  border-color: #83C150;
+  -webkit-box-shadow: inset 0 0 0 1px #83C150;
+  box-shadow: inset 0 0 0 1px #83C150;
+}
+
+.marketplace-period-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -30px;
+  padding: 30px;
+  border-top: 1px solid #e3e3e3;
+}
+
+.marketplace-period-date {
+  padding: 0 10px;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #000000;
+}
+
+.marketplace-period-options {
+  white-space: nowrap;
+}
+
+.marketplace-period-options .button {
+  margin-left: 6px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.marketplace-datepicker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.marketplace-datepicker .ui-datepicker {
+  display: block;
+  width: 335px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.marketplace-datepicker .ui-datepicker-header {
+  margin-bottom: 35px;
+}
+
+.marketplace-datepicker .ui-datepicker-title {
+  font-size: 15px;
+  line-height: 40px;
+  padding-bottom: 0;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar th {
+  font-size: 11px;
+  line-height: 1.55;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td {
+  padding: 16px 0 0;
+  line-height: 34px;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td a {
+  color: #686868;
+  font-weight: normal;
+  width: 100%;
+  height: 34px;
+  margin: 0;
+  position: relative;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td a:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -17px;
+  width: 34px;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color, box-shadow;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td a:after {
+  opacity: 0;
+  z-index: -2;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  background: rgba(131, 193, 80, 0.2);
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td a:hover {
+  color: #83C150;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td a.ui-state-active {
+  font-weight: bold;
+  color: #ffffff;
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td a.ui-state-active:before {
+  background-color: #83C150;
+  -webkit-box-shadow: inset 0 0 0 1.5px #6da63d, 0 0 0 1.5px #6da63d;
+  box-shadow: inset 0 0 0 1.5px #6da63d, 0 0 0 1.5px #6da63d;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td.ui-datepicker-week-end a {
+  color: #a1a1a1;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td.ui-datepicker-week-end a:hover {
+  color: #83C150;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td.ui-datepicker-week-end a.ui-state-active {
+  color: #ffffff;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td:last-child a {
+  color: #F30000;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td:last-child a:hover {
+  color: #83C150;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td:last-child a.ui-state-active {
+  color: #ffffff;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td.date-highlighted a {
+  background: rgba(131, 193, 80, 0.2);
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td.date-highlighted a.ui-state-active {
+  background: transparent;
+}
+
+.marketplace-datepicker .ui-datepicker-calendar td.date-highlighted a.ui-state-active:after {
+  opacity: 1;
+}
+
+.pagination-other {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pagination-other .pagination-next-button,
+.pagination-other .pagination-prev-button {
+  padding-right: 50px;
+}
+
+.pagination-other .pagination-next-button:after,
+.pagination-other .pagination-prev-button:after {
+  right: 14px;
+  margin-top: -10px;
+  width: 12px;
+  height: 20px;
+  background-image: url("../upload/right-small.svg");
+}
+
+.pagination-other .pagination-prev-button {
+  padding-right: 20px;
+  padding-left: 50px;
+}
+
+.pagination-other .pagination-prev-button:after {
+  right: auto;
+  left: 14px;
+}
+
+.pagination-other .pagination-list li a {
+  border-color: transparent;
+}
+
+.pagination-other .pagination-list li a:hover {
+  color: #686868;
+}
+
+.pagination-other .pagination-list li.active a {
+  color: #ffffff;
+}
+
+#marketplace-datepicker-to .ui-datepicker-calendar td a:after {
+  left: 0;
+  right: 50%;
+}
+
+#marketplace-datepicker-to .ui-datepicker-calendar td a.ui-state-active:before {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 @media (max-width: 1325px) {
   .marketplace-hero-content {
     padding-left: 0;
@@ -18564,6 +19067,53 @@ textarea.complaint-textarea {
     -ms-flex: 0 0 42%;
     flex: 0 0 42%;
     max-width: 42%;
+  }
+  .marketplace-stock {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .marketplace-calculation {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .marketplace-calculation-period {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .marketplace-period-panel {
+    left: -20px;
+  }
+}
+
+@media (max-width: 1179px) {
+  .marketplace-period-panel {
+    width: 690px;
+  }
+  .marketplace-period-content {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .marketplace-period-calendar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+  .marketplace-period-menu {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+  .marketplace-datepicker .ui-datepicker {
+    width: 300px;
+  }
+  .marketplace-period-date {
+    padding-left: 0;
   }
 }
 
