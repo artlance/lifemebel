@@ -109,4 +109,12 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //marketplace statistics
+    $(document).on('click', '.marketplace-statistics-toggle', function (event) {
+        event.preventDefault();
+        $(this).parents('.marketplace-statistics-row').toggleClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

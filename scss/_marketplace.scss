@@ -1110,6 +1110,283 @@
             }
         }
     }
+    &-statistics {
+        .pagination-other {
+            max-width: 830px;
+        }
+        &-caption {
+            display: flex;
+            padding: 37px 40px 40px;
+            margin-bottom: 20px;
+            background: $w;
+            border-radius: 3px;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+            .marketplace-period {
+                flex: 1 1 auto;
+                max-width: 400px;
+                &-panel {
+                    left: -173px;
+                }
+            }
+        }
+        &-content {
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 6px
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $tr;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #e1e1e1;
+                border-radius: 3px;
+                outline: none;
+            }
+            &::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+            &::-webkit-scrollbar-corner {
+                background: $tr;
+            }
+        }
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            min-width: 1150px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e3e3e3;
+            transition: background-color $d $f;
+            will-change: background-color;
+            &.active {
+                background-color: $s;
+                .marketplace-statistics-products {
+                    display: block;
+                }
+                .marketplace-statistics-toggle-icon {
+                    background-color: #e1e1e1;
+                    box-shadow: none;
+                    transform: rotate(-180deg);
+                    .svg-stroke {
+                        stroke: $b;
+                    }
+                }
+            }
+        }
+        &-col {
+            padding-right: 20px;
+            &:first-child {
+                flex: 0 0 111px;
+                max-width: 111px;
+                padding-left: 20px;
+            }
+            &:nth-child(2) {
+                flex: 0 0 96px;
+                max-width: 96px;
+            }
+            &:nth-child(3) {
+                flex: 0 0 128px;
+                max-width: 128px;
+            }
+            &:nth-child(4) {
+                flex-grow: 1;
+            }
+            &:nth-child(5) {
+                flex: 0 0 125px;
+                max-width: 125px;
+                padding-right: 30px;
+                text-align: right;
+            }
+            &:nth-child(6) {
+                flex: 0 0 164px;
+                max-width: 164px;
+            }
+            &:nth-child(7) {
+                flex: 0 0 117px;
+                max-width: 117px;
+            }
+        }
+        &-title {
+            padding-bottom: 2px;
+            font-size: 11px;
+            line-height: 1.55;
+            font-weight: bold;
+            color: $dgr;
+        }
+        &-text {
+            font-size: 13px;
+            line-height: 1.54;
+            color: $dgr;
+            padding-top: 2px;
+        }
+        &-toggle {
+            display: block;
+            position: relative;
+            padding: 5px 0 5px 32px;
+            font-size: 13px;
+            line-height: 1.54;
+            font-weight: 500;
+            color: $b;
+            &-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: -1px;
+                top: 3px;
+                width: 24px;
+                height: 24px;
+                background: $w;
+                border-radius: 3px;
+                box-shadow: 0 2px 3px 0 #e1e1e1;
+                transition: background-color $d $f, transform $d $f;
+                will-change: background-color, transform;
+                svg {
+                    width: 11px;
+                    height: 7px;
+                }
+                .svg-stroke {
+                    transition: stroke $d $f;
+                    will-change: stroke;
+                }
+            }
+            &:hover {
+                color: $p;
+                .svg-stroke {
+                    stroke: $p !important;
+                }
+            }
+        }
+        &-price {
+            font-size: 13px;
+            line-height: 1.54;
+            font-weight: 500;
+            color: $b;
+            white-space: nowrap;
+        }
+        &-status {
+            position: relative;
+            padding-top: 2px;
+            padding-left: 20px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $dgr;
+            &-icon {
+                display: block;
+                position: absolute;
+                left: -1px;
+                top: 6px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: $p;
+            }
+        }
+        &-products {
+            display: none;
+            flex: 0 0 100%;
+            max-width: calc(100% - 20px);
+            padding: 10px 301px 10px 325px;
+            margin: 10px 10px 0;
+            background: $w;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        }
+        &-product {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            &-img {
+                flex: 0 0 64px;
+                max-width: 64px;
+                padding-right: 14px;
+                img {
+                    width: 100%;
+                }
+            }
+            &-info {
+                flex-grow: 1;
+                padding-right: 10px;
+            }
+            &-title {
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+                color: $b;
+            }
+            &-category {
+                font-size: 11px;
+                line-height: 1.455;
+            }
+            &-articul {
+                flex: 0 0 100px;
+                max-width: 100px;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $dgr;
+                padding-top: 2px;
+                padding-right: 10px;
+            }
+            &-number {
+                flex: 0 0 54px;
+                max-width: 54px;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $dgr;
+                text-align: right;
+                padding-top: 2px;
+                padding-right: 10px;
+            }
+            &-price {
+                flex: 0 0 95px;
+                max-width: 95px;
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+                color: $b;
+                white-space: nowrap;
+                text-align: right;
+            }
+        }
+    }
+    &-filter {
+        flex: 0 0 265px;
+        max-width: 265px;
+        padding-right: 15px;
+        &-title {
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 14px;
+        }
+    }
+    &-export {
+        flex: 1 1 auto;
+        padding: 32px 0 0 15px;
+        text-align: right;
+        white-space: nowrap;
+        .button {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &-icon {
+            display: inline-block;
+            vertical-align: top;
+            margin: 1px 13px -1px 0;
+            width: 16px;
+            height: 18px;
+            background: $tr url('../upload/marketplace-export.svg') 50% 50% no-repeat;
+            background-size: 100% 100%;
+        }
+    }
 }
 .pagination-other {
     max-width: 700px;
@@ -1253,6 +1530,17 @@
     .marketplace-period-panel {
         left: -20px;
     }
+    .marketplace-statistics-caption {
+        padding-left: 20px;
+        padding-right: 20px;
+        .marketplace-period-panel {
+            left: -235px;
+        }
+    }
+    .marketplace-filter {
+        flex: 0 0 215px;
+        max-width: 215px;
+    }
 }
 @media (max-width: 1179px) {
     .marketplace-period-panel {
@@ -1276,6 +1564,14 @@
     }
     .marketplace-period-date {
         padding-left: 0;
+    }
+}
+@media (max-width: 1079px) {
+    .marketplace-export {
+        .button {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 }
 /*-------------------- End marketplace --------------------*/

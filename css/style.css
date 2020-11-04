@@ -18944,6 +18944,393 @@ textarea.complaint-textarea {
   opacity: 1;
 }
 
+.marketplace-statistics .pagination-other {
+  max-width: 830px;
+}
+
+.marketplace-statistics-caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 37px 40px 40px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.marketplace-statistics-caption .marketplace-period {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: 400px;
+}
+
+.marketplace-statistics-caption .marketplace-period-panel {
+  left: -173px;
+}
+
+.marketplace-statistics-content {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+.marketplace-statistics-content::-webkit-scrollbar {
+  width: 0;
+  height: 6px;
+}
+
+.marketplace-statistics-content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.marketplace-statistics-content::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border-radius: 3px;
+  outline: none;
+}
+
+.marketplace-statistics-content::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.marketplace-statistics-content::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.marketplace-statistics-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 1150px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e3e3;
+  -webkit-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color;
+}
+
+.marketplace-statistics-row.active {
+  background-color: #F4F5F6;
+}
+
+.marketplace-statistics-row.active .marketplace-statistics-products {
+  display: block;
+}
+
+.marketplace-statistics-row.active .marketplace-statistics-toggle-icon {
+  background-color: #e1e1e1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.marketplace-statistics-row.active .marketplace-statistics-toggle-icon .svg-stroke {
+  stroke: #000000;
+}
+
+.marketplace-statistics-col {
+  padding-right: 20px;
+}
+
+.marketplace-statistics-col:first-child {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 111px;
+  flex: 0 0 111px;
+  max-width: 111px;
+  padding-left: 20px;
+}
+
+.marketplace-statistics-col:nth-child(2) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 96px;
+  flex: 0 0 96px;
+  max-width: 96px;
+}
+
+.marketplace-statistics-col:nth-child(3) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 128px;
+  flex: 0 0 128px;
+  max-width: 128px;
+}
+
+.marketplace-statistics-col:nth-child(4) {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.marketplace-statistics-col:nth-child(5) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 125px;
+  flex: 0 0 125px;
+  max-width: 125px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.marketplace-statistics-col:nth-child(6) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 164px;
+  flex: 0 0 164px;
+  max-width: 164px;
+}
+
+.marketplace-statistics-col:nth-child(7) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 117px;
+  flex: 0 0 117px;
+  max-width: 117px;
+}
+
+.marketplace-statistics-title {
+  padding-bottom: 2px;
+  font-size: 11px;
+  line-height: 1.55;
+  font-weight: bold;
+  color: #393939;
+}
+
+.marketplace-statistics-text {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+  padding-top: 2px;
+}
+
+.marketplace-statistics-toggle {
+  display: block;
+  position: relative;
+  padding: 5px 0 5px 32px;
+  font-size: 13px;
+  line-height: 1.54;
+  font-weight: 500;
+  color: #000000;
+}
+
+.marketplace-statistics-toggle-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  left: -1px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 3px 0 #e1e1e1;
+  box-shadow: 0 2px 3px 0 #e1e1e1;
+  -webkit-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color, transform;
+}
+
+.marketplace-statistics-toggle-icon svg {
+  width: 11px;
+  height: 7px;
+}
+
+.marketplace-statistics-toggle-icon .svg-stroke {
+  -webkit-transition: stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: stroke;
+}
+
+.marketplace-statistics-toggle:hover {
+  color: #83C150;
+}
+
+.marketplace-statistics-toggle:hover .svg-stroke {
+  stroke: #83C150 !important;
+}
+
+.marketplace-statistics-price {
+  font-size: 13px;
+  line-height: 1.54;
+  font-weight: 500;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.marketplace-statistics-status {
+  position: relative;
+  padding-top: 2px;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+}
+
+.marketplace-statistics-status-icon {
+  display: block;
+  position: absolute;
+  left: -1px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #83C150;
+}
+
+.marketplace-statistics-products {
+  display: none;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: calc(100% - 20px);
+  padding: 10px 301px 10px 325px;
+  margin: 10px 10px 0;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.marketplace-statistics-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.marketplace-statistics-product-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 64px;
+  flex: 0 0 64px;
+  max-width: 64px;
+  padding-right: 14px;
+}
+
+.marketplace-statistics-product-img img {
+  width: 100%;
+}
+
+.marketplace-statistics-product-info {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.marketplace-statistics-product-title {
+  font-size: 13px;
+  line-height: 1.54;
+  font-weight: 500;
+  color: #000000;
+}
+
+.marketplace-statistics-product-category {
+  font-size: 11px;
+  line-height: 1.455;
+}
+
+.marketplace-statistics-product-articul {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  max-width: 100px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+  padding-top: 2px;
+  padding-right: 10px;
+}
+
+.marketplace-statistics-product-number {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 54px;
+  flex: 0 0 54px;
+  max-width: 54px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+  text-align: right;
+  padding-top: 2px;
+  padding-right: 10px;
+}
+
+.marketplace-statistics-product-price {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 95px;
+  flex: 0 0 95px;
+  max-width: 95px;
+  font-size: 13px;
+  line-height: 1.54;
+  font-weight: 500;
+  color: #000000;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.marketplace-filter {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 265px;
+  flex: 0 0 265px;
+  max-width: 265px;
+  padding-right: 15px;
+}
+
+.marketplace-filter-title {
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 14px;
+}
+
+.marketplace-export {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 32px 0 0 15px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.marketplace-export .button {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.marketplace-export-icon {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1px 13px -1px 0;
+  width: 16px;
+  height: 18px;
+  background: transparent url("../upload/marketplace-export.svg") 50% 50% no-repeat;
+  background-size: 100% 100%;
+}
+
 .pagination-other {
   max-width: 700px;
   margin: 0 auto;
@@ -19085,6 +19472,19 @@ textarea.complaint-textarea {
   .marketplace-period-panel {
     left: -20px;
   }
+  .marketplace-statistics-caption {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .marketplace-statistics-caption .marketplace-period-panel {
+    left: -235px;
+  }
+  .marketplace-filter {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 215px;
+    flex: 0 0 215px;
+    max-width: 215px;
+  }
 }
 
 @media (max-width: 1179px) {
@@ -19114,6 +19514,13 @@ textarea.complaint-textarea {
   }
   .marketplace-period-date {
     padding-left: 0;
+  }
+}
+
+@media (max-width: 1079px) {
+  .marketplace-export .button {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
