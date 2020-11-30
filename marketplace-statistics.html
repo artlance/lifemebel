@@ -103,40 +103,9 @@
                                     </select>
                                 </div>
                                 <!-- /.marketplace-filter -->
-                                <div class="marketplace-period drop">
+                                <div class="marketplace-period">
                                     <div class="marketplace-period-title">Период</div>
-                                    <a href="#" class="marketplace-period-toggle drop-toggle">Пн, 01 Октября, 2020 - Ср, 31 Октября, 2020</a>
-                                    <div class="marketplace-period-panel drop-block">
-                                        <div class="marketplace-period-content">
-                                            <div class="marketplace-period-calendar">
-                                                <div class="marketplace-datepicker">
-                                                    <div id="marketplace-datepicker-from"></div>
-                                                    <div id="marketplace-datepicker-to"></div>
-                                                </div>
-                                            </div>
-                                            <div class="marketplace-period-menu">
-                                                <ul>
-                                                    <li><a href="#">Сегодня</a></li>
-                                                    <li><a href="#">Вчера</a></li>
-                                                    <li><a href="#">Эта неделя</a></li>
-                                                    <li><a href="#">Этот месяц</a></li>
-                                                    <li><a href="#">Прошлый месяц</a></li>
-                                                    <li class="active"><a href="#">Произвольный диапазон</a></li>
-                                                </ul>
-                                            </div>
-                                            <!-- /.marketplace-period-menu -->
-                                        </div>
-                                        <!-- /.marketplace-period-content -->
-                                        <div class="marketplace-period-footer">
-                                            <div class="marketplace-period-date">Октябрь 24, 2020 – Ноябрь 9, 2020</div>
-                                            <div class="marketplace-period-options">
-                                                <a href="#" class="button secondary drop-close">Отменить</a>
-                                                <a href="#" class="button primary">Применить</a>
-                                            </div>
-                                        </div>
-                                        <!-- /.marketplace-period-footer -->
-                                    </div>
-                                    <!-- /.marketplace-period-panel -->
+                                    <input id="marketplace-daterangepicker" name="marketplace-daterangepicker" class="marketplace-period-input" readonly>
                                 </div>
                                 <!-- /.marketplace-period -->
                                 <div class="marketplace-export">
@@ -968,6 +937,8 @@
     <script src="js/scrollpane.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/core.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/daterange.js"></script>
     <script src="js/marketplace.js"></script>
 </body>
 </html>

@@ -18708,11 +18708,35 @@ textarea.complaint-textarea {
   border-color: #83C150;
 }
 
+.marketplace-period-input {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 10px 39px 10px 15px;
+  line-height: 1.385;
+  color: #000000;
+  background: #ffffff url("../upload/datepicker.svg") 100% 50% no-repeat;
+  background-size: 28px 17px;
+  border: 1px solid #a1a1a1;
+  border-radius: 2px;
+  -webkit-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.marketplace-period-input:hover, .marketplace-period-input:focus {
+  border-color: #83C150;
+}
+
 .marketplace-period-panel {
+  display: none;
+  z-index: 5000;
   position: absolute;
   top: 100%;
   margin-top: 5px;
-  left: -40px;
+  margin-right: 39px;
+  left: 0;
   width: 1048px;
   padding: 30px 30px 0;
   background: #ffffff;
@@ -18732,6 +18756,18 @@ textarea.complaint-textarea {
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding-bottom: 10px;
+}
+
+.marketplace-period-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .marketplace-period-menu {
@@ -18762,6 +18798,12 @@ textarea.complaint-textarea {
 
 .marketplace-period-menu ul li a:hover {
   border-color: #83C150;
+}
+
+.marketplace-period-menu ul li a:focus {
+  border-color: #83C150;
+  -webkit-box-shadow: inset 0 0 0 1px #83C150;
+  box-shadow: inset 0 0 0 1px #83C150;
 }
 
 .marketplace-period-menu ul li.active a {
@@ -18798,150 +18840,9 @@ textarea.complaint-textarea {
 }
 
 .marketplace-period-options .button {
-  margin-left: 6px;
+  margin-left: 10px;
   padding-left: 30px;
   padding-right: 30px;
-}
-
-.marketplace-datepicker {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.marketplace-datepicker .ui-datepicker {
-  display: block;
-  width: 335px;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.marketplace-datepicker .ui-datepicker-header {
-  margin-bottom: 35px;
-}
-
-.marketplace-datepicker .ui-datepicker-title {
-  font-size: 15px;
-  line-height: 40px;
-  padding-bottom: 0;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar th {
-  font-size: 11px;
-  line-height: 1.55;
-  text-transform: uppercase;
-  padding-bottom: 12px;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td {
-  padding: 16px 0 0;
-  line-height: 34px;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td a {
-  color: #686868;
-  font-weight: normal;
-  width: 100%;
-  height: 34px;
-  margin: 0;
-  position: relative;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td a:before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -17px;
-  width: 34px;
-  border-radius: 50%;
-  -webkit-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: background-color, box-shadow;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td a:after {
-  opacity: 0;
-  z-index: -2;
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  right: 0;
-  background: rgba(131, 193, 80, 0.2);
-  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td a:hover {
-  color: #83C150;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td a.ui-state-active {
-  font-weight: bold;
-  color: #ffffff;
-  background: transparent;
-  border-radius: 0;
-  cursor: pointer;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td a.ui-state-active:before {
-  background-color: #83C150;
-  -webkit-box-shadow: inset 0 0 0 1.5px #6da63d, 0 0 0 1.5px #6da63d;
-  box-shadow: inset 0 0 0 1.5px #6da63d, 0 0 0 1.5px #6da63d;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td.ui-datepicker-week-end a {
-  color: #a1a1a1;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td.ui-datepicker-week-end a:hover {
-  color: #83C150;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td.ui-datepicker-week-end a.ui-state-active {
-  color: #ffffff;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td:last-child a {
-  color: #F30000;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td:last-child a:hover {
-  color: #83C150;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td:last-child a.ui-state-active {
-  color: #ffffff;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td.date-highlighted a {
-  background: rgba(131, 193, 80, 0.2);
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td.date-highlighted a.ui-state-active {
-  background: transparent;
-}
-
-.marketplace-datepicker .ui-datepicker-calendar td.date-highlighted a.ui-state-active:after {
-  opacity: 1;
 }
 
 .marketplace-statistics .pagination-other {
@@ -18965,10 +18866,6 @@ textarea.complaint-textarea {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   max-width: 400px;
-}
-
-.marketplace-statistics-caption .marketplace-period-panel {
-  left: -173px;
 }
 
 .marketplace-statistics-content {
@@ -19372,14 +19269,202 @@ textarea.complaint-textarea {
   color: #ffffff;
 }
 
-#marketplace-datepicker-to .ui-datepicker-calendar td a:after {
+.daterangepicker.single .drp-selected {
+  display: none;
+}
+
+.daterangepicker.show-calendar .drp-calendar {
+  display: block;
+  width: 335px;
+}
+
+.daterangepicker.auto-apply .drp-buttons {
+  display: none;
+}
+
+.daterangepicker .calendar-table .next span,
+.daterangepicker .calendar-table .prev span {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.daterangepicker .calendar-table .next span:after,
+.daterangepicker .calendar-table .prev span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -6px;
+  width: 12px;
+  height: 20px;
+  background: transparent url("../upload/right-small.svg") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.daterangepicker .calendar-table .prev span:after {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.daterangepicker .calendar-table table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.daterangepicker .calendar-table th {
+  font-size: 11px;
+  line-height: 1.55;
+  text-align: center;
+  font-weight: bold;
+  color: #393939;
+  text-transform: uppercase;
+  padding: 5px 3px 12px;
+  vertical-align: top;
+}
+
+.daterangepicker .calendar-table th.month {
+  font-size: 15px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: none;
+  padding: 0 0 35px;
+}
+
+.daterangepicker .calendar-table th.next, .daterangepicker .calendar-table th.prev {
+  padding: 0;
+}
+
+.daterangepicker .calendar-table td {
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  padding: 16px 0 0;
+  font-size: 15px;
+  line-height: 34px;
+  position: relative;
+}
+
+.daterangepicker .calendar-table td .c-day {
+  display: block;
+  width: 100%;
+  height: 34px;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  z-index: -1;
+  -webkit-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color;
+}
+
+.daterangepicker .calendar-table td .c-day:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -17px;
+  width: 34px;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color, box-shadow;
+}
+
+.daterangepicker .calendar-table td .c-day:after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  background: rgba(131, 193, 80, 0.2);
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+.daterangepicker td.weekend {
+  color: #a1a1a1;
+}
+
+.daterangepicker td:last-child {
+  color: #F30000;
+}
+
+.daterangepicker td.available:hover {
+  color: #83C150;
+}
+
+.daterangepicker td.in-range .c-day {
+  background: rgba(131, 193, 80, 0.2);
+}
+
+.daterangepicker td.in-range.active .c-day {
+  background: transparent;
+}
+
+.daterangepicker td.start-date .c-day:before {
+  background-color: #83C150;
+  -webkit-box-shadow: inset 0 0 0 1.5px #6da63d, 0 0 0 1.5px #6da63d;
+  box-shadow: inset 0 0 0 1.5px #6da63d, 0 0 0 1.5px #6da63d;
+}
+
+.daterangepicker td.end-date .c-day:before {
+  background-color: #83C150;
+}
+
+.daterangepicker td.end-date .c-day:after {
   left: 0;
   right: 50%;
 }
 
-#marketplace-datepicker-to .ui-datepicker-calendar td a.ui-state-active:before {
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.daterangepicker td.start-date.end-date .c-day:after {
+  background: transparent;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.daterangepicker td.active .c-day:after,
+.daterangepicker td.active:hover .c-day:after {
+  opacity: 1;
+}
+
+.daterangepicker td.disabled,
+.daterangepicker option.disabled {
+  color: #a1a1a1;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.daterangepicker td.off,
+.daterangepicker td.off.in-range,
+.daterangepicker td.off.start-date,
+.daterangepicker td.off.end-date {
+  background-color: #fff;
+  border-color: transparent;
+  color: transparent;
+  opacity: 0;
+  cursor: default;
 }
 
 @media (max-width: 1325px) {
@@ -19469,15 +19554,9 @@ textarea.complaint-textarea {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .marketplace-period-panel {
-    left: -20px;
-  }
   .marketplace-statistics-caption {
     padding-left: 20px;
     padding-right: 20px;
-  }
-  .marketplace-statistics-caption .marketplace-period-panel {
-    left: -235px;
   }
   .marketplace-filter {
     -webkit-box-flex: 0;
@@ -19509,7 +19588,7 @@ textarea.complaint-textarea {
     max-width: 100%;
     padding-left: 0;
   }
-  .marketplace-datepicker .ui-datepicker {
+  .daterangepicker.show-calendar .drp-calendar {
     width: 300px;
   }
   .marketplace-period-date {
