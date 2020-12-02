@@ -515,4 +515,19 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //new product delivery
+    $(document).on('click', '.new-product-delivery-type-filials-link', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $(this).parents('.new-product-delivery-info').find('.new-product-delivery-filials').toggleClass('visible');
+    });
+
+    $(document).on('click', '.new-product-delivery-filials-close', function (event) {
+        event.preventDefault();
+        $(this).parents('.new-product-delivery-filials').removeClass('visible');
+        $(this).parents('.new-product-delivery-info').find('.new-product-delivery-type-filials-link').removeClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
