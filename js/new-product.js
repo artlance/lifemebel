@@ -530,4 +530,37 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //new product modal city
+    $('#new-product-modal-city').on('shown', function () {
+        $.ajax({
+            url: '../new-product-modal-city.html',
+            cache: false,
+            success: function () {
+                $('#new-product-modal-city').load('../new-product-modal-city.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new product modal city clear
+    $(document).on('click', '.new-product-modal-city-clear', function (event) {
+        event.preventDefault();
+        $(this).parents('.new-product-modal-city-input').find('.input-text').val('').focus();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new product modal city choose
+    $(document).on('click', '.new-product-modal-city-list a', function (event) {
+        event.preventDefault();
+        $(this).parents('.new-product-modal-city-list').find('li').removeClass('active');
+        $(this).parent('li').addClass('active');
+        $('.new-product-modal-city-input').find('.input-text').val($(this).text());
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

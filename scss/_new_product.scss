@@ -2289,6 +2289,148 @@
                 text-align: center;
             }
         }
+        &-city {
+            position: absolute;
+            width: 1000px;
+            padding: 0 30px 38px;
+            max-width: 100%;
+            background: $w;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+            .new-product-modal-close {
+                top: 20px;
+                right: 20px;
+            }
+            &-caption {
+                margin: 0 -30px;
+                padding: 27px 30px 30px;
+                background: $s;
+            }
+            &-title {
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: bold;
+                color: $b;
+                padding-right: 30px;
+                margin-bottom: 29px;
+            }
+            &-input {
+                position: relative;
+                input.input-text {
+                    padding-right: 39px;
+                }
+            }
+            &-clear {
+                display: block;
+                position: absolute;
+                top: 12px;
+                right: 15px;
+                width: 16px;
+                height: 16px;
+                background: #c1c5c7 url('../upload/close2.svg') 50% 50% no-repeat;
+                background-size: 8px 8px;
+                border-radius: 50%;
+                &:hover {
+                    background-color: $t;
+                }
+            }
+            &-delivery {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 31px 0;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #e1e1e1;
+                &-icon {
+                    padding-right: 32px;
+                    padding-left: 4px;
+                }
+                &-title {
+                    font-size: 15px;
+                    line-height: 1.4;
+                    font-weight: 500;
+                    color: $b;
+                }
+            }
+            &-list {
+                &-wrapper {
+                    margin-bottom: 16px;
+                    padding-bottom: 28px;
+                    border-bottom: 1px solid #e1e1e1;
+                }
+                display: flex;
+                max-height: 270px;
+                margin-left: -20px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                -webkit-overflow-scrolling: touch;
+                overflow-scrolling: touch;
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    height: 0;
+                }
+                &::-webkit-scrollbar-track {
+                    background: $tr;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #e1e1e1;
+                    border-radius: 3px;
+                    outline: none;
+                }
+                &::-webkit-scrollbar-button {
+                    width: 0;
+                    height: 0;
+                    display: none;
+                }
+                &::-webkit-scrollbar-corner {
+                    background: $tr;
+                }
+                ul {
+                    flex: 1 1 0;
+                    max-width: 100%;
+                    padding-left: 20px;
+                    li {
+                        padding-right: 10px;
+                        a {
+                            display: inline-block;
+                            vertical-align: top;
+                            position: relative;
+                            margin-left: -10px;
+                            color: $dgr;
+                            padding: 5px 36px 7px 10px;
+                            border-radius: 3px;
+                            &::before {
+                                opacity: 0;
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                margin-top: -6px;
+                                right: 11px;
+                                width: 13px;
+                                height: 13px;
+                                background: $tr url('../upload/check2.svg') 50% 50% no-repeat;
+                                background-size: 100% 100%;
+                                transition: opacity $d $f;
+                                will-change: opacity;
+                            }
+                        }
+                        &.active {
+                            a {
+                                font-weight: 500;
+                                color: $b;
+                                background-color: $s;
+                                &::before {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-note {
+                font-size: 11px;
+                line-height: 1.455;
+            }
+        }
     }
     &-discount {
         margin-top: -10px;
