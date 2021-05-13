@@ -39,15 +39,21 @@ $(document).ready(function(){
         thisParents.find('.filter-range-slider').nstSlider('refresh');
     });
 
-    function filterPanelLeft(thisTargetPanelLeft, thisTargetPanelWidth, docWidth, thisTargetPanel){
-        if (thisTargetPanelLeft < 39) {
-            thisTargetPanel.css({
-                'margin-left': Math.abs(thisTargetPanelLeft) + 39
-            });
-        } else if (docWidth - 39 < thisTargetPanelWidth + thisTargetPanelLeft) {
-            thisTargetPanel.css({
-                'margin-left': docWidth - thisTargetPanelWidth - thisTargetPanelLeft - 39
-            });
+    function filterPanelLeft(thisTargetPanelLeft, thisTargetPanelWidth, filterTarget, thisTargetPanel){
+
+        var filterWidth = filterTarget.innerWidth();
+        var filterLeft = filterTarget.offset().left;
+        var filterTotal = filterWidth + filterLeft;
+        var panelTotal = thisTargetPanelWidth + thisTargetPanelLeft;
+
+        if ( filterLeft <= thisTargetPanelLeft && filterTotal >= panelTotal && filterWidth >= thisTargetPanelWidth) {
+            //console.log('good');
+        } else if ( filterLeft <= thisTargetPanelLeft && filterTotal < panelTotal && filterWidth >= thisTargetPanelWidth ) {
+            thisTargetPanel.css({ 'margin-left': filterTotal - panelTotal });
+        } else if ( filterLeft > thisTargetPanelLeft && filterTotal >= panelTotal && filterWidth >= thisTargetPanelWidth ) {
+            thisTargetPanel.css({ 'margin-left':  filterLeft - thisTargetPanelLeft });
+        } else if (filterWidth < thisTargetPanelWidth) {
+            thisTargetPanel.css({ 'margin-left': filterTotal - panelTotal });
         }
     }
 
@@ -57,8 +63,8 @@ $(document).ready(function(){
                 thisTargetPanel.css({'margin-left': 0});
             var thisTargetPanelWidth = thisTargetPanel.innerWidth(),
                 thisTargetPanelLeft = thisTargetPanel.offset().left,
-                docWidth = $('body').innerWidth();
-            filterPanelLeft(thisTargetPanelLeft, thisTargetPanelWidth, docWidth, thisTargetPanel);
+                filterTarget = $('.catalog-filter');
+            filterPanelLeft(thisTargetPanelLeft, thisTargetPanelWidth, filterTarget, thisTargetPanel);
         }
     });
 
@@ -78,9 +84,9 @@ $(document).ready(function(){
 
             var thisTargetPanelWidth = thisTargetPanel.innerWidth(),
                 thisTargetPanelLeft = thisTargetPanel.offset().left,
-                docWidth = $('body').innerWidth();
+                filterTarget = $('.catalog-filter');
 
-            filterPanelLeft(thisTargetPanelLeft, thisTargetPanelWidth, docWidth, thisTargetPanel);
+            filterPanelLeft(thisTargetPanelLeft, thisTargetPanelWidth, filterTarget, thisTargetPanel);
         }
     });
 
