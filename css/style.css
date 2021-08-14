@@ -27264,6 +27264,211 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
 }
 
 /*-------------------- End new showroom ----------------------*/
+.assembly-review {
+  max-width: 628px;
+  padding: 69px 92px 73px;
+  margin: 16px auto 100px;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  text-align: center;
+}
+
+.assembly-review-title {
+  font-size: 26px;
+  line-height: 1.154;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 28px;
+}
+
+.assembly-review-title h1 {
+  font-size: 100%;
+  font-weight: 900;
+  margin: 0;
+}
+
+.assembly-review-intro {
+  margin: 0 -62px;
+  padding-bottom: 24px;
+  color: #393939;
+}
+
+.assembly-review-intro p {
+  margin-bottom: 18px;
+}
+
+.assembly-review-question {
+  color: #393939;
+  margin-bottom: 17px;
+  text-align: left;
+}
+
+.assembly-review-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -8px 29px;
+}
+
+.assembly-review-radio {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 8px;
+  text-align: left;
+}
+
+.assembly-review-radio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  left: -9999px;
+}
+
+.assembly-review-radio input:checked + label {
+  border-color: #a1a1a1;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+.assembly-review-radio input:checked + label:before {
+  border-color: #83C150;
+  background-color: #83C150;
+}
+
+.assembly-review-radio input:checked + label:after {
+  opacity: 1;
+}
+
+.assembly-review-radio input:disabled + label {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.assembly-review-radio label {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 18px 14px 18px 50px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #393939;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background: #F4F5F6;
+  -webkit-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: border-color, background-color, box-shadow;
+}
+
+.assembly-review-radio label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 18px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #a1a1a1;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: border-color, background-color;
+}
+
+.assembly-review-radio label:after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  left: 23px;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+.assembly-review-form-button {
+  padding-top: 7px;
+  margin-bottom: 19px;
+}
+
+.assembly-review-form-button .button {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.assembly-review-form-note {
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.273;
+}
+
+.assembly-review-form-note a {
+  font-weight: 500;
+}
+
+.assembly-review-thanks-icon {
+  margin: -5px auto 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  background: #F4F5F6;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.assembly-review-thanks-title {
+  font-size: 26px;
+  line-height: 1.154;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 43px;
+}
+
+.assembly-review-thanks-title h1 {
+  font-size: 100%;
+  font-weight: 900;
+  margin: 0;
+}
+
+.assembly-review-shop {
+  margin-bottom: -9px;
+}
+
+.assembly-review-shop .button {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
 /* responsive */
 @media (max-width: 1399px) {
   .thumb-caption-v12 .thumb-title,
