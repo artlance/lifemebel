@@ -563,4 +563,22 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //new product modal call
+    $('#new-product-modal-call').on('shown', function () {
+        $.ajax({
+            url: '../new-product-modal-call.html',
+            cache: false,
+            success: function () {
+                $('#new-product-modal-call').load('../new-product-modal-call.html', function (response, status, xhr) {
+                    centerModal();
+                    if ($('.form-phone-mask').length) {
+                        $('.form-phone-mask').mask('+7 (999) 999-99-99');
+                    }
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
