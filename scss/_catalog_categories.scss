@@ -68,6 +68,36 @@
                         font-weight: 500;
                         color: $p;
                     }
+                    & > ul {
+                        display: block;
+                    }
+                }
+                & > ul {
+                    display: none;
+                    padding: 16px 0 5px;
+                    & > li {
+                        & > a {
+                            display: block;
+                            color: $b;
+                            position: relative;
+                            padding: 5px 0 5px 36px;
+                            &::before {
+                                content: "•";
+                                position: absolute;
+                                left: 10px;
+                                top: 5px;
+                            }
+                            &:hover {
+                                color: $text;
+                            }
+                        }
+                        &.active {
+                            & > a {
+                                font-weight: 500;
+                                color: $p;
+                            }
+                        }
+                    }
                 }
             }
         }

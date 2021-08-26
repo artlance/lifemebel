@@ -302,4 +302,86 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //centerModal
+    function centerModal() {
+        var modalName = $('.modal-center');
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        modalName.each(function () {
+            var modalOuterWidth = $(this).outerWidth();
+            var modalOuterHeight = $(this).outerHeight();
+            $(this).css({
+                margin: 0
+            });
+            if (windowHeight > modalOuterHeight) {
+                $(this).css({
+                    top: (windowHeight - modalOuterHeight) / 2
+                });
+            } else {
+                $(this).css({
+                    top: 0
+                });
+            }
+            if (windowWidth > modalOuterWidth) {
+                $(this).css({
+                    left: (windowWidth - modalOuterWidth) / 2
+                });
+            } else {
+                $(this).css({
+                    left: 0
+                });
+            }
+        });
+    }
+    $(document).on('click', '[data-toggle="modal"]', function (event) {
+        centerModal();
+    });
+    $(window).resize(function () {
+        centerModal();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new product modal certificate
+    function newProductModalCertificate_init() {
+
+        var newProductModalCertificate,
+            newProductModalCertificateLength = $('.new-product-modal-certificate').length;
+        if (newProductModalCertificateLength) {
+            newProductModalCertificate = new Swiper('.new-product-modal-certificate', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                watchOverflow: true,
+                speed: 500,
+                on: {
+                    imagesReady: function () {
+                        centerModal();
+                    },
+                },
+            });
+        }
+
+    }
+
+    $('#new-product-modal-certificate').on('shown', function () {
+        $.ajax({
+            url: '../new-product-modal-certificate.html',
+            cache: false,
+            success: function () {
+                $('#new-product-modal-certificate').load('../new-product-modal-certificate.html', function (response, status, xhr) {
+                    newProductModalCertificate_init();
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
