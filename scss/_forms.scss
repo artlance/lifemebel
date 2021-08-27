@@ -13,12 +13,16 @@
     cursor: default !important;
     pointer-events: none;
 }
-.input-note {
+.input-note,
+.input-error {
     margin-top: -14px;
     margin-bottom: 21px;
     font-size: 11px;
     line-height: 1.55;
     color: rgba(57, 57, 57, 0.5);
+}
+.input-error {
+    color: $red;
 }
 .input-wrapper {
     margin-bottom: 20px;

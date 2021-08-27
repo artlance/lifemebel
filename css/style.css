@@ -777,12 +777,17 @@ a.underline {
   pointer-events: none;
 }
 
-.input-note {
+.input-note,
+.input-error {
   margin-top: -14px;
   margin-bottom: 21px;
   font-size: 11px;
   line-height: 1.55;
   color: rgba(57, 57, 57, 0.5);
+}
+
+.input-error {
+  color: #F30000;
 }
 
 .input-wrapper {
@@ -15271,18 +15276,27 @@ textarea.faq-feedback-question {
 }
 
 .complaint {
-  padding: 71px 0 46px;
-  margin-bottom: 93px;
-  background: #F4F5F6;
+  padding-top: 16px;
+  margin-bottom: 100px;
 }
 
 .complaint-block {
-  max-width: 750px;
+  padding: 69px 92px 73px;
+  max-width: 996px;
   margin: 0 auto;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
 .complaint-block .global-title {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
+}
+
+.complaint-block .global-title h1 {
+  font-size: 26px;
+  line-height: 1.154;
+  font-weight: 900;
 }
 
 .complaint-form {
@@ -15291,29 +15305,177 @@ textarea.faq-feedback-question {
   display: flex;
 }
 
-.complaint-form .input-wrapper {
-  margin-bottom: 16px;
-}
-
-.complaint-form .input-note {
-  margin-top: -10px;
-  margin-bottom: 17px;
-}
-
 .complaint-form-col-rating {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 48%;
-  flex: 0 0 48%;
-  max-width: 48%;
+  -ms-flex: 0 0 45.3%;
+  flex: 0 0 45.3%;
+  max-width: 45.3%;
   padding-right: 10px;
 }
 
 .complaint-form-col {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 52%;
-  flex: 0 0 52%;
-  max-width: 52%;
-  margin-bottom: 45px;
+  -ms-flex: 0 0 54.7%;
+  flex: 0 0 54.7%;
+  max-width: 54.7%;
+}
+
+.complaint-form-title {
+  margin-bottom: 17px;
+  color: #393939;
+}
+
+.complaint-form-radio {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 8px;
+}
+
+.complaint-form-radio-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -8px 36px;
+}
+
+.complaint-form-radio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  left: -9999px;
+}
+
+.complaint-form-radio input:checked + label {
+  border-color: #a1a1a1;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+.complaint-form-radio input:checked + label:before {
+  border-color: #83C150;
+  background-color: #83C150;
+}
+
+.complaint-form-radio input:checked + label:after {
+  opacity: 1;
+}
+
+.complaint-form-radio input:disabled + label {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.complaint-form-radio label {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 18px 14px 18px 50px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #393939;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background: #F4F5F6;
+  -webkit-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: border-color, background-color, box-shadow;
+}
+
+.complaint-form-radio label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 18px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #a1a1a1;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: border-color, background-color;
+}
+
+.complaint-form-radio label:after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  left: 23px;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+.complaint-form .input-wrapper {
+  margin-bottom: 24px;
+}
+
+.complaint-form .input-wrapper > label {
+  padding-top: 0;
+  padding-bottom: 8px;
+}
+
+.complaint-form .input-note {
+  color: #686868;
+}
+
+.complaint-form .input-note,
+.complaint-form .input-error {
+  margin-top: -17px;
+  margin-bottom: 21px;
+}
+
+.complaint-form textarea.complaint-textarea {
+  height: 124px;
+}
+
+.complaint-form .new-product-modal-review-photo {
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+
+.complaint-form .new-product-modal-review-photo-list {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-right: -10px;
+}
+
+.complaint-form .new-product-modal-review-photo-item {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.complaint-form .new-product-modal-review-photo-upload {
+  text-align: left;
+}
+
+.complaint-form .new-product-modal-review-photo-upload label {
+  padding-left: 34px;
+}
+
+.complaint-form .new-product-modal-review-photo-upload label::before {
+  left: 0;
 }
 
 .complaint-rating {
@@ -15322,10 +15484,10 @@ textarea.faq-feedback-question {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  margin-bottom: 45px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .complaint-rating-title {
@@ -15333,18 +15495,12 @@ textarea.faq-feedback-question {
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
-  color: #393939;
-  padding: 1px 0 16px 5px;
-}
-
-.complaint-rating-value {
-  font-size: 11px;
-  line-height: 1.364;
-  color: rgba(57, 57, 57, 0.5);
+  color: #000000;
+  margin-bottom: 13px;
 }
 
 .complaint-rating-block {
-  padding-right: 4px;
+  padding: 0 3px 10px 0;
 }
 
 .complaint-rating-block > input {
@@ -15354,13 +15510,40 @@ textarea.faq-feedback-question {
 .complaint-rating-block label {
   cursor: pointer;
   float: right;
-  width: 32px;
+  width: 33px;
   height: 24px;
-  padding-right: 6px;
+  padding-right: 7px;
 }
 
 .complaint-rating-block label svg {
   display: block;
+}
+
+.complaint-rating-value {
+  margin-bottom: 10px;
+  font-size: 11px;
+  line-height: 1.364;
+  color: rgba(57, 57, 57, 0.5);
+}
+
+.complaint-button {
+  margin-bottom: 19px;
+}
+
+.complaint-button .button {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.complaint-agree {
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.273;
+}
+
+.complaint-agree a {
+  font-weight: 500;
 }
 
 .complaint-rating-block > input:checked ~ label .svg-fill,
@@ -15377,28 +15560,29 @@ textarea.faq-feedback-question {
   fill: #daa500;
 }
 
-textarea.complaint-textarea {
-  height: 120px;
-}
-
-.complaint-button {
-  padding: 4px 0 16px;
-}
-
-.complaint-button .button {
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 100%;
-}
-
-.complaint-agree {
-  text-align: center;
-  font-size: 11px;
-  line-height: 1.55;
-}
-
-.complaint-agree a {
-  font-weight: 500;
+@media (max-width: 1079px) {
+  .complaint-block {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .complaint-form-col-rating {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .complaint-form-col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  .complaint-rating-value {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .provider .breadcrumbs-push {
@@ -27829,7 +28013,7 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   line-height: 1.154;
   font-weight: 900;
   color: #000000;
-  margin-bottom: 43px;
+  margin: 0 -62px 43px;
 }
 
 .assembly-review-thanks-title h1 {

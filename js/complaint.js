@@ -1,21 +1,21 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     //complaint phone mask
-    $('.complaint-phone-mask').mask('8 (999) 999-99-99');
+    $('.complaint-phone-mask').mask('+7 (999) 999-99-99');
 
     //------------------------------------------------------------------------//
 
     //complaint rating
     $('.complaint-rating-block label').hover(
-        function() {
+        function () {
             $(this)
                 .parents('.complaint-rating')
                 .find('.complaint-rating-value')
                 .text($(this).data('rating'));
-        }, function() {
+        }, function () {
             var thisParent = $(this).parents('.complaint-rating'),
                 thisChecked = thisParent.find(':checked');
-            if ( thisChecked.length ) {
+            if (thisChecked.length) {
                 var thisCheckedValue =
                     thisChecked
                         .next('label')
