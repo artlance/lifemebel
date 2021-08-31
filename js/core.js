@@ -189,6 +189,20 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //reviews sorting select
+    $(document).on('click', '.reviews-sorting-select-item', function (event) {
+        event.preventDefault();
+        var thisElement = $(this),
+            thisElementText = thisElement.text(),
+            thisParent = thisElement.parents('.reviews-sorting-select');
+        thisElement.addClass('active').siblings().removeClass('active');
+        thisParent.find('.reviews-sorting-select-toggle').text(thisElementText);
+        activePop = null;
+        closeInactivePop();
+    });
+
+    //------------------------------------------------------------------------//
+
     //tab
     $('.tabs').delegate('li:not(.active)', 'click', function () {
         $(this).addClass('active').siblings().removeClass('active').parents('.tab').find('.box').hide().eq($(this).index()).fadeIn(250, function () {

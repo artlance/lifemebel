@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     //fancybox
     $('[data-fancybox]').fancybox({
@@ -28,7 +28,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //reviews sorting
-    $('.reviews-sorting a').on('click', function(event) {
+    $('.reviews-sorting a').on('click', function (event) {
         event.preventDefault();
         $(this).parent('li').addClass('active').siblings().removeClass('active');
     });
@@ -37,6 +37,32 @@ $(document).ready(function(){
 
     //reviews audio
     $('.reviews-audio audio').audioPlayer();
+
+    //------------------------------------------------------------------------//
+
+    //reviews gallery
+    var reviewsGallery,
+        reviewsGalleryLength = $('.reviews-item-gallery').length;
+    if (reviewsGalleryLength) {
+        reviewsGallery = new Swiper('.reviews-item-gallery', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            watchOverflow: true,
+            speed: 500,
+            spaceBetween: 10,
+            slidesPerView: 'auto',
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //reviews text more
+    $(document).on('click', '.reviews-item-text-more', function (event) {
+        event.preventDefault();
+        $(this).hide().parents('.reviews-item-text').find('.reviews-item-text-hidden').show();
+    });
 
     //------------------------------------------------------------------------//
 
