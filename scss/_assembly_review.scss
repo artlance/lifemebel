@@ -122,6 +122,17 @@
                 font-weight: 500;
             }
         }
+        .input-wrapper {
+            text-align: left;
+            margin-bottom: 24px;
+            & > label {
+                padding-top: 0;
+                padding-bottom: 8px;
+            }
+        }
+        textarea.textarea {
+            height: 124px;
+        }
     }
     &-thanks {
         &-icon {
@@ -154,6 +165,19 @@
             padding-left: 10px;
             padding-right: 10px;
             width: 100%;
+        }
+    }
+    .complaint-rating {
+        margin: -1px 0 23px;
+        justify-content: center;
+        &-title {
+            flex: 0 1 auto;
+            max-width: 100%;
+            margin-bottom: 0;
+            padding: 4px 10px 0 8px;
+        }
+        &-block {
+            padding: 0;
         }
     }
 }

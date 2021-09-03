@@ -28251,6 +28251,20 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   font-weight: 500;
 }
 
+.assembly-review-form .input-wrapper {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.assembly-review-form .input-wrapper > label {
+  padding-top: 0;
+  padding-bottom: 8px;
+}
+
+.assembly-review-form textarea.textarea {
+  height: 124px;
+}
+
 .assembly-review-thanks-icon {
   margin: -5px auto 29px;
   display: -webkit-box;
@@ -28291,6 +28305,26 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
+}
+
+.assembly-review .complaint-rating {
+  margin: -1px 0 23px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.assembly-review .complaint-rating-title {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  max-width: 100%;
+  margin-bottom: 0;
+  padding: 4px 10px 0 8px;
+}
+
+.assembly-review .complaint-rating-block {
+  padding: 0;
 }
 
 /* responsive */
