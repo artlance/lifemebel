@@ -623,3 +623,17 @@
         font-size: 15px;
     }
 }
+.delivery-rate-item-note + .delivery-rate-item-footnote {
+    margin-top: -6px;
+}
+.delivery-rate-item-footnote {
+    font-size: 11px;
+    line-height: 1.455;
+    margin-bottom: 10px;
+}
+.delivery-rate-item-feature {
+    font-size: 11px;
+    line-height: 1.455;
+    color: $b;
+    margin-bottom: 13px;
+}
