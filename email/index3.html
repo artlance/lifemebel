@@ -44,6 +44,17 @@
         font-weight: normal;
         color: #000000;
     }
+    ul {
+        display: block;
+        margin: 0 0 16px;
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+    ul li {
+        margin: 0;
+        padding-left: 8px;
+        padding-bottom: 3px;
+    }
     .clear {
         display: block;
         clear: both;
@@ -84,6 +95,9 @@
     a.button:active {
         background-color: #569f29;
     }
+    p.button-mobile {
+        display: none !important;
+    }
     /* responsive */
     @media only screen and (max-width: 600px) {
         h1 {
@@ -94,29 +108,57 @@
             font-size: 13px;
             line-height: 17px;
         }
-        div[class="content"] {
+        ul {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        div.content {
             padding-left: 16px;
             padding-right: 16px;
         }
-        td[class="logo"] {
+        td.logo {
             padding-top: 18px !important;
             padding-bottom: 17px !important;
         }
-        td[class="logo"] img {
+        td.logo img {
             width: 139px !important;
             height: 19px !important;
         }
-        span[class="promocode"] {
+        span.promocode {
             display: block !important;
             width: auto !important;
             padding-top: 16px !important;
             padding-bottom: 16px !important;
         }
-        a[class="button"] {
+        a.button {
             display: block;
-            width: auto;
+            width: auto !important;
             padding-top: 13px;
             padding-bottom: 14px;
+        }
+        p.request {
+            font-size: 16px !important;
+            line-height: 21px !important;
+        }
+        p.feedback {
+            width: 140px;
+            padding-top: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        td.product-thumb {
+            width: 110px !important;
+            padding-right: 16px !important;
+        }
+        p.product-articul {
+            font-size: 10px !important;
+            line-height: 14px !important;
+        }
+        p.button-desktop {
+            display: none !important;
+        }
+        p.button-mobile {
+            display: block !important;
         }
     }
 </style>
