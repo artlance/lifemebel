@@ -3347,6 +3347,111 @@
             }
         }
     }
+    &-advantages {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -30px -38px 21px;
+        &-item {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 0 8px 33px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $black;
+            p {
+                margin-bottom: 6px;
+            }
+            &.active {
+                .new-product-advantages-more {
+                    &::after {
+                        transform: rotate(-180deg);
+                    }
+                    &-show {
+                        display: none;
+                    }
+                    &-hide {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &-img {
+            margin-bottom: 19px;
+            img {
+                width: 100%;
+            }
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.334;
+            font-weight: 500;
+            margin-bottom: 17px;
+        }
+        &-text {}
+        &-detail {
+            display: none;
+        }
+        &-more {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            font-weight: 500;
+            margin-top: -6px;
+            padding: 5px 21px 5px 0;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -3px;
+                right: 0;
+                width: 10px;
+                height: 7px;
+                background: $tr url('../upload/down-green.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                transition: transform $d $f;
+                will-change: transform;
+            }
+            &-show {
+                display: block;
+            }
+            &-hide {
+                display: none;
+            }
+        }
+        &-video {
+            margin-bottom: 19px;
+            img {
+                width: 100%;
+            }
+            &-link {
+                display: block;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: $black;
+                    opacity: 0.4;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -20px;
+                    margin-top: -20px;
+                    width: 40px;
+                    height: 40px;
+                    background: $w url('../upload/new-play.svg') calc(50% + 1px) 50% no-repeat;
+                    background-size: 12px 16px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
 }
 a.new-product-brand-feature {
     &:hover {
@@ -3695,6 +3800,13 @@ a.new-product-brand-feature {
                 }
             }
         }
+        &-advantages {
+            margin: 0 -8px;
+            &-item {
+                flex: 0 0 33.3333333%;
+                max-width: 33.3333333%;
+            }
+        }
     }
 }
 @media (max-width: 1079px) {
@@ -3732,6 +3844,12 @@ a.new-product-brand-feature {
                 .button {
                     width: 100%;
                 }
+            }
+        }
+        &-advantages {
+            &-item {
+                flex: 0 0 50%;
+                max-width: 50%;
             }
         }
     }

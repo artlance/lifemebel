@@ -51,7 +51,7 @@
         & > ul {
             display: none;
             margin: -4px 0 0;
-            padding: 0 0 15px;
+            padding: 0 0 11px;
             & > li {
                 padding: 0 0 11px 20px;
                 & > a {
@@ -74,19 +74,14 @@
                 }
                 & > ul {
                     display: none;
-                    padding: 16px 0 5px;
+                    padding: 5px 0 2px 16px;
                     & > li {
                         & > a {
                             display: block;
+                            font-size: 15px;
+                            line-height: 1.6;
                             color: $b;
-                            position: relative;
-                            padding: 5px 0 5px 36px;
-                            &::before {
-                                content: "•";
-                                position: absolute;
-                                left: 10px;
-                                top: 5px;
-                            }
+                            padding: 2px 0;
                             &:hover {
                                 color: $text;
                             }

@@ -581,4 +581,12 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //new product advantages more
+    $(document).on('click', '.new-product-advantages-more', function (event) {
+        event.preventDefault();
+        $(this).parents('.new-product-advantages-item').toggleClass('active').find('.new-product-advantages-detail').slideToggle(200);
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
