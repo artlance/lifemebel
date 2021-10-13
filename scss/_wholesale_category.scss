@@ -191,6 +191,173 @@
             }
         }
     }
+    &-hero {
+        margin-top: -13px;
+        color: $w;
+        background: $dgr 50% 50% no-repeat;
+        background-size: cover;
+        .row {
+            padding: 65px 0 20px;
+            min-height: 550px;
+        }
+        &-title {
+            font-size: 44px;
+            line-height: 1.14;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 40px;
+            h1 {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+    }
+    &-advantages {
+        background: $s;
+        padding: 97px 0 94px;
+        &-caption {
+            text-align: center;
+            font-size: 26px;
+            line-height: 1.154;
+            font-weight: 900;
+            color: $b;
+            margin-bottom: 59px;
+            h2, h3, h4 {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -20px 49px;
+        }
+        &-item {
+            flex: 0 0 16.5%;
+            max-width: 16.5%;
+            padding: 0 20px 40px;
+            text-align: center;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: $w;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 16px;
+        }
+        &-info {
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+        }
+    }
+    &-apply {
+        margin: -94px 0 97px;
+        &-content {
+            padding: 0 30px 72px;
+            max-width: 812px;
+            margin: 0 auto;
+            background: $w;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        }
+        &-icon {
+            position: relative;
+            top: -25px;
+            margin: 0 auto 19px;
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+            background: $w;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+        }
+        &-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            background: $p;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-title {
+            text-align: center;
+            font-size: 26px;
+            line-height: 1.154;
+            font-weight: 900;
+            color: $b;
+            margin-bottom: 43px;
+            h2, h3, h4 {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+        &-form {
+            max-width: 444px;
+            margin: 0 auto;
+            .input-wrapper {
+                & > label {
+                    padding: 0 0 8px;
+                }
+            }
+            &-button {
+                padding-top: 12px;
+                .button {
+                    width: 100%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+    &-contacts {
+        margin-bottom: 56px;
+        &-title {
+            text-align: center;
+            font-size: 26px;
+            line-height: 1.154;
+            font-weight: 900;
+            color: $b;
+            margin-bottom: 51px;
+            h2, h3, h4 {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -24px;
+        }
+        &-item {
+            flex: 0 1 auto;
+            max-width: 100%;
+            padding: 0 24px 40px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $dgr;
+            a {
+                display: block;
+                padding: 5px 0;
+                font-size: 15px;
+                line-height: 1.334;
+                color: $b;
+                &:hover {
+                    color: $p;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1325px) {
@@ -205,6 +372,22 @@
             &-products {
                 margin-left: 0;
                 margin-right: 0;
+            }
+        }
+        &-advantages {
+            &-item {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+        &-contacts {
+            &-list {
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+            &-item {
+                padding-left: 20px;
+                padding-right: 20px;
             }
         }
     }
