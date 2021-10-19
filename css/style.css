@@ -28998,6 +28998,48 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   filter: grayscale(100%);
 }
 
+.wholesale-categories {
+  padding-bottom: 22px;
+}
+
+.wholesale-categories .wholesale-subcategory-products-wrapper {
+  margin-bottom: 41px;
+}
+
+.wholesale-categories-caption {
+  text-align: center;
+  padding-bottom: 33px;
+}
+
+.wholesale-categories-caption h3 {
+  font-size: 26px;
+  line-height: 1.154;
+  font-weight: 900;
+  color: #000000;
+  margin: 0 0 17px;
+}
+
+.wholesale-categories-caption h4 {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 17px;
+}
+
+.wholesale-categories-all {
+  text-align: center;
+  margin-bottom: 78px;
+}
+
+.wholesale-categories-all + .wholesale-categories-caption h3 {
+  padding-top: 19px;
+}
+
+.wholesale-categories-all .button {
+  min-width: 260px;
+}
+
 @media (max-width: 1499px) {
   .wholesale-clients-list {
     padding: 0;

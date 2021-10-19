@@ -396,6 +396,42 @@
             }
         }
     }
+    &-categories {
+        padding-bottom: 22px;
+        .wholesale-subcategory-products-wrapper {
+            margin-bottom: 41px;
+        }
+        &-caption {
+            text-align: center;
+            padding-bottom: 33px;
+            h3 {
+                font-size: 26px;
+                line-height: 1.154;
+                font-weight: 900;
+                color: $b;
+                margin: 0 0 17px;
+            }
+            h4 {
+                font-size: 20px;
+                line-height: 1;
+                font-weight: bold;
+                color: $b;
+                margin: 0 0 17px;
+            }
+        }
+        &-all {
+            text-align: center;
+            margin-bottom: 78px;
+            & + .wholesale-categories-caption {
+                h3 {
+                    padding-top: 19px;
+                }
+            }
+            .button {
+                min-width: 260px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1499px) {
