@@ -27131,11 +27131,30 @@ button.swiper-pagination-bullet {
 }
 
 .new-product-advantages-img {
+  position: relative;
+  height: 0;
+  padding-top: 56.37%;
+  background: #F4F5F6;
   margin-bottom: 19px;
 }
 
+.new-product-advantages-img a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  cursor: url("../upload/cursor.svg") 20 20, url("../upload/cursor.png") 20 20, pointer;
+}
+
 .new-product-advantages-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .new-product-advantages-title {
@@ -27185,41 +27204,44 @@ button.swiper-pagination-bullet {
 }
 
 .new-product-advantages-video {
+  position: relative;
   margin-bottom: 19px;
-}
-
-.new-product-advantages-video img {
-  width: 100%;
 }
 
 .new-product-advantages-video-link {
   display: block;
   position: relative;
+  height: 0;
+  padding-top: 56.37%;
+  background: #F4F5F6;
+  cursor: url("../upload/cursor.svg") 20 20, url("../upload/cursor.png") 20 20, pointer;
 }
 
-.new-product-advantages-video-link::before {
-  content: "";
+.new-product-advantages-video video {
   position: absolute;
   left: 0;
   top: 0;
-  right: 0;
-  bottom: 0;
-  background: #000000;
-  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-.new-product-advantages-video-link::after {
-  content: "";
+.new-product-advantages-video-play, .new-product-advantages-video-pause {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -20px;
-  margin-top: -20px;
+  z-index: 2;
+  bottom: 20px;
+  left: 20px;
   width: 40px;
   height: 40px;
-  background: #ffffff url("../upload/new-play.svg") calc(50% + 1px) 50% no-repeat;
-  background-size: 12px 16px;
   border-radius: 50%;
+  background: rgba(57, 57, 57, 0.8) url("../upload/video-play.svg") 50% 50% no-repeat;
+  background-size: 100% 100%;
+}
+
+.new-product-advantages-video-pause {
+  display: none;
+  background-image: url("../upload/video-pause.svg");
 }
 
 a.new-product-brand-feature:hover .new-product-brand-feature-title {

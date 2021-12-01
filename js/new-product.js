@@ -589,4 +589,50 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    function productAdvantagesVideoPlay (element) {
+        element.find('.new-product-advantages-video-play').fadeOut(0);
+        element.find('.new-product-advantages-video-pause').fadeIn(0);
+    }
+
+    function productAdvantagesVideoPause (element) {
+        element.find('.new-product-advantages-video-play').fadeIn(0);
+        element.find('.new-product-advantages-video-pause').fadeOut(0);
+    }
+
+    $('.new-product-advantages-video').hover(function() {
+        var thisVideo = $(this).find('video');
+        if(thisVideo.length && !$(this).hasClass('manual-changed')) {
+            thisVideo[0].play();
+            productAdvantagesVideoPlay($(this));
+        }
+    }, function() {
+        var thisVideo = $(this).find('video');
+        if(thisVideo.length && !$(this).hasClass('manual-changed')) {
+            thisVideo[0].pause();
+            productAdvantagesVideoPause($(this));
+        }
+    });
+
+    $(document).on('click', '.new-product-advantages-video-play', function(event) {
+        event.preventDefault();
+        var thisParent = $(this).parents('.new-product-advantages-video');
+        thisParent.addClass('manual-changed');
+        var thisVideo = thisParent.find('video');
+        if(thisVideo.length) {
+            thisVideo[0].play();
+            productAdvantagesVideoPlay(thisParent);
+        }
+    });
+
+    $(document).on('click', '.new-product-advantages-video-pause', function(event) {
+        event.preventDefault();
+        var thisParent = $(this).parents('.new-product-advantages-video');
+        thisParent.addClass('manual-changed');
+        var thisVideo = thisParent.find('video');
+        if(thisVideo.length) {
+            thisVideo[0].pause();
+            productAdvantagesVideoPause(thisParent);
+        }
+    });
+
 });//document ready
