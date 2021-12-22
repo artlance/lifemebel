@@ -1,7 +1,11 @@
 .catalog-products {
-    padding-bottom: 10px;
+    padding-bottom: 14px;
     .row {
         flex-wrap: wrap;
+        margin: 0 -8px;
+    }
+    .col-4 {
+        padding: 0 8px;
     }
     .col {
         flex: 0 0 33.3333%;
@@ -9,20 +13,20 @@
         padding: 0 8px;
     }
     &-square {
-        .row {
-            margin: 0 -8px;
-        }
         .catalog-product-img-link {
             max-width: 358px;
         }
-        .catalog-product-img {
-            margin-bottom: 21px;
+        .catalog-product-colors-list {
+            li {
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
         }
     }
 }
 .catalog-product {
-    padding-top: 20px;
-    margin-bottom: 40px;
+    padding-top: 16px;
+    margin-bottom: 16px;
     position: relative;
     text-align: center;
     &:hover {
@@ -39,18 +43,18 @@
     position: absolute;
     z-index: 5;
     top: 0;
-    bottom: -128px;
-    left: -20px;
-    right: -20px;
+    bottom: -80px;
+    left: -16px;
+    right: -16px;
     background: $w;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
 }
 .catalog-product-content {
     position: relative;
     z-index: 10;
 }
 .catalog-product-img {
-    margin-bottom: 34px;
+    margin-bottom: 20px;
 }
 .catalog-product-img-slider {
     @extend .clearfix;
@@ -66,9 +70,9 @@
         }
     }
     .slick-dots {
-        bottom: -20px;
         display: flex;
         top: 0;
+        bottom: 0;
         li {
             height: 100%;
             flex-grow: 1;
@@ -89,7 +93,7 @@
 }
 .catalog-product-img-link {
     display: block;
-    max-width: 276px;
+    max-width: 264px;
     img {
         width: 100%;
     }
@@ -98,7 +102,7 @@
     display: none;
 }
 .catalog-product-labels {
-    margin: -34px 0 8px;
+    margin: -36px 0 10px;
     position: relative;
     z-index: 2;
     display: flex;
@@ -138,71 +142,101 @@
     border: 1px solid rgba(131, 193, 80, 0.5);
 }
 .catalog-product-colors {
-    padding: 4px 0 8px;
-    height: 29px;
+    margin-bottom: 16px;
+    overflow: hidden;
 }
 .catalog-product-colors-list {
     display: flex;
-    justify-content: center;
-    margin-left: -7px;
+    align-items: center;
+    margin-left: -8px;
     li {
-        padding-left: 7px;
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-left: 8px;
     }
 }
 .catalog-product-color {
     display: block;
-    border: 2px solid $tr;
-    border-radius: 50%;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid $tr;
+        transition: border-color $d $f;
+    }
     &.hover,
     &:hover {
-        border-color: $b;
-        span {
-            box-shadow: inset 0 0 0 2px $w;
+        &::after {
+            border-color: $text;
         }
     }
-    span {
-        display: block;
-        width: 13px;
-        height: 13px;
-        border-radius: 50%;
-        background-color: $tr;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        transition: box-shadow $d $f;
+    img {
+        width: 100%;
     }
 }
 .catalog-product-colors-more {
     display: block;
-    width: 19px;
-    height: 17px;
-    background: $tr url('../upload/more.svg') 50% 50% no-repeat;
-    background-size: 15px 3px;
+    text-align: center;
+    font-weight: 500;
+    color: $b;
+    padding: 7px 0 9px;
+    &:hover {
+        color: $dgr;
+    }
+}
+.catalog-product-rating {
+    font-size: 0;
+    line-height: 0;
+    white-space: nowrap;
+    padding: 4px 7px 0 0;
+    img {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 2px;
+    }
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
+.catalog-product-reviews {
+    white-space: nowrap;
+    color: $t;
+    font-size: 11px;
+    line-height: 1.182;
+    padding-top: 4px;
 }
 .catalog-product-title {
-    padding: 0 10px 8px;
+    padding-bottom: 5px;
     font-size: 13px;
     line-height: 1.31;
+    text-align: left;
     a {
-        color: $text;
+        color: $dgr;
         &:hover {
-            color: $t;
+            color: $b;
         }
     }
 }
 .catalog-product-price {
-    padding: 0 10px 1px;
+    padding-bottom: 10px;
     font-size: 15px;
     line-height: 1.2;
     font-weight: 500;
     color: $b;
+    text-align: left;
 }
 .catalog-product-price-new {
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
     color: $red;
-    margin-right: 11px;
+    margin-right: 3px;
 }
 .catalog-product-price-old {
     display: inline-block;
@@ -216,14 +250,35 @@
     display: none;
     position: absolute;
     z-index: 2;
-    top: 10px;
-    right: 10px;
-    width: 24px;
-    height: 22px;
-    background: $tr url('../upload/favorite-gray.svg') 50% 50% no-repeat;
-    background-size: 100% 100%;
+    top: 12px;
+    right: 12px;
+    width: 46px;
+    height: 46px;
+    background: $w;
+    border-radius: 50%;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: $tr url('../upload/favorite2.svg') 50% 50% no-repeat;
+        background-size: 22px 20px;
+        transition: opacity $d $f;
+    }
+    &::after {
+        opacity: 0;
+        background-image: url('../upload/favorite-active.svg');
+    }
     &.active {
-        background-image: url('../upload/favorite-red.svg');
+        &::before {
+            opacity: 0;
+        }
+        &::after {
+            opacity: 1;
+        }
     }
 }
 .catalog-product-info {
@@ -232,7 +287,7 @@
     left: 0;
     right: 0;
     top: 100%;
-    padding: 6px 10px 0;
+    padding: 16px 0 24px;
 }
 .catalog-product-parameters {
     margin-bottom: 10px;
@@ -274,16 +329,15 @@
     }
 }
 .catalog-product-button {
-    margin: 0 -30px;
     .button {
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
-        border-radius: 0;
+        border-radius: 2px;
     }
 }
 .catalog-banner {
-    padding: 20px 0 40px;
+    padding: 16px 0;
     &-link {
         display: block;
         position: relative;

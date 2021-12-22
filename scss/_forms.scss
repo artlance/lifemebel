@@ -43,6 +43,7 @@
             background: $w url('../upload/check-green.svg') 50% 50% no-repeat;
             background-size: 100% 100%;
         }
+        textarea.textarea,
         input.input-text {
             border-color: $p;
             padding-right: 29px;
@@ -58,6 +59,7 @@
         & > label {
             color: $error;
         }
+        textarea.textarea,
         input.input-text {
             color: $error;
             border-color: rgba(243, 0, 0, 0.5);
@@ -72,6 +74,7 @@
         }
     }
 }
+textarea.textarea,
 input.input-text {
     float: left;
     width: 100%;
@@ -108,7 +111,6 @@ input.input-text {
     }
 }
 textarea.textarea {
-    @extend input.input-text;
     font-family: $fontFamily;
     overflow: auto;
     height: auto;

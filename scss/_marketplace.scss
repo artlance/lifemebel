@@ -1796,6 +1796,7 @@
         &-name,
         &-phone {
             position: relative;
+            textarea.textarea,
             input.input-text {
                 padding-right: 34px;
             }
@@ -2228,6 +2229,7 @@
             &-text {
                 flex-grow: 1;
                 position: relative;
+                textarea.textarea,
                 input.input-text {
                     padding-left: 39px;
                 }

@@ -410,11 +410,13 @@ a.warranty-email {
             &:before {
                 display: none;
             }
+            textarea.textarea,
             input.input-text {
                 padding-right: 46px;
             }
         }
     }
+    textarea.textarea,
     input.input-text {
         padding-right: 46px;
     }
