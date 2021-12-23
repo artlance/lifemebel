@@ -3,6 +3,7 @@
     margin-bottom: 40px;
     border-top: 1px solid #e3e3e3;
     & > li {
+        position: relative;
         border-bottom: 1px solid #e3e3e3;
         & > a {
             display: block;
@@ -14,16 +15,16 @@
             &:hover {
                 color: $text;
             }
-        }
-        &.active {
-            & > a {
-                color: $p;
-            }
-        }
-        &.catalog-menu-dropdown {
-            & > a {
-                position: relative;
-                padding-right: 40px;
+            &.catalog-menu-dropdown-toggle {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 56px;
+                padding: 0 !important;
+                font-size: 0;
+                line-height: 0;
                 &::after {
                     content: "";
                     position: absolute;
@@ -37,10 +38,22 @@
                     will-change: transform;
                 }
             }
+        }
+        &.active {
+            & > a {
+                color: $p;
+            }
+        }
+        &.catalog-menu-dropdown {
+            & > a {
+                padding-right: 40px;
+            }
             &.open {
                 & > a {
-                    &::after {
-                        transform: rotate(-180deg);
+                    &.catalog-menu-dropdown-toggle {
+                        &::after {
+                            transform: rotate(-180deg);
+                        }
                     }
                 }
                 & > ul {

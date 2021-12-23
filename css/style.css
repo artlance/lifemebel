@@ -6215,6 +6215,7 @@ a.warranty-email:hover {
   border-top: 1px solid #e3e3e3;
 }
 .catalog-menu-v2 > li {
+  position: relative;
   border-bottom: 1px solid #e3e3e3;
 }
 .catalog-menu-v2 > li > a {
@@ -6228,14 +6229,18 @@ a.warranty-email:hover {
 .catalog-menu-v2 > li > a:hover {
   color: #686868;
 }
-.catalog-menu-v2 > li.active > a {
-  color: #83C150;
+.catalog-menu-v2 > li > a.catalog-menu-dropdown-toggle {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 56px;
+  padding: 0 !important;
+  font-size: 0;
+  line-height: 0;
 }
-.catalog-menu-v2 > li.catalog-menu-dropdown > a {
-  position: relative;
-  padding-right: 40px;
-}
-.catalog-menu-v2 > li.catalog-menu-dropdown > a::after {
+.catalog-menu-v2 > li > a.catalog-menu-dropdown-toggle::after {
   content: "";
   position: absolute;
   top: 24px;
@@ -6250,7 +6255,13 @@ a.warranty-email:hover {
   transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
-.catalog-menu-v2 > li.catalog-menu-dropdown.open > a::after {
+.catalog-menu-v2 > li.active > a {
+  color: #83C150;
+}
+.catalog-menu-v2 > li.catalog-menu-dropdown > a {
+  padding-right: 40px;
+}
+.catalog-menu-v2 > li.catalog-menu-dropdown.open > a.catalog-menu-dropdown-toggle::after {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
