@@ -589,50 +589,69 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
-    function productAdvantagesVideoPlay (element) {
+    //new product advantages video
+    function productAdvantagesVideoPlay(element) {
         element.find('.new-product-advantages-video-play').fadeOut(0);
         element.find('.new-product-advantages-video-pause').fadeIn(0);
     }
 
-    function productAdvantagesVideoPause (element) {
+    function productAdvantagesVideoPause(element) {
         element.find('.new-product-advantages-video-play').fadeIn(0);
         element.find('.new-product-advantages-video-pause').fadeOut(0);
     }
 
-    $('.new-product-advantages-video').hover(function() {
+    $('.new-product-advantages-video').hover(function () {
         var thisVideo = $(this).find('video');
-        if(thisVideo.length && !$(this).hasClass('manual-changed')) {
+        if (thisVideo.length && !$(this).hasClass('manual-changed')) {
             thisVideo[0].play();
             productAdvantagesVideoPlay($(this));
         }
-    }, function() {
+    }, function () {
         var thisVideo = $(this).find('video');
-        if(thisVideo.length && !$(this).hasClass('manual-changed')) {
+        if (thisVideo.length && !$(this).hasClass('manual-changed')) {
             thisVideo[0].pause();
             productAdvantagesVideoPause($(this));
         }
     });
 
-    $(document).on('click', '.new-product-advantages-video-play', function(event) {
+    $(document).on('click', '.new-product-advantages-video-play', function (event) {
         event.preventDefault();
         var thisParent = $(this).parents('.new-product-advantages-video');
         thisParent.addClass('manual-changed');
         var thisVideo = thisParent.find('video');
-        if(thisVideo.length) {
+        if (thisVideo.length) {
             thisVideo[0].play();
             productAdvantagesVideoPlay(thisParent);
         }
     });
 
-    $(document).on('click', '.new-product-advantages-video-pause', function(event) {
+    $(document).on('click', '.new-product-advantages-video-pause', function (event) {
         event.preventDefault();
         var thisParent = $(this).parents('.new-product-advantages-video');
         thisParent.addClass('manual-changed');
         var thisVideo = thisParent.find('video');
-        if(thisVideo.length) {
+        if (thisVideo.length) {
             thisVideo[0].pause();
             productAdvantagesVideoPause(thisParent);
         }
     });
+
+    //------------------------------------------------------------------------//
+
+    //new product modal showroom
+    $('#new-product-modal-showroom').on('shown', function () {
+        $.ajax({
+            url: '../new-product-modal-showroom.html',
+            cache: false,
+            success: function () {
+                $('#new-product-modal-showroom').load('../new-product-modal-showroom.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
 
 });//document ready
