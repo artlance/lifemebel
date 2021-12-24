@@ -158,6 +158,9 @@
 .catalog-product-color {
     display: block;
     position: relative;
+    height: 0;
+    padding-top: 100%;
+    background: $s;
     &::after {
         content: "";
         position: absolute;
@@ -169,13 +172,18 @@
         transition: border-color $d $f;
     }
     &.hover,
-    &:hover {
+    &.active {
         &::after {
             border-color: $text;
         }
     }
     img {
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }
 .catalog-product-colors-more {
