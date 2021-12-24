@@ -54,7 +54,18 @@
     z-index: 10;
 }
 .catalog-product-img {
+    position: relative;
     margin-bottom: 20px;
+}
+a.catalog-product-fast-view {
+    display: none;
+    position: absolute;
+    max-width: 240px;
+    padding: 10px 12px 12px;
+    bottom: 24px;
+    left: 10px;
+    right: 10px;
+    margin: 0 auto;
 }
 .catalog-product-img-slider {
     @extend .clearfix;
