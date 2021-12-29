@@ -13,13 +13,19 @@
                         controls: []
                     }, {
                         searchControlProvider: 'yandex#search'
+                    }),
+
+                    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'upload/new-pin3.svg',
+                        iconImageSize: [345, 75],
+                        iconImageOffset: [-27, -37]
                     });
+
+                    myMap.geoObjects.add(myPlacemark);
                 });
             </script>
-            <div class="new-product-modal-showroom-map-point" style="top: 40%; left: 40%;">
-                <img src="upload/new-pin2.svg" alt="">
-                <div class="new-product-modal-showroom-map-info">Шоурум Лайфмебель</div>
-            </div>
         </div>
         <!-- /.new-product-modal-showroom-map-block -->
         <div class="new-product-modal-showroom-route-list">
