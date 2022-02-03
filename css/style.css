@@ -26980,6 +26980,173 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   color: #a1a1a1;
   background: #F4F5F6;
 }
+.new-cabinet-modal-close {
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}
+.new-cabinet-modal-close:before, .new-cabinet-modal-close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  right: 13px;
+  height: 2px;
+  margin-top: -1px;
+  background: #a1a1a1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color;
+}
+.new-cabinet-modal-close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.new-cabinet-modal-close:hover:before, .new-cabinet-modal-close:hover:after {
+  background-color: #686868;
+}
+.new-cabinet-modal-promocode {
+  position: absolute;
+  width: 1180px;
+  max-width: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.new-cabinet-modal-promocode-caption {
+  padding: 28px 60px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+}
+.new-cabinet-modal-promocode-content {
+  padding: 103px 40px 100px;
+}
+.new-cabinet-modal-promocode-close {
+  text-align: center;
+}
+.new-cabinet-modal-promocode-close .button {
+  min-width: 260px;
+  padding-top: 11px;
+  border-radius: 2px;
+}
+.new-cabinet-modal-promocode-process {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.new-cabinet-modal-promocode-process-step {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 188px;
+          flex: 0 0 188px;
+  max-width: 188px;
+  margin-bottom: 57px;
+}
+.new-cabinet-modal-promocode-process-step.active .new-cabinet-modal-promocode-process-step-icon {
+  border-color: #83C150;
+}
+.new-cabinet-modal-promocode-process-step-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 23px;
+  width: 100px;
+  height: 100px;
+  border: 7px solid rgba(131, 193, 80, 0.4);
+  background: #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+.new-cabinet-modal-promocode-process-step-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.new-cabinet-modal-promocode-process-step-number {
+  position: relative;
+  font-size: 26px;
+  line-height: 1.154;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+.new-cabinet-modal-promocode-process-step-title {
+  font-size: 15px;
+  line-height: 1.3334;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+}
+.new-cabinet-modal-promocode-process-step-img {
+  position: relative;
+}
+.new-cabinet-modal-promocode-process-dots {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  max-width: 20px;
+  height: 100px;
+  position: relative;
+}
+.new-cabinet-modal-promocode-process-dots-list {
+  display: block;
+  position: absolute;
+  left: -30px;
+  top: 46px;
+  font-size: 0;
+  line-height: 0;
+  white-space: nowrap;
+}
+.new-cabinet-modal-promocode-process-dots-list li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 6px;
+  width: 8px;
+  height: 8px;
+  background: #e1e1e1;
+  border-radius: 50%;
+}
+.new-cabinet-modal-promocode-apply {
+  position: absolute;
+  width: 1180px;
+  max-width: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.new-cabinet-modal-promocode-apply .new-cabinet-modal-promocode-process-step {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 240px;
+          flex: 0 0 240px;
+  max-width: 240px;
+}
 
 /* responsive */
 @media (max-width: 1399px) {
