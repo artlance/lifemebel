@@ -653,5 +653,120 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product image sticky
+    if ($('.v3-product-specs-img').length) {
+        $('.v3-product-specs-img').stickySidebar({
+            containerSelector: '.v3-product-specs',
+            innerWrapperSelector: '.v3-product-specs-img-inner',
+            topSpacing: 16,
+            bottomSpacing: 0,
+            resizeSensor: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //v3 product specs more
+    $(document).on('click', '.v3-product-specs-more', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('.v3-product-specs-text-hidden').slideToggle(200, function () {
+            $('.v3-product-specs-img').stickySidebar('updateSticky');
+            $('.v3-product-info-video').stickySidebar('updateSticky');
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product video sticky
+    if ($('.v3-product-info-video').length) {
+        $('.v3-product-info-video').stickySidebar({
+            containerSelector: '.v3-product-info',
+            innerWrapperSelector: '.v3-product-info-video-inner',
+            topSpacing: 16,
+            bottomSpacing: 0,
+            resizeSensor: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //v3 product info more
+    $(document).on('click', '.v3-product-info-more', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('.v3-product-info-text-hidden').slideToggle(200, function () {
+            $('.v3-product-specs-img').stickySidebar('updateSticky');
+            $('.v3-product-info-video').stickySidebar('updateSticky');
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product reviews
+    var v3ProductReviews,
+        v3ProductReviewsLength = $('.v3-product-reviews-list').length;
+    if (v3ProductReviewsLength) {
+        v3ProductReviews = new Swiper('.v3-product-reviews-list', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            watchOverflow: true,
+            speed: 500,
+            spaceBetween: 16,
+            slidesPerView: 2,
+            centerInsufficientSlides: true,
+            breakpoints: {
+                1326: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //v3 product reviews modal
+    $('#v3-product-reviews-modal').on('shown', function () {
+        $.ajax({
+            url: '../v3-product-reviews-modal.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-reviews-modal').load('../v3-product-reviews-modal.html', function (response, status, xhr) {
+                    centerModal();
+                    //fancybox
+                    if ($('[data-fancybox]').length) {
+                        $('[data-fancybox]').fancybox({
+                            infobar: false,
+                            transitionEffect: "slide",
+                            animationEffect: "fade",
+                            buttons: [
+                                "close"
+                            ],
+                            lang: "ru",
+                            i18n: {
+                                ru: {
+                                    CLOSE: "Закрыть",
+                                    NEXT: "Следующая",
+                                    PREV: "Предыдущая",
+                                    ERROR: "Запрошенный контент не может быть загружен. <br/> Повторите попытку позже.",
+                                    PLAY_START: "Включить слайд-шоу",
+                                    PLAY_STOP: "Остановить слайд-шоу",
+                                    FULL_SCREEN: "Полноэкранный режим",
+                                    THUMBS: "Эскизы",
+                                    DOWNLOAD: "Скачать",
+                                    SHARE: "Поделиться",
+                                    ZOOM: "Увеличить"
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
 
 });//document ready
