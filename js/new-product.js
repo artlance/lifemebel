@@ -769,4 +769,19 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product payment modal
+    $('#v3-product-payment-modal').on('shown', function () {
+        $.ajax({
+            url: '../v3-product-payment-modal.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-payment-modal').load('../v3-product-payment-modal.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
