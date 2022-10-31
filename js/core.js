@@ -529,4 +529,12 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //catalog menu dropdown
+    $(document).on('click', '.catalog-menu-dropdown-toggle', function (event) {
+        event.preventDefault();
+        $(this).parents('li').toggleClass('open');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

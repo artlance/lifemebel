@@ -241,14 +241,6 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
-    //catalog menu dropdown
-    $(document).on('click', '.catalog-menu-dropdown-toggle', function (event) {
-        event.preventDefault();
-        $(this).parents('li').toggleClass('open');
-    });
-
-    //------------------------------------------------------------------------//
-
     //catalog country
     $(document).on('click', '.catalog-country-item', function (event) {
         event.preventDefault();

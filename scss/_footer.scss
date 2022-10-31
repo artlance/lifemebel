@@ -100,3 +100,29 @@
     padding: 10px 10px 0 0;
 }
 .reference {}
+.footer-payment {
+    margin: -33px 0 16px;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px 0 0;
+        li {
+            flex: 0 0 88px;
+            max-width: 88px;
+            padding: 0 8px 8px 0;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 3px;
+                height: 32px;
+                background: $s;
+                border-radius: 4px;
+                overflow: hidden;
+                img {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+}
