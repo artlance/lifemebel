@@ -28498,6 +28498,9 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
 .v3-payment-item-single .v3-payment-item-advantages {
   padding-bottom: 0;
 }
+.v3-payment-advantages-2 .v3-payment-advantages-list {
+  margin-bottom: 76px;
+}
 .v3-payment-advantages-caption {
   margin-bottom: 46px;
   text-align: center;
@@ -28618,6 +28621,186 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   line-height: 1.455;
   color: #686868;
   margin-bottom: 8px;
+}
+.v3-payment-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 128px;
+}
+.v3-payment-intro-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 366px;
+  padding-right: 16px;
+  color: #393939;
+}
+.v3-payment-intro-title {
+  margin-bottom: 12px;
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: 900;
+}
+.v3-payment-intro-title h1, .v3-payment-intro-title h2, .v3-payment-intro-title h3 {
+  font-size: 100%;
+  font-weight: 900;
+}
+.v3-payment-intro-text {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+.v3-payment-intro-text p + p {
+  margin-top: 10px;
+}
+.v3-payment-intro-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 56.73%;
+          flex: 0 0 56.73%;
+  max-width: 56.73%;
+}
+.v3-payment-intro-img img {
+  width: 100%;
+}
+.v3-payment-video {
+  max-width: 720px;
+  padding-top: 5px;
+  margin: 0 auto 124px;
+}
+.v3-payment-video-block {
+  display: block;
+  height: 0;
+  padding-top: 56.39%;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.v3-payment-video-block::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  width: 120px;
+  height: 120px;
+  background: transparent url("../upload/video.svg") 50% 50% no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.v3-payment-video-block:hover::after {
+  -webkit-transform: translate3d(-50%, -50%, 0) scale(1.1);
+          transform: translate3d(-50%, -50%, 0) scale(1.1);
+}
+.v3-payment-video iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.v3-payment-video img,
+.v3-payment-video video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.v3-payment-video-mask {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.v3-payment-faq {
+  max-width: 720px;
+  margin: 0 auto 120px;
+}
+.v3-payment-faq-caption {
+  margin-bottom: 46px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: bold;
+  color: #000000;
+}
+.v3-payment-faq-caption h2, .v3-payment-faq-caption h3, .v3-payment-faq-caption h4 {
+  font-size: 100%;
+  font-weight: bold;
+}
+.v3-payment-faq-item {
+  border-bottom: 1px solid #E1E1E1;
+}
+.v3-payment-faq-item:first-child {
+  border-top: 1px solid #E1E1E1;
+}
+.v3-payment-faq-item.open .v3-payment-faq-item-text {
+  display: block;
+}
+.v3-payment-faq-item.open .v3-payment-faq-item-caption::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.v3-payment-faq-item-caption {
+  display: block;
+  padding: 32px 80px 33px 0;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #000000;
+}
+.v3-payment-faq-item-caption::before, .v3-payment-faq-item-caption::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: #F4F5F6;
+  border-radius: 50%;
+}
+.v3-payment-faq-item-caption::after {
+  background: transparent url("../upload/arrow-down2.svg") 50% 50% no-repeat;
+  background-size: 10px 7px;
+  -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.v3-payment-faq-item-caption:hover {
+  color: #686868;
+}
+.v3-payment-faq-item-text {
+  display: none;
+  max-width: 630px;
+  margin-top: -13px;
+  padding-bottom: 24px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+}
+.v3-payment-faq-item-text p + p {
+  margin-top: 10px;
 }
 
 @media (max-width: 1325px) {
