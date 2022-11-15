@@ -784,4 +784,10 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    $(document).on('click', '.modal.in', function (event) {
+        if ($(event.target).hasClass('modal')) {
+            $('.modal.in').modal('hide');
+        }
+    });
+
 });//document ready
