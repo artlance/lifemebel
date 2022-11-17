@@ -1133,10 +1133,10 @@
                     color: $b;
                     margin-bottom: 1px;
                     a {
-                       color: $b;
-                       &:hover {
-                           color: $p;
-                       }
+                        color: $b;
+                        &:hover {
+                            color: $p;
+                        }
                     }
                 }
             }
@@ -3179,6 +3179,9 @@
                     right: auto;
                     left: -22px;
                     background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 14%, #ffffff 57%, #ffffff 57%);
+                }
+                &:after {
+                    box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.1);
                 }
             }
             .swiper-button-next {

@@ -376,4 +376,33 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //quick sorting
+    var quickSorting,
+        quickSortingLength = $('.catalog-filter-quick-sorting').length;
+    if (quickSortingLength) {
+        quickSorting = new Swiper('.catalog-filter-quick-sorting', {
+            navigation: {
+                nextEl: '.catalog-filter-quick-sorting-wrapper .swiper-button-next',
+                prevEl: '.catalog-filter-quick-sorting-wrapper .swiper-button-prev',
+            },
+            watchOverflow: true,
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 'auto',
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //quick sorting item
+    $(document).on('click', '.catalog-filter-quick-sorting-item', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $(this)[0].addEventListener('transitionend', () => {
+            quickSorting.update();
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
