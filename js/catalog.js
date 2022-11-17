@@ -390,6 +390,10 @@ $(document).ready(function () {
             spaceBetween: 8,
             slidesPerView: 'auto',
         });
+
+        $(window).load(function () {
+            quickSorting.update();
+        });
     }
 
     //------------------------------------------------------------------------//
