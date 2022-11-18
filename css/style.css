@@ -24842,6 +24842,7 @@ button.swiper-pagination-bullet {
      object-fit: cover;
 }
 .new-product-advantages-video-play, .new-product-advantages-video-pause {
+  display: none;
   position: absolute;
   z-index: 2;
   bottom: 20px;
@@ -24853,7 +24854,7 @@ button.swiper-pagination-bullet {
   background-size: 100% 100%;
 }
 .new-product-advantages-video-pause {
-  display: none;
+  display: block;
   background-image: url("../upload/video-pause.svg");
 }
 

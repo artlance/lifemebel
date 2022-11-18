@@ -3573,6 +3573,7 @@
             }
             &-play,
             &-pause {
+                display: none;
                 position: absolute;
                 z-index: 2;
                 bottom: 20px;
@@ -3584,7 +3585,7 @@
                 background-size: 100% 100%;
             }
             &-pause {
-                display: none;
+                display: block;
                 background-image: url('../upload/video-pause.svg');
             }
         }

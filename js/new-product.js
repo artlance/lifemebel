@@ -265,10 +265,10 @@ $(document).ready(function () {
 
     $('#new-product-modal-certificate').on('shown', function () {
         $.ajax({
-            url: '../new-product-modal-certificate.html',
+            url: './new-product-modal-certificate.html',
             cache: false,
             success: function () {
-                $('#new-product-modal-certificate').load('../new-product-modal-certificate.html', function (response, status, xhr) {
+                $('#new-product-modal-certificate').load('./new-product-modal-certificate.html', function (response, status, xhr) {
                     newProductModalCertificate_init();
                     centerModal();
                 });
@@ -281,10 +281,10 @@ $(document).ready(function () {
     //new product modal credit
     $('#new-product-modal-credit').on('shown', function () {
         $.ajax({
-            url: '../new-product-modal-credit.html',
+            url: './new-product-modal-credit.html',
             cache: false,
             success: function () {
-                $('#new-product-modal-credit').load('../new-product-modal-credit.html', function (response, status, xhr) {
+                $('#new-product-modal-credit').load('./new-product-modal-credit.html', function (response, status, xhr) {
                     centerModal();
                 });
             }
@@ -323,10 +323,10 @@ $(document).ready(function () {
 
     $('#new-product-modal-gallery').on('shown', function () {
         $.ajax({
-            url: '../new-product-modal-gallery.html',
+            url: './new-product-modal-gallery.html',
             cache: false,
             success: function () {
-                $('#new-product-modal-gallery').load('../new-product-modal-gallery.html', function (response, status, xhr) {
+                $('#new-product-modal-gallery').load('./new-product-modal-gallery.html', function (response, status, xhr) {
                     newProductModalGallery_init();
                 });
             }
@@ -338,10 +338,10 @@ $(document).ready(function () {
     //new product modal review
     $('#new-product-modal-review').on('shown', function () {
         $.ajax({
-            url: '../new-product-modal-review.html',
+            url: './new-product-modal-review.html',
             cache: false,
             success: function () {
-                $('#new-product-modal-review').load('../new-product-modal-review.html', function (response, status, xhr) {
+                $('#new-product-modal-review').load('./new-product-modal-review.html', function (response, status, xhr) {
                     centerModal();
                 });
             }
@@ -475,10 +475,10 @@ $(document).ready(function () {
 
     $('#new-product-quick-view').on('shown', function () {
         $.ajax({
-            url: '../new-product-quick-view.html',
+            url: './new-product-quick-view.html',
             cache: false,
             success: function () {
-                $('#new-product-quick-view').load('../new-product-quick-view.html', function (response, status, xhr) {
+                $('#new-product-quick-view').load('./new-product-quick-view.html', function (response, status, xhr) {
                     newProductQuickView_init();
                     centerModal();
                     if ($('.popover-target').length) {
@@ -533,10 +533,10 @@ $(document).ready(function () {
     //new product modal city
     $('#new-product-modal-city').on('shown', function () {
         $.ajax({
-            url: '../new-product-modal-city.html',
+            url: './new-product-modal-city.html',
             cache: false,
             success: function () {
-                $('#new-product-modal-city').load('../new-product-modal-city.html', function (response, status, xhr) {
+                $('#new-product-modal-city').load('./new-product-modal-city.html', function (response, status, xhr) {
                     centerModal();
                 });
             }
@@ -566,10 +566,10 @@ $(document).ready(function () {
     //new product modal call
     $('#new-product-modal-call').on('shown', function () {
         $.ajax({
-            url: '../new-product-modal-call.html',
+            url: './new-product-modal-call.html',
             cache: false,
             success: function () {
-                $('#new-product-modal-call').load('../new-product-modal-call.html', function (response, status, xhr) {
+                $('#new-product-modal-call').load('./new-product-modal-call.html', function (response, status, xhr) {
                     centerModal();
                     if ($('.form-phone-mask').length) {
                         $('.form-phone-mask').mask('+7 (999) 999-99-99');
@@ -600,19 +600,19 @@ $(document).ready(function () {
         element.find('.new-product-advantages-video-pause').fadeOut(0);
     }
 
-    $('.new-product-advantages-video').hover(function () {
-        var thisVideo = $(this).find('video');
-        if (thisVideo.length && !$(this).hasClass('manual-changed')) {
-            thisVideo[0].play();
-            productAdvantagesVideoPlay($(this));
-        }
-    }, function () {
-        var thisVideo = $(this).find('video');
-        if (thisVideo.length && !$(this).hasClass('manual-changed')) {
-            thisVideo[0].pause();
-            productAdvantagesVideoPause($(this));
-        }
-    });
+    // $('.new-product-advantages-video').hover(function () {
+    //     var thisVideo = $(this).find('video');
+    //     if (thisVideo.length && !$(this).hasClass('manual-changed')) {
+    //         thisVideo[0].play();
+    //         productAdvantagesVideoPlay($(this));
+    //     }
+    // }, function () {
+    //     var thisVideo = $(this).find('video');
+    //     if (thisVideo.length && !$(this).hasClass('manual-changed')) {
+    //         thisVideo[0].pause();
+    //         productAdvantagesVideoPause($(this));
+    //     }
+    // });
 
     $(document).on('click', '.new-product-advantages-video-play', function (event) {
         event.preventDefault();
@@ -641,10 +641,10 @@ $(document).ready(function () {
     //new product modal showroom
     $('#new-product-modal-showroom').on('shown', function () {
         $.ajax({
-            url: '../new-product-modal-showroom.html',
+            url: './new-product-modal-showroom.html',
             cache: false,
             success: function () {
-                $('#new-product-modal-showroom').load('../new-product-modal-showroom.html', function (response, status, xhr) {
+                $('#new-product-modal-showroom').load('./new-product-modal-showroom.html', function (response, status, xhr) {
                     centerModal();
                 });
             }
@@ -730,10 +730,10 @@ $(document).ready(function () {
     //v3 product reviews modal
     $('#v3-product-reviews-modal').on('shown', function () {
         $.ajax({
-            url: '../v3-product-reviews-modal.html',
+            url: './v3-product-reviews-modal.html',
             cache: false,
             success: function () {
-                $('#v3-product-reviews-modal').load('../v3-product-reviews-modal.html', function (response, status, xhr) {
+                $('#v3-product-reviews-modal').load('./v3-product-reviews-modal.html', function (response, status, xhr) {
                     centerModal();
                     //fancybox
                     if ($('[data-fancybox]').length) {
@@ -772,10 +772,10 @@ $(document).ready(function () {
     //v3 product payment modal
     $('#v3-product-payment-modal').on('shown', function () {
         $.ajax({
-            url: '../v3-product-payment-modal.html',
+            url: './v3-product-payment-modal.html',
             cache: false,
             success: function () {
-                $('#v3-product-payment-modal').load('../v3-product-payment-modal.html', function (response, status, xhr) {
+                $('#v3-product-payment-modal').load('./v3-product-payment-modal.html', function (response, status, xhr) {
                     centerModal();
                 });
             }

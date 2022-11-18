@@ -187,7 +187,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //catalog filter toggle active
-    $(document).on('click', '.catalog-filter-category-item, .catalog-filter-sorting-link', function (event) {
+    $(document).on('click', '.catalog-filter-sorting-link', function (event) {
         event.preventDefault();
         $(this).toggleClass('active');
     });
