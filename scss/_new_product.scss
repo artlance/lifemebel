@@ -3757,6 +3757,14 @@ a.new-product-brand-feature {
                 padding-right: 15px;
             }
         }
+        &-tabs {
+            margin-left: -16px;
+            margin-right: -16px;
+            li {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
         &-description {
             padding: 30px 30px 15px;
             hr {

@@ -577,13 +577,14 @@
             display: flex;
             align-items: center;
             min-height: 50px;
-            padding: 5px 35px 5px 10px;
+            padding: 5px 10px;
             border: 1px solid #E1E1E1;
             border-radius: 3px;
             color: $dgr;
             position: relative;
             &:before,
             &:after {
+                display: none;
                 opacity: 0;
                 content: "";
                 position: absolute;
@@ -808,14 +809,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin-bottom: 10px;
+    margin: 10px;
     z-index: 10000;
     display: block;
     max-width: 152px;
     text-align: center;
     border-radius: 2px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-    background-color: rgba(57, 57, 57, 0.6);
+    background: rgba(57, 57, 57, 0.6);
     word-break: normal;
     word-spacing: normal;
     white-space: normal;
@@ -823,12 +824,37 @@
     word-wrap: break-word;
     .arrow {
         position: absolute;
-        top: 100%;
-        left: 50%;
         width: 0;
         height: 0;
         border: 5px solid $tr;
-        border-top-color: rgba(57, 57, 57, 0.6);
+        pointer-events: none;
+    }
+    &.bs-popover-top {
+        .arrow {
+            top: 100%;
+            border-top-color: rgba(57, 57, 57, 0.6);
+        }
+    }
+    &.bs-popover-bottom {
+        .arrow {
+            bottom: 100%;
+            border-bottom-color: rgba(57, 57, 57, 0.6);
+        }
+    }
+    &.bs-popover-right {
+        .arrow {
+            right: 100%;
+            border-right-color: rgba(57, 57, 57, 0.6);
+        }
+    }
+    &.bs-popover-left {
+        .arrow {
+            left: 100%;
+            border-left-color: rgba(57, 57, 57, 0.6);
+        }
+    }
+    &-header {
+        display: none;
     }
 }
 .popover-body {

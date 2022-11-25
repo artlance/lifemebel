@@ -67,6 +67,15 @@ $(document).ready(function () {
         });
     }
 
+    //popover color
+    if ($('.popover-target-color').length) {
+        $('.popover-target-color').popover({
+            trigger: 'hover',
+            html: true,
+            template: '<div class="popover popover-color" role="tooltip"><div class="arrow"></div><div class="popover-body"></div></div>'
+        });
+    }
+
     //------------------------------------------------------------------------//
 
     //countdown
@@ -789,5 +798,17 @@ $(document).ready(function () {
             $('.modal.in').modal('hide');
         }
     });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product color scroll
+    $(document).on('click', '.v3-product-color-scroll', function () {
+        $('html, body').animate({
+            scrollTop: $('#v3-product-color-detail').offset().top
+        }, 400);
+        $('.tabs li#v3-product-color-detail').addClass('active').siblings('li').removeClass('active').parents('.tab').find('.box').hide().eq($('#v3-product-color-detail').index()).fadeIn(250);
+    });
+
+    //------------------------------------------------------------------------//
 
 });//document ready
