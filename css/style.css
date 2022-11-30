@@ -6376,6 +6376,51 @@ a.catalog-product-fast-view {
   padding: 9px 10px 10px;
 }
 
+.catalog-sale.swiper-container {
+  margin: 0 -1px;
+  padding: 14px 0 27px;
+}
+.catalog-sale .swiper-slide {
+  width: 214px;
+}
+.catalog-sale-banner {
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 102px;
+  padding: 13px 14px;
+  background: #F4F5F6;
+  border-radius: 4px;
+}
+.catalog-sale-banner img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 114px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 0 4px 4px;
+}
+.catalog-sale-banner.active {
+  background: #83C150;
+}
+.catalog-sale-banner.active .catalog-sale-title {
+  color: #ffffff;
+}
+.catalog-sale-title {
+  display: block;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 1.286;
+  font-weight: bold;
+  color: #393939;
+  max-height: 72px;
+  overflow: hidden;
+}
+
 @media (max-width: 1325px) {
   .catalog-filter-category {
     -webkit-box-flex: 0;

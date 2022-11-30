@@ -864,6 +864,51 @@
     color: $w;
     padding: 9px 10px 10px;
 }
+.catalog-sale {
+    &.swiper-container {
+        margin: 0 -1px;
+        padding: 14px 0 27px;
+    }
+    .swiper-slide {
+        width: 214px;
+    }
+    &-banner {
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        height: 102px;
+        padding: 13px 14px;
+        background: $s;
+        border-radius: 4px;
+        img {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            max-height: 114px;
+            object-fit: cover;
+            border-radius: 0 0 4px 4px;
+        }
+        &.active {
+            background: $p;
+            .catalog-sale-title {
+                color: $w;
+            }
+        }
+    }
+    &-title {
+        display: block;
+        position: relative;
+        z-index: 2;
+        font-size: 14px;
+        line-height: 1.286;
+        font-weight: bold;
+        color: $dgr;
+        max-height: 72px;
+        overflow: hidden;
+    }
+}
+
 @media (max-width: 1325px) {
     .catalog-filter-category {
         flex: 0 0 33.3333%;

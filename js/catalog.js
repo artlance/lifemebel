@@ -409,4 +409,18 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //catalog sale
+    var catalogSale,
+        catalogSaleLength = $('.catalog-sale').length;
+    if (catalogSaleLength) {
+        catalogSale = new Swiper('.catalog-sale', {
+            watchOverflow: true,
+            speed: 500,
+            spaceBetween: 16,
+            slidesPerView: 'auto',
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready
