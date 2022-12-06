@@ -1258,6 +1258,222 @@
             }
         }
     }
+    &-customer {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 1440px;
+        padding: 0 38px;
+        max-width: 100%;
+        &-close {
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.6) url('../upload/close3.svg') 50% 50% no-repeat;
+            background-size: 24px 24px;
+            transition: background-color $d $f;
+            will-change: background-color;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+        }
+        &-counter {
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $w;
+            margin-bottom: 22px;
+        }
+        &-review {
+            display: flex;
+            margin: 0 -8px 40px;
+            height: max(calc(100vh - 200px), 600px);
+            max-height: 800px;
+            &-photo {
+                flex: 0 0 66.66666667%;
+                max-width: 66.66666667%;
+                padding: 0 8px;
+                &-slider {
+                    height: 100%;
+                    background: $s;
+                    .swiper-button-prev {
+                        left: 16px;
+                    }
+                    .swiper-button-next {
+                        right: 16px;
+                    }
+                }
+                &-item {
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+            &-content {
+                flex: 0 0 33.33333333%;
+                max-width: 33.33333333%;
+                padding: 0 8px;
+            }
+            &-text {
+                padding: 32px 16px;
+                height: 100%;
+                background: $s;
+                .new-product-review {
+                    flex-wrap: wrap;
+                    margin-bottom: 0;
+                    background: transparent;
+                    &-info {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        padding: 0 0 15px;
+                        background: transparent;
+                    }
+                    &-customer {
+                        margin-bottom: 8px;
+                    }
+                    &-date {
+                        padding-top: 0;
+                        margin-bottom: 9px;
+                    }
+                    &-rating {
+                        padding-top: 0;
+                        margin-bottom: 8px;
+                    }
+                    &-content {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        padding: 0;
+                    }
+                    &-features {
+                        display: block;
+                        margin: 0 0 16px;
+                        color: $b;
+                        p {
+                            padding: 0 0 8px;
+                        }
+                        strong {
+                            line-height: normal;
+                        }
+                    }
+                    &-text {
+                        max-width: none;
+                        color: $b;
+                        padding-bottom: 13px;
+                    }
+                    &-ratio {
+                        display: flex;
+                        padding-right: 0;
+                        margin-right: -24px;
+                    }
+                    &-feedback {
+                        max-width: none;
+                        margin-bottom: 0;
+                        padding-top: 20px;
+                        &-title {
+                            padding-bottom: 14px;
+                        }
+                        &-block {
+                            flex-wrap: wrap;
+                            padding-bottom: 9px;
+                            border-radius: 0;
+                        }
+                        &-info {
+                            max-width: calc(100% - 56px);
+                        }
+                        &-date {
+                            padding-top: 0;
+                            margin-top: -2px;
+                        }
+                        &-person {
+                            color: $text;
+                            strong {
+                                color: $b;
+                            }
+                        }
+                        &-text {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            &-overflow {
+                height: 100%;
+                padding: 0 24px;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+                overflow-scrolling: touch;
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    height: 6px;
+                }
+                &::-webkit-scrollbar-track {
+                    background: $tr;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $t;
+                    border-radius: 3px;
+                    outline: none;
+                }
+                &::-webkit-scrollbar-button {
+                    width: 0;
+                    height: 0;
+                    display: none;
+                }
+                &::-webkit-scrollbar-corner {
+                    background: $tr;
+                }
+            }
+        }
+        &-photo {
+            display: block;
+            position: relative;
+            &::after {
+                opacity: 0;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                border: 4px solid $p;
+                transition: opacity $d $f;
+                will-change: opacity;
+            }
+            &.active {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            img {
+                width: 100%;
+            }
+            &-list {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -8px;
+                padding-bottom: 24px;
+                .grid-sizer {
+                    width: 33.33333333%;
+                    height: 0;
+                }
+            }
+            &-item {
+                flex: 0 0 33.33333333%;
+                width: 33.33333333%;
+                max-width: 33.33333333%;
+                padding: 0 8px 16px;
+            }
+        }
+    }
 }
 .popover-color {
     margin: 16px;

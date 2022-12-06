@@ -3140,12 +3140,22 @@
         flex-wrap: wrap;
         align-items: center;
         margin: -15px 0 46px;
+        &-v3 {
+            .new-product-customer-photos {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
         &-title {
             flex: 0 0 100%;
             max-width: 100%;
             font-weight: 500;
             color: $b;
             margin-bottom: 14px;
+            strong {
+                color: $p;
+                font-weight: 500;
+            }
         }
         &-photos {
             flex: 0 0 73.21%;
