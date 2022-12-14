@@ -22282,17 +22282,17 @@ button.swiper-pagination-bullet {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 -25px 24px;
+  margin: 0 -16px 24px;
 }
 .new-product-tabs li {
-  padding: 0 25px;
+  padding: 0 16px;
 }
 .new-product-tabs li a {
   display: block;
   padding: 10px 0 5px;
   font-size: 15px;
   line-height: 1.3334;
-  color: #686868;
+  color: #393939;
   white-space: nowrap;
   border-bottom: 3px solid transparent;
 }
@@ -25117,12 +25117,12 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
     padding-right: 15px;
   }
   .new-product-tabs {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -8px;
+    margin-right: -8px;
   }
   .new-product-tabs li {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .new-product-description {
     padding: 30px 30px 15px;
@@ -28614,8 +28614,6 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   height: 0;
   padding-top: 100%;
   position: relative;
-  background: #D9D9D9;
-  border-radius: 12px;
   overflow: hidden;
 }
 .v3-product-color-category-item-img::before {
@@ -28662,15 +28660,23 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 12px;
 }
 .v3-product-color-category-item-title {
   display: block;
+  height: 16px;
   font-size: 11px;
   line-height: 1.455;
   color: #393939;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .v3-product-color-category-item:hover .v3-product-color-category-item-img::before {
   opacity: 1;
+}
+.v3-product-color-category-item:hover .v3-product-color-category-item-img img {
+  border-radius: 14px;
 }
 .v3-product-color-category-item.active .v3-product-color-category-item-img::before {
   opacity: 1;
@@ -28679,6 +28685,9 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
 }
 .v3-product-color-category-item.active .v3-product-color-category-item-img::after {
   opacity: 1;
+}
+.v3-product-color-category-item.active .v3-product-color-category-item-img img {
+  border-radius: 14px;
 }
 .v3-product-color-category-item.active .v3-product-color-category-item-title {
   font-weight: 500;

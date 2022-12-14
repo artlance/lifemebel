@@ -1245,15 +1245,15 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 -25px 24px;
+        margin: 0 -16px 24px;
         li {
-            padding: 0 25px;
+            padding: 0 16px;
             a {
                 display: block;
                 padding: 10px 0 5px;
                 font-size: 15px;
                 line-height: 1.3334;
-                color: $text;
+                color: $dgr;
                 white-space: nowrap;
                 border-bottom: 3px solid $tr;
                 strong {
@@ -3768,11 +3768,11 @@ a.new-product-brand-feature {
             }
         }
         &-tabs {
-            margin-left: -16px;
-            margin-right: -16px;
+            margin-left: -8px;
+            margin-right: -8px;
             li {
-                padding-left: 16px;
-                padding-right: 16px;
+                padding-left: 8px;
+                padding-right: 8px;
             }
         }
         &-description {
