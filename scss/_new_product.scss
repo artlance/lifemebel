@@ -3203,6 +3203,18 @@
                 width: 123px;
             }
         }
+        &-photos-separator.swiper-slide {
+            margin-right: 21px !important;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 90px;
+                right: -11px;
+                width: 1px;
+                background: #E1E1E1;
+            }
+        }
         &-photo {
             display: block;
             height: 90px;

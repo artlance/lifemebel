@@ -24497,6 +24497,18 @@ button.swiper-pagination-bullet {
 .new-product-customer-photos-slider .swiper-slide {
   width: 123px;
 }
+.new-product-customer-photos-separator.swiper-slide {
+  margin-right: 21px !important;
+}
+.new-product-customer-photos-separator.swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 90px;
+  right: -11px;
+  width: 1px;
+  background: #E1E1E1;
+}
 .new-product-customer-photo {
   display: block;
   height: 90px;
@@ -28785,10 +28797,10 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   z-index: 3;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.6) url("../upload/close3.svg") 50% 50% no-repeat;
-  background-size: 24px 24px;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.6) url("../upload/close.svg") 50% 50% no-repeat;
+  background-size: 40px 40px;
   -webkit-transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: background-color;

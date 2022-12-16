@@ -838,10 +838,13 @@ $(document).ready(function () {
                             thisElement.slideTo(thisIndex - 1, 0);
                             $('#v3-product-customer-modal').animate({ scrollTop: 0 }, '500');
                         });
+
+                        printV3productReview(thisElement.activeIndex);
                     },
                     slideChange: function () {
                         v3ProductCustomerPhotoGridChange(this.activeIndex);
                         $('.v3-product-customer-counter-current').text(this.activeIndex + 1);
+                        printV3productReview(this.activeIndex);
                     }
                 },
             });
@@ -878,6 +881,13 @@ $(document).ready(function () {
         event.preventDefault();
         v3ProductCustomerPhotoIndex = $(this).parents('.swiper-slide').index();
     });
+
+    function printV3productReview(thisID = 0) {
+        //убрать if, он для примера дизайнеру
+        if (thisID > 2) { thisID = 0; }
+        $('.v3-product-customer-review-overflow').html($('.new-product-review-template[data-id="' + thisID + '"]').html());
+    }
+
 
     //------------------------------------------------------------------------//
 
