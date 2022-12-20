@@ -1,7 +1,7 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     //order buy
-    $('.order-buy-begin').on('click', function(event) {
+    $('.order-buy-begin').on('click', function (event) {
         event.preventDefault();
         $(this).parents('.order-buy-block').addClass('active');
     });
@@ -9,12 +9,12 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //order delete
-    $('.order-product-delete').on('click', function(event) {
+    $('.order-product-delete').on('click', function (event) {
         event.preventDefault();
         $(this).parents('.order-product').addClass('deleted');
     });
 
-    $('.order-product-return-link').on('click', function(event) {
+    $('.order-product-return-link').on('click', function (event) {
         event.preventDefault();
         $(this).parents('.order-product').removeClass('deleted');
     });
@@ -22,7 +22,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //order set
-    $('.order-product-set-toggle').on('click', function(event) {
+    $('.order-product-set-toggle').on('click', function (event) {
         event.preventDefault();
         $(this).parents('.order-product-set').toggleClass('open').find('.order-product-set-list').slideToggle(200);
     });
@@ -30,12 +30,12 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //order change
-    $('.order-product-change-toggle').on('click', function(event) {
+    $('.order-product-change-toggle').on('click', function (event) {
         event.preventDefault();
         $(this).parents('.order-product-change').toggleClass('open').find('.order-product-change-list').slideToggle(200);
     });
 
-    $('.order-product-change-item-link').on('click', function(event) {
+    $('.order-product-change-item-link').on('click', function (event) {
         event.preventDefault();
         $(this).parent('.order-product-change-item').addClass('active').siblings('.order-product-change-item').removeClass('active');
     });
@@ -43,21 +43,21 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //product number
-    $('.product-number-text').on('keypress', function(event) {
+    $('.product-number-text').on('keypress', function (event) {
         event = event || window.event;
-        if (event.charCode && event.charCode!=0 && event.charCode!=46 && (event.charCode < 48 || event.charCode > 57) ) return false;
+        if (event.charCode && event.charCode != 0 && event.charCode != 46 && (event.charCode < 48 || event.charCode > 57)) return false;
     });
 
-    $(document).on('click', '.product-number-minus', function(event) {
+    $(document).on('click', '.product-number-minus', function (event) {
         event.preventDefault();
         var quantityInput = $(this).parent('.product-number').find('.product-number-text');
         var quantityValue = quantityInput.val();
         quantityValue = --quantityValue;
-        if ( quantityValue < 0 ) { quantityValue = 0; }
+        if (quantityValue < 0) { quantityValue = 0; }
         quantityInput.val(quantityValue);
     });
 
-    $(document).on('click', '.product-number-plus', function(event) {
+    $(document).on('click', '.product-number-plus', function (event) {
         event.preventDefault();
         var quantityInput = $(this).parent('.product-number').find('.product-number-text');
         var quantityValue = quantityInput.val();
@@ -72,12 +72,12 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //order map
-    $('.order-delivery-map-toggle').on('click', function(event) {
+    $('.order-delivery-map-toggle').on('click', function (event) {
         event.preventDefault();
         $(this).parents('.order-delivery-map').addClass('open');
     });
 
-    $('.order-delivery-map-hide').on('click', function(event) {
+    $('.order-delivery-map-hide').on('click', function (event) {
         event.preventDefault();
         $(this).parents('.order-delivery-map').removeClass('open');
     });
@@ -90,13 +90,13 @@ $(document).ready(function(){
         prevText: 'Предыдущий',
         nextText: 'Следующий',
         currentText: 'Сегодня',
-        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-        'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-        monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
-        'Июл','Авг','Сен','Окт','Ноя','Дек'],
-        dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-        dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн',
+            'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+        dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
         weekHeader: 'Не',
         dateFormat: 'dd.mm.yy',
         firstDay: 1,
@@ -109,8 +109,8 @@ $(document).ready(function(){
     var enableDays = ['03.07.2019', '04.07.2019'];
 
     function enableAllTheseDays(date) {
-        var sdate = $.datepicker.formatDate( 'dd.mm.yy', date);
-        if ( $.inArray(sdate, enableDays ) != -1) {
+        var sdate = $.datepicker.formatDate('dd.mm.yy', date);
+        if ($.inArray(sdate, enableDays) != -1) {
             return [true];
         }
         return [false];
@@ -129,7 +129,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //order comment
-    $('.order-comment-options li a').on('click', function(event) {
+    $('.order-comment-options li a').on('click', function (event) {
         event.preventDefault();
         var thisComment = $(this).text();
         $('.order-comment-textarea').focus().val(thisComment);
@@ -147,8 +147,8 @@ $(document).ready(function(){
 
         if (thisElement.parents('.order-product-set-list').length) {
             var setTrue = true;
-            thisSetCheckbox.each(function(index, el) {
-                if ( $(this).prop('checked') == false ) {
+            thisSetCheckbox.each(function (index, el) {
+                if ($(this).prop('checked') == false) {
                     setTrue = false;
                 }
                 if (setTrue) {
@@ -166,8 +166,18 @@ $(document).ready(function(){
         }
     }
 
-    $('.order-product-set input[type="checkbox"]').on('change', function(event) {
+    $('.order-product-set input[type="checkbox"]').on('change', function (event) {
         orderSet($(this));
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 order cart share
+    $(document).on('click', '.v3-order-cart-share-cta', function (event) {
+        event.preventDefault();
+        var thisParents = $(this).parents('.v3-order-cart-share');
+        thisParents.addClass('active');
+        navigator.clipboard.writeText(thisParents.find('.v3-order-cart-share-link').text());
     });
 
     //------------------------------------------------------------------------//

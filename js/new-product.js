@@ -891,4 +891,12 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product promocode copy
+    $(document).on('click', '.v3-product-promocode', function (event) {
+        event.preventDefault();
+        navigator.clipboard.writeText($(this).find('.v3-product-promocode-text').text());
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

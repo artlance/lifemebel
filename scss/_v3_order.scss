@@ -1,0 +1,60 @@
+.v3-order {
+    &-cart {
+        &-caption {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-bottom: 9px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #E1E1E1;
+        }
+        &-title {
+            font-weight: 500;
+            color: $b;
+        }
+        &-share {
+            max-width: 70%;
+            padding-left: 10px;
+            &.active {
+                .v3-order-cart-share-cta {
+                    display: none;
+                }
+                .v3-order-cart-share-block {
+                    display: flex;
+                }
+            }
+            &-cta {
+                display: block;
+                font-weight: 500;
+                text-align: right;
+            }
+            &-block {
+                display: none;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+            &-success {
+                position: relative;
+                padding-left: 14px;
+                white-space: nowrap;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    width: 10px;
+                    height: 8px;
+                    background: $tr url('../upload/check-green.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+            &-link {
+                display: block;
+                margin-left: 13px;
+                font-weight: 500;
+                text-align: right;
+            }
+        }
+    }
+}
