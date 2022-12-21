@@ -894,6 +894,7 @@ $(document).ready(function () {
     //v3 product promocode copy
     $(document).on('click', '.v3-product-promocode', function (event) {
         event.preventDefault();
+        $(this).addClass('active');
         navigator.clipboard.writeText($(this).find('.v3-product-promocode-text').text());
     });
 

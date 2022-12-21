@@ -29028,15 +29028,35 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   background: #ffffff;
   position: relative;
 }
+.v3-product-promocode.active .v3-product-promocode-copy-default {
+  opacity: 0;
+}
+.v3-product-promocode.active .v3-product-promocode-copy-active {
+  opacity: 1;
+}
 .v3-product-promocode-copy {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50px;
           flex: 0 0 50px;
   max-width: 50px;
+  height: 48px;
   padding: 8px 5px 8px 12px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  position: relative;
+  overflow: hidden;
+}
+.v3-product-promocode-copy-default, .v3-product-promocode-copy-active {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+.v3-product-promocode-copy-active {
+  opacity: 0;
 }
 .v3-product-promocode-info {
   -webkit-box-flex: 1;
