@@ -28782,6 +28782,151 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   text-decoration: line-through;
   white-space: nowrap;
 }
+.v3-product-color-custom {
+  margin: -6px -30px 14px;
+  padding: 0 30px 17px;
+  border-bottom: 1px solid #E1E1E1;
+}
+.v3-product-color-custom-cta {
+  display: block;
+  font-size: 13px;
+  line-height: 1.54;
+  font-weight: 500;
+}
+.v3-product-color-custom-note {
+  font-size: 11px;
+  line-height: 1.455;
+  color: #393939;
+}
+.v3-product-color-custom-modal {
+  position: absolute;
+  width: 442px;
+  padding: 27px 30px 48px;
+  max-width: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.v3-product-color-custom-modal .new-product-modal-close {
+  top: 20px;
+  right: 20px;
+}
+.v3-product-color-custom-modal-caption {
+  margin: 0 -30px 32px;
+  padding: 0 60px 29px 30px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #e1e1e1;
+}
+.v3-product-color-custom-modal-info {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+  margin-bottom: 24px;
+}
+.v3-product-color-custom-modal-row {
+  margin-bottom: 16px;
+}
+.v3-product-color-custom-modal-row .input-wrapper {
+  margin-bottom: 0;
+}
+.v3-product-color-custom-modal-row .input-wrapper > label {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+  padding: 0 0 10px;
+}
+.v3-product-color-custom-modal-row textarea.textarea.error,
+.v3-product-color-custom-modal-row input.input-text.error {
+  color: #000000 !important;
+  border-color: #F30000 !important;
+}
+.v3-product-color-custom-modal-row textarea.textarea.error::-webkit-input-placeholder, .v3-product-color-custom-modal-row input.input-text.error::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+.v3-product-color-custom-modal-row textarea.textarea.error::-moz-placeholder, .v3-product-color-custom-modal-row input.input-text.error::-moz-placeholder {
+  color: #a1a1a1;
+}
+.v3-product-color-custom-modal-row textarea.textarea.error:-ms-input-placeholder, .v3-product-color-custom-modal-row input.input-text.error:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+.v3-product-color-custom-modal-row textarea.textarea.error::-ms-input-placeholder, .v3-product-color-custom-modal-row input.input-text.error::-ms-input-placeholder {
+  color: #a1a1a1;
+}
+.v3-product-color-custom-modal-row textarea.textarea.error::placeholder,
+.v3-product-color-custom-modal-row input.input-text.error::placeholder {
+  color: #a1a1a1;
+}
+.v3-product-color-custom-modal-row.error .v3-product-color-custom-modal-error {
+  display: block;
+}
+.v3-product-color-custom-modal-row.error textarea.textarea,
+.v3-product-color-custom-modal-row.error input.input-text {
+  border-color: #F30000;
+}
+.v3-product-color-custom-modal-error {
+  display: none;
+  padding-top: 10px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #F30000;
+}
+.v3-product-color-custom-modal-button {
+  padding-top: 16px;
+}
+.v3-product-color-custom-modal-button .button {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.v3-product-color-custom-modal-button .button.button-disabled {
+  cursor: default;
+  background-color: #CDE6B9 !important;
+}
+.v3-product-color-custom-modal-note {
+  padding-top: 12px;
+  font-size: 11px;
+  line-height: 1.455;
+}
+.v3-product-color-custom-modal-note a {
+  font-weight: 500;
+}
+.v3-product-color-custom-modal-success {
+  display: none;
+}
+.v3-product-color-custom-modal-success-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 124px;
+  height: 124px;
+  background: #F4F5F6;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 24px;
+}
+.v3-product-color-custom-modal-success-text {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+  margin-bottom: 32px;
+}
+.v3-product-color-custom-modal-success-button {
+  text-align: center;
+}
+.v3-product-color-custom-modal-success-button .button {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .v3-product-customer {
   position: absolute;
   top: 60px;
@@ -29261,6 +29406,12 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   .v3-product-color-note {
     top: 15px;
     left: 15px;
+  }
+  .v3-product-color-custom {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /*--------------------- End v3 product ---------------------*/

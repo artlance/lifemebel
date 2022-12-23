@@ -900,4 +900,40 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product color custom modal
+    $('#v3-product-color-custom-modal').on('shown', function () {
+        $.ajax({
+            url: './v3-product-color-custom-modal.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-color-custom-modal').load('./v3-product-color-custom-modal.html', function (response, status, xhr) {
+                    centerModal();
+                    if ($('.form-phone-mask').length) {
+                        $('.form-phone-mask').mask('+7 (999) 999-99-99');
+                    }
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //пример переключения блоков для дизайнера
+    $(document).on('click', '.v3-product-color-custom-modal-button .button', function (event) {
+        event.preventDefault();
+        $(this).addClass('button-disabled');
+        $(this).parents('.v3-product-color-custom-modal-content').find('.v3-product-color-custom-modal-row').addClass('error');
+        centerModal();
+    });
+
+    $(document).on('click', '.v3-product-color-custom-modal-button .button-disabled', function (event) {
+        event.preventDefault();
+        $(this).parents('.v3-product-color-custom-modal-content').hide();
+        $(this).parents('.v3-product-color-custom-modal').find('.v3-product-color-custom-modal-success').show();
+        centerModal();
+    });
+
+    //------------------------------------------------------------------------//
+
+
 });//document ready

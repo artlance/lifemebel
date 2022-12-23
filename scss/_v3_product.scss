@@ -1266,6 +1266,136 @@
                 }
             }
         }
+        &-custom {
+            margin: -6px -30px 14px;
+            padding: 0 30px 17px;
+            border-bottom: 1px solid #E1E1E1;
+            &-cta {
+                display: block;
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+            }
+            &-note {
+                font-size: 11px;
+                line-height: 1.455;
+                color: $dgr;
+            }
+            &-modal {
+                position: absolute;
+                width: 442px;
+                padding: 27px 30px 48px;
+                max-width: 100%;
+                background: $w;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+                .new-product-modal-close {
+                    top: 20px;
+                    right: 20px;
+                }
+                &-caption {
+                    margin: 0 -30px 32px;
+                    padding: 0 60px 29px 30px;
+                    font-size: 20px;
+                    line-height: 1.2;
+                    font-weight: bold;
+                    color: $b;
+                    border-bottom: 1px solid #e1e1e1;
+                }
+                &-content {}
+                &-info {
+                    font-size: 13px;
+                    line-height: 1.54;
+                    color: $dgr;
+                    margin-bottom: 24px;
+                }
+                &-row {
+                    margin-bottom: 16px;
+                    .input-wrapper {
+                        margin-bottom: 0;
+                        & > label {
+                            font-size: 13px;
+                            line-height: 1.54;
+                            color: $b;
+                            padding: 0 0 10px;
+                        }
+                    }
+                    textarea.textarea,
+                    input.input-text {
+                        &.error {
+                            color: $b !important;
+                            border-color: $red !important;
+                            &::placeholder {
+                                color: $t;
+                            }
+                        }
+                    }
+                    &.error {
+                        .v3-product-color-custom-modal-error {
+                            display: block;
+                        }
+                        textarea.textarea,
+                        input.input-text {
+                            border-color: $red;
+                        }
+                    }
+                }
+                &-error {
+                    display: none;
+                    padding-top: 10px;
+                    font-size: 10px;
+                    line-height: 1.5;
+                    color: $red;
+                }
+                &-button {
+                    padding-top: 16px;
+                    .button {
+                        width: 100%;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        &.button-disabled {
+                            cursor: default;
+                            background-color: #CDE6B9 !important;
+                        }
+                    }
+                }
+                &-note {
+                    padding-top: 12px;
+                    font-size: 11px;
+                    line-height: 1.455;
+                    a {
+                        font-weight: 500;
+                    }
+                }
+                &-success {
+                    display: none;
+                    &-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 124px;
+                        height: 124px;
+                        background: $s;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin: 0 auto 24px;
+                    }
+                    &-text {
+                        text-align: center;
+                        font-size: 13px;
+                        line-height: 1.54;
+                        color: $b;
+                        margin-bottom: 32px;
+                    }
+                    &-button {
+                        text-align: center;
+                        .button {
+                            padding-left: 30px;
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
     }
     &-customer {
         position: absolute;
@@ -1749,6 +1879,12 @@
             &-note {
                 top: 15px;
                 left: 15px;
+            }
+            &-custom {
+                margin-left: -15px;
+                margin-right: -15px;
+                padding-left: 15px;
+                padding-right: 15px;
             }
         }
     }
