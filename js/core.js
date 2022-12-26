@@ -214,7 +214,35 @@ $(document).ready(function () {
             }
 
         });
+        var thisIndex = $(this).parents('.tab').find('.box:visible').find('.v3-home-products-slider').index('.v3-home-products-slider');
+        if ($('.box:visible').find('.v3-home-products-slider').length) {
+            v3HomeProductsArr[thisIndex].update();
+        }
     });
+
+    //------------------------------------------------------------------------//
+
+    //v3 home products
+    var v3HomeProducts = $('.v3-home-products-slider');
+    var v3HomeProductsArr = [];
+    if (v3HomeProducts.length) {
+        v3HomeProducts.each(function (index, element) {
+            var thisParent = $(element).parents('.v3-home-products-slider-wrapper');
+            var thisPrev = thisParent.find('.swiper-button-prev');
+            var thisNext = thisParent.find('.swiper-button-next');
+            v3HomeProductsArr[index] = new Swiper($(element), {
+                navigation: {
+                    nextEl: thisNext,
+                    prevEl: thisPrev,
+                },
+                watchOverflow: true,
+                speed: 500,
+                spaceBetween: 16,
+                slidesPerView: 'auto',
+                centerInsufficientSlides: true,
+            });
+        });
+    }
 
     //------------------------------------------------------------------------//
 

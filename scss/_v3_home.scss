@@ -1,0 +1,216 @@
+/*-------------------- Begin v3 home --------------------*/
+.v3-home {
+    &-products {
+        margin-bottom: 65px;
+        &-title {
+            margin-bottom: 48px;
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 900;
+            color: $b;
+            text-align: center;
+            * {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+        &-tab {}
+        &-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -20px 18px;
+            li {
+                padding: 0 20px 10px;
+                a {
+                    display: block;
+                    position: relative;
+                    padding: 1px 0 3px;
+                    font-size: 13px;
+                    line-height: normal;
+                    color: $dgr;
+                    white-space: nowrap;
+                    border-bottom: 2px solid $tr;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: -20px;
+                        right: -20px;
+                        top: -10px;
+                        bottom: -10px;
+                    }
+                    &:hover {
+                        color: $b;
+                    }
+                }
+                &.active {
+                    a {
+                        cursor: default;
+                        color: $b;
+                        font-weight: 500;
+                        border-bottom-color: $p;
+                    }
+                }
+            }
+        }
+        &-slider {
+            margin: 0 -1px;
+            .swiper-slide {
+                width: 260px;
+            }
+            &-wrapper {
+                position: relative;
+                .swiper-button-prev,
+                .swiper-button-next {
+                    right: -26px;
+                    top: 70px;
+                    margin-top: 0;
+                    width: 50px;
+                    height: 50px;
+                    background: $w;
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+                    &:after {
+                        left: 2px;
+                        background-image: url('../upload/right-small.svg');
+                        background-size: 12px 20px;
+                    }
+                    &.swiper-button-disabled {
+                        display: none;
+                    }
+                }
+                .swiper-button-prev {
+                    right: auto;
+                    left: -26px;
+                    &:after {
+                        left: 0;
+                        right: 2px;
+                    }
+                }
+            }
+        }
+        &-item {
+            display: block;
+            text-align: center;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            &-img {
+                display: block;
+                height: 190px;
+                margin-bottom: 15px;
+                background: $s;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .catalog-product-labels {
+                margin-top: -31px;
+                margin-bottom: 5px;
+            }
+            .catalog-product-sale {
+                min-width: 45px;
+            }
+            &-title {
+                display: block;
+                font-size: 13px;
+                line-height: 1.31;
+                color: $dgr;
+                margin-bottom: 9px;
+                max-height: 34px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            &-price {
+                display: block;
+                font-size: 15px;
+                line-height: normal;
+                font-weight: 500;
+                color: $b;
+                &-new {
+                    display: inline-block;
+                    vertical-align: top;
+                    white-space: nowrap;
+                    color: $red;
+                    margin-right: 5px;
+                }
+                &-old {
+                    display: inline-block;
+                    vertical-align: top;
+                    white-space: nowrap;
+                    text-decoration: line-through;
+                    font-weight: normal;
+                    color: $t;
+                }
+            }
+        }
+        &-more {
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            &-link {
+                display: block;
+                color: $b;
+                &:hover {
+                    color: $text;
+                }
+            }
+            &-block {
+                display: block;
+                position: relative;
+                height: 134px;
+                margin-bottom: 16px;
+                background: $s;
+            }
+            &-text {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                width: 90px;
+                height: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 14px;
+                line-height: 1.5;
+                font-weight: bold;
+                background: $w;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            &-cta {
+                display: block;
+                padding: 9px 10px 10px;
+                height: 40px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 1.5;
+                font-weight: 500;
+                background: $s;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+// responsive
+@media (max-width: 1325px) {
+    .v3-home {
+        &-products {
+            &-slider {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+/*--------------------- End v3 home ---------------------*/
