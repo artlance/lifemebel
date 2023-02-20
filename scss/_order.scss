@@ -1059,13 +1059,51 @@ input.datepicker {
     }
 }
 .order-payment {
-    padding: 21px 0 20px;
+    padding: 17px 0 16px;
+    .radio {
+        margin-bottom: 15px;
+        label {
+            padding-left: 32px;
+            &:before {
+                top: 4px;
+            }
+            &:after {
+                top: 10px;
+            }
+        }
+    }
 }
 .order-payment-note {
     display: block;
     font-size: 11px;
     line-height: 1.37;
     color: $text;
+    padding-top: 6px;
+}
+.order-payment-caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.order-payment-title {
+    max-width: 100%;
+    padding: 4px 9px 4px 0;
+}
+.order-payment-type {
+    flex: 0 0 51px;
+    max-width: 51px;
+    height: 24px;
+    padding: 3px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $s;
+    border-radius: 4px;
+    overflow: hidden;
+    img {
+        max-height: 100%;
+    }
 }
 .order-comment {
     display: flex;

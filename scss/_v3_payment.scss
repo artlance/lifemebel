@@ -106,7 +106,7 @@
                 align-items: center;
                 justify-content: center;
                 min-height: 80px;
-                padding: 10px;
+                padding: 8px;
                 background: $s;
                 border-radius: 12px;
             }
@@ -474,6 +474,53 @@
             }
         }
     }
+    &-cta {
+        max-width: 260px;
+        margin-top: 20px;
+        padding-bottom: 18px;
+        .button {
+            margin-bottom: 12px;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            &.v3-payment-cta-sbp {
+                white-space: nowrap;
+                color: $w;
+                background: #1D1346;
+                box-shadow: none;
+                &:hover {
+                    background-color: #2e2357;
+                }
+                &:active {
+                    background-color: #171328;
+                }
+                &:disabled,
+                &.disabled {
+                    cursor: default;
+                    color: $w !important;
+                    background-color: #dddae4;
+                    img {
+                        opacity: 0.5;
+                    }
+                }
+                &.loading {
+                    color: $tr !important;
+                    background-color: #171328;
+                    img {
+                        opacity: 0;
+                    }
+                    &:after {
+                        background-image: url('../upload/loader-white.svg');
+                    }
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: -4px 0 -6px 10px;
+                }
+            }
+        }
+    }
 }
 
 // responsive
@@ -489,17 +536,17 @@
             padding-left: 16px;
             padding-right: 16px;
             &-img {
-                flex: 0 0 194px;
-                max-width: 194px;
+                flex: 0 0 164px;
+                max-width: 164px;
                 padding-right: 16px;
             }
             &-info {
-                max-width: calc(100% - 194px);
+                max-width: calc(100% - 164px);
             }
             &-single {
                 .v3-payment-item {
                     &-info {
-                        max-width: calc(55% - 194px);
+                        max-width: calc(55% - 164px);
                     }
                     &-detail {
                         flex: 0 0 45%;
