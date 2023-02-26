@@ -11256,6 +11256,19 @@ a.order-product-change-more-button {
   -ms-user-select: none;
   user-select: none;
 }
+.order-delivery-type-radio.disabled .order-delivery-type-title,
+.order-delivery-type-radio.disabled .order-delivery-type-price {
+  color: #a1a1a1;
+}
+.order-delivery-type-radio.disabled .filter-item-hint {
+  opacity: 0.5;
+}
+.order-delivery-type-radio.error .order-delivery-type-item {
+  border-color: #F30000;
+}
+.order-delivery-type-radio.error .order-delivery-type-date {
+  color: #F30000;
+}
 
 .order-delivery-type-item {
   display: block;
@@ -11278,7 +11291,7 @@ a.order-product-change-more-button {
 .order-delivery-type-title {
   display: block;
   font-weight: 500;
-  color: #000000;
+  color: #393939;
   margin-bottom: 12px;
 }
 
@@ -11287,13 +11300,52 @@ a.order-product-change-more-button {
   font-size: 15px;
   line-height: 1.2;
   font-weight: 500;
-  color: #000000;
+  color: #393939;
   margin-bottom: 20px;
 }
 
 .order-delivery-type-date {
   display: block;
-  color: #393939;
+  color: #000000;
+}
+.order-delivery-type-date strong {
+  font-weight: normal;
+  color: #a1a1a1;
+}
+
+.order-delivery-modal {
+  position: absolute;
+  width: 630px;
+  padding: 27px 40px 48px;
+  max-width: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.order-delivery-modal .new-product-modal-close {
+  top: 20px;
+  right: 20px;
+}
+.order-delivery-modal-caption {
+  margin: 0 -40px 40px;
+  padding: 0 60px 29px 40px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #e1e1e1;
+}
+.order-delivery-modal-content p {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.order-delivery-modal-button {
+  padding-top: 20px;
+}
+.order-delivery-modal-button .button {
+  width: 100%;
 }
 
 .order-delivery-address {
@@ -11380,6 +11432,12 @@ a.order-product-change-more-button {
           flex: 0 0 33.3333%;
   max-width: 33.3333%;
   padding: 0 10px;
+}
+
+select.order-delivery-time {
+  padding-right: 34px;
+  background-image: url("../upload/time.svg") !important;
+  background-size: 38px 38px;
 }
 
 input.datepicker {

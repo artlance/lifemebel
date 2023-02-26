@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>time</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="time">
+            <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="38" height="38"></rect>
+            <path d="M28,19 C28,14.0294 23.9706,10 19,10 C14.0294,10 10,14.0294 10,19 C10,23.9706 14.0294,28 19,28 C23.9706,28 28,23.9706 28,19 Z M12,19 C12,15.134 15.134,12 19,12 C22.866,12 26,15.134 26,19 C26,22.866 22.866,26 19,26 C15.134,26 12,22.866 12,19 Z M20,18.585 L20,13.9375 L18,13.9375 L18,19.4142 L21.3864,22.8006 L22.8006,21.3864 L20,18.585 Z" id="Shape" fill="#A1A1A1"></path>
+        </g>
+    </g>
+</svg>

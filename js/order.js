@@ -182,4 +182,67 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //centerModal
+    function centerModal() {
+        var modalName = $('.modal-center');
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        modalName.each(function () {
+            var modalOuterWidth = $(this).outerWidth();
+            var modalOuterHeight = $(this).outerHeight();
+            $(this).css({
+                margin: 0
+            });
+            if (windowHeight > modalOuterHeight) {
+                $(this).css({
+                    top: (windowHeight - modalOuterHeight) / 2
+                });
+            } else {
+                $(this).css({
+                    top: 0
+                });
+            }
+            if (windowWidth > modalOuterWidth) {
+                $(this).css({
+                    left: (windowWidth - modalOuterWidth) / 2
+                });
+            } else {
+                $(this).css({
+                    left: 0
+                });
+            }
+        });
+    }
+    $(document).on('click', '[data-toggle="modal"]', function (event) {
+        centerModal();
+    });
+    $(window).resize(function () {
+        centerModal();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product payment modal
+    $('#order-delivery-modal').on('shown', function () {
+        $.ajax({
+            url: './order-delivery-modal.html',
+            cache: false,
+            success: function () {
+                $('#order-delivery-modal').load('./order-delivery-modal.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    $(document).on('click', '.modal.in', function (event) {
+        if ($(event.target).hasClass('modal')) {
+            $('.modal.in').modal('hide');
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
