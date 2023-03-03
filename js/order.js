@@ -222,7 +222,7 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
-    //v3 product payment modal
+    //order delivery modal
     $('#order-delivery-modal').on('shown', function () {
         $.ajax({
             url: './order-delivery-modal.html',
