@@ -1,0 +1,77 @@
+<div class="v3-product-showroom-modal modal-center">
+    <a href="#" class="new-product-modal-close" data-dismiss="modal" aria-hidden="true" title="Закрыть"></a>
+    <div class="v3-product-showroom-modal-content">
+        <div class="v3-product-showroom-modal-map-block">
+            <div class="v3-product-showroom-modal-map" id="v3-product-showroom-modal-map"></div>
+            <script>
+                ymaps.ready(function () {
+                    var myMap = new ymaps.Map('v3-product-showroom-modal-map', {
+                            center: [55.782982, 37.725424],
+                            zoom: 17,
+                            controls: ['geolocationControl', 'zoomControl'],
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        }),
+
+                        myPlacemark = new ymaps.Placemark([55.782982, 37.725424], {
+                        }, {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'upload/v3-showroom-pin2-active.svg',
+                            iconImageSize: [64, 64],
+                            iconImageOffset: [-32, -28],
+                        });
+
+                    myMap.geoObjects.add(myPlacemark);
+                });
+            </script>
+        </div>
+        <!-- /.v3-product-showroom-modal-map-block -->
+        <div class="v3-product-showroom-modal-info">
+            <div class="v3-product-showroom-modal-caption">Шоурум в Москве</div>
+            <div class="v3-product-showroom-modal-text">
+                <div class="v3-product-showroom-modal-text-overflow">
+                    <div class="v3-product-showroom-modal-item-detail">
+                        <div class="v3-product-showroom-modal-item-title">Шоурум № 2 — у м. Семеновская</div>
+                        <p>г. Москва, ул. Щербаковская, д. 5А</p>
+                        <div class="v3-product-showroom-modal-item-route">
+                            <a href="#">Проложить маршрут</a>
+                        </div>
+                        <div class="v3-product-showroom-modal-item-call">
+                            <a href="#new-product-modal-call" data-toggle="modal" data-dismiss="modal" aria-hidden="true" class="button secondary">Заказать звонок из шоурума</a>
+                        </div>
+                        <div class="v3-product-showroom-modal-item-info">
+                            <div class="v3-product-showroom-modal-item-info-title">Метро</div>
+                            <div class="v3-product-showroom-modal-item-station">
+                                <img src="upload/v3-showroom-station2.svg" alt="">
+                                <p>м. Семеновская <strong>— 5 минут пешком</strong></p>
+                            </div>
+                            <p>Последний вагон из центра, выход № 1</p>
+                        </div>
+                        <div class="v3-product-showroom-modal-item-info">
+                            <div class="v3-product-showroom-modal-item-info-title">Как найти</div>
+                            <p>После выхода из метро поверните налево. Пройдите ТЦ Семеновский и сразу поверните налево, не переходя дорогу. Далее идите прямо 250 м. По пути вы пройдете ДЦ Щербаковский и Шоколадницу. Сразу после шоколадницы переходите дорогу в том же направлении и сразу поверните налево. Вы увидите белое крыльцо с торца здания. Это и есть наш шоурум.</p>
+                        </div>
+                        <div class="v3-product-showroom-modal-item-info">
+                            <div class="v3-product-showroom-modal-item-info-title">Парковка</div>
+                            <p>Парковка в ТЦ Семеновский. <br>Первые 30 минут — бесплатно, далее <span class="nowrap">50 р/час.</span></p>
+                        </div>
+                        <div class="v3-product-showroom-modal-item-info">
+                            <div class="v3-product-showroom-modal-item-info-title">Режим работы</div>
+                            <p>Ежедневно с 10:00 до 22:00</p>
+                        </div>
+                        <div class="v3-product-showroom-modal-item-info">
+                            <div class="v3-product-showroom-modal-item-info-title">Телефон</div>
+                            <p><a href="tel:+74994556502" class="nowrap">8 (499) 455-65-02</a></p>
+                        </div>
+                    </div>
+                    <!-- /.v3-product-showroom-modal-item-detail -->
+                </div>
+                <!-- /.v3-product-showroom-modal-text-overflow -->
+            </div>
+            <!-- /.v3-product-showroom-modal-text -->
+        </div>
+        <!-- /.v3-product-showroom-modal-info -->
+    </div>
+    <!-- /.v3-product-showroom-modal-content -->
+</div>
+<!-- /.v3-product-showroom-modal -->

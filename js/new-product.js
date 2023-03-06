@@ -935,4 +935,88 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product showroom modal overflow
+    function v3ProductShowroomModalOverflow() {
+        //v3 product showroom modal text overflow
+        $('.v3-product-showroom-modal-text-overflow').on('scroll', function () {
+            if ($(this).scrollTop() > 0) {
+                $(this).parents('.v3-product-showroom-modal-text').addClass('shadow');
+            } else {
+                $(this).parents('.v3-product-showroom-modal-text').removeClass('shadow');
+            }
+        });
+
+        //v3 product showroom modal panel overflow
+        $('.v3-product-showroom-modal-panel-overflow').on('scroll', function () {
+            if ($(this).scrollTop() > 0) {
+                $(this).parents('.v3-product-showroom-modal-panel-content').addClass('shadow');
+            } else {
+                $(this).parents('.v3-product-showroom-modal-panel-content').removeClass('shadow');
+            }
+        });
+    }
+
+    //v3 product showroom modal
+    $('#v3-product-showroom-modal').on('shown', function () {
+        $.ajax({
+            url: './v3-product-showroom-modal.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-showroom-modal').load('./v3-product-showroom-modal.html', function (response, status, xhr) {
+                    centerModal();
+                    v3ProductShowroomModalOverflow();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product showroom modal 2
+    $('#v3-product-showroom-modal-2').on('shown', function () {
+        $.ajax({
+            url: './v3-product-showroom-modal-2.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-showroom-modal-2').load('./v3-product-showroom-modal-2.html', function (response, status, xhr) {
+                    centerModal();
+                    v3ProductShowroomModalOverflow();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product showroom modal 3
+    $('#v3-product-showroom-modal-3').on('shown', function () {
+        $.ajax({
+            url: './v3-product-showroom-modal-3.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-showroom-modal-3').load('./v3-product-showroom-modal-3.html', function (response, status, xhr) {
+                    centerModal();
+                    v3ProductShowroomModalOverflow();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product showroom modal panel
+    $(document).on('click', '.v3-product-showroom-modal-item-cta a', function (event) {
+        event.preventDefault();
+        var thisId = $(this).attr('href');
+        thisId = thisId.substr(1);
+        $('[data-showroom="' + thisId + '"]').addClass('show');
+    });
+
+    $(document).on('click', '.v3-product-showroom-modal-panel-back', function (event) {
+        event.preventDefault();
+        $(this).parents('.v3-product-showroom-modal-panel').removeClass('show');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
