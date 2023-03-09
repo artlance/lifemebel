@@ -1004,6 +1004,54 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product showroom modal 4
+    $('#v3-product-showroom-modal-4').on('shown', function () {
+        $.ajax({
+            url: './v3-product-showroom-modal-4.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-showroom-modal-4').load('./v3-product-showroom-modal-4.html', function (response, status, xhr) {
+                    centerModal();
+                    v3ProductShowroomModalOverflow();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product showroom modal 5
+    $('#v3-product-showroom-modal-5').on('shown', function () {
+        $.ajax({
+            url: './v3-product-showroom-modal-5.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-showroom-modal-5').load('./v3-product-showroom-modal-5.html', function (response, status, xhr) {
+                    centerModal();
+                    v3ProductShowroomModalOverflow();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product showroom modal 6
+    $('#v3-product-showroom-modal-6').on('shown', function () {
+        $.ajax({
+            url: './v3-product-showroom-modal-6.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-showroom-modal-6').load('./v3-product-showroom-modal-6.html', function (response, status, xhr) {
+                    centerModal();
+                    v3ProductShowroomModalOverflow();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
     //v3 product showroom modal panel
     $(document).on('click', '.v3-product-showroom-modal-item-cta a', function (event) {
         event.preventDefault();

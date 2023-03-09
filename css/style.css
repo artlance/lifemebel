@@ -25054,6 +25054,14 @@ button.swiper-pagination-bullet {
   display: block;
   background-image: url("../upload/video-pause.svg");
 }
+.new-product-advantages-mask-gray {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.04);
+}
 
 a.new-product-brand-feature:hover .new-product-brand-feature-title {
   color: #686868;
@@ -29840,6 +29848,18 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
+}
+.v3-product-showroom-modal-item-attention {
+  font-size: 13px;
+  line-height: 1.54;
+  margin-bottom: 24px;
+  padding-left: 32px;
+  position: relative;
+}
+.v3-product-showroom-modal-item-attention img {
+  position: absolute;
+  left: 4px;
+  top: 2px;
 }
 .v3-product-showroom-modal-panel {
   position: absolute;

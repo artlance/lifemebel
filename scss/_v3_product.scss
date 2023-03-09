@@ -2129,6 +2129,18 @@
                         padding-right: 10px;
                     }
                 }
+                &-attention {
+                    font-size: 13px;
+                    line-height: 1.54;
+                    margin-bottom: 24px;
+                    padding-left: 32px;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        left: 4px;
+                        top: 2px;
+                    }
+                }
             }
             &-panel {
                 position: absolute;
