@@ -28519,18 +28519,20 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 16px;
-  width: 375px;
-  background: #E6F2DC;
-  border-radius: 16px;
+  padding: 16px 24px;
+  max-width: 446px;
+  background: #ffffff;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 .v3-product-color-note-img {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 88px;
-          flex: 0 0 88px;
-  max-width: 88px;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+  max-width: 80px;
   height: 64px;
-  padding-right: 24px;
+  padding-right: 16px;
 }
 .v3-product-color-note-img img {
   width: 100%;
@@ -28543,6 +28545,7 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  max-width: calc(100% - 80px);
   color: #000000;
 }
 .v3-product-color-note-suptitle {
@@ -30373,6 +30376,9 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   .v3-product-color-note {
     top: 15px;
     left: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 370px;
   }
   .v3-product-color-custom {
     margin-left: -15px;
