@@ -726,6 +726,9 @@
                     line-height: 1.54;
                     color: $b;
                     margin-bottom: 8px;
+                    a {
+                        font-weight: 500;
+                    }
                 }
             }
             &-advantages {

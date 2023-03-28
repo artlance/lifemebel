@@ -10367,12 +10367,24 @@ body.modal-open {
   margin-bottom: 35px;
 }
 
+.order-delivery-manager + .order-category-title {
+  padding-top: 30px;
+}
+
 .order-category-title {
   font-weight: 500;
   color: #000000;
   padding-bottom: 9px;
   margin-bottom: 18px;
   border-bottom: 1px solid #E1E1E1;
+}
+.order-category-title-v2 {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+.order-category-title + .order-payment-category {
+  padding-top: 21px;
 }
 
 .order-category-caption {
@@ -11165,6 +11177,9 @@ a.order-product-change-more-button {
 .order-delivery {
   padding-bottom: 15px;
 }
+.order-delivery + .order-category-title {
+  padding-top: 15px;
+}
 
 .order-delivery-city {
   display: -webkit-box;
@@ -11573,7 +11588,7 @@ input.datepicker {
   padding: 17px 0 16px;
 }
 .order-payment .radio {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 .order-payment .radio label {
   padding-left: 32px;
@@ -11634,6 +11649,21 @@ input.datepicker {
   max-height: 100%;
 }
 
+.order-payment-category {
+  padding-bottom: 14px;
+}
+.order-payment-category-title {
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.54;
+  font-weight: 500;
+  color: #000000;
+}
+.order-payment-category .order-payment {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .order-comment {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11641,6 +11671,7 @@ input.datepicker {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -15px;
+  padding-top: 10px;
   padding-bottom: 5px;
 }
 .order-comment .input-wrapper {
@@ -28345,6 +28376,9 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   color: #000000;
   margin-bottom: 8px;
 }
+.v3-product-payment-item-process li a {
+  font-weight: 500;
+}
 .v3-product-payment-item-advantages {
   display: block;
   margin-bottom: 6px;
@@ -30722,7 +30756,7 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
 .v3-payment-advantages-title {
   font-size: 15px;
   line-height: 1.4;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 8px;
 }
 .v3-payment-advantages-text {

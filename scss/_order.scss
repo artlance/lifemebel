@@ -84,12 +84,23 @@
 .order-category {
     margin-bottom: 35px;
 }
+.order-delivery-manager + .order-category-title {
+    padding-top: 30px;
+}
 .order-category-title {
     font-weight: 500;
     color: $b;
     padding-bottom: 9px;
     margin-bottom: 18px;
     border-bottom: 1px solid #E1E1E1;
+    &-v2 {
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: bold;
+    }
+    & + .order-payment-category {
+        padding-top: 21px;
+    }
 }
 .order-category-caption {
     font-size: 20px;
@@ -761,6 +772,9 @@ a.order-product-change-more-button {
 }
 .order-delivery {
     padding-bottom: 15px;
+    & + .order-category-title {
+        padding-top: 15px;
+    }
 }
 .order-delivery-city {
     display: flex;
@@ -1122,7 +1136,7 @@ input.datepicker {
 .order-payment {
     padding: 17px 0 16px;
     .radio {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         label {
             padding-left: 32px;
             &:before {
@@ -1166,10 +1180,25 @@ input.datepicker {
         max-height: 100%;
     }
 }
+.order-payment-category {
+    padding-bottom: 14px;
+    &-title {
+        margin-bottom: 10px;
+        font-size: 13px;
+        line-height: 1.54;
+        font-weight: 500;
+        color: $b;
+    }
+    .order-payment {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
 .order-comment {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+    padding-top: 10px;
     padding-bottom: 5px;
     .input-wrapper {
         margin-bottom: 0;
