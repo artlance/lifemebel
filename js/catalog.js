@@ -404,6 +404,12 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $(this)[0].addEventListener('transitionend', () => {
             quickSorting.update();
+
+            const thisIndex = $(this).parents('.swiper-slide').index() + 1;
+            if (thisIndex == quickSorting.slides.length) {
+                quickSorting.slideTo(thisIndex - 1);
+            }
+
         });
     });
 
