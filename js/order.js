@@ -245,4 +245,19 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 order cart textile
+    $('#v3-order-cart-textile-detail').on('shown', function () {
+        $.ajax({
+            url: './v3-order-cart-textile-detail.html',
+            cache: false,
+            success: function () {
+                $('#v3-order-cart-textile-detail').load('./v3-order-cart-textile-detail.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

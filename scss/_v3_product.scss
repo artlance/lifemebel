@@ -2432,6 +2432,51 @@
             }
         }
     }
+    &-favorite-overfill {
+        position: absolute;
+        width: 442px;
+        padding: 27px 30px 48px;
+        max-width: 100%;
+        background: $w;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+        .new-product-modal-close {
+            top: 20px;
+            right: 20px;
+        }
+        &-caption {
+            margin: 0 -30px 40px;
+            padding: 0 60px 29px 30px;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: bold;
+            color: $b;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        &-content {}
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 124px;
+            height: 124px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 32px;
+        }
+        &-text {
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+            margin-bottom: 32px;
+        }
+        &-button {
+            .button {
+                width: 100%;
+            }
+        }
+    }
 }
 .popover-color {
     margin: 16px;

@@ -1067,4 +1067,19 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product favorite overfill
+    $('#v3-product-favorite-overfill').on('shown', function () {
+        $.ajax({
+            url: './v3-product-favorite-overfill.html',
+            cache: false,
+            success: function () {
+                $('#v3-product-favorite-overfill').load('./v3-product-favorite-overfill.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

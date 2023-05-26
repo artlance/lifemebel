@@ -30237,6 +30237,55 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   color: #000000;
   text-align: center;
 }
+.v3-product-favorite-overfill {
+  position: absolute;
+  width: 442px;
+  padding: 27px 30px 48px;
+  max-width: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.v3-product-favorite-overfill .new-product-modal-close {
+  top: 20px;
+  right: 20px;
+}
+.v3-product-favorite-overfill-caption {
+  margin: 0 -30px 40px;
+  padding: 0 60px 29px 30px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #e1e1e1;
+}
+.v3-product-favorite-overfill-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 124px;
+  height: 124px;
+  background: #F4F5F6;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 32px;
+}
+.v3-product-favorite-overfill-text {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+  margin-bottom: 32px;
+}
+.v3-product-favorite-overfill-button .button {
+  width: 100%;
+}
 
 .popover-color {
   margin: 16px;
@@ -31152,6 +31201,91 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   margin-left: 13px;
   font-weight: 500;
   text-align: right;
+}
+.v3-order-cart-textile {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+}
+.v3-order-cart-textile strong {
+  font-weight: normal;
+  color: #686868;
+}
+.v3-order-cart-textile-link {
+  color: #000000;
+}
+.v3-order-cart-textile-link:hover {
+  color: #000000;
+}
+.v3-order-cart-textile-link img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 8px 0 5px;
+  width: 16px;
+  height: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.v3-order-cart-textile-link svg {
+  display: inline-block;
+  vertical-align: top;
+  margin: 7px 0 0 7px;
+}
+.v3-order-cart-textile-detail {
+  position: absolute;
+  width: 442px;
+  padding: 27px 30px 48px;
+  max-width: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.v3-order-cart-textile-detail .new-product-modal-close {
+  top: 20px;
+  right: 20px;
+}
+.v3-order-cart-textile-detail-caption {
+  margin: 0 -30px 32px;
+  padding: 0 60px 29px 30px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #e1e1e1;
+}
+.v3-order-cart-textile-detail-img {
+  margin-bottom: 24px;
+}
+.v3-order-cart-textile-detail-img img {
+  width: 100%;
+  height: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.v3-order-cart-textile-detail-text {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+}
+.v3-order-cart-textile-detail-text p {
+  margin: 0 0 8px;
+}
+.v3-order-cart-textile-detail-text strong {
+  line-height: normal;
+  font-weight: 500;
+}
+.v3-order-cart-textile-detail-text em {
+  font-style: normal;
+  color: #686868;
+}
+.v3-order-cart-textile-detail-button {
+  padding-top: 24px;
+}
+.v3-order-cart-textile-detail-button .button {
+  width: 100%;
 }
 
 /*-------------------- Begin v3 home --------------------*/
