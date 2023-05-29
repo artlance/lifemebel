@@ -30286,6 +30286,42 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
 .v3-product-favorite-overfill-button .button {
   width: 100%;
 }
+.v3-product-discount-request {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.v3-product-discount-request-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 28px;
+          flex: 0 0 28px;
+  max-width: 28px;
+  padding-right: 7px;
+}
+.v3-product-discount-request-img img {
+  width: 100%;
+}
+.v3-product-discount-request-text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+}
+.v3-product-discount-request-text strong {
+  color: #83C150;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: underline;
+}
 
 .popover-color {
   margin: 16px;
