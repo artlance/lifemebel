@@ -477,7 +477,6 @@
         font-size: 25px;
         line-height: 1.16;
         font-weight: 500;
-        letter-spacing: -0.43px;
         color: $b;
         margin-bottom: 24px;
         &-new {
@@ -490,9 +489,10 @@
             display: inline-block;
             vertical-align: top;
             white-space: nowrap;
+            margin-right: 8px;
             text-decoration: line-through;
-            font-size: 14px;
-            line-height: 1.72;
+            font-size: 12px;
+            line-height: 1.84;
             color: $t;
             letter-spacing: normal;
         }
@@ -503,7 +503,7 @@
         margin: -13px 0 22px;
     }
     &-saving-block {
-        margin: -14px 0 23px;
+        margin: -11px 0 24px;
         line-height: 1.54;
         color: $dgr;
     }

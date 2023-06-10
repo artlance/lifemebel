@@ -1082,4 +1082,26 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product gallery
+    if ($('.v3-product-gallery').length) {
+        $('.v3-product-gallery').stickySidebar({
+            containerSelector: '.v3-product-sticky',
+            innerWrapperSelector: '.v3-product-gallery-inner',
+            topSpacing: 16,
+            bottomSpacing: 0,
+            resizeSensor: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //v3 product filter item
+    $(document).on('click', '.v3-product-filter-item', function (event) {
+        event.preventDefault();
+        $(this).parents('.v3-product-filter-list').find('.v3-product-filter-item').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
