@@ -1857,16 +1857,23 @@
     &-showroom {
         display: flex;
         margin-bottom: 56px;
-        padding: 16px 26px;
-        background: $s;
+        &-content {
+            flex-grow: 1;
+            display: flex;
+            padding: 16px 26px;
+            background: $s;
+            border-radius: 4px;
+        }
         &-info {
             display: flex;
-            align-items: flex-start;
-            padding: 8px 0 4px;
+            align-items: center;
+            align-self: center;
+            flex: 1 1 0;
+            padding: 6px 0;
             &-icon {
                 flex: 0 0 66px;
                 max-width: 66px;
-                padding: 7px 16px 11px 0;
+                padding: 9px 16px 9px 0;
                 span {
                     display: flex;
                     align-items: center;
@@ -1887,6 +1894,9 @@
             &-title {
                 font-weight: 500;
                 margin-bottom: 4px;
+                a {
+                    text-decoration: underline;
+                }
             }
             &-item {
                 position: relative;
@@ -1915,12 +1925,11 @@
             }
             &-map {
                 padding-top: 4px;
-                font-weight: 500;
             }
         }
         &-sep {
-            flex: 0 0 141px;
-            max-width: 141px;
+            flex: 0 0 81px;
+            max-width: 81px;
             position: relative;
             &::after {
                 content: "";
@@ -1933,15 +1942,24 @@
             }
         }
         &-call {
-            align-self: center;
-            flex-grow: 1;
-            text-align: right;
-            padding: 10px 0 10px 20px;
+            flex: 0 0 352px;
+            max-width: 352px;
+            margin-left: 16px;
+            padding: 24px 23px 20px;
+            background: $s;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+            text-align: center;
+            p {
+                margin-bottom: 8px;
+            }
             .button {
-                padding-left: 38px;
-                padding-right: 38px;
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
                 color: $p;
-                white-space: nowrap;
             }
         }
         &-modal {
@@ -2892,16 +2910,6 @@
         }
     }
 }
-@media (max-width: 1399px) {
-    .v3-product {
-        &-showroom {
-            &-sep {
-                flex: 0 0 81px;
-                max-width: 81px;
-            }
-        }
-    }
-}
 @media (max-width: 1325px) {
     .v3-product {
         &-description {
@@ -2994,22 +3002,11 @@
         }
         &-showroom {
             flex-wrap: wrap;
-            &-info {
-                flex: 0 0 50%;
-                max-width: 50%;
-                padding-right: 10px;
-            }
-            &-sep {
-                display: none;
-            }
             &-call {
                 flex: 0 0 100%;
                 max-width: 100%;
-                padding-left: 0;
-                padding-top: 20px;
-                .button {
-                    width: 100%;
-                }
+                margin-left: 0;
+                margin-top: 16px;
             }
         }
         &-delivery {
