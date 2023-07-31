@@ -52,6 +52,7 @@
     &-specs {
         display: flex;
         align-items: flex-start;
+        margin-top: 26px;
         margin-bottom: 56px;
         &-img {
             flex: 0 0 50.77%;
@@ -64,6 +65,9 @@
                 will-change: position, transform;
                 img {
                     width: 100%;
+                    & + img {
+                        margin-top: 56px;
+                    }
                 }
             }
         }
@@ -156,6 +160,7 @@
     &-info {
         display: flex;
         align-items: flex-start;
+        margin-top: 26px;
         margin-bottom: 56px;
         &-video {
             flex: 0 0 50.77%;

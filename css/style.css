@@ -27596,6 +27596,7 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-top: 26px;
   margin-bottom: 56px;
 }
 .v3-product-specs-img {
@@ -27615,6 +27616,9 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
 }
 .v3-product-specs-img-inner img {
   width: 100%;
+}
+.v3-product-specs-img-inner img + img {
+  margin-top: 56px;
 }
 .v3-product-specs-content {
   -webkit-box-flex: 1;
@@ -27716,6 +27720,7 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-top: 26px;
   margin-bottom: 56px;
 }
 .v3-product-info-video {
