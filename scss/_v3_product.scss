@@ -1930,6 +1930,15 @@
             }
             &-map {
                 padding-top: 4px;
+                strong {
+                    font-weight: 500;
+                }
+            }
+            &-map-title {
+                margin-bottom: 4px;
+                strong {
+                    font-weight: 500;
+                }
             }
         }
         &-sep {
@@ -2267,6 +2276,25 @@
                         background: $tr;
                     }
                 }
+            }
+        }
+    }
+    &-showroom-cta {
+        display: flex;
+        margin-bottom: 56px;
+        padding: 16px 26px;
+        background: $s;
+        border-radius: 4px;
+        &-button {
+            flex: 0 0 288px;
+            max-width: 288px;
+            padding-left: 16px;
+            align-self: center;
+            .button {
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                color: $p;
             }
         }
     }
@@ -3012,6 +3040,15 @@
                 max-width: 100%;
                 margin-left: 0;
                 margin-top: 16px;
+            }
+        }
+        &-showroom-cta {
+            flex-wrap: wrap;
+            &-button {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding-left: 0;
+                padding-top: 16px;
             }
         }
         &-delivery {
