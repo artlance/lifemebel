@@ -28554,6 +28554,46 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   font-size: 11px;
   line-height: 1.455;
 }
+.v3-product-payment-credit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+.v3-product-payment-credit-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+  max-width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.v3-product-payment-credit-img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+.v3-product-payment-credit-text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-left: 9px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+}
+.v3-product-payment-credit-text strong {
+  font-weight: 500;
+  line-height: normal;
+}
 .v3-product-color-note {
   position: absolute;
   z-index: 10;
@@ -31178,6 +31218,9 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   border-radius: 50%;
 }
 .v3-payment-item-single {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% - 16px);
+          flex: 0 0 calc(100% - 16px);
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -31196,6 +31239,30 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   padding-left: 16px;
 }
 .v3-payment-item-single .v3-payment-item-advantages {
+  padding-bottom: 0;
+}
+.v3-payment-item-single-v2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% - 16px);
+          flex: 0 0 calc(100% - 16px);
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.v3-payment-item-single-v2 .v3-payment-item-img-block {
+  min-height: 89px;
+}
+.v3-payment-item-single-v2 .v3-payment-item-info {
+  max-width: calc(48% - 202px);
+}
+.v3-payment-item-single-v2 .v3-payment-item-detail {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 52%;
+          flex: 0 0 52%;
+  max-width: 52%;
+  padding-top: 0;
+  padding-left: 16px;
+}
+.v3-payment-item-single-v2 .v3-payment-item-advantages {
   padding-bottom: 0;
 }
 .v3-payment-advantages-2 .v3-payment-advantages-list {
@@ -31569,10 +31636,10 @@ a.new-product-brand-feature:hover .new-product-brand-feature-title {
   .v3-payment-item-info {
     max-width: calc(100% - 164px);
   }
-  .v3-payment-item-single .v3-payment-item-info {
+  .v3-payment-item-single .v3-payment-item-info, .v3-payment-item-single-v2 .v3-payment-item-info {
     max-width: calc(55% - 164px);
   }
-  .v3-payment-item-single .v3-payment-item-detail {
+  .v3-payment-item-single .v3-payment-item-detail, .v3-payment-item-single-v2 .v3-payment-item-detail {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 45%;
             flex: 0 0 45%;

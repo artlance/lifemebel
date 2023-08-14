@@ -171,6 +171,7 @@
             }
         }
         &-single {
+            flex: 0 0 calc(100% - 16px);
             flex-wrap: nowrap;
             .v3-payment-item {
                 &-img {
@@ -184,6 +185,29 @@
                 &-detail {
                     flex: 0 0 56.35%;
                     max-width: 56.35%;
+                    padding-top: 0;
+                    padding-left: 16px;
+                }
+                &-advantages {
+                    padding-bottom: 0;
+                }
+            }
+        }
+        &-single-v2 {
+            flex: 0 0 calc(100% - 16px);
+            flex-wrap: nowrap;
+            .v3-payment-item {
+                &-img {
+                    &-block {
+                        min-height: 89px;
+                    }
+                }
+                &-info {
+                    max-width: calc(48% - 202px);
+                }
+                &-detail {
+                    flex: 0 0 52%;
+                    max-width: 52%;
                     padding-top: 0;
                     padding-left: 16px;
                 }
@@ -543,7 +567,8 @@
             &-info {
                 max-width: calc(100% - 164px);
             }
-            &-single {
+            &-single,
+            &-single-v2 {
                 .v3-payment-item {
                     &-info {
                         max-width: calc(55% - 164px);

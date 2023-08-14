@@ -916,6 +916,37 @@
                 }
             }
         }
+        &-credit {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            &-img {
+                flex: 0 0 24px;
+                max-width: 24px;
+                height: 24px;
+                background: $w;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate3d(-50%, -50%, 0);
+                }
+            }
+            &-text {
+                flex-grow: 1;
+                padding-left: 9px;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $dgr;
+                strong {
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
     }
     &-color {
         &-note {
