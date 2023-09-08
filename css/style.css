@@ -5126,7 +5126,7 @@ a.catalog-product-fast-view {
 }
 
 .catalog-product-labels {
-  margin: -36px 0 10px;
+  margin: -36px 0 12px;
   position: relative;
   z-index: 2;
   display: -webkit-box;
@@ -5178,7 +5178,8 @@ a.catalog-product-fast-view {
 }
 
 .catalog-product-colors {
-  margin-bottom: 16px;
+  margin-top: 14px;
+  margin-bottom: 8px;
   overflow: hidden;
 }
 
@@ -5186,9 +5187,6 @@ a.catalog-product-fast-view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-left: -8px;
 }
 .catalog-product-colors-list li {
@@ -5205,6 +5203,8 @@ a.catalog-product-fast-view {
   height: 0;
   padding-top: 100%;
   background: #F4F5F6;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .catalog-product-color::after {
   content: "";
@@ -5214,6 +5214,7 @@ a.catalog-product-fast-view {
   right: 0;
   bottom: 0;
   border: 1px solid transparent;
+  border-radius: 8px;
   -webkit-transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -5231,7 +5232,18 @@ a.catalog-product-fast-view {
 }
 
 .catalog-product-colors-more {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background: #F4F5F6;
+  border-radius: 8px;
   text-align: center;
   font-weight: 500;
   color: #000000;
@@ -5270,10 +5282,13 @@ a.catalog-product-fast-view {
 }
 
 .catalog-product-title {
-  padding-bottom: 5px;
+  padding-bottom: 8px;
   font-size: 13px;
   line-height: 1.31;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .catalog-product-title a {
   color: #393939;
@@ -5283,7 +5298,7 @@ a.catalog-product-fast-view {
 }
 
 .catalog-product-price {
-  padding-bottom: 10px;
+  padding-bottom: 11px;
   font-size: 15px;
   line-height: 1.2;
   font-weight: 500;
@@ -5348,36 +5363,7 @@ a.catalog-product-fast-view {
   left: 0;
   right: 0;
   top: 100%;
-  padding: 16px 0 24px;
-}
-
-.catalog-product-parameters {
-  margin-bottom: 10px;
-}
-.catalog-product-parameters table {
-  width: 100%;
-  table-layout: fixed;
-}
-.catalog-product-parameters table td {
-  font-size: 11px;
-  line-height: 1.64;
-  padding: 0 0 0 10px;
-  vertical-align: top;
-  text-align: left;
-}
-.catalog-product-parameters table td:first-child {
-  padding: 0 10px 0 0;
-  text-align: right;
-}
-.catalog-product-parameters table td.wide {
-  padding: 0;
-  text-align: center;
-}
-.catalog-product-parameters table td strong {
-  color: #000000;
-}
-.catalog-product-parameters table td span {
-  font-weight: bold;
+  padding: 20px 0 24px;
 }
 
 .catalog-product-availability {
@@ -5468,6 +5454,160 @@ a.catalog-product-fast-view {
     line-height: 1.25;
   }
 }
+.catalog-product-label-rating {
+  margin: 0 2px 2px;
+  padding: 5px 10px 7px;
+  letter-spacing: 0;
+  border-radius: 3px;
+  background: #FFA22A;
+  white-space: nowrap;
+}
+.catalog-product-label-rating img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1px 3px -1px 0;
+}
+
+.catalog-product-label-new {
+  margin: 0 2px 2px;
+  padding: 6px 10px;
+  letter-spacing: 0;
+  border-radius: 3px;
+  background: #83C150;
+}
+
+.catalog-product-label-showroom {
+  margin: 0 2px 2px;
+  padding: 6px 10px;
+  letter-spacing: 0;
+  border-radius: 3px;
+  background: #393939;
+}
+
+.catalog-product-price-sale {
+  display: inline-block;
+  vertical-align: top;
+  margin: -2px 0 -4px 10px;
+  padding: 6px 10px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 3px;
+  background: #F30000;
+}
+
+.catalog-product-not-available .catalog-product-img-link-wrapper {
+  background: transparent;
+}
+.catalog-product-not-available .catalog-product-img img {
+  opacity: 0.2;
+}
+
+.catalog-product-status {
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+  text-align: left;
+  white-space: nowrap;
+}
+.catalog-product-status img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 3px 10px 0 0;
+}
+
+.catalog-product-delivery-info {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 24px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+  text-align: left;
+}
+.catalog-product-delivery-info::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 12px;
+  background: transparent url("../upload/delivery3.svg") 50% 50% no-repeat;
+  background-size: 100% 100%;
+}
+
+.catalog-product-size {
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+
+.catalog-product-colors-new {
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+
+.catalog-product-colors-more-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background: #F4F5F6;
+  border-radius: 8px;
+}
+
+.catalog-product-title-min {
+  padding-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.catalog-product-price-min {
+  padding-bottom: 11px;
+}
+
+.catalog-product-info-min {
+  padding-top: 20px;
+}
+
+.catalog-product-parameters {
+  margin-bottom: 17px;
+}
+.catalog-product-parameters table {
+  width: 100%;
+  table-layout: fixed;
+}
+.catalog-product-parameters table td {
+  font-size: 13px;
+  line-height: 1.54;
+  padding: 0 0 4px;
+  vertical-align: top;
+  text-align: left;
+  color: #393939;
+}
+.catalog-product-parameters table td:first-child {
+  padding-right: 10px;
+  color: #686868;
+}
+.catalog-product-parameters table td.wide {
+  padding: 0;
+}
+.catalog-product-parameters table td strong {
+  color: #393939;
+}
+.catalog-product-parameters table td span {
+  font-weight: bold;
+}
+
 /*-------------------- Begin new filter --------------------*/
 .catalog-caption-other {
   margin-top: -13px;
