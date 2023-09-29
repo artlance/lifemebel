@@ -9,14 +9,17 @@
 .new-cabinet {
     clear: both;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
+    &-pt {
+        padding-top: 73.6px;
+    }
     &::before {
         content: "";
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
-        height: 424px;
+        height: 434px;
         background: $s;
     }
     .container {
@@ -51,7 +54,7 @@
             padding: 0 1px;
             a {
                 display: block;
-                padding: 8px 3px 20px;
+                padding: 13px 3px 15px;
                 text-align: center;
                 color: $b;
                 background: $w;
@@ -64,7 +67,7 @@
                 a {
                     color: $b;
                     border-color: $p;
-                    background-color: rgba(131, 193, 80, 0.1);
+                    background-color: #F3F9ED;
                 }
             }
         }
@@ -81,17 +84,17 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: -36px -16px 0;
+        margin: -35px -16px 0;
         li {
             padding: 0 16px;
             a {
                 display: block;
-                padding-bottom: 14px;
+                padding-bottom: 12px;
                 font-size: 15px;
                 line-height: 1.334;
                 color: $dgr;
                 white-space: nowrap;
-                border-bottom: 2px solid $tr;
+                border-bottom: 3px solid $tr;
                 &:hover {
                     color: $b;
                 }
@@ -99,17 +102,15 @@
             &.active {
                 a {
                     color: $b;
-                    font-weight: 500;
                     border-bottom-color: $p;
                 }
             }
         }
     }
     &-wrapper {
-        padding: 48px 40px 56px;
+        padding: 56px 40px;
         background: $w;
-        border-radius: 3px;
-        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.02), 0 0 50px 0 rgba(0, 0, 0, 0.03), 0 0 100px 0 rgba(0, 0, 0, 0.05);
     }
     &-status {
         display: flex;
@@ -490,7 +491,8 @@
                 border-radius: 2px;
                 &-green {
                     color: $p;
-                    background: rgba(131, 193, 80, 0.2);;
+                    background: rgba(131, 193, 80, 0.2);
+                    ;
                 }
                 &-yellow {
                     color: #f3b800;
@@ -553,6 +555,15 @@
                 }
             }
         }
+        &-caption {
+            padding: 28px 60px;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: bold;
+            color: $b;
+            text-align: center;
+            border-bottom: 1px solid #e1e1e1;
+        }
         &-promocode {
             position: absolute;
             width: 1180px;
@@ -575,8 +586,6 @@
                 text-align: center;
                 .button {
                     min-width: 260px;
-                    padding-top: 11px;
-                    border-radius: 2px;
                 }
             }
             &-process {
@@ -670,5 +679,355 @@
                 }
             }
         }
+        &-confirm-phone {
+            position: absolute;
+            width: 626px;
+            max-width: 100%;
+            background: $w;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+            &-content {
+                padding: 40px 92px;
+            }
+            &-info {
+                margin-bottom: 24px;
+                text-align: center;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $dgr;
+                strong {
+                    font-weight: 500;
+                }
+            }
+            &-buttons {
+                display: flex;
+                margin: 0 -4px 24px;
+            }
+            &-button {
+                flex: 1 1 0;
+                max-width: 100%;
+                padding: 0 4px;
+                .button {
+                    width: 100%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+        &-confirm-email {
+            position: absolute;
+            width: 630px;
+            max-width: 100%;
+            background: $w;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+            &-content {
+                padding: 64px 64px 56px;
+            }
+            &-icon {
+                width: 124px;
+                height: 124px;
+                margin: 0 auto 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $s;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            &-info {
+                margin-bottom: 32px;
+                text-align: center;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $b;
+                strong {
+                    font-weight: 500;
+                }
+            }
+            &-button {
+                text-align: center;
+                margin-bottom: 24px;
+                .button {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+        }
+        &-change-phone {
+            position: absolute;
+            width: 442px;
+            max-width: 100%;
+            background: $w;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+            &-content {
+                padding: 40px 92px;
+            }
+            &-button {
+                padding-top: 12px;
+                margin-bottom: 16px;
+                .button {
+                    width: 100%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+            &-terms {
+                margin-bottom: 24px;
+                font-size: 11px;
+                line-height: 1.455;
+                text-align: center;
+            }
+        }
+        &-verify-phone {
+            position: absolute;
+            width: 442px;
+            max-width: 100%;
+            background: $w;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+            &-content {
+                padding: 40px 92px;
+            }
+            &-info {
+                margin-bottom: 3px;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $dgr;
+                strong {
+                    font-weight: 500;
+                }
+            }
+            &-change {
+                margin-bottom: 17px;
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+            }
+            &-resend {
+                margin-top: -11px;
+                margin-bottom: 21px;
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+            }
+            &-button {
+                padding-top: 4px;
+                margin-bottom: 24px;
+                .button {
+                    width: 100%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    &.disabled {
+                        pointer-events: auto;
+                    }
+                }
+            }
+            &-success {
+                padding: 40px;
+                &-icon {
+                    width: 124px;
+                    height: 124px;
+                    margin: 0 auto 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $s;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+                &-text {
+                    margin-bottom: 24px;
+                    text-align: center;
+                    font-size: 13px;
+                    line-height: 1.54;
+                    color: $b;
+                    strong {
+                        font-weight: 500;
+                    }
+                }
+                &-button {
+                    text-align: center;
+                    margin-bottom: 24px;
+                    .button {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }
     }
+    &-profile {
+        max-width: 812px;
+        margin: 0 auto;
+        &-row {
+            display: flex;
+            margin: 0 -8px;
+        }
+        &-col {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 8px;
+        }
+        &-block {
+            padding: 36px 40px 40px;
+            min-height: 100%;
+            background: $s;
+            border-radius: 5px;
+        }
+        &-title {
+            margin-bottom: 21px;
+            font-size: 15px;
+            line-height: 1.334;
+            font-weight: 900;
+            color: $dgr;
+        }
+        &-save {
+            padding-top: 5px;
+            margin-bottom: 20px;
+            .button {
+                width: 100%;
+            }
+            &-success {
+                position: relative;
+                padding: 10px 0 10px 24px;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $b;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 1px;
+                    top: 13px;
+                    width: 14px;
+                    height: 14px;
+                    background: $tr url('../upload/new-cabinet-success.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+    &-input {
+        &-wrapper {
+            margin-bottom: 20px;
+            &.success {
+                .new-cabinet-input-block {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 13px;
+                        right: 13px;
+                        width: 14px;
+                        height: 14px;
+                        background: $tr url('../upload/new-cabinet-success.svg') 50% 50% no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            &.error {
+                .new-cabinet-input-note {
+                    color: $red;
+                }
+                .new-cabinet-input-text {
+                    border-color: $red;
+                }
+            }
+            &.warning {
+                .new-cabinet-input-text {
+                    border-color: #FFA22A;
+                }
+                .new-cabinet-input-block {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 13px;
+                        right: 13px;
+                        width: 14px;
+                        height: 14px;
+                        background: $tr url('../upload/new-cabinet-warning.svg') 50% 50% no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+        }
+        &-date {
+            width: 50%;
+        }
+        &-caption {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            & > label {
+                display: block;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $b;
+                margin: 0;
+            }
+        }
+        &-cta {
+            padding-left: 10px;
+            font-size: 13px;
+            line-height: 1.54;
+            font-weight: 500;
+            text-align: right;
+            a {
+                display: block;
+            }
+        }
+        &-block {
+            margin-bottom: 7px;
+            position: relative;
+        }
+        &-text {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 0 39px 2px 15px;
+            font-size: 13px;
+            color: $b;
+            background: $w;
+            border: 1px solid $t;
+            border-radius: 2px !important;
+            transition: color $d $f, border-color $d $f;
+            &::placeholder {
+                color: $t;
+            }
+            &:hover,
+            &:focus {
+                border-color: $p;
+            }
+            &:read-only {
+                color: $t;
+                border-color: $t;
+            }
+        }
+        &-note {
+            font-size: 11px;
+            line-height: 1.455;
+            color: $text;
+        }
+    }
+    &-datepicker {
+        cursor: pointer;
+        background: $w url('../upload/datepicker.svg') 100% 50% no-repeat;
+        background-size: 28px 17px;
+    }
+}
+select.ui-datepicker-year {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 31px 1px 0;
+    text-align: center;
+    height: 38px;
+    font-size: 18px;
+    line-height: normal;
+    font-family: $ff;
+    font-weight: 500;
+    color: $b;
+    background: $tr url('../upload/new-cabinet-select-year.svg') 100% 50% no-repeat;
+    background-size: 32px 32px;
+    border: 0;
+    border-radius: 0;
+    appearance: none;
+}
+select.ui-datepicker-year::-ms-expand {
+    display: none;
 }
