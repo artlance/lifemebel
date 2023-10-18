@@ -294,4 +294,115 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //new cabinet modal add address
+    $('#new-cabinet-modal-add-address').on('shown', function () {
+        $.ajax({
+            url: './new-cabinet-modal-add-address.html',
+            cache: false,
+            success: function () {
+                $('#new-cabinet-modal-add-address').load('./new-cabinet-modal-add-address.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new cabinet modal add address - private house
+    $(document).on('change', '#add-address-private-house', function (event) {
+        if ($(this).is(':checked')) {
+            $('.new-cabinet-modal-add-address-detail').addClass('hidden');
+        } else {
+            $('.new-cabinet-modal-add-address-detail').removeClass('hidden');
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new cabinet modal add address filled
+    $('#new-cabinet-modal-add-address-filled').on('shown', function () {
+        $.ajax({
+            url: './new-cabinet-modal-add-address-filled.html',
+            cache: false,
+            success: function () {
+                $('#new-cabinet-modal-add-address-filled').load('./new-cabinet-modal-add-address-filled.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new cabinet modal add address error
+    $('#new-cabinet-modal-add-address-error').on('shown', function () {
+        $.ajax({
+            url: './new-cabinet-modal-add-address-error.html',
+            cache: false,
+            success: function () {
+                $('#new-cabinet-modal-add-address-error').load('./new-cabinet-modal-add-address-error.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new cabinet modal add address warning
+    $('#new-cabinet-modal-add-address-warning').on('shown', function () {
+        $.ajax({
+            url: './new-cabinet-modal-add-address-warning.html',
+            cache: false,
+            success: function () {
+                $('#new-cabinet-modal-add-address-warning').load('./new-cabinet-modal-add-address-warning.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new cabinet modal add address success
+    $('#new-cabinet-modal-add-address-success').on('shown', function () {
+        $.ajax({
+            url: './new-cabinet-modal-add-address-success.html',
+            cache: false,
+            success: function () {
+                $('#new-cabinet-modal-add-address-success').load('./new-cabinet-modal-add-address-success.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new cabinet modal add address delete
+    $('#new-cabinet-modal-add-address-delete').on('shown', function () {
+        $.ajax({
+            url: './new-cabinet-modal-add-address-delete.html',
+            cache: false,
+            success: function () {
+                $('#new-cabinet-modal-add-address-delete').load('./new-cabinet-modal-add-address-delete.html', function (response, status, xhr) {
+                    centerModal();
+                });
+            }
+        });
+    });
+
+    //------------------------------------------------------------------------//
+
+    //new cabinet modal add address delete success
+    $(document).on('click', '.new-cabinet-modal-add-address-delete-cta', function (event) {
+        event.preventDefault();
+        $(this).parents('.new-cabinet-modal-add-address-delete-content').addClass('hidden');
+        $('.new-cabinet-modal-add-address-delete-success').removeClass('hidden');
+        centerModal();
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

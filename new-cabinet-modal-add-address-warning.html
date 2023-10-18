@@ -1,0 +1,138 @@
+<div class="new-cabinet-modal-add-address modal-center">
+    <a href="#" class="new-cabinet-modal-close" data-dismiss="modal" aria-hidden="true" title="Закрыть"></a>
+    <div class="new-cabinet-modal-add-address-caption">Адрес доставки</div>
+    <div class="new-cabinet-modal-add-address-content">
+        <div class="new-cabinet-modal-add-address-form">
+            <div class="new-cabinet-modal-add-address-city">
+                Доставка в&nbsp;&nbsp;<a class="new-cabinet-modal-add-address-city-link" href="#new-product-modal-city" data-toggle="modal" data-dismiss="modal" aria-hidden="true">Москва и МО</a>
+            </div>
+            <div class="new-cabinet-input-wrapper success">
+                <div class="new-cabinet-input-caption">
+                    <label for="add-address-title">Название</label>
+                </div>
+                <div class="new-cabinet-input-block">
+                    <input type="text" class="new-cabinet-input-text" id="add-address-title" name="add-address-title" placeholder="Например, «Дом» или «Работа»" value="Работа">
+                </div>
+            </div>
+            <!-- /.new-cabinet-input-wrapper -->
+            <div class="new-cabinet-input-wrapper warning">
+                <div class="new-cabinet-input-caption">
+                    <label for="add-address-text">Адрес*</label>
+                </div>
+                <div class="new-cabinet-input-block">
+                    <input type="text" class="new-cabinet-input-text" id="add-address-text" name="add-address-text" placeholder="Город, улица, дом, корпус" value="Москва, Братеевский проезд, д. 4 к. 2">
+                </div>
+                <div class="new-cabinet-input-note">Не сможем доставить заказ по этому адрес. Выберите другой</div>
+                <div class="new-cabinet-enable-toggle">
+                    <input type="checkbox" id="add-address-private-house" name="add-address-private-house">
+                    <label for="add-address-private-house">Частный дом</label>
+                </div>
+            </div>
+            <!-- /.new-cabinet-input-wrapper -->
+            <div class="new-cabinet-modal-add-address-detail">
+                <div class="new-cabinet-modal-add-address-row">
+                    <div class="new-cabinet-modal-add-address-col">
+                        <div class="new-cabinet-input-wrapper">
+                            <div class="new-cabinet-input-caption">
+                                <label for="add-address-detail-1">Подъезд</label>
+                            </div>
+                            <div class="new-cabinet-input-block">
+                                <input type="tel" class="new-cabinet-input-text" id="add-address-detail-1" name="add-address-detail-1" placeholder="№" value="7в">
+                            </div>
+                        </div>
+                        <!-- /.new-cabinet-input-wrapper -->
+                    </div>
+                    <!-- /.new-cabinet-modal-add-address-col -->
+                    <div class="new-cabinet-modal-add-address-col">
+                        <div class="new-cabinet-input-wrapper">
+                            <div class="new-cabinet-input-caption">
+                                <label for="add-address-detail-2">Этаж*</label>
+                            </div>
+                            <div class="new-cabinet-input-block">
+                                <input type="tel" class="new-cabinet-input-text" id="add-address-detail-2" name="add-address-detail-2" placeholder="№" value="4">
+                            </div>
+                        </div>
+                        <!-- /.new-cabinet-input-wrapper -->
+                    </div>
+                    <!-- /.new-cabinet-modal-add-address-col -->
+                    <div class="new-cabinet-modal-add-address-col">
+                        <div class="new-cabinet-input-wrapper">
+                            <div class="new-cabinet-input-caption">
+                                <label for="add-address-detail-3">Кв. или офис*</label>
+                            </div>
+                            <div class="new-cabinet-input-block">
+                                <input type="tel" class="new-cabinet-input-text" id="add-address-detail-3" name="add-address-detail-3" placeholder="№" value="22">
+                            </div>
+                        </div>
+                        <!-- /.new-cabinet-input-wrapper -->
+                    </div>
+                    <!-- /.new-cabinet-modal-add-address-col -->
+                </div>
+                <!-- /.new-cabinet-modal-add-address-row -->
+                <div class="new-cabinet-input-wrapper">
+                    <div class="new-cabinet-input-caption">
+                        <label>Лифт в доме</label>
+                    </div>
+                    <div class="new-cabinet-input-radio">
+                        <input type="radio" id="add-address-radio-1" name="add-address-radio">
+                        <label for="add-address-radio-1">Нет</label>
+                    </div>
+                    <div class="new-cabinet-input-radio">
+                        <input type="radio" id="add-address-radio-2" name="add-address-radio" checked>
+                        <label for="add-address-radio-2">Грузовой</label>
+                    </div>
+                    <div class="new-cabinet-input-radio">
+                        <input type="radio" id="add-address-radio-3" name="add-address-radio">
+                        <label for="add-address-radio-3">Пассажирский</label>
+                    </div>
+                </div>
+                <!-- /.new-cabinet-input-wrapper -->
+            </div>
+            <!-- /.new-cabinet-modal-add-address-detail -->
+            <div class="new-cabinet-input-wrapper">
+                <div class="new-cabinet-input-caption">
+                    <label for="add-address-extra">Дополнительно</label>
+                </div>
+                <div class="new-cabinet-input-block">
+                    <textarea class="new-cabinet-input-textarea" name="add-address-extra" id="add-address-extra" cols="30" rows="2" placeholder="Код от домофона, тип парковки">Домофон — 2456</textarea>
+                </div>
+            </div>
+            <!-- /.new-cabinet-input-wrapper -->
+            <div class="new-cabinet-enable-toggle">
+                <input type="checkbox" id="add-address-main" name="add-address-main">
+                <label for="add-address-main">Основной адрес доставки</label>
+            </div>
+            <div class="new-cabinet-modal-add-address-cta">
+                <input type="submit" class="button primary" value="Сохранить" disabled>
+            </div>
+        </div>
+        <!-- /.new-cabinet-modal-add-address-form -->
+        <div class="new-cabinet-modal-add-address-map-block">
+            <div class="new-cabinet-modal-add-address-map" id="new-cabinet-modal-add-address-map"></div>
+            <script>
+                ymaps.ready(function () {
+                    var myMap = new ymaps.Map('new-cabinet-modal-add-address-map', {
+                            center: [55.687049, 37.659014],
+                            zoom: 16,
+                            controls: ['geolocationControl', 'zoomControl'],
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        }),
+
+                        myPlacemark = new ymaps.Placemark([55.687049, 37.659014], {
+                        }, {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'upload/new-cabinet-pin-map.svg',
+                            iconImageSize: [60, 69],
+                            iconImageOffset: [-30, -55],
+                        });
+
+                    myMap.geoObjects.add(myPlacemark);
+                });
+            </script>
+        </div>
+        <!-- /.new-cabinet-modal-add-address-map-block -->
+    </div>
+    <!-- /.new-cabinet-modal-add-address-content -->
+</div>
+<!-- /.new-cabinet-modal-add-address -->
