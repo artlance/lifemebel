@@ -1104,4 +1104,12 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product quantity item
+    $(document).on('click', '.v3-product-quantity-item', function (event) {
+        event.preventDefault();
+        $(this).parents('li').addClass('active').siblings('li').removeClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
