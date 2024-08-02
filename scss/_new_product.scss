@@ -422,6 +422,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        justify-content: space-between;
         margin: 0 -16px 12px 0;
     }
     &-articul {
@@ -448,6 +449,10 @@
             .new-product-status-icon {
                 margin-top: 0;
             }
+        }
+        a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
     }
     &-rating {
