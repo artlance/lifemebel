@@ -786,6 +786,10 @@ $(document).ready(function () {
             success: function () {
                 $('#v3-product-payment-modal').load('./v3-product-payment-modal.html', function (response, status, xhr) {
                     centerModal();
+                    //tab
+                    $('.tabs').delegate('li:not(.active)', 'click', function () {
+                        $(this).addClass('active').siblings().removeClass('active').parents('.tab').find('.box').hide().eq($(this).index()).fadeIn(250);
+                    });
                 });
             }
         });
