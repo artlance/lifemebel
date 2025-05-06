@@ -9,6 +9,7 @@
 }
 .new-product {
     display: flex;
+    gap: 0 16px;
     align-items: flex-start;
     margin-top: -14px;
     margin-bottom: 20px;
@@ -409,9 +410,8 @@
         }
     }
     &-info {
-        flex: 0 0 26.79%;
-        max-width: 26.79%;
-        padding-left: 16px;
+        flex: 0 0 calc(26.79% - 16px);
+        max-width: calc(26.79% - 16px);
     }
     &-info-block {
         padding: 27px 30px 4px;
@@ -3785,8 +3785,8 @@ a.new-product-brand-feature {
             }
         }
         &-info {
-            flex: 0 0 40%;
-            max-width: 40%;
+            flex: 0 0 calc(40% - 16px);
+            max-width: calc(40% - 16px);
         }
         &-info-block {
             padding: 18px 15px 4px;

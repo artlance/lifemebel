@@ -2651,6 +2651,14 @@
         .new-product-info-block {
             margin-bottom: 0;
         }
+        .new-product-info {
+            will-change: min-height;
+            &-inner {
+                transform: translate(0, 0);
+                transform: translate3d(0, 0, 0);
+                will-change: position, transform;
+            }
+        }
     }
     &-gallery {
         flex: 0 0 73.21%;

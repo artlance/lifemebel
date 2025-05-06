@@ -1087,7 +1087,15 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //v3 product gallery
-    if ($('.v3-product-gallery').length) {
+    if ($('.v3-product-gallery').length && $('.new-product-info-inner').length) {
+        $('.new-product-info').stickySidebar({
+            containerSelector: '.v3-product-sticky',
+            innerWrapperSelector: '.new-product-info-inner',
+            topSpacing: 16,
+            bottomSpacing: 0,
+            resizeSensor: true,
+        });
+    } else if ($('.v3-product-gallery').length) {
         $('.v3-product-gallery').stickySidebar({
             containerSelector: '.v3-product-sticky',
             innerWrapperSelector: '.v3-product-gallery-inner',
