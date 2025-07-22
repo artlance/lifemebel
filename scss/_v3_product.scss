@@ -2674,6 +2674,76 @@
                 margin-bottom: 0;
             }
         }
+        &-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            &-col-x2 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            &-col {
+                flex: 0 0 calc(50% - 8px);
+                max-width: calc(50% - 8px);
+            }
+            &-item {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                &-video {
+                    display: block;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background: rgba(0, 0, 0, 0.4);
+                    }
+                }
+                &-play {
+                    position: absolute;
+                    z-index: 2;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate3d(-50%, -50%, 0);
+                    width: 50px;
+                    height: 50px;
+                    background: rgba(57, 57, 57, 0.8) url('../upload/video-play.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                    border-radius: 50%;
+                }
+            }
+            &-button {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+                padding-top: 34px;
+            }
+            &-more {
+                &.button {
+                    min-width: 300px;
+                    padding: 15px 10px;
+                    font-size: 15px;
+                }
+                &-show {
+                    display: block;
+                }
+                &-hide {
+                    display: none;
+                }
+                &.active {
+                    .v3-product-gallery-images-more {
+                        &-show {
+                            display: none;
+                        }
+                        &-hide {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
     }
     &-filter {
         padding: 30px 30px 6px;

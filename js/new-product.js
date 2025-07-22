@@ -1124,4 +1124,14 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product gallery images more
+    $(document).on('click', '.v3-product-gallery-images-more', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('.v3-product-gallery-images').find('[data-hidden]').toggleClass('hidden');
+        $('.new-product-info').stickySidebar('updateSticky');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
