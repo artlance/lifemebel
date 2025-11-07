@@ -32214,6 +32214,58 @@ select.ui-datepicker-year::-ms-expand {
   background: #FEE5E5;
   border-radius: 4px;
 }
+.v3-product-increment {
+  padding: 15px 30px;
+  background: #F4F5F6;
+  margin-top: 16px;
+}
+.v3-product-increment-caption {
+  position: relative;
+  padding-left: 24px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #000000;
+  font-weight: bold;
+}
+.v3-product-increment-caption img {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.v3-product-brand {
+  padding: 15px 30px 5px;
+  background: #F4F5F6;
+  margin-top: 16px;
+}
+.v3-product-brand-logo {
+  margin-bottom: 10px;
+}
+.v3-product-brand-logo a {
+  display: inline-block;
+  vertical-align: top;
+}
+.v3-product-brand-link {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #393939;
+}
+.v3-product-brand-link a {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  color: #393939;
+  padding-right: 20px;
+}
+.v3-product-brand-link a::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 6px;
+  height: 10px;
+  background: transparent url("../upload/arrow-nav.svg") 50% 50% no-repeat;
+  background-size: 100% 100%;
+}
 
 .popover-color {
   margin: 16px;
@@ -32450,6 +32502,14 @@ select.ui-datepicker-year::-ms-expand {
   .v3-product-filter-item-hint-title {
     font-size: 12px;
     line-height: 1.5;
+  }
+  .v3-product-increment {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .v3-product-brand {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /*--------------------- End v3 product ---------------------*/

@@ -3074,6 +3074,58 @@
             border-radius: 4px;
         }
     }
+    &-increment {
+        padding: 15px 30px;
+        background: $s;
+        margin-top: 16px;
+        &-caption {
+            position: relative;
+            padding-left: 24px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+            font-weight: bold;
+            img {
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+        }
+    }
+    &-brand {
+        padding: 15px 30px 5px;
+        background: $s;
+        margin-top: 16px;
+        &-logo {
+            margin-bottom: 10px;
+            a {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        &-link {
+            font-size: 13px;
+            line-height: 1.54;
+            color: $dgr;
+            a {
+                display: block;
+                position: relative;
+                margin-bottom: 10px;
+                color: $dgr;
+                padding-right: 20px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+                    width: 6px;
+                    height: 10px;
+                    background: transparent url('../upload/arrow-nav.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
 }
 .popover-color {
     margin: 16px;
@@ -3297,6 +3349,14 @@
                     }
                 }
             }
+        }
+        &-increment {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &-brand {
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }
