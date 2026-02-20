@@ -3126,6 +3126,122 @@
             }
         }
     }
+    &-selection-reviews {
+        padding: 15px 30px 16px;
+        background: #F2F6ED;
+        margin-top: 16px;
+        &-title {
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 1.43;
+            font-weight: bold;
+            color: #535353;
+        }
+        &-all {
+            color: $t;
+            a {
+                color: $t;
+                &:hover {
+                    color: $dgr;
+                }
+            }
+        }
+        &-item {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding-left: 18px;
+            &::before {
+                content: "•";
+                position: absolute;
+                left: 6px;
+                top: 3px;
+                color: $p;
+            }
+            &-text {
+                padding: 3px 5px 3px 0;
+                color: $dgr;
+            }
+            &-toggle {
+                display: block;
+                position: relative;
+                white-space: nowrap;
+                padding: 2px 9px 4px;
+                font-size: 12px;
+                line-height: 1.3334;
+                font-weight: 500;
+                border: 1px solid #DADFD7;
+                border-radius: 3px;
+                background: #F8FAF5;
+                &::after {
+                    opacity: 0;
+                    content: "";
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    width: 10px;
+                    height: 10px;
+                    background: $w url('../upload/close4.svg') 50% 50% no-repeat;
+                    background-size: 6px 6px;
+                    border-radius: 4px;
+                    transition: opacity $d $f;
+                }
+                strong {
+                    color: $p;
+                }
+                span {
+                    color: #64748B;
+                    border-bottom: 1px dotted #64748B;
+                }
+            }
+            &-negative {
+                &::before {
+                    color: #B45309;
+                }
+                .v3-product-selection-reviews-item-text {
+                    color: #8B8B8B;
+                }
+            }
+            &.active {
+                .v3-product-selection-reviews-item-toggle {
+                    border-color: $p;
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &-chosen {
+            margin: 5px 0 20px;
+            display: none;
+            &-cancel {
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                padding: 4px 28px 6px 9px;
+                color: $dgr;
+                font-weight: 500;
+                border: 1px solid $p;
+                border-radius: 3px;
+                background: #F8FAF5;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -15px;
+                    right: 0;
+                    width: 28px;
+                    height: 30px;
+                    background: transparent url('../upload/close5.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                }
+                &:hover {
+                    color: $b;
+                }
+            }
+        }
+    }
 }
 .popover-color {
     margin: 16px;
@@ -3355,6 +3471,10 @@
             padding-right: 15px;
         }
         &-brand {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &-selection-reviews {
             padding-left: 15px;
             padding-right: 15px;
         }

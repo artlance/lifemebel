@@ -1134,4 +1134,42 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product selection reviews
+    function v3ProductSelectionReviews(itemToggle, itemClick) {
+        const thisParent = itemToggle.parents('.v3-product-selection-reviews-item');
+        if (itemClick) {
+            thisParent.siblings('.v3-product-selection-reviews-item.active').removeClass('active');
+            thisParent.toggleClass('active');
+        }
+        const thisActive = $('.v3-product-selection-reviews-item.active');
+        if (thisActive.length) {
+            $('.v3-product-selection-reviews-chosen-cancel').text(thisActive.find('.v3-product-selection-reviews-item-text').text());
+            $('.v3-product-selection-reviews-chosen').show(0);
+        } else {
+            $('.v3-product-selection-reviews-chosen').hide(0);
+        }
+    }
+    $(document).on('click', '.v3-product-selection-reviews-item-toggle', function (event) {
+        event.preventDefault();
+        v3ProductSelectionReviews($(this), true);
+    });
+    v3ProductSelectionReviews($('.v3-product-selection-reviews-item.active .v3-product-selection-reviews-item-toggle'));
+
+    $(document).on('click', '.v3-product-selection-reviews-chosen-cancel', function (event) {
+        event.preventDefault();
+        $('.v3-product-selection-reviews-item.active').removeClass('active');
+        $('.v3-product-selection-reviews-chosen').hide(0);
+    });
+
+    $(document).on('click', '.v3-product-selection-reviews-all a', function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#LINK_TO_REVIEWS').offset().top
+        }, 400);
+        $('.v3-product-selection-reviews-item.active').removeClass('active');
+        $('.v3-product-selection-reviews-chosen').hide(0);
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
